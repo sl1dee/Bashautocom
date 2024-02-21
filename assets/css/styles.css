@@ -1,0 +1,515 @@
+* {
+  outline: none;
+  font-family: "Manrope", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bg-abclinic {
+  background-color: #F1F3FF;
+}
+
+.services {
+  padding: 75px 0;
+  background-color: #F1F3FF;
+}
+.services > div {
+  row-gap: 20px;
+}
+.services-preHeader p {
+  color: #16171B;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: -0.48px;
+}
+.services-content {
+  row-gap: 40px;
+}
+.services-tabs {
+  column-gap: 40px;
+}
+.services-tabs-el {
+  color: #484D72;
+  opacity: 0.5;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.76px;
+  transition: opacity 0.3s ease, color 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  text-wrap: none;
+}
+.services-tabs-el::after {
+  height: 3px;
+  background-color: #16171B;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+}
+.services-tabs-el.active, .services-tabs-el.single {
+  color: #16171B;
+  opacity: 1;
+}
+.services-tabs-el.active::after, .services-tabs-el.single::after {
+  opacity: 1;
+}
+.services-tabs-el.single {
+  cursor: default;
+}
+.services-tabs-el.single::after {
+  content: unset;
+}
+.services-tabsContent {
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  position: relative;
+  z-index: 0;
+}
+.services-tabsContent .onlyImage {
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+}
+.services-tabsContent .onlyImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+}
+.services-tabsContent .additionalImage {
+  position: absolute;
+  right: 20px;
+  top: 70px;
+  transform: translate(0, -100%);
+  z-index: -1;
+  max-height: 190px;
+}
+.services-tabsContent .additionalImage img {
+  height: 100%;
+}
+.services-tabsContent > div:not(.onlyImage, .additionalImage) {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 30px;
+  min-height: 290px;
+  gap: 14px;
+  overflow: hidden;
+}
+.services-tabsContent > div:not(.onlyImage, .additionalImage) .text {
+  row-gap: 12px;
+}
+.services-tabsContent > div:not(.onlyImage, .additionalImage) .text h2 {
+  color: #16171B;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: -0.48px;
+}
+.services-tabsContent > div:not(.onlyImage, .additionalImage) .text p {
+  color: #484D72;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 150%;
+}
+.services-tabsContent > div:not(.onlyImage, .additionalImage) .badge {
+  padding: 4px 20px;
+  background-color: #F1F3FF;
+  border-radius: 30px;
+}
+.services-tabsContent > div:not(.onlyImage, .additionalImage) .badge span {
+  color: #484D72;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.favorites-header {
+  color: #16171B;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.76px;
+}
+
+.favorites {
+  padding: 75px 0;
+  background-color: #F1F3FF;
+}
+.favorites > div {
+  row-gap: 40px;
+}
+.favorites-content {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.favorites-content .onlyImage {
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+}
+.favorites-content .onlyImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+}
+.favorites-content-el {
+  padding: 40px;
+  border-radius: 30px;
+  background-color: #fff;
+  row-gap: 40px;
+  text-wrap: none;
+}
+.favorites-content-el .text {
+  row-gap: 14px;
+}
+.favorites-content-el .text-header {
+  color: #16171B;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: -0.48px;
+}
+.favorites-content-el .text-description {
+  color: #484D72;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 150%;
+}
+.favorites-content-el .photo img {
+  width: 64px;
+  height: 64px;
+}
+.favorites-content-el.dark {
+  background-color: #484D72;
+  grid-column: span 2;
+}
+.favorites-content-el.dark .text-header, .favorites-content-el.dark .text-description {
+  color: #fff;
+}
+
+.contactsBlock {
+  padding: 75px 0 150px;
+  background-color: #F1F3FF;
+}
+.contactsBlock-mapWrap {
+  position: relative;
+  z-index: 0;
+}
+.contactsBlock-map {
+  width: 100%;
+  min-height: 650px;
+  border-radius: 30px;
+  overflow: hidden;
+  z-index: -1;
+}
+.contactsBlock-info {
+  row-gap: 8px;
+  padding: 40px;
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: #fff;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+.contactsBlock-info-header {
+  color: #16171B;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: -0.6px;
+}
+.contactsBlock-info-contact {
+  color: #16171B;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%;
+}
+.contactsBlock-info-time {
+  color: #484D72;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .container {
+    max-width: none;
+    padding: 0 20px;
+    margin: 0;
+  }
+  .services-tabsContent {
+    grid-template-columns: 1fr 1fr;
+  }
+  .services-tabsContent > div:not(.onlyImage, .additionalImage) {
+    min-height: 275px;
+  }
+  .services-tabsContent .additionalImage {
+    right: 30px;
+    top: 35px;
+  }
+  .services-tabsContent .additionalImage img {
+    max-height: 180px;
+  }
+  .contactsBlock {
+    padding: 55px 0 110px;
+  }
+  .contactsBlock-map {
+    min-height: 440px;
+  }
+  .contactsBlock-info-header {
+    font-size: 28px;
+    letter-spacing: -0.56px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .container {
+    max-width: none;
+    padding: 0 20px;
+    margin: 0;
+  }
+  .favorites-header {
+    font-size: 28px;
+    letter-spacing: -0.56px;
+  }
+  .favorites {
+    padding: 55px 0;
+  }
+  .favorites-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .favorites-content .onlyImage {
+    min-height: 210px;
+  }
+  .favorites-content-el {
+    padding: 30px;
+    column-gap: 30px;
+    grid-column: span 2;
+    text-wrap: none;
+  }
+  .favorites-content-el .text {
+    row-gap: 8px;
+  }
+  .favorites-content-el .text-header {
+    font-size: 22px;
+    letter-spacing: -0.44px;
+  }
+  .favorites-content-el .text-description {
+    font-size: 16px;
+  }
+  .favorites-content-el .photo img {
+    width: 50px;
+    height: 50px;
+  }
+  .services {
+    padding: 55px 0;
+  }
+  .services > div {
+    row-gap: 26px;
+  }
+  .services-preHeader p {
+    color: #16171B;
+    font-size: 20px;
+    letter-spacing: -0.4px;
+  }
+  .services-content {
+    row-gap: 52px;
+  }
+  .services-tabs-el {
+    font-size: 28px;
+    letter-spacing: -0.56px;
+    text-wrap: none;
+  }
+  .services-tabs-el::after {
+    height: 2.5px;
+  }
+  .services-tabsContent {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .services-tabsContent > div:not(.onlyImage, .additionalImage) {
+    background-color: #fff;
+    padding: 30px;
+    min-height: 225px;
+    gap: 14px;
+  }
+  .services-tabsContent > div:not(.onlyImage, .additionalImage) .text {
+    row-gap: 8px;
+  }
+  .services-tabsContent > div:not(.onlyImage, .additionalImage) .text h2 {
+    font-size: 22px;
+    letter-spacing: -0.44px;
+  }
+  .services-tabsContent > div:not(.onlyImage, .additionalImage) .text p {
+    font-size: 16px;
+  }
+  .services-tabsContent > div:not(.onlyImage, .additionalImage) .badge {
+    border-radius: 82px;
+  }
+  .services-tabsContent > div:not(.onlyImage, .additionalImage) .badge span {
+    font-size: 16px;
+  }
+  .services-tabsContent .additionalImage {
+    right: 5px;
+    top: 30px;
+  }
+  .services-tabsContent .additionalImage img {
+    max-height: 145px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: none;
+    padding: 0 20px;
+    margin: 0;
+  }
+  .services {
+    padding: 40px 0;
+  }
+  .services > div {
+    row-gap: 16px;
+  }
+  .services-preHeader p {
+    font-size: 16px;
+    letter-spacing: -0.32px;
+  }
+  .services-content {
+    row-gap: 32px;
+  }
+  .services-tabs {
+    column-gap: 20px;
+    overflow-x: auto;
+    min-height: 60px;
+  }
+  .services-tabs-el {
+    font-size: 20px;
+    letter-spacing: -0.4px;
+    text-wrap: nowrap;
+  }
+  .services-tabs-el::after {
+    height: 2px;
+    bottom: -8px;
+  }
+  .services-tabs::-webkit-scrollbar {
+    background: transparent;
+  }
+  .services-tabsContent {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .services-tabsContent .onlyImage {
+    border-radius: 20px;
+    min-height: 150px;
+  }
+  .services-tabsContent > div:not(.onlyImage) {
+    padding: 20px;
+    border-radius: 20px;
+    min-height: 150px;
+    gap: 10px;
+  }
+  .services-tabsContent > div:not(.onlyImage) .text {
+    row-gap: 4px;
+  }
+  .services-tabsContent > div:not(.onlyImage) .text h2 {
+    font-size: 18px;
+    letter-spacing: -0.36px;
+  }
+  .services-tabsContent > div:not(.onlyImage) .text p {
+    font-size: 14px;
+  }
+  .services-tabsContent > div:not(.onlyImage) .badge {
+    border-radius: 82px;
+  }
+  .services-tabsContent > div:not(.onlyImage) .badge span {
+    font-size: 14px;
+  }
+  .favorites-header {
+    font-size: 20px;
+    letter-spacing: -0.4px;
+  }
+  .favorites {
+    padding: 40px 0;
+  }
+  .favorites > div {
+    row-gap: 20px;
+  }
+  .favorites-content {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .favorites-content .onlyImage {
+    border-radius: 20px;
+    min-height: 210px;
+  }
+  .favorites-content-el {
+    padding: 20px;
+    border-radius: 20px;
+    row-gap: 16px;
+  }
+  .favorites-content-el .text {
+    row-gap: 8px;
+  }
+  .favorites-content-el .text-header {
+    font-size: 18px;
+    letter-spacing: -0.36px;
+  }
+  .favorites-content-el .text-description {
+    font-size: 14px;
+  }
+  .favorites-content-el .photo img {
+    width: 40px;
+    height: 40px;
+  }
+  .favorites-content-el.dark {
+    grid-column: unset;
+  }
+  .contactsBlock {
+    padding: 40px 0 80px;
+  }
+  .contactsBlock-map {
+    min-height: 440px;
+    border-radius: 20px;
+    max-height: 550px;
+  }
+  .contactsBlock-info {
+    row-gap: 8px;
+    padding: 20px;
+    border-radius: 20px;
+    top: unset;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 55px;
+    max-width: 260px;
+    width: 100%;
+  }
+  .contactsBlock-info-header {
+    font-size: 20px;
+    letter-spacing: -0.4px;
+  }
+  .contactsBlock-info-contact {
+    font-size: 14px;
+  }
+  .contactsBlock-info-time {
+    font-size: 12px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
