@@ -7,6 +7,7 @@ import Footer from '@components/footer'
 import Header from '@components/header'
 import Sidebar from '@components/header/sidebar'
 import SignUpModal from '@components/modals/sign-up-modal'
+import Cookie from "../../components/cookie/cookie.jsx";
 
 const MainLayout = ({ children }) => {
 	const signUpIsOpen = useSelector(signUpIsOpenSelector)
@@ -18,7 +19,7 @@ const MainLayout = ({ children }) => {
 			<Header />
 			{children}
 			<Footer />
-			{/* <Cookie /> */}
+			 <Cookie />
 			{burgerIsOpen && <Sidebar />}
 			{signUpIsOpen && <SignUpModal />}
 		</>
