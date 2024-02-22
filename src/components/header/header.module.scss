@@ -3,16 +3,37 @@
 .header {
   background-color: #ffffff;
   margin: 0 135px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 
   &TopLinks {
-    background-color: blue;
     align-self: end;
     gap: 20px;
     padding: 16px 0 0 0;
+
+    > div {
+      span {
+        color: #6B6B6B;
+        font-size: 14px;
+        font-weight: 400;
+        //line-height: 110%;
+      }
+    }
   }
 
   &Links {
-    background-color: pink;
     padding: 16px 0 18px 0;
+
+    > div {
+      span {
+        color: #000000;
+        font-size: 16px;
+        font-weight: 400;
+        //line-height: 110%;
+      }
+    }
   }
 }

@@ -9,6 +9,7 @@ import SignUpModal from '@components/modals/sign-up-modal'
 
 import Cookie from '../../components/cookie/cookie.jsx'
 import Header from '../../components/header/index.js'
+import MainServices from '../../components/main-services/index.js'
 
 const MainLayout = ({ children }) => {
 	const signUpIsOpen = useSelector(signUpIsOpenSelector)
@@ -18,6 +19,7 @@ const MainLayout = ({ children }) => {
 	return (
 		<>
 			<Header />
+			<MainServices />
 			{/* {children} */}
 			{/* <Footer /> */}
 			{/* <Cookie /> */}
