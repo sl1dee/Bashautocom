@@ -1,13 +1,17 @@
 @use '@assets/styles/vars/colors';
 
 .btn {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 120%;
-  letter-spacing: -0.36px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22.4px;
+  //letter-spacing: -0.36px;
   cursor: pointer;
-  border: 2px solid colors.$mainColor;
-  border-radius: 100px;
+  border: 2px solid #2F3140;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 
 
 
@@ -16,44 +20,49 @@
   //  user-select: none;
   //}
   &SizeS{
-    padding: 10px 18px;
+    padding: 14px 20px;
     min-width: 178px;
   }
   &SizeM {
     padding: 8px 13px;
   }
+  &SizeL {
+    padding: 14px 20px;
+    min-width: 172px;
+  }
   //&-dark-trnsp
   &Primary {
-    background-color: colors.$mainColor;
+    background-color: #2F3140;
     color: colors.$whiteColor;
     transition: background-color .3s ease, color .3s ease;
 
     &:hover {
-      color: colors.$mainColor;
+      color: #2F3140;
       background-color: transparent;
     }
   }
   //&-trnsp-dark
   &Outlined {
     background-color: transparent;
-    color: colors.$mainColor;
+    color: #2F3140;
     transition: color .3s ease, background-color .3s ease;
 
     &:hover {
       color: colors.$whiteColor;
-      background-color: colors.$mainColor;
+      background-color: #2F3140;
     }
   }
   //&-white-trnsp
   &Secondary {
-    background-color: colors.$whiteColor;
-    color: colors.$mainColor;
+    background-color: rgba(187, 189, 204, 0.4);
+    color: #2F3140;
     border: 2px solid colors.$whiteColor;
     transition: color .3s ease, background-color .3s ease;
 
     &:hover {
-      color: colors.$whiteColor;
+      color: #2F3140;
       background-color: transparent;
+      border: 2px solid rgba(187, 189, 204, 0.4);
     }
   }
 }

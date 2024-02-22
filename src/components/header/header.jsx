@@ -1,170 +1,83 @@
-import arrDown from '@assets/img/header/arr_down.svg'
-import logo from '@assets/img/logos/logo_b_hor.svg'
-import { setBurgerIsOpen, setSignUpIsOpen } from '@store/modules/modals.js'
 import cn from 'classnames'
-import React, { memo, useEffect, useState } from 'react'
-import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-import Button from '@ui/button/index.js'
-
+import logo from '../../../assets/img/header/new_logo.svg'
+import user from '../../../assets/img/header/user.svg'
+import Button from '../../ui/button/index.js'
 import cl from './header.module.scss'
 
 const Header = () => {
-	const dispatch = useDispatch()
-	const [isScrolled, setIsScrolled] = useState(false)
-
-	const openModalHandler = () => {
-		dispatch(setSignUpIsOpen(true))
-	}
-	const openBurgerHandler = () => {
-		dispatch(setBurgerIsOpen(true))
-	}
-
-	const handleScroll = () => {
-		const scrollTop = window.pageYOffset || document.documentElement.scrollTop
-		setIsScrolled(scrollTop > 0)
-	}
-
-	useEffect(() => {
-		window.addEventListener('scroll', handleScroll)
-		return () => {
-			window.removeEventListener('scroll', handleScroll)
-		}
-	}, [])
-
 	return (
-		<header className={`${cl.header} ${isScrolled ? cl.scrolled : ''}`}>
-			<div className="container d-flex align-items-center justify-content-between">
-				<div className={cl.headerLogo}>
-					<Link to="/">
-						<img src={logo} alt="" />
-					</Link>
-				</div>
-				<div className={cn([cl.headerLinks, 'd-none', 'd-md-flex', 'align-items-center'])}>
-					<div className={cn([cl.link, 'd-flex', 'align-items-center'])}>
-						<Link to="/doctors">
-							<span className="mb-0">Врачи</span>
-						</Link>
-					</div>
-					<div className={cn([cl.link, 'd-flex', 'align-items-center'])}>
-						<span className="mb-0">Услуги</span>
-						<img src={arrDown} alt="" />
-						<div className={cn([cl.linkMenu, 'd-flex', 'flex-column'])}>
-							<div className={cn([cl.content, 'd-flex', 'flex-column'])}>
-								<div className={cl.contentBigLink}>
-									<span>Услуги</span>
-								</div>
-								<div className={cn([cl.contentAdditionalLinks, 'd-flex', 'flex-column'])}>
-									<div>
-										<Link to="/therapy-service">
-											<span>Лечение зубов</span>
-										</Link>
-									</div>
-									<Link to="/orthopedics-services">
-										<div>
-											<span>Ортопедия</span>
-										</div>
-									</Link>
-									<div>
-										<Link to="/surgery-services">
-											<span>Хирургия</span>
-										</Link>
-									</div>
-									<div>
-										<Link to="/orthodontics-services">
-											<span>Брекеты, элайнеры</span>
-										</Link>
-									</div>
-									<div>
-										<Link to="/periodontics-services">
-											<span>Лечение десен</span>
-										</Link>
-									</div>
-								</div>
-							</div>
+		<header className={cn([cl.header])}>
+			<div className="container-fluid d-flex flex-column p-0">
+				<div className={cl.headerInformation}>
+					<div className={cn([cl.headerInformationTopLinks], 'd-flex', 'justify-content-end')}>
+						<div>
+							<Link to="/">
+								<span>Программа лояльности</span>
+							</Link>
+						</div>
+						<div>
+							<Link to="/">
+								<span>Написать гендиректору</span>
+							</Link>
+						</div>
+						<div>
+							<Link to="/">
+								<span>+7 (347) 123-45-67</span>
+							</Link>
+						</div>
+						<div>
+							<Link to="/">
+								<span>Заказать звонок</span>
+							</Link>
 						</div>
 					</div>
-					<div className={cn([cl.link, 'd-flex', 'align-items-center'])}>
-						<span className="mb-0">Направления</span>
-						<img src={arrDown} alt="" />
-						<div className={cn([cl.linkMenu, 'd-flex', 'flex-column'])}>
-							<div className={cn([cl.content, 'd-flex', 'flex-column'])}>
-								<div className={cl.contentBigLink}>
-									<span>Направления</span>
-								</div>
-								<div className={cn([cl.contentAdditionalLinks, 'd-flex', 'flex-column'])}>
-									<div>
-										<Link to="/adult-referral">
-											<span>Взрослое</span>
-										</Link>
-									</div>
-									<div>
-										<Link to="/children-referral">
-											<span>Детское</span>
-										</Link>
-									</div>
-								</div>
-							</div>
+					<div className={cn([cl.headerInformationLinks], 'd-flex', 'justify-content-between')}>
+						<div className="d-flex align-items-center">
+							<Link to="/">
+								<img src={logo} alt="logo" />
+							</Link>
 						</div>
-					</div>
-					<div className={cn([cl.link, 'd-none', 'd-xxl-flex', 'align-items-center'])}>
-						<span className="mb-0">О клинике</span>
-						<img src={arrDown} alt="" />
-						<div className={cn([cl.linkMenu, 'd-flex', 'flex-column'])}>
-							<div className={cn([cl.content, 'd-flex', 'flex-column'])}>
-								<div className={cl.contentBigLink}>
-									<span>О клинике</span>
-								</div>
-								<div className={cn([cl.contentAdditionalLinks, 'd-flex', 'flex-column'])}>
-									<div>
-										<Link to="/contacts">
-											<span>Контакты</span>
-										</Link>
-									</div>
-									{/* <div> */}
-									{/*	<Link to="/stock"> */}
-									{/*		<span>Акции</span> */}
-									{/*	</Link> */}
-									{/* </div> */}
-									{/* <div> */}
-									{/*	<Link to="/blog"> */}
-									{/*		<span>Блог</span> */}
-									{/*	</Link> */}
-									{/* </div> */}
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div className={cn([cl.headerAdditional, 'd-flex', 'align-items-center'])}>
-					<div className={cn([cl.contacts, 'd-flex', 'align-items-center'])}>
-						<a href="tel:+73472000424" className={cn([cl.contactsPhone, 'd-none', 'd-xxl-flex'])}>
+						<div className="d-flex align-items-center gap-4">
 							<div>
-								<span>+7 347 200 04 24</span>
+								<Link to="/">
+									<span>Новые авто</span>
+								</Link>
 							</div>
-						</a>
-						<Button
-							onClick={openModalHandler}
-							sizeStyle="SizeS"
-							colorStyle="outlined"
-							className="d-none d-lg-flex justify-content-center"
-						>
-							Записаться
-						</Button>
-					</div>
-					<div
-						className={cn([
-							cl.sidenavTrigger,
-							'd-flex',
-							'flex-column',
-							'align-items-center',
-							'justify-content-between',
-							'd-xxl-none'
-						])}
-						onClick={openBurgerHandler}
-					>
-						<div />
+							<div>
+								<Link to="/">
+									<span>Авто с пробегом</span>
+								</Link>
+							</div>
+							<div>
+								<Link to="/">
+									<span>Корпоративным клиентам</span>
+								</Link>
+							</div>
+							<div>
+								<Link to="/">
+									<span>Услуги</span>
+								</Link>
+							</div>
+							<div>
+								<Link to="/">
+									<span>О компании</span>
+								</Link>
+							</div>
+							<div>
+								<Link to="/">
+									<span>Контакты</span>
+								</Link>
+							</div>
+						</div>
+						<div className="d-flex gap-4">
+							<Button sizeStyle="sizeL">Записаться</Button>
+							<Button sizeStyle="sizeL" colorStyle="Outlined" className="d-flex gap-2">
+								<img src={user} alt="" />
+								Личный кабинет
+							</Button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -172,4 +85,4 @@ const Header = () => {
 	)
 }
 
-export default memo(Header)
+export default Header

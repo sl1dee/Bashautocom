@@ -1,0 +1,44 @@
+
+
+.mainServices {
+  background-color: #2F3140;
+
+  &Cards {
+    margin: 0 135px;
+    padding: 74px 0 89px 0;
+    color: #FFFFFF;
+
+    .cardWrapper {
+      position: relative;
+      background-color: #FFFFFF;
+      border-radius: 20px;
+      padding: 30px;
+      height: 280px;
+      max-width: 314px;
+
+      .card {
+        height: 100%;
+        width: 100%;
+
+        &Title {
+          font-size: 24px;
+          font-weight: 500;
+          color: #111111;
+        }
+
+        &Text {
+          font-size: 16px;
+          font-weight: 400;
+          color: #111111;
+          opacity: 48%;
+        }
+
+        &Img {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+}
