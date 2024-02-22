@@ -2,7 +2,7 @@ import React from 'react'
 import { Routes } from 'react-router-dom'
 
 import footer from './Bars/footer/footer'
-import header from './Bars/header/header'
+import header from './Bars/header2/header2'
 import MakeRecord from './components/modals/sign-up-modal/sign-up-modal.jsx'
 
 export default function App() {

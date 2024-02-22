@@ -4,10 +4,11 @@ import React, { memo } from 'react'
 import { useSelector } from 'react-redux'
 
 import Footer from '@components/footer'
-import Header from '@components/header'
-import Sidebar from '@components/header/sidebar'
+import Sidebar from '@components/header2/sidebar'
 import SignUpModal from '@components/modals/sign-up-modal'
-import Cookie from "../../components/cookie/cookie.jsx";
+
+import Cookie from '../../components/cookie/cookie.jsx'
+import Header from '../../components/header/index.js'
 
 const MainLayout = ({ children }) => {
 	const signUpIsOpen = useSelector(signUpIsOpenSelector)
@@ -17,11 +18,11 @@ const MainLayout = ({ children }) => {
 	return (
 		<>
 			<Header />
-			{children}
-			<Footer />
-			 <Cookie />
-			{burgerIsOpen && <Sidebar />}
-			{signUpIsOpen && <SignUpModal />}
+			{/* {children} */}
+			{/* <Footer /> */}
+			{/* <Cookie /> */}
+			{/* {burgerIsOpen && <Sidebar />} */}
+			{/* {signUpIsOpen && <SignUpModal />} */}
 		</>
 	)
 }

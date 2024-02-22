@@ -6049,7 +6049,7 @@
 		template:
 			'<div class="popover" role="tooltip">' +
 			'<div class="popover-arrow"></div>' +
-			'<h3 class="popover-header"></h3>' +
+			'<h3 class="popover-header2"></h3>' +
 			'<div class="popover-body"></div>' +
 			'</div>'
 	}
@@ -6068,7 +6068,7 @@
 	}
 	const CLASS_NAME_FADE$2 = 'fade'
 	const CLASS_NAME_SHOW$2 = 'show'
-	const SELECTOR_TITLE = '.popover-header'
+	const SELECTOR_TITLE = '.popover-header2'
 	const SELECTOR_CONTENT = '.popover-body'
 	/**
 	 * ------------------------------------------------------------------------
