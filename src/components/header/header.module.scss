@@ -1,38 +1,40 @@
 
 
 .header {
-  background-color: #ffffff;
-  margin: 0 135px;
+  background-color: #FFFFFF;
   position: sticky;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
 
-  &TopLinks {
-    align-self: end;
-    gap: 20px;
-    padding: 16px 0 0 0;
+  &Information {
+    margin: 0 135px;
 
-    > div {
-      span {
-        color: #6B6B6B;
-        font-size: 14px;
-        font-weight: 400;
-        //line-height: 110%;
+    &TopLinks {
+      gap: 20px;
+      padding: 16px 0 0 0;
+
+      > div {
+        span {
+          color: #6B6B6B;
+          font-size: 14px;
+          font-weight: 400;
+          //line-height: 110%;
+        }
       }
     }
-  }
 
-  &Links {
-    padding: 16px 0 18px 0;
+    &Links {
+      padding: 16px 0 18px 0;
 
-    > div {
-      span {
-        color: #000000;
-        font-size: 16px;
-        font-weight: 400;
-        //line-height: 110%;
+      > div {
+        span {
+          color: #000000;
+          font-size: 16px;
+          font-weight: 400;
+          //line-height: 110%;
+        }
       }
     }
   }

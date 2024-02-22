@@ -14,7 +14,7 @@ import usedCars from '../../../assets/img/main-services/usedCars.png'
 import cl from './main-services.module.scss'
 
 const MainServices = () => {
-	const servicesCards = [
+	const servicesList = [
 		{
 			id: 1,
 			title: 'Новые автомобили',
@@ -81,12 +81,14 @@ const MainServices = () => {
 		<div className={cl.mainServices}>
 			<div className="container-fluid p-0">
 				<div className={cn([cl.mainServicesCards])}>
-					<div className="row row-cols-5">
-						{servicesCards.map(({ title, text, imgPath }) => (
-							<div className={cn([cl.card])}>
-								<div className={cl.cardTitle}>{title}</div>
-								<div className={cl.cardText}>{text}</div>
-								<img src={imgPath} alt="" className={cl.cardImg} />
+					<div className="row row-cols-5 gap-5">
+						{servicesList.map(({ id, title, text, imgPath }) => (
+							<div className={cn([cl.cardWrapper, 'd-flex'])} key={id}>
+								<div className={cn([cl.card])}>
+									<div className={cl.cardTitle}>{title}</div>
+									<div className={cl.cardText}>{text}</div>
+									<img src={imgPath} alt="" className={cl.cardImg} />
+								</div>
 							</div>
 						))}
 					</div>

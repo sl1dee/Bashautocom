@@ -8,29 +8,36 @@
     padding: 74px 0 89px 0;
     color: #FFFFFF;
 
-    .card {
+    .cardWrapper {
+      position: relative;
       background-color: #FFFFFF;
       border-radius: 20px;
       padding: 30px;
-      position: relative;
+      height: 280px;
+      max-width: 314px;
 
-      &Title {
-        font-size: 24px;
-        font-weight: 500;
-        color: #111111;
-      }
+      .card {
+        height: 100%;
+        width: 100%;
 
-      &Text {
-        font-size: 16px;
-        font-weight: 400;
-        color: #111111;
-        opacity: 48%;
-      }
+        &Title {
+          font-size: 24px;
+          font-weight: 500;
+          color: #111111;
+        }
 
-      &Img {
-        position: absolute;
-        bottom: 0;
-        right: 0;
+        &Text {
+          font-size: 16px;
+          font-weight: 400;
+          color: #111111;
+          opacity: 48%;
+        }
+
+        &Img {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
       }
     }
   }

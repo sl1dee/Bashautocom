@@ -1,0 +1,30 @@
+
+
+.brands {
+  background-color: #FFFFFF;
+
+  &Information {
+    padding: 137px 135px 70px 135px;
+    gap: 50px;
+
+    &Title {
+      font-size: 50px;
+      font-weight: 500;
+      color: #111111;
+      line-height: 60px;
+    }
+
+    .card {
+      width: 306px;
+      height: 120px;
+      border-radius: 20px;
+      background-color: #FAFAFA;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &Logo {
+      }
+    }
+  }
+}

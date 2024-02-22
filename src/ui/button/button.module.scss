@@ -54,14 +54,15 @@
   }
   //&-white-trnsp
   &Secondary {
-    background-color: colors.$whiteColor;
+    background-color: rgba(187, 189, 204, 0.4);
     color: #2F3140;
     border: 2px solid colors.$whiteColor;
     transition: color .3s ease, background-color .3s ease;
 
     &:hover {
-      color: colors.$whiteColor;
+      color: #2F3140;
       background-color: transparent;
+      border: 2px solid rgba(187, 189, 204, 0.4);
     }
   }
 }
