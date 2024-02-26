@@ -1,3 +1,4 @@
+import { Combobox } from '@consta/uikit/Combobox'
 import cn from 'classnames'
 import React, { useState } from 'react'
 import { A11y, Navigation, Pagination, Scrollbar } from 'swiper'
@@ -16,6 +17,7 @@ import omoda_logo from '/assets/img/special-offer/omoda_logo.svg'
 
 const SpecialOffers = () => {
 	const [swiper, setSwiper] = useState(null)
+	const [comboboxValue, setComboboxValue] = useState(null)
 	// const { isDesktop, isTablet, isTabletSmall } = useMatchMedia()
 
 	const cardList = [
@@ -51,6 +53,21 @@ const SpecialOffers = () => {
 		}
 	]
 
+	const comboboxValues = [
+		{
+			label: 'Первый',
+			id: 1
+		},
+		{
+			label: 'Второй',
+			id: 2
+		},
+		{
+			label: 'Третий',
+			id: 3
+		}
+	]
+
 	const prevSwipeHandler = () => {
 		swiper?.slidePrev()
 	}
@@ -60,7 +77,7 @@ const SpecialOffers = () => {
 
 	return (
 		<div className={cl.specialOffers}>
-			<div className="container-fluid p-0">
+			<div className="container p-0">
 				<div className={cn([cl.specialOffersInformation, 'd-flex', 'flex-column'])}>
 					<h1 className={cn([cl.specialOffersInformationTitle, 'mb-0'])}>Специальные предложения</h1>
 					<div className="d-flex flex-column gap-4">
@@ -77,7 +94,9 @@ const SpecialOffers = () => {
 									Детейлинг
 								</Button>
 							</div>
-							<div>selector</div>
+							<div>
+								<Combobox items={comboboxValues} onChange={setComboboxValue} value={comboboxValue} />
+							</div>
 						</div>
 						<div className={cl.specialOffersSwiper}>
 							<button onClick={prevSwipeHandler} className={cn([cl.swiperArrow, cl.swiperArrowLeft])} />

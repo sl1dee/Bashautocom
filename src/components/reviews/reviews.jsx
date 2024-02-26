@@ -52,7 +52,7 @@ const Reviews = () => {
 
 	return (
 		<div className={cl.reviews}>
-			<div className="container-fluid p-0">
+			<div className="container p-0">
 				<div className={cn([cl.reviewsInformation, 'd-flex', 'flex-column'])}>
 					<h1 className={cn([cl.reviewsInformationTitle, 'mb-0'])}>Узнайте больше в наших обзорах</h1>
 					<div className="d-flex flex-column gap-4">

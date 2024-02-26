@@ -33,7 +33,7 @@ const Events = () => {
 
 	return (
 		<div className={cl.events}>
-			<div className="container-fluid p-0">
+			<div className="container p-0">
 				<div className={cn([cl.eventsInformation, 'd-flex', 'flex-column'])}>
 					<h1 className={cn([cl.eventsInformationTitle, 'mb-0'])}>Будьте в курсе событий</h1>
 					<span className={cn([cl.eventsInformationBlock, 'd-flex', 'flex-column'])}>

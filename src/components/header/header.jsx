@@ -9,7 +9,7 @@ import cl from './header.module.scss'
 const Header = () => {
 	return (
 		<header className={cn([cl.header])}>
-			<div className="container-fluid d-flex flex-column p-0">
+			<div className="container d-flex flex-column p-0">
 				<div className={cl.headerInformation}>
 					<div className={cn([cl.headerInformationTopLinks], 'd-flex', 'justify-content-end')}>
 						<div>

@@ -82,7 +82,7 @@ const Brands = () => {
 
 	return (
 		<div className={cl.brands}>
-			<div className="container-fluid p-0">
+			<div className="container p-0">
 				<div className={cn([cl.brandsInformation, 'd-flex', 'flex-column'])}>
 					<div className="d-flex justify-content-between align-items-center">
 						<h1 className={cn([cl.brandsInformationTitle, 'mb-0'])}>Найдите свой бренд</h1>

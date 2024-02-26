@@ -15,7 +15,7 @@ import cl from './footer.module.scss'
 const Footer = () => {
 	return (
 		<div className={cl.footer}>
-			<div className="container-fluid p-0">
+			<div className="container p-0">
 				<div className={cn([cl.footerContent, 'd-flex', 'justify-content-between'])}>
 					<span className={cn([cl.footerContentStartColumn, 'd-flex', 'flex-column'])}>
 						<img src={logo} alt="" className={cl.logo} />

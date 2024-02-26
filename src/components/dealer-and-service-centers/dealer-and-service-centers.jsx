@@ -70,7 +70,7 @@ const DealerAndServiceCenters = () => {
 
 	return (
 		<div className={cl.centers}>
-			<div className="container-fluid p-0">
+			<div className="container p-0">
 				<div className={cn([cl.centersInformation, 'd-flex', 'flex-column'])}>
 					<h1 className={cn([cl.centersInformationTitle, 'mb-0'])}>Дилерские и сервисные центры</h1>
 					<div className="d-flex flex-column gap-4">

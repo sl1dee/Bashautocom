@@ -81,20 +81,20 @@ const MainServices = () => {
 	return (
 		<div className={cl.mainServices}>
 			<div className="container p-0">
-				<div className={cn([cl.mainServicesCards])}>
-					<div className="row row-cols-5 gap-5">
-						{servicesList.map(({ id, title, text, imgPath }) => (
-							// <Link to="/">
-							<div className={cn([cl.cardWrapper, 'd-flex'])} key={id}>
-								<div className={cn([cl.card])}>
-									<div className={cl.cardTitle}>{title}</div>
-									<div className={cl.cardText}>{text}</div>
-									<img src={imgPath} alt="" className={cl.cardImg} />
-								</div>
+				<div className={cn([cl.mainServicesCards, 'row', 'row-cols-5'])}>
+					{/* <div className="row row-cols-5 gap-5"> */}
+					{servicesList.map(({ id, title, text, imgPath }) => (
+						// <Link to="/">
+						<div className={cn([cl.cardWrapper, 'd-flex'])} key={id}>
+							<div className={cn([cl.card])}>
+								<div className={cl.cardTitle}>{title}</div>
+								<div className={cl.cardText}>{text}</div>
+								<img src={imgPath} alt="" className={cl.cardImg} />
 							</div>
-							// </Link>
-						))}
-					</div>
+						</div>
+						// </Link>
+					))}
+					{/* </div> */}
 				</div>
 			</div>
 		</div>

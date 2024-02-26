@@ -9,7 +9,7 @@ import cl from './about.module.scss'
 const About = () => {
 	return (
 		<div className={cl.about}>
-			<div className="container-fluid p-0">
+			<div className="container p-0">
 				<div className={cn([cl.aboutInformation, 'd-flex', 'flex-column'])}>
 					<div className={cn([cl.first, 'd-flex'])}>
 						<img className={cl.firstImg} src={mainEntrance} alt="mainEntrance" />

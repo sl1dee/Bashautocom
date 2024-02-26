@@ -8,7 +8,7 @@ import cl from './question.module.scss'
 const Question = () => {
 	return (
 		<div className={cl.question}>
-			<div className="container-fluid p-0">
+			<div className="container p-0">
 				<div className={cn([cl.questionInformation, 'd-flex'])}>
 					<div className={cn([cl.questionInformationText, 'd-flex', 'flex-column'])}>
 						<div className={cn([cl.yourQuestion, 'd-flex', 'flex-column'])}>
