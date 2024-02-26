@@ -1,0 +1,56 @@
+
+.question {
+
+  &Information {
+    margin: 75px 0 76px 0;
+    background-color: rgba(238, 240, 243, 0.7);
+    border-radius: 20px;
+    padding: 90px 160px 90px 160px;
+    gap: 75px;
+
+    &Text {
+      max-width: 667px;
+      gap: 38px;
+
+      .yourQuestion {
+        gap: 20px;
+
+        .title {
+          font-size: 50px;
+          font-weight: 500;
+          line-height: 60px;
+          color: #111111;
+        }
+
+        .text {
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 28px;
+          color: #111111;
+        }
+      }
+
+      .socialNetwork {
+        gap: 20px;
+
+        .secondTitle {
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 31.2px;
+          color: #111111;
+        }
+
+        .btns {
+
+        }
+      }
+    }
+
+    &Modal {
+      max-width: 588px;
+      padding: 40px 60px 40px 60px;
+      border-radius: 20px;
+      background-color: #FFFFFF;
+    }
+  }
+}

@@ -66,28 +66,26 @@ const OurServices = () => {
 
 	return (
 		<div className={cl.ourServices}>
-			<div className="container-fluid p-0">
+			<div className="container p-0">
 				<div className={cn([cl.ourServicesInformation, 'd-flex', 'flex-column'])}>
 					<h1 className={cn([cl.ourServicesInformationTitle, 'd-flex', 'justify-content-center', 'mb-0'])}>
 						Наши услуги
 					</h1>
-					<div className={cn([cl.ourServicesInformationCards])}>
-						<div className="row row-cols-5 gap-5">
-							{servicesList.map(({ id, title, text, icon }) => (
-								<div className={cn([cl.cardWrapper, 'd-flex'])} key={id}>
-									<div className={cn([cl.card, 'd-flex', 'justify-content-between'])}>
-										<div className="d-flex flex-column w-100">
-											<div className={cl.cardTitle}>{title}</div>
-											<div className={cl.cardText}>{text}</div>
-											<Button sizeStyle="sizeL" colorStyle="secondary" className={cl.cardButton}>
-												Подробнее
-											</Button>
-										</div>
-										<img src={icon} alt="" className={cl.cardImg} />
+					<div className={cn([cl.ourServicesInformationCards, 'row', 'row-cols-5'])}>
+						{servicesList.map(({ id, title, text, icon }) => (
+							<div className={cn([cl.cardWrapper, 'd-flex'])} key={id}>
+								<div className={cn([cl.card, 'd-flex', 'justify-content-between'])}>
+									<div className="d-flex flex-column w-100">
+										<div className={cl.cardTitle}>{title}</div>
+										<div className={cl.cardText}>{text}</div>
+										<Button sizeStyle="sizeL" colorStyle="secondary" className={cl.cardButton}>
+											Подробнее
+										</Button>
 									</div>
+									<img src={icon} alt="" className={cl.cardImg} />
 								</div>
-							))}
-						</div>
+							</div>
+						))}
 					</div>
 				</div>
 			</div>

@@ -5,7 +5,7 @@
   //opacity: 70%;
 
   &Information {
-    padding: 100px 135px 100px 135px;
+    padding: 100px 0 100px 0;
     gap: 68px;
 
     &Title {
@@ -17,7 +17,7 @@
     }
 
     &Cards {
-
+      gap: 30px;
 
       .cardWrapper {
         background-color: #FFFFFF;

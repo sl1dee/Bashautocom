@@ -1,5 +1,5 @@
 {
-  "name": "ab-clinic",
+  "name": "bashautocom",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,6 +12,8 @@
     "extends": "react-app"
   },
   "dependencies": {
+    "@consta/icons": "^0.5.2",
+    "@consta/uikit": "^4.17.0",
     "@pbe/react-yandex-maps": "^1.2.5",
     "@reduxjs/toolkit": "^2.0.1",
     "bootstrap": "5.3.3",

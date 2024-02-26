@@ -1,6 +1,6 @@
 import React from 'react'
 
-import About from '@components/about'
+import About from '@components/about2'
 import YandexMap from '@components/yandex-map'
 
 import cl from './contacts.module.scss'
