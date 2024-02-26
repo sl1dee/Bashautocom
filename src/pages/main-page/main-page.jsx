@@ -1,6 +1,6 @@
 import React from 'react'
 
-import About from '@components/about'
+import About from '@components/about2'
 import Articles from '@components/articles'
 import EmployeesSlider from '@components/employees-slider'
 import Favorites from '@components/favorites/index.js'

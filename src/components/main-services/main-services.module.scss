@@ -4,7 +4,7 @@
   background-color: #2F3140;
 
   &Cards {
-    margin: 0 135px;
+    //margin: 0 135px;
     padding: 74px 0 89px 0;
     color: #FFFFFF;
 
@@ -37,6 +37,11 @@
           position: absolute;
           bottom: 0;
           right: 0;
+          transition: transform 0.5s;
+        }
+
+        &Img:hover {
+          transform: scale(1.1);
         }
       }
     }

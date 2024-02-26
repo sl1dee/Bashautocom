@@ -1,46 +1,57 @@
-import four from '@media/about/four.jpg'
-import one from '@media/about/one.jpg'
-import three from '@media/about/three.jpg'
-import two from '@media/about/two.jpg'
+import car from '@assets/img/about/car.jpg'
+import mainEntrance from '@assets/img/about/mainEntrance.jpg'
 import cn from 'classnames'
 import React from 'react'
-import 'swiper/css'
-import 'swiper/css/navigation'
-import { Swiper, SwiperSlide } from 'swiper/react'
 
+import Button from '../../ui/button/index.js'
 import cl from './about.module.scss'
 
-export default function About() {
+const About = () => {
 	return (
-		<section className={cl.about}>
-			<div className="container d-flex flex-column">
-				<div className={cn([cl.aboutHeaderWrap, 'd-flex', 'flex-column', 'flex-lg-row', 'align-items-start'])}>
-					<div className="flex-grow-1">
-						<h1 className={cn([cl.aboutHeader, 'mb-0'])}>AB Clinic семейная стоматология в Уфе</h1>
+		<div className={cl.about}>
+			<div className="container-fluid p-0">
+				<div className={cn([cl.aboutInformation, 'd-flex', 'flex-column'])}>
+					<div className={cn([cl.first, 'd-flex'])}>
+						<img className={cl.firstImg} src={mainEntrance} alt="mainEntrance" />
+						<span className={cn([cl.firstBlock, 'd-flex', 'flex-column'])}>
+							<h1 className={cn([cl.firstBlockTitle, 'mb-0'])}>Башавтоком - лидер на автомобильном рынке Башкирии</h1>
+							<span className={cn([cl.firstBlockText, 'd-flex', 'flex-column'])}>
+								<p className={cn([cl.firstIcon, 'd-flex', 'mb-0'])}>
+									Официальный дилер брендов Omoda, Changan Auto, Jaecoo, Exeed, Москвич, Lada, Haval.
+								</p>
+								<p className={cn([cl.secondIcon, 'd-flex', 'mb-0'])}>
+									Обслуживаем автомобили в нашем сервисном центре, обеспечивая безопасность и комфорт
+								</p>
+								<p className={cn([cl.thirdIcon, 'd-flex', 'mb-0'])}>
+									850 сотрудников Башавтоком — профессионалы своего дела, и каждый день делают всё для вашего удобства
+								</p>
+							</span>
+							<div className="d-flex">
+								<Button sizeStyle="sizeL">Подробнее о компании</Button>
+							</div>
+						</span>
 					</div>
-					<div className={cl.aboutDescription}>
-						<p className="mb-0">
-							AB Clinic работают профессиональные и опытные врачи. Среди наших услуг взрослая и детская стоматология,
-							лечение кариеса, исправление прикуса, установка брекетов и элайнеров, имплантация, профессиональная
-							гигиена.
-						</p>
+					<div className={cn([cl.second, 'd-flex'])}>
+						<div className={cn([cl.secondBlock, 'd-flex'])}>
+							<span className={cn([cl.secondBlockCol, 'd-flex', 'flex-column'])}>
+								<h1 className={cn([cl.secondBlockColTitle, 'd-flex', 'mb-0'])}>30 лет</h1>
+								<p className={cn([cl.secondBlockColText, 'd-flex', 'mb-0'])}>Продаём автомобили с 1992 года</p>
+							</span>
+							<span className={cn([cl.secondBlockCol, 'd-flex', 'flex-column'])}>
+								<h1 className={cn([cl.secondBlockColTitle, 'd-flex', 'mb-0'])}>100 000+</h1>
+								<p className={cn([cl.secondBlockColText, 'd-flex', 'mb-0'])}>Автомобилей продали за все время работы</p>
+							</span>
+							<span className={cn([cl.secondBlockCol, 'd-flex', 'flex-column'])}>
+								<h1 className={cn([cl.secondBlockColTitle, 'd-flex', 'mb-0'])}>4 города</h1>
+								<p className={cn([cl.secondBlockColText, 'd-flex', 'mb-0'])}>Уфа, Октябрьский, Стерлитамак, Белебей</p>
+							</span>
+						</div>
+						<img className={cl.secondImg} src={car} alt="car" />
 					</div>
 				</div>
-				<Swiper slidesPerView="auto" spaceBetween={20} allowTouchMove loop={false} className={cl.slider}>
-					<SwiperSlide className={cl.aboutSlide}>
-						<img src={one} alt="" />
-					</SwiperSlide>
-					<SwiperSlide className={cl.aboutSlide}>
-						<img src={two} alt="" />
-					</SwiperSlide>
-					<SwiperSlide className={cl.aboutSlide}>
-						<img src={three} alt="" />
-					</SwiperSlide>
-					<SwiperSlide className={cl.aboutSlide}>
-						<img src={four} alt="" />
-					</SwiperSlide>
-				</Swiper>
 			</div>
-		</section>
+		</div>
 	)
 }
+
+export default About

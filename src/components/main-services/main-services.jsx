@@ -1,5 +1,6 @@
 import cn from 'classnames'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import bodyRepair from '../../../assets/img/main-services/bodyRepair.png'
 import carsRent from '../../../assets/img/main-services/carsRent.png'
@@ -79,10 +80,11 @@ const MainServices = () => {
 
 	return (
 		<div className={cl.mainServices}>
-			<div className="container-fluid p-0">
+			<div className="container p-0">
 				<div className={cn([cl.mainServicesCards])}>
 					<div className="row row-cols-5 gap-5">
 						{servicesList.map(({ id, title, text, imgPath }) => (
+							// <Link to="/">
 							<div className={cn([cl.cardWrapper, 'd-flex'])} key={id}>
 								<div className={cn([cl.card])}>
 									<div className={cl.cardTitle}>{title}</div>
@@ -90,6 +92,7 @@ const MainServices = () => {
 									<img src={imgPath} alt="" className={cl.cardImg} />
 								</div>
 							</div>
+							// </Link>
 						))}
 					</div>
 				</div>
