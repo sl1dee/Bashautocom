@@ -3,6 +3,7 @@ import { Combobox } from '@consta/uikit/Combobox'
 import cn from 'classnames'
 import React, { useState } from 'react'
 import { A11y, Navigation, Pagination, Scrollbar } from 'swiper'
+import 'swiper/css'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/scss/pagination'
 
