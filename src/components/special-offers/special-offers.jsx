@@ -136,7 +136,6 @@ const SpecialOffers = () => {
 										<SpecialOffersCard bckgImg={bckgImg} title={title} logo={logo} />
 									</SwiperSlide>
 								))}
-								{/*<div className="swiper-pagination"></div>*/}
 							</Swiper>
 						</div>
 					</div>
