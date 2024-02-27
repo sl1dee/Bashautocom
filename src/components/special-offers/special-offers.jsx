@@ -1,5 +1,5 @@
+import { ChoiceGroup } from '@consta/uikit/ChoiceGroup'
 import { Combobox } from '@consta/uikit/Combobox'
-import { Select } from '@consta/uikit/Select'
 import cn from 'classnames'
 import React, { useState } from 'react'
 import { A11y, Navigation, Pagination, Scrollbar } from 'swiper'
@@ -56,18 +56,30 @@ const SpecialOffers = () => {
 
 	const comboboxValues = [
 		{
-			label: 'Первый',
+			label: 'Changan Auto',
 			id: 1
 		},
 		{
-			label: 'Второй',
+			label: 'Omoda',
 			id: 2
 		},
 		{
-			label: 'Третий',
+			label: 'Haval',
 			id: 3
+		},
+		{
+			label: 'Москвич',
+			id: 4
+		},
+		{
+			label: 'Exeed',
+			id: 5
 		}
 	]
+
+	const items = ['Все', 'Продажа', 'Сервис', 'Детейлинг']
+
+	const [value, setValue] = useState(items[0])
 
 	const prevSwipeHandler = () => {
 		swiper?.slidePrev()
@@ -84,20 +96,28 @@ const SpecialOffers = () => {
 					<div className="d-flex flex-column gap-4">
 						<div className="d-flex justify-content-between align-items-center">
 							<div className="d-flex">
-								<Button sizeStyle="sizeL">Все</Button>
-								<Button sizeStyle="sizeL" colorStyle="Outlined">
-									Продажа
-								</Button>
-								<Button sizeStyle="sizeL" colorStyle="Outlined">
-									Сервис
-								</Button>
-								<Button sizeStyle="sizeL" colorStyle="Outlined">
-									Детейлинг
-								</Button>
+								<ChoiceGroup
+									value={value}
+									onChange={setValue}
+									items={items}
+									getItemLabel={(item) => item}
+									form="default"
+									size="l"
+									view="primary"
+									name="ChoiceGroupExampleForm"
+									multiple={false}
+								/>
 							</div>
-							{/*<div>*/}
-							<Select items={comboboxValues} value={comboboxValue} onChange={setComboboxValue} />
-							{/*</div>*/}
+							<div className={cl.combobox}>
+								<Combobox
+									placeholder="Выберите бренд"
+									size="l"
+									items={comboboxValues}
+									value={comboboxValue}
+									onChange={setComboboxValue}
+									multiple
+								/>
+							</div>
 						</div>
 						<div className={cl.specialOffersSwiper}>
 							<button onClick={prevSwipeHandler} className={cn([cl.swiperArrow, cl.swiperArrowLeft])} />

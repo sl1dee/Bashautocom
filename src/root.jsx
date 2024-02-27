@@ -8,11 +8,11 @@ import { presetBashautocom } from './uikit/presets/presetBashautocom.js'
 
 const Root = () => {
 	return (
-		<Theme preset={presetBashautocom}>
-			<Provider store={store}>
-				<Routes />
-			</Provider>
-		</Theme>
+		// <Theme preset={presetBashautocom}>
+		<Provider store={store}>
+			<Routes />
+		</Provider>
+		// </Theme>
 	)
 }
 

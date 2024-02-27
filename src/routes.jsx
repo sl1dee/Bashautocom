@@ -1,3 +1,4 @@
+import ServiceCenterPage from '@pages/service-center-page/index.js'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 import MainPage from './pages/main-page'
@@ -7,6 +8,10 @@ const Routes = () => {
 		{
 			path: '/',
 			element: <MainPage />
+		},
+		{
+			path: '/service-center',
+			element: <ServiceCenterPage />
 		}
 	])
 

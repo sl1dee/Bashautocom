@@ -1,5 +1,6 @@
+import { ChoiceGroup } from '@consta/uikit/ChoiceGroup'
 import cn from 'classnames'
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import changan from '../../../assets/img/brands/changan.svg'
@@ -20,7 +21,7 @@ import user from '../../../assets/img/header/user.svg'
 import Button from '../../ui/button/button.jsx'
 import cl from './brands.module.scss'
 
-const Brands = () => {
+const Brands = ({ title }) => {
 	const brandsist = [
 		{
 			id: 1,
@@ -80,22 +81,28 @@ const Brands = () => {
 		}
 	]
 
+	const items = ['Все бренды', 'Продаем', 'Ремонтируем']
+
+	const [value, setValue] = useState(items[0])
+
 	return (
 		<div className={cl.brands}>
 			<div className="container p-0">
 				<div className={cn([cl.brandsInformation, 'd-flex', 'flex-column'])}>
 					<div className="d-flex justify-content-between align-items-center">
-						<h1 className={cn([cl.brandsInformationTitle, 'mb-0'])}>Найдите свой бренд</h1>
+						<h1 className={cn([cl.brandsInformationTitle, 'mb-0'])}>{title}</h1>
 						<div className={cl.brandsInformationTabs}>
-							<div className="d-flex">
-								<Button sizeStyle="sizeL">Все бренды</Button>
-								<Button sizeStyle="sizeL" colorStyle="Outlined">
-									Продаем
-								</Button>
-								<Button sizeStyle="sizeL" colorStyle="Outlined">
-									Ремонтируем
-								</Button>
-							</div>
+							<ChoiceGroup
+								value={value}
+								onChange={setValue}
+								items={items}
+								getItemLabel={(item) => item}
+								form="default"
+								size="l"
+								view="primary"
+								name="ChoiceGroupExampleForm"
+								multiple={false}
+							/>
 						</div>
 					</div>
 					<div className="row row-cols-5 gap-4">
