@@ -14,7 +14,7 @@ import SpecialOffersCard from '../special-offers/special-offers-card/index.js'
 import DealerAndServiceCentersCard from './dealer-and-service-centers-card/index.js'
 import cl from './dealer-and-service-centers.module.scss'
 
-const DealerAndServiceCenters = () => {
+const DealerAndServiceCenters = ({ title }) => {
 	const [swiper, setSwiper] = useState(null)
 	const [comboboxValue, setComboboxValue] = useState(null)
 	// const { isDesktop, isTablet, isTabletSmall } = useMatchMedia()
@@ -102,7 +102,7 @@ const DealerAndServiceCenters = () => {
 		<div className={cl.centers}>
 			<div className="container p-0">
 				<div className={cn([cl.centersInformation, 'd-flex', 'flex-column'])}>
-					<h1 className={cn([cl.centersInformationTitle, 'mb-0'])}>Дилерские и сервисные центры</h1>
+					<h1 className={cn([cl.centersInformationTitle, 'mb-0'])}>{title}</h1>
 					<div className="d-flex flex-column gap-4">
 						<div className="d-flex justify-content-between align-items-center">
 							<div className="d-flex">

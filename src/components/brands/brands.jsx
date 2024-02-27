@@ -21,7 +21,7 @@ import user from '../../../assets/img/header/user.svg'
 import Button from '../../ui/button/button.jsx'
 import cl from './brands.module.scss'
 
-const Brands = ({ title }) => {
+const Brands = ({ title, viewTabs }) => {
 	const brandsist = [
 		{
 			id: 1,
@@ -91,19 +91,23 @@ const Brands = ({ title }) => {
 				<div className={cn([cl.brandsInformation, 'd-flex', 'flex-column'])}>
 					<div className="d-flex justify-content-between align-items-center">
 						<h1 className={cn([cl.brandsInformationTitle, 'mb-0'])}>{title}</h1>
-						<div className={cl.brandsInformationTabs}>
-							<ChoiceGroup
-								value={value}
-								onChange={setValue}
-								items={items}
-								getItemLabel={(item) => item}
-								form="default"
-								size="l"
-								view="primary"
-								name="ChoiceGroupExampleForm"
-								multiple={false}
-							/>
-						</div>
+						{viewTabs === true ? (
+							<div className={cl.brandsInformationTabs}>
+								<ChoiceGroup
+									value={value}
+									onChange={setValue}
+									items={items}
+									getItemLabel={(item) => item}
+									form="default"
+									size="l"
+									view="primary"
+									name="ChoiceGroupExampleForm"
+									multiple={false}
+								/>
+							</div>
+						) : (
+							<div />
+						)}
 					</div>
 					<div className="row row-cols-5 gap-4">
 						{brandsist.map(({ id, imgPath }) => (
