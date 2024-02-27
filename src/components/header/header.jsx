@@ -1,4 +1,5 @@
 import cn from 'classnames'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import logo from '../../../assets/img/header/new_logo.svg'
@@ -7,8 +8,22 @@ import Button from '../../ui/button/index.js'
 import cl from './header.module.scss'
 
 const Header = () => {
+	const [isScrolled, setIsScrolled] = useState(false)
+
+	const handleScroll = () => {
+		const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+		setIsScrolled(scrollTop > 0)
+	}
+
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll)
+		return () => {
+			window.removeEventListener('scroll', handleScroll)
+		}
+	}, [])
+
 	return (
-		<header className={cn([cl.header])}>
+		<header className={`${cl.header} ${isScrolled ? cl.scrolled : ''}`}>
 			<div className="container d-flex flex-column p-0">
 				<div className={cl.headerInformation}>
 					<div className={cn([cl.headerInformationTopLinks], 'd-flex', 'justify-content-end')}>

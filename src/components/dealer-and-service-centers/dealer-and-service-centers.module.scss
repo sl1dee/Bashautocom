@@ -19,6 +19,7 @@
 
       .swiper {
         height: 554px;
+        z-index: 0;
       }
 
       .swiperArrow {
@@ -60,6 +61,11 @@
           }
         }
       }
+    }
+
+    .combobox {
+      width: 390px;
+      z-index: 100;
     }
   }
 }

@@ -1,5 +1,7 @@
+import { ChoiceGroup } from '@consta/uikit/ChoiceGroup'
+import { Combobox } from '@consta/uikit/Combobox'
 import cn from 'classnames'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { A11y, Navigation, Pagination, Scrollbar } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/scss/pagination'
@@ -12,8 +14,9 @@ import SpecialOffersCard from '../special-offers/special-offers-card/index.js'
 import DealerAndServiceCentersCard from './dealer-and-service-centers-card/index.js'
 import cl from './dealer-and-service-centers.module.scss'
 
-const DealerAndServiceCenters = () => {
+const DealerAndServiceCenters = ({ title }) => {
 	const [swiper, setSwiper] = useState(null)
+	const [comboboxValue, setComboboxValue] = useState(null)
 	// const { isDesktop, isTablet, isTabletSmall } = useMatchMedia()
 
 	const cardList = [
@@ -61,6 +64,29 @@ const DealerAndServiceCenters = () => {
 		}
 	]
 
+	const comboboxValues = [
+		{
+			label: 'Changan Auto',
+			id: 1
+		},
+		{
+			label: 'Omoda',
+			id: 2
+		},
+		{
+			label: 'Haval',
+			id: 3
+		},
+		{
+			label: 'Москвич',
+			id: 4
+		},
+		{
+			label: 'Exeed',
+			id: 5
+		}
+	]
+
 	const prevSwipeHandler = () => {
 		swiper?.slidePrev()
 	}
@@ -68,29 +94,40 @@ const DealerAndServiceCenters = () => {
 		swiper?.slideNext()
 	}
 
+	const items = ['Все', 'Уфа', 'Стерлитамак', 'Октябрьский', 'Белебей']
+
+	const [value, setValue] = useState(items[0])
+
 	return (
 		<div className={cl.centers}>
 			<div className="container p-0">
 				<div className={cn([cl.centersInformation, 'd-flex', 'flex-column'])}>
-					<h1 className={cn([cl.centersInformationTitle, 'mb-0'])}>Дилерские и сервисные центры</h1>
+					<h1 className={cn([cl.centersInformationTitle, 'mb-0'])}>{title}</h1>
 					<div className="d-flex flex-column gap-4">
 						<div className="d-flex justify-content-between align-items-center">
 							<div className="d-flex">
-								<Button sizeStyle="sizeL">Все</Button>
-								<Button sizeStyle="sizeL" colorStyle="Outlined">
-									Уфа
-								</Button>
-								<Button sizeStyle="sizeL" colorStyle="Outlined">
-									Стерлитамак
-								</Button>
-								<Button sizeStyle="sizeL" colorStyle="Outlined">
-									Октябрьский
-								</Button>
-								<Button sizeStyle="sizeL" colorStyle="Outlined">
-									Белебей
-								</Button>
+								<ChoiceGroup
+									value={value}
+									onChange={setValue}
+									items={items}
+									getItemLabel={(item) => item}
+									form="default"
+									size="l"
+									view="primary"
+									name="ChoiceGroupExampleForm"
+									multiple={false}
+								/>
 							</div>
-							<div>selector</div>
+							<div className={cl.combobox}>
+								<Combobox
+									placeholder="Выберите бренд"
+									size="l"
+									items={comboboxValues}
+									value={comboboxValue}
+									onChange={setComboboxValue}
+									multiple
+								/>
+							</div>
 						</div>
 						<div className={cl.centersSwiper}>
 							<button onClick={prevSwipeHandler} className={cn([cl.swiperArrow, cl.swiperArrowLeft])} />
