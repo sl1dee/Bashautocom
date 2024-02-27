@@ -4,11 +4,11 @@ import store from '@store'
 import { Provider } from 'react-redux'
 
 import Routes from './routes.jsx'
-import { presetGiGas } from './uikit/presets/presetGiGas.js'
+import { presetBashautocom } from './uikit/presets/presetBashautocom.js'
 
 const Root = () => {
 	return (
-		<Theme preset={presetGiGas}>
+		<Theme preset={presetBashautocom}>
 			<Provider store={store}>
 				<Routes />
 			</Provider>

@@ -1,4 +1,5 @@
 import { Combobox } from '@consta/uikit/Combobox'
+import { Select } from '@consta/uikit/Select'
 import cn from 'classnames'
 import React, { useState } from 'react'
 import { A11y, Navigation, Pagination, Scrollbar } from 'swiper'
@@ -94,9 +95,9 @@ const SpecialOffers = () => {
 									Детейлинг
 								</Button>
 							</div>
-							<div>
-								<Combobox items={comboboxValues} onChange={setComboboxValue} value={comboboxValue} />
-							</div>
+							{/*<div>*/}
+							<Select items={comboboxValues} value={comboboxValue} onChange={setComboboxValue} />
+							{/*</div>*/}
 						</div>
 						<div className={cl.specialOffersSwiper}>
 							<button onClick={prevSwipeHandler} className={cn([cl.swiperArrow, cl.swiperArrowLeft])} />
