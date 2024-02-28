@@ -90,7 +90,7 @@ const Question = () => {
 						</div>
 						<div className={cn([cl.questionInformationModalBlock3, 'd-flex', 'flex-column'])}>
 							<div>
-								<Button sizeStyle="sizeM">Отправить вопрос</Button>
+								<Button sizeStyle="sizeL">Отправить вопрос</Button>
 							</div>
 							<p className={cn([cl.policy, 'd-flex', 'mb-0'])}>
 								Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности

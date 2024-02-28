@@ -1,0 +1,61 @@
+
+.loyaltyProgram {
+  padding: 70px 0 70px 0;
+
+
+  &Information {
+    background-color: #2F3140;
+    border-radius: 20px;
+    padding: 34px 0 0 57px;
+    gap: 59px;
+
+    &Block {
+      gap: 30px;
+      color: #FFFFFF;
+      padding: 78px 125px 78px 0;
+      max-width: 680px;
+
+      h3 {
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 48px;
+      }
+
+      h6 {
+        align-self: start;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+        border: 2px solid #FFFFFF;
+        border-radius: 80px;
+        padding: 10px 24px 10px 24px;
+      }
+
+      .ulList {
+
+        p {
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 28px;
+        }
+
+        ul {
+          gap: 10px;
+        }
+
+        li {
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 28px;
+        }
+      }
+
+      .btn {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+        align-self: start;
+      }
+    }
+  }
+}
