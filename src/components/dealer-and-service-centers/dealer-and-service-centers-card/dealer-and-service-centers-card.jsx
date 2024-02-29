@@ -12,8 +12,8 @@ const DealerAndServiceCentersCard = ({ bckgImg, street, number, sale, service })
 				<div className={cl.centersCardTextNumber}>{number}</div>
 			</div>
 			<div className={cn([cl.centersCardBottom, 'd-flex', 'justify-content-between'])}>
-				<button className={cl.btn}>Продажа {sale} брендов</button>
-				<button className={cl.btn}>Сервис {service} брендов</button>
+				<p className="mb-0">Продажа {sale} брендов</p>
+				<p className="mb-0">Сервис {service} брендов</p>
 			</div>
 		</div>
 	)

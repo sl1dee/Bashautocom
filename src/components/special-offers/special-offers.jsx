@@ -24,35 +24,32 @@ const SpecialOffers = () => {
 
 	const cardList = [
 		{
-			bckgImg: haval,
-			title: 'ВЫГОДА НА HAVAL M6 до 200 000 ₽',
-			logo: haval_logo
+			image: haval,
+			link: '/service-center'
 		},
 		{
-			bckgImg: moskvich,
-			title: 'МЕГА-ВЫГОДА\n' + 'НА МОСКВИЧ 3Е\n' + 'ДО 925 000 ₽',
-			logo: moskvich_logo
+			image: moskvich,
+			link: '/service-center'
 		},
 		{
-			bckgImg: omoda,
-			title: 'OMODA С5 AWD С ВЫГОДОЙ ДО 880 000 ₽',
-			logo: omoda_logo
-		},
-		{
-			bckgImg: haval,
-			title: 'ВЫГОДА НА HAVAL M6 до 200 000 ₽',
-			logo: haval_logo
-		},
-		{
-			bckgImg: moskvich,
-			title: 'МЕГА-ВЫГОДА\n' + 'НА МОСКВИЧ 3Е\n' + 'ДО 925 000 ₽',
-			logo: moskvich_logo
-		},
-		{
-			bckgImg: omoda,
-			title: 'OMODA С5 AWD С ВЫГОДОЙ ДО 880 000 ₽',
-			logo: omoda_logo
+			image: omoda,
+			link: '/service-center'
 		}
+		// {
+		// 	bckgImg: haval,
+		// 	title: 'ВЫГОДА НА HAVAL M6 до 200 000 ₽',
+		// 	logo: haval_logo
+		// },
+		// {
+		// 	bckgImg: moskvich,
+		// 	title: 'МЕГА-ВЫГОДА\n' + 'НА МОСКВИЧ 3Е\n' + 'ДО 925 000 ₽',
+		// 	logo: moskvich_logo
+		// },
+		// {
+		// 	bckgImg: omoda,
+		// 	title: 'OMODA С5 AWD С ВЫГОДОЙ ДО 880 000 ₽',
+		// 	logo: omoda_logo
+		// }
 	]
 
 	const comboboxValues = [
@@ -82,6 +79,8 @@ const SpecialOffers = () => {
 
 	const [value, setValue] = useState(items[0])
 
+	console.log(value)
+
 	const prevSwipeHandler = () => {
 		swiper?.slidePrev()
 	}
@@ -105,7 +104,7 @@ const SpecialOffers = () => {
 									form="default"
 									size="l"
 									view="primary"
-									name="ChoiceGroupExampleForm"
+									name="ChoiceGroupExampleOne"
 									multiple={false}
 								/>
 							</div>
@@ -132,9 +131,9 @@ const SpecialOffers = () => {
 								pagination={{ clickable: true }}
 								scrollbar={{ draggable: true }}
 							>
-								{cardList.map(({ bckgImg, title, logo }) => (
+								{cardList.map(({ image, link }) => (
 									<SwiperSlide>
-										<SpecialOffersCard bckgImg={bckgImg} title={title} logo={logo} />
+										<SpecialOffersCard image={image} link={link} />
 									</SwiperSlide>
 								))}
 							</Swiper>
