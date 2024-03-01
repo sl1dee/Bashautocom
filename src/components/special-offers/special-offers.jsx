@@ -34,22 +34,19 @@ const SpecialOffers = () => {
 		{
 			image: omoda,
 			link: '/service-center'
+		},
+		{
+			image: haval,
+			link: '/service-center'
+		},
+		{
+			image: moskvich,
+			link: '/service-center'
+		},
+		{
+			image: omoda,
+			link: '/service-center'
 		}
-		// {
-		// 	bckgImg: haval,
-		// 	title: 'ВЫГОДА НА HAVAL M6 до 200 000 ₽',
-		// 	logo: haval_logo
-		// },
-		// {
-		// 	bckgImg: moskvich,
-		// 	title: 'МЕГА-ВЫГОДА\n' + 'НА МОСКВИЧ 3Е\n' + 'ДО 925 000 ₽',
-		// 	logo: moskvich_logo
-		// },
-		// {
-		// 	bckgImg: omoda,
-		// 	title: 'OMODA С5 AWD С ВЫГОДОЙ ДО 880 000 ₽',
-		// 	logo: omoda_logo
-		// }
 	]
 
 	const comboboxValues = [

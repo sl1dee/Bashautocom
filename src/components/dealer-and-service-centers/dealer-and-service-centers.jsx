@@ -25,21 +25,27 @@ const DealerAndServiceCenters = ({ title }) => {
 			street: 'Уфа, ул. Проспект Салавата Юлаева, 89',
 			number: '+7 (347) 246-65-47',
 			sale: '3',
-			service: '7'
+			service: '7',
+			saleBrands: ['Haval', 'Changan Auto'],
+			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan Auto']
 		},
 		{
 			bckgImg: moskvich,
 			street: 'Уфа, ул. Рубежная, 168',
 			number: '+7 (347) 246-65-47',
 			sale: '2',
-			service: '7'
+			service: '7',
+			saleBrands: ['Haval', 'Changan Auto'],
+			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan Auto']
 		},
 		{
 			bckgImg: omoda,
 			street: 'Уфа, ул. Адмирала Макарова, 32',
 			number: '+7 (347) 246-65-47',
 			sale: '2',
-			service: '7'
+			service: '7',
+			saleBrands: ['Haval', 'Changan Auto'],
+			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan Auto']
 		},
 		{
 			bckgImg: haval,
@@ -141,7 +147,7 @@ const DealerAndServiceCenters = ({ title }) => {
 								pagination={{ clickable: true }}
 								scrollbar={{ draggable: true }}
 							>
-								{cardList.map(({ bckgImg, street, number, sale, service }) => (
+								{cardList.map(({ bckgImg, street, number, sale, service, saleBrands, serviceBrands }) => (
 									<SwiperSlide>
 										<DealerAndServiceCentersCard
 											bckgImg={bckgImg}
@@ -149,10 +155,11 @@ const DealerAndServiceCenters = ({ title }) => {
 											number={number}
 											sale={sale}
 											service={service}
+											saleBrands={saleBrands}
+											serviceBrands={serviceBrands}
 										/>
 									</SwiperSlide>
 								))}
-								{/* <div className="swiper-pagination"></div> */}
 							</Swiper>
 						</div>
 					</div>
