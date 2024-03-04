@@ -88,9 +88,12 @@ const Header = () => {
 						</div>
 						<div className="d-flex gap-4">
 							<Button sizeStyle="sizeL">Записаться</Button>
-							<Button sizeStyle="sizeL" colorStyle="Outlined" className="d-flex gap-2">
+							<Button sizeStyle="sizeL" colorStyle="Outlined" className="d-none d-xxl-flex gap-2">
 								<img src={user} alt="" />
 								Личный кабинет
+							</Button>
+							<Button sizeStyle="sizeContent" colorStyle="Outlined" className="d-flex d-xxl-none gap-2">
+								<img src={user} alt="" />
 							</Button>
 						</div>
 					</div>

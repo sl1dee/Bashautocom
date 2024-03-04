@@ -1,8 +1,6 @@
 
 
 .offerCard {
-  background-size: 530px 500px;
-  background-repeat: no-repeat;
   width: 530px;
   height: 500px;
 
@@ -11,35 +9,19 @@
     height: 500px;
     border-radius: 20px;
   }
-  //position: relative;
 
-  //&Title {
-  //  max-width: 300px;
-  //  font-size: 30px;
-  //  font-weight: 400;
-  //  color: #FFFFFF;
-  //  line-height: 36px;
-  //}
-  //
-  //&Bottom {
-  //  position: absolute;
-  //  bottom: 40px;
-  //  left: 40px;
-  //  right: 40px;
-  //
-  //  &Link {
-  //    font-size: 16px;
-  //    font-weight: 500;
-  //    color: rgba(255, 255, 255, 0.88);
-  //    display: flex;
-  //    align-items: center;
-  //    gap: 10px;
-  //    margin-top: auto;
-  //    &::after {
-  //      content: url("/assets/img/special-offer/arrow-up.svg");
-  //      width: 16px;
-  //      height: 18px;
-  //    }
-  //  }
-  //}
+}
+
+@media (min-width: 1400px) and (max-width: 1650px) {
+  .offerCard {
+    width: 420px;
+    height: 398px;
+
+    img {
+      width: 420px;
+      height: 398px;
+      border-radius: 20px;
+    }
+
+  }
 }

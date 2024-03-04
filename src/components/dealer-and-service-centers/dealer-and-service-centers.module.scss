@@ -69,3 +69,74 @@
     }
   }
 }
+@media (min-width: 1400px) and (max-width: 1650px) {
+  .centers {
+    background-color: #FFFFFF;
+
+    &Information {
+      padding: 76px 0 65px 0;
+      gap: 50px;
+
+      &Title {
+        font-size: 50px;
+        font-weight: 500;
+        color: #111111;
+        line-height: 60px;
+      }
+
+      .centersSwiper {
+        position: relative;
+
+        .swiper {
+          height: 454px;
+          z-index: 0;
+        }
+
+        .swiperArrow {
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 1;
+          transform: translateY(-50%);
+          top: 36%;
+          border: none;
+          background-color: #2F3140;
+          border-radius: 4px;
+          width: 46px;
+          height: 44px;
+
+
+          &Left {
+            left: -6px;
+            transform: translateX(-100%);
+
+            &::before {
+              content: url('/assets/img/special-offer/arrow-left.svg');
+              display: flex;
+              width: 24px;
+              height: 24px;
+            }
+          }
+
+          &Right {
+            right: -6px;
+            transform: translateX(100%);
+
+            &::before {
+              content: url('/assets/img/special-offer/arrow-right.svg');
+              display: flex;
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+
+      .combobox {
+        width: 390px;
+        z-index: 100;
+      }
+    }
+  }
+}

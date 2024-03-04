@@ -71,10 +71,12 @@ const OurServices = () => {
 					<h1 className={cn([cl.ourServicesInformationTitle, 'd-flex', 'justify-content-center', 'mb-0'])}>
 						Наши услуги
 					</h1>
-					<div className={cn([cl.ourServicesInformationCards, 'row', 'row-cols-5'])}>
+					<div className={cn([cl.ourServicesInformationCards])}>
 						{servicesList.map(({ id, title, text, icon }) => (
 							<div className={cn([cl.cardWrapper, 'd-flex'])} key={id}>
-								<div className={cn([cl.card, 'd-flex', 'justify-content-between'])}>
+								<div
+									className={cn([cl.card, 'd-flex', 'flex-column-reverse', 'flex-xxl-row', 'justify-content-between'])}
+								>
 									<div className="d-flex flex-column w-100">
 										<div className={cl.cardTitle}>{title}</div>
 										<div className={cl.cardText}>{text}</div>

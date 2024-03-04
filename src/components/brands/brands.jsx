@@ -109,7 +109,7 @@ const Brands = ({ title, viewTabs }) => {
 							<div />
 						)}
 					</div>
-					<div className="row row-cols-5 gap-4">
+					<div className={cl.cards}>
 						{brandsist.map(({ id, imgPath }) => (
 							<div key={id} className={cl.card}>
 								<Link to="/" className={cl.cardLogo}>

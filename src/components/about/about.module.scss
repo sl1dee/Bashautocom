@@ -61,7 +61,7 @@
       gap: 100px;
 
       &Block {
-        width: 100%;
+        //width: 100%;
         align-items: center;
         justify-content: space-evenly;
 
@@ -90,6 +90,112 @@
 
       &Img {
         border-radius: 20px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1650px) {
+  .about {
+    background-color: #FFFFFF;
+
+    &Information {
+      padding: 75px 0 50px 0;
+      gap: 60px;
+
+      .first {
+        gap: 50px;
+
+        &Img {
+          border-radius: 20px;
+          max-width: 620px;
+          max-height: 450px;
+        }
+
+        &Block {
+          gap: 30px;
+
+          &Title {
+            font-size: 50px;
+            font-weight: 500;
+            color: #111111;
+            line-height: 60px;
+          }
+
+          &Text {
+            font-size: 16px;
+            font-weight: 400;
+            color: #111111;
+            line-height: 19.52px;
+            gap: 20px;
+            max-width: 590px;
+
+            .firstIcon {
+              align-items: center;
+              gap: 14px;
+              &::before {
+                content: url("/assets/img/about/shield.svg");
+              }
+            }
+
+            .secondIcon {
+              align-items: center;
+              gap: 14px;
+              &::before {
+                content: url("/assets/img/about/setting.svg");
+              }
+            }
+
+            .thirdIcon {
+              align-items: center;
+              gap: 14px;
+              &::before {
+                content: url("/assets/img/about/users.svg");
+              }
+            }
+          }
+        }
+      }
+
+      .second {
+        //gap: 100px;
+        justify-content: space-between;
+
+        &Block {
+          //width: 100%;
+          align-items: center;
+          justify-content: start;
+          //justify-content: space-evenly;
+          gap: 60px;
+
+
+          &Col {
+            max-width: 203px;
+            gap: 10px;
+
+            &Title {
+              font-size: 40px;
+              font-weight: 500;
+              color: #111111;
+              line-height: 60px;
+            }
+
+            &Text {
+              font-size: 16px;
+              font-weight: 400;
+              color: #111111;
+              line-height: 19.52px;
+              gap: 20px;
+            }
+          }
+        }
+
+
+        &Img {
+          border-radius: 20px;
+          max-width: 427px;
+          max-height: 244px;
+        }
       }
     }
   }

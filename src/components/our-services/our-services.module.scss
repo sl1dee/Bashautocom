@@ -17,18 +17,20 @@
     }
 
     &Cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
       gap: 30px;
 
       .cardWrapper {
         background-color: #FFFFFF;
         border-radius: 20px;
         padding: 30px;
-        height: 230px;
         width: 390px;
+        height: 230px;
 
         .card {
-          height: 100%;
           width: 100%;
+          height: 100%;
           gap: 40px;
 
           &Title {
@@ -53,6 +55,68 @@
             max-height: 50px;
             max-width: 50px;
             justify-content: end;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1650px) {
+  .ourServices {
+
+    &Information {
+      padding: 100px 0 100px 0;
+      gap: 50px;
+
+      &Title {
+        color: #111111;
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+
+      }
+
+      &Cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 30px;
+
+        .cardWrapper {
+          background-color: #FFFFFF;
+          border-radius: 20px;
+          padding: 30px;
+          width: 315px;
+          height: 280px;
+
+          .card {
+            width: 100%;
+            height: 100%;
+            gap: 40px;
+
+            &Title {
+              font-size: 24px;
+              font-weight: 500;
+              color: #111111;
+            }
+
+            &Text {
+              font-size: 16px;
+              font-weight: 400;
+              color: #111111;
+              opacity: 48%;
+            }
+
+            &Button {
+              margin-top: auto;
+              max-width: 128px;
+            }
+
+            &Img {
+              max-height: 50px;
+              max-width: 50px;
+              justify-content: end;
+            }
           }
         }
       }
