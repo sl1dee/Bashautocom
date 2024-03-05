@@ -1,4 +1,3 @@
-// import '../Theme.css';
 import '../Theme.css'
 import '../_color/Theme_color_GiGas.css'
 import '../_color/Theme_color_GiGasDark.css'
