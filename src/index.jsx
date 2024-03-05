@@ -29,7 +29,6 @@ import ReactDOM from 'react-dom/client'
 
 import '../assets/css/styles.scss'
 import Root from './root'
-import { presetBashautocom } from './uikit/presets/presetBashautocom.js'
 import { presetGiGas } from './uikit/presets/presetGiGas.js'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
