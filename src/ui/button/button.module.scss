@@ -59,15 +59,15 @@
   }
   //&-white-trnsp
   &Secondary {
-    background-color: #FFFFFF;
-    color: #2F3140;
+    background-color: rgba(187, 189, 204, 0.4);
+    color: #111111;
     border: 2px solid #FFFFFF;
     transition: color .3s ease, background-color .3s ease;
 
     &:hover {
-      color: #FFFFFF;
+      color: #111111;
       background-color: transparent;
-      border: 2px solid #FFFFFF;
+      border: 2px solid rgba(187, 189, 204, 0.4);
     }
   }
 }

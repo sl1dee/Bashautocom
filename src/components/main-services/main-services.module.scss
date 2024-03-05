@@ -106,3 +106,59 @@
     }
   }
 }
+
+@media (min-width: 1000px) and (max-width: 1400px) {
+  .mainServices {
+
+    &Cards {
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 50px 0;
+      color: #FFFFFF;
+      gap: 20px;
+      row-gap: 30px;
+
+      .cardWrapper {
+        position: relative;
+        background-color: #FFFFFF;
+        border-radius: 20px;
+        padding: 30px;
+        max-width: 306.67px;
+        height: 260px;
+        overflow: hidden;
+
+        .card {
+          height: 100%;
+          width: 100%;
+
+
+          &Title {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 24px;
+            color: #111111;
+          }
+
+          &Text {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.52px;
+            color: #111111;
+            opacity: 48%;
+          }
+
+          &Img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transition: transform 1s;
+            border-radius: 20px;
+          }
+
+          &Img:hover {
+            transform: translateX(-5%) scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}

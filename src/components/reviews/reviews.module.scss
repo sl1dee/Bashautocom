@@ -129,3 +129,29 @@
     }
   }
 }
+
+@media (min-width: 1000px) and (max-width: 1400px) {
+  .reviews {
+    background-color: #FFFFFF;
+
+    &Information {
+      padding: 140px 0 65px 0;
+      gap: 50px;
+
+      &Title {
+        font-size: 50px;
+        font-weight: 500;
+        color: #111111;
+        line-height: 60px;
+      }
+
+      .reviewsSwiper {
+        position: relative;
+
+        .swiper {
+          height: 360px;
+        }
+      }
+    }
+  }
+}

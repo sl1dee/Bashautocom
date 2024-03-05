@@ -89,7 +89,17 @@ const Brands = ({ title, viewTabs }) => {
 		<div className={cl.brands}>
 			<div className="container p-0">
 				<div className={cn([cl.brandsInformation, 'd-flex', 'flex-column'])}>
-					<div className="d-flex justify-content-between align-items-center">
+					<div
+						className={cn([
+							cl.head,
+							'd-flex',
+							'flex-column',
+							'flex-xxl-row',
+							'justify-content-start',
+							'justify-content-xxl-between',
+							'align-content-xxl-center'
+						])}
+					>
 						<h1 className={cn([cl.brandsInformationTitle, 'mb-0'])}>{title}</h1>
 						{viewTabs === true ? (
 							<div className={cl.brandsInformationTabs}>

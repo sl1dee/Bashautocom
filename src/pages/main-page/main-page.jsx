@@ -16,7 +16,7 @@ const MainPage = () => {
 	return (
 		<MainLayout>
 			<MainServices />
-			<Brands title="Найдите свой бренд" />
+			<Brands title="Найдите свой бренд" viewTabs />
 			<SpecialOffers />
 			<OurServices />
 			<Reviews />

@@ -140,3 +140,34 @@
     }
   }
 }
+
+@media (min-width: 1000px) and (max-width: 1400px) {
+  .specialOffers {
+
+    &Information {
+      padding: 70px 0 130px 0;
+      gap: 50px;
+
+      &Title {
+        font-size: 50px;
+        font-weight: 500;
+        color: #111111;
+        line-height: 60px;
+      }
+
+      .specialOffersSwiper {
+        position: relative;
+        z-index: 0;
+
+        .swiper {
+          height: 350px;
+        }
+      }
+
+      .combobox {
+        width: 390px;
+        z-index: 100;
+      }
+    }
+  }
+}

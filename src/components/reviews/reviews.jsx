@@ -57,8 +57,14 @@ const Reviews = () => {
 					<h1 className={cn([cl.reviewsInformationTitle, 'mb-0'])}>Узнайте больше в наших обзорах</h1>
 					<div className="d-flex flex-column gap-4">
 						<div className={cl.reviewsSwiper}>
-							<button onClick={prevSwipeHandler} className={cn([cl.swiperArrow, cl.swiperArrowLeft])} />
-							<button onClick={nextSwipeHandler} className={cn([cl.swiperArrow, cl.swiperArrowRight])} />
+							<button
+								onClick={prevSwipeHandler}
+								className={cn([cl.swiperArrow, cl.swiperArrowLeft, 'd-none', 'd-xxl-flex'])}
+							/>
+							<button
+								onClick={nextSwipeHandler}
+								className={cn([cl.swiperArrow, cl.swiperArrowRight, 'd-none', 'd-xxl-flex'])}
+							/>
 							<Swiper
 								className={cl.swiper}
 								modules={[Navigation, Pagination]}
