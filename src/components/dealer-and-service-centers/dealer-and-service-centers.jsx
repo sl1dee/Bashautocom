@@ -136,8 +136,14 @@ const DealerAndServiceCenters = ({ title }) => {
 							</div>
 						</div>
 						<div className={cl.centersSwiper}>
-							<button onClick={prevSwipeHandler} className={cn([cl.swiperArrow, cl.swiperArrowLeft])} />
-							<button onClick={nextSwipeHandler} className={cn([cl.swiperArrow, cl.swiperArrowRight])} />
+							<button
+								onClick={prevSwipeHandler}
+								className={cn([cl.swiperArrow, cl.swiperArrowLeft, 'd-none', 'd-xxl-flex'])}
+							/>
+							<button
+								onClick={nextSwipeHandler}
+								className={cn([cl.swiperArrow, cl.swiperArrowRight, 'd-none', 'd-xxl-flex'])}
+							/>
 							<Swiper
 								className={cl.swiper}
 								modules={[Navigation, Pagination, Scrollbar, A11y]}

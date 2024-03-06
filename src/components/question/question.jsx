@@ -1,8 +1,12 @@
 import car from '@assets/img/question/car.png'
+import tg from '@assets/img/question/tg.svg'
+import vk from '@assets/img/question/vk.svg'
+import wa from '@assets/img/question/wa.svg'
 import { ChoiceGroup } from '@consta/uikit/ChoiceGroup'
 import { Combobox } from '@consta/uikit/Combobox'
 import cn from 'classnames'
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import Button from '../../ui/button/button.jsx'
 import cl from './question.module.scss'
@@ -52,9 +56,22 @@ const Question = () => {
 						</div>
 						<div className={cn([cl.socialNetwork, 'd-flex', 'flex-column'])}>
 							<p className={cn([cl.secondTitle, 'mb-0'])}>Или напишите нам в социальных сетях</p>
-							<div className={cn([cl.btns, 'mb-0'])}>buttons</div>
+							<div className={cn([cl.btns, 'd-flex', 'mb-0'])}>
+								<Link to="/" className={cn([cl.btn, 'd-flex', 'align-items-center'])}>
+									<img src={vk} alt="" />
+									<p className="mb-0">вконтакте</p>
+								</Link>
+								<Link to="/" className={cn([cl.btn, 'd-flex', 'align-items-center'])}>
+									<img src={wa} alt="" />
+									<p className="mb-0">WhatsApp</p>
+								</Link>
+								<Link to="/" className={cn([cl.btn, 'd-flex', 'align-items-center'])}>
+									<img src={tg} alt="" />
+									<p className="mb-0">Telegram</p>
+								</Link>
+							</div>
 						</div>
-						<img src={car} alt="" />
+						<img src={car} alt="" className={cl.image} />
 					</div>
 					<div className={cn([cl.questionInformationModal, 'd-flex', 'flex-column'])}>
 						<div className={cn([cl.questionInformationModalBlock1, 'd-flex', 'flex-column'])}>

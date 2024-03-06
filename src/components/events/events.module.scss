@@ -120,3 +120,65 @@
     }
   }
 }
+
+@media (min-width: 1000px) and (max-width: 1400px) {
+  .events {
+    background-color: #FFFFFF;
+
+    &Information {
+      padding: 50px 0 150px 0;
+      gap: 50px;
+
+      &Title {
+        font-size: 50px;
+        font-weight: 500;
+        color: #111111;
+        line-height: 60px;
+      }
+
+      &Block {
+        gap: 25px;
+
+        .cards {
+          gap: 30px;
+
+          .card {
+            max-width: 306.67px;
+            gap: 20px;
+
+            &Image {
+              max-width: 306.67px;
+              max-height: 188px;
+              border-radius: 20px;
+            }
+
+            &Title {
+              font-size: 20px;
+              font-weight: 500;
+              line-height: 24px;
+              color: #111111;
+            }
+
+            &Date {
+              margin-top: auto;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 19.52px;
+              color: rgba(17, 17, 17, 0.48);
+            }
+          }
+        }
+
+        .btn {
+          gap: 14px;
+          align-items: center;
+          &::after {
+            content: url("/assets/img/events/arrow-right.svg");
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
