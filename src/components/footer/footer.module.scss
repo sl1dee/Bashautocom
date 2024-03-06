@@ -4,10 +4,15 @@
 
   &Content {
     padding: 50px 0 120px 0;
+    justify-content: space-between;
 
-    &StartColumn {
+    &Contacts {
       max-width: 367px;
       gap: 40px;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
 
       .logo {
         max-width: 307px;
@@ -40,9 +45,13 @@
       }
     }
 
-    &Columns {
+    &Buy {
       max-width: 200px;
       gap: 16px;
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
 
       .title {
         font-size: 16px;
@@ -62,8 +71,64 @@
       }
     }
 
-    &EndColumn {
+    &Company {
+      max-width: 200px;
       gap: 16px;
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 2;
+
+      .title {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+        color: #2F3140;
+      }
+
+      .link {
+
+        a {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 19.52px;
+          color: #2F3140;
+        }
+      }
+    }
+
+    &Services {
+      max-width: 200px;
+      gap: 16px;
+      grid-column-start: 4;
+      grid-column-end: 5;
+      grid-row-start: 1;
+      grid-row-end: 2;
+
+      .title {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+        color: #2F3140;
+      }
+
+      .link {
+
+        a {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 19.52px;
+          color: #2F3140;
+        }
+      }
+    }
+
+    &Download {
+      gap: 16px;
+      grid-column-start: 5;
+      grid-column-end: 6;
+      grid-row-start: 1;
+      grid-row-end: 2;
 
       .title {
         font-size: 16px;
@@ -100,6 +165,177 @@
     a {
       color: #6B6B6B;
       border-bottom: 1px solid #6B6B6B;
+    }
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1400px) {
+
+  .footer {
+
+    &Content {
+      padding: 40px 40px 50px 40px;
+
+      &Contacts {
+        max-width: 367px;
+        gap: 40px;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+        .logo {
+          max-width: 307px;
+        }
+
+        .phone {
+          gap: 14px;
+
+          &Number {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 38.4px;
+            color: #2F3140;
+          }
+
+          &Link {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.2px;
+            color: #2F3140;
+            //border-bottom: 1px solid #2F3140;
+          }
+        }
+
+        .text {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 16.8px;
+          color: rgba(17, 17, 17, 0.31);
+        }
+      }
+
+      &Buy {
+        max-width: 200px;
+        gap: 16px;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+        .title {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22.4px;
+          color: #2F3140;
+        }
+
+        .link {
+
+          a {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.52px;
+            color: #2F3140;
+          }
+        }
+      }
+
+      &Company {
+        max-width: 200px;
+        gap: 16px;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+        .title {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22.4px;
+          color: #2F3140;
+        }
+
+        .link {
+
+          a {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.52px;
+            color: #2F3140;
+          }
+        }
+      }
+
+      &Services {
+        max-width: 200px;
+        gap: 16px;
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 3;
+
+        .title {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22.4px;
+          color: #2F3140;
+        }
+
+        .link {
+
+          a {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.52px;
+            color: #2F3140;
+          }
+        }
+      }
+
+      &Download {
+        gap: 16px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+        .title {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22.4px;
+          color: #2F3140;
+        }
+
+        .icons {
+          gap: 20px;
+
+          &Links {
+            gap: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .footer2 {
+    background-color: #EDEEF0;
+
+    &Links {
+      padding: 15px 135px 15px 135px;
+
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.52px;
+        color: #6B6B6B;
+        margin: 0;
+      }
+
+      a {
+        color: #6B6B6B;
+        border-bottom: 1px solid #6B6B6B;
+      }
     }
   }
 }

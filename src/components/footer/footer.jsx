@@ -17,8 +17,8 @@ const Footer = () => {
 		<div>
 			<div className={cl.footer}>
 				<div className="container p-0">
-					<div className={cn([cl.footerContent, 'd-flex', 'justify-content-between'])}>
-						<span className={cn([cl.footerContentStartColumn, 'd-flex', 'flex-column'])}>
+					<div className={cn([cl.footerContent, 'd-grid'])}>
+						<span className={cn([cl.footerContentContacts, 'd-flex', 'flex-column'])}>
 							<img src={logo} alt="" className={cl.logo} />
 							<div className={cn([cl.phone, 'd-flex', 'flex-column'])}>
 								<div className={cl.phoneNumber}>+7 (347) 123-45-67</div>
@@ -39,7 +39,7 @@ const Footer = () => {
 							</div>
 							<p className={cl.text}>Сайт носит информационный характер и предложения не являются публичной офертой.</p>
 						</span>
-						<span className={cn([cl.footerContentColumns, 'd-flex', 'flex-column'])}>
+						<span className={cn([cl.footerContentBuy, 'd-flex', 'flex-column'])}>
 							<div className={cl.title}>Купить автомобиль</div>
 							<div className={cl.link}>
 								<Link to="/">Новые автомобили</Link>
@@ -51,7 +51,7 @@ const Footer = () => {
 								<Link to="/">Специальные предложения</Link>
 							</div>
 						</span>
-						<span className={cn([cl.footerContentColumns, 'd-flex', 'flex-column'])}>
+						<span className={cn([cl.footerContentCompany, 'd-flex', 'flex-column'])}>
 							<div className={cl.title}>Компания</div>
 							<div className={cl.link}>
 								<Link to="/">О компании</Link>
@@ -72,7 +72,7 @@ const Footer = () => {
 								<Link to="/">Контакты</Link>
 							</div>
 						</span>
-						<span className={cn([cl.footerContentColumns, 'd-flex', 'flex-column'])}>
+						<span className={cn([cl.footerContentServices, 'd-flex', 'flex-column'])}>
 							<div className={cl.title}>Услуги</div>
 							<div className={cl.link}>
 								<Link to="/">Корпоративным клиентам</Link>
@@ -99,7 +99,7 @@ const Footer = () => {
 								<Link to="/">Аренда автомобиля</Link>
 							</div>
 						</span>
-						<span className={cn([cl.footerContentEndColumn, 'd-flex', 'flex-column'])}>
+						<span className={cn([cl.footerContentDownload, 'd-flex', 'flex-column'])}>
 							<div className={cl.title}>Скачайте приложение Башавтоком</div>
 							<div className={cn([cl.icons, 'd-flex'])}>
 								<img src={qr} alt="" />
