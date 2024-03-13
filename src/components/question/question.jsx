@@ -8,6 +8,9 @@ import cn from 'classnames'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
+import getRawPhoneFromParsedPhone from '@helpers/getRawPhoneFromParsedPhone.js'
+import parseRawPhone from '@helpers/parseRawPhone.js'
+
 import Button from '../../ui/button/button.jsx'
 import cl from './question.module.scss'
 
@@ -40,6 +43,17 @@ const Question = () => {
 	const items = ['Покупка', 'Сервис', 'Услуги']
 
 	const [value, setValue] = useState(items[0])
+
+	const [viewPhone, setViewPhone] = useState('')
+	const [phone, setPhone] = useState('')
+
+	const changePhoneHandler = (event) => {
+		const rawPhone = getRawPhoneFromParsedPhone(event.target.value, viewPhone)
+		const newViewPhone = parseRawPhone(rawPhone)
+
+		setViewPhone(newViewPhone)
+		setPhone(rawPhone)
+	}
 
 	return (
 		<div className={cl.question}>
@@ -93,7 +107,16 @@ const Question = () => {
 						</div>
 						<div className={cn([cl.questionInformationModalBlock2, 'd-flex', 'flex-column'])}>
 							<input type="text" className={cl.input} name="name" placeholder="Имя" />
-							<input type="text" className={cl.input} placeholder="Телефон" />
+							<input
+								className={cl.input}
+								onChange={changePhoneHandler}
+								value={viewPhone}
+								type="text"
+								size="16"
+								placeholder="Телефон"
+								required
+							/>
+							<input className={cl.input} name="phone" type="hidden" tabIndex={-1} readOnly value={phone} />
 							<div className={cl.combobox}>
 								<Combobox
 									placeholder="Выберите бренд"
