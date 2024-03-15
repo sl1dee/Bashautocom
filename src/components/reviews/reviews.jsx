@@ -69,7 +69,7 @@ const Reviews = () => {
 								className={cl.swiper}
 								modules={[Navigation, Pagination]}
 								spaceBetween={30}
-								slidesPerView={3}
+								slidesPerView={2}
 								onSwiper={(swiper) => setSwiper(swiper)}
 								pagination={{ clickable: true }}
 								scrollbar={{ draggable: true }}

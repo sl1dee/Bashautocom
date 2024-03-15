@@ -75,12 +75,22 @@ const OurServices = () => {
 						{servicesList.map(({ id, title, text, icon }) => (
 							<div className={cn([cl.cardWrapper, 'd-flex'])} key={id}>
 								<div
-									className={cn([cl.card, 'd-flex', 'flex-column-reverse', 'flex-xxl-row', 'justify-content-between'])}
+									className={cn([
+										cl.card,
+										'd-flex',
+										'flex-column-reverse',
+										'flex-xxl-row'
+										// 'justify-content-lg-between'
+									])}
 								>
 									<div className="d-flex flex-column w-100">
 										<div className={cl.cardTitle}>{title}</div>
 										<div className={cl.cardText}>{text}</div>
-										<Button sizeStyle="sizeL" colorStyle="secondary" className={cl.cardButton}>
+										<Button
+											sizeStyle="sizeL"
+											colorStyle="secondary"
+											className={cn([cl.cardButton], 'd-none', 'd-lg-flex')}
+										>
 											Подробнее
 										</Button>
 									</div>

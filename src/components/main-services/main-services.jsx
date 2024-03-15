@@ -85,7 +85,7 @@ const MainServices = () => {
 					{/* <div className="row row-cols-5 gap-5"> */}
 					{servicesList.map(({ id, title, text, imgPath }) => (
 						// <Link to="/">
-						<div className={cn([cl.cardWrapper, 'd-flex', 'justify-content-center'])} key={id}>
+						<div className={cn([cl.cardWrapper, 'elem', 'd-flex', 'justify-content-center'])} key={id}>
 							<div className={cn([cl.card])}>
 								<div className={cl.cardTitle}>{title}</div>
 								<div className={cl.cardText}>{text}</div>

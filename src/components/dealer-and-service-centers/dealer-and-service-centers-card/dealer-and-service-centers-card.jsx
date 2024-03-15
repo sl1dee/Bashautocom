@@ -12,7 +12,7 @@ const DealerAndServiceCentersCard = ({ bckgImg, street, number, sale, service, s
 					<div className={cl.Block1TextStreet}>{street}</div>
 					<div className={cl.Block1TextNumber}>{number}</div>
 				</div>
-				<div className={cn([cl.Block1Bottom, 'd-flex', 'justify-content-between'])}>
+				<div className={cn([cl.Block1Bottom, 'd-flex', 'flex-column', 'flex-lg-row', 'justify-content-between'])}>
 					<p className="mb-0">Продажа {sale} брендов</p>
 					<p className="mb-0">Сервис {service} брендов</p>
 				</div>

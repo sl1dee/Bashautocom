@@ -110,7 +110,7 @@ const DealerAndServiceCenters = ({ title }) => {
 				<div className={cn([cl.centersInformation, 'd-flex', 'flex-column'])}>
 					<h1 className={cn([cl.centersInformationTitle, 'mb-0'])}>{title}</h1>
 					<div className="d-flex flex-column gap-4">
-						<div className="d-flex justify-content-between align-items-center">
+						<div className="d-flex flex-column flex-lg-row justify-content-lg-between align-items-lg-center">
 							<div className="d-flex">
 								<ChoiceGroup
 									value={value}
@@ -148,7 +148,7 @@ const DealerAndServiceCenters = ({ title }) => {
 								className={cl.swiper}
 								modules={[Navigation, Pagination, Scrollbar, A11y]}
 								spaceBetween={30}
-								slidesPerView={3}
+								slidesPerView={2}
 								onSwiper={(swiper) => setSwiper(swiper)}
 								pagination={{ clickable: true }}
 								scrollbar={{ draggable: true }}

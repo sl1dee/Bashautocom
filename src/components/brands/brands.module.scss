@@ -54,13 +54,16 @@
         align-items: center;
 
         &Logo {
+          img {
+
+          }
         }
       }
     }
   }
 }
 
-@media (min-width: 1400px) and (max-width: 1650px) {
+@media (min-width: 1400px) and (max-width: 1674px) {
   .brands {
 
     &Information {
@@ -176,6 +179,71 @@
           align-items: center;
 
           &Logo {
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .brands {
+
+    &Information {
+      padding: 100px 0 50px 0;
+      gap: 30px;
+
+      .head {
+        gap: 30px;
+
+        &Title {
+          font-size: 32px;
+          font-weight: 500;
+          color: #111111;
+          line-height: 38.4px;
+        }
+
+        &Tabs {
+
+          .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 13px 20px 13px 20px;
+            gap: 0;
+            width: 176.67px;
+            height: 48px;
+            border-radius: 4px;
+            background-color: #FFFFFF;
+            color: #2F3140;
+            border: 1px solid #2F3140;
+          }
+
+          .btn:hover {
+            background-color: #2F3140;
+            color: #FFFFFF;
+          }
+        }
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+
+        .card {
+          width: 173px;
+          height: 80px;
+          border-radius: 20px;
+          background-color: #FAFAFA;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &Logo {
+            img {
+              width: 60%;
+            }
           }
         }
       }

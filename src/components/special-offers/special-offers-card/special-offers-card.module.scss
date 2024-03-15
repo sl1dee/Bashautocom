@@ -39,3 +39,17 @@
 
   }
 }
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .offerCard {
+    width: 265px;
+    height: 250px;
+
+    img {
+      width: 265px;
+      height: 250px;
+      border-radius: 20px;
+    }
+
+  }
+}

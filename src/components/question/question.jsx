@@ -58,13 +58,12 @@ const Question = () => {
 	return (
 		<div className={cl.question}>
 			<div className="container p-0">
-				<div className={cn([cl.questionInformation, 'd-flex'])}>
+				<div className={cn([cl.questionInformation, 'd-flex', 'flex-column', 'flex-lg-row'])}>
 					<div className={cn([cl.questionInformationText, 'd-flex', 'flex-column'])}>
 						<div className={cn([cl.yourQuestion, 'd-flex', 'flex-column'])}>
 							<h1 className={cn([cl.title, 'mb-0'])}>У вас возник вопрос?</h1>
 							<p className={cn([cl.text, 'mb-0'])}>
 								Задайте свой вопрос в форме, выбрав тему Покупка, Сервис или Услуги. Мы свяжемся с вами в течении дня,
-								{/* eslint-disable-next-line no-irregular-whitespace */}
 								ответим на все вопросы, запишем на тест-драйв, сервис или ремонт при необходимости.
 							</p>
 						</div>

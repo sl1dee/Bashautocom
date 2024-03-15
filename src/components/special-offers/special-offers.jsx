@@ -129,7 +129,7 @@ const SpecialOffers = () => {
 								className={cl.swiper}
 								modules={[Navigation, Pagination, Scrollbar, A11y]}
 								spaceBetween={30}
-								slidesPerView={3}
+								slidesPerView={'auto'}
 								onSwiper={(swiper) => setSwiper(swiper)}
 								pagination={{ clickable: true }}
 								scrollbar={{ draggable: true }}

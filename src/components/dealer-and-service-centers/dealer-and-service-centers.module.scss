@@ -172,3 +172,35 @@
     }
   }
 }
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .centers {
+    background-color: #FFFFFF;
+
+    &Information {
+      padding: 50px 0 40px 0;
+      gap: 30px;
+
+      &Title {
+        font-size: 32px;
+        font-weight: 500;
+        color: #111111;
+        line-height: 38.4px;
+      }
+
+      .centersSwiper {
+        position: relative;
+
+        .swiper {
+          height: 328px;
+          z-index: 0;
+        }
+      }
+
+      .combobox {
+        max-width: 279px;
+        z-index: 100;
+      }
+    }
+  }
+}

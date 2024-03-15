@@ -118,7 +118,9 @@ const Header = () => {
 		<header className={`${cl.header} ${isScrolled ? cl.scrolled : ''}`}>
 			<div className="d-flex flex-column p-0">
 				<div className={cl.headerInformation}>
-					<div className={cn([cl.headerInformationTopLinks], 'container', 'd-flex', 'justify-content-end')}>
+					<div
+						className={cn([cl.headerInformationTopLinks], 'container', 'd-none', 'd-lg-flex', 'justify-content-end')}
+					>
 						<div>
 							<Link to="/">
 								<span>Программа лояльности</span>
@@ -141,12 +143,12 @@ const Header = () => {
 						</div>
 					</div>
 					<div className={cn([cl.headerInformationLinks], 'container', 'd-flex', 'justify-content-between')}>
-						<div className="d-flex align-items-center">
+						<div className={cn([cl.logo, 'd-flex', 'align-items-center'])}>
 							<Link to="/">
 								<img src={logo} alt="logo" />
 							</Link>
 						</div>
-						<div className="d-flex align-items-center gap-4">
+						<div className={cn(cl.servicesLinks, 'd-none', 'd-lg-flex', 'align-items-center')}>
 							<div>
 								<Link to="/">
 									<span>Новые авто</span>
@@ -157,7 +159,7 @@ const Header = () => {
 									<span>Авто с пробегом</span>
 								</Link>
 							</div>
-							<div>
+							<div className="d-none d-xxl-flex">
 								<Link to="/">
 									<span>Корпоративным клиентам</span>
 								</Link>
@@ -202,20 +204,24 @@ const Header = () => {
 									</div>
 								</div>
 							</div>
-							<div>
+							<div className="d-none d-xxl-flex">
 								<Link to="/">
 									<span>Контакты</span>
 								</Link>
 							</div>
+							<div className="d-flex d-xxl-none">
+								<Link to="/">
+									<span>Еще</span>
+								</Link>
+							</div>
 						</div>
-						<div className="d-flex gap-4">
-							<Button sizeStyle="sizeL">Записаться</Button>
-							<Button sizeStyle="sizeL" colorStyle="Outlined" className="d-none d-xxl-flex gap-2">
-								<img src={user} alt="" />
-								Личный кабинет
+						<div className={cl.buttons}>
+							<Button sizeStyle="sizeContent" className={cn([cl.buttonsSignUp])}>
+								Записаться
 							</Button>
-							<Button sizeStyle="sizeContent" colorStyle="Outlined" className="d-flex d-xxl-none gap-2">
-								<img src={user} alt="" />
+							<Button sizeStyle="sizeContent" colorStyle="Secondary" className={cl.buttonsAccount}>
+								<img src={user} alt="userIcon" className={cl.buttonsAccountIcon} />
+								<span className={cl.buttonsAccountName}>Личный кабинет</span>
 							</Button>
 						</div>
 					</div>
