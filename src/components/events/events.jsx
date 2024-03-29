@@ -23,6 +23,11 @@ const Events = () => {
 			image: lada,
 			title: 'Новое специальное предложение на шиномонтаж в LADA «Башавтоком»',
 			date: '23.01.2024'
+		},
+		{
+			image: lada,
+			title: 'Новое специальное предложение на шиномонтаж в LADA «Башавтоком»',
+			date: '23.01.2024'
 		}
 	]
 
@@ -32,7 +37,7 @@ const Events = () => {
 				<div className={cn([cl.eventsInformation, 'd-flex', 'flex-column'])}>
 					<h1 className={cn([cl.eventsInformationTitle, 'mb-0'])}>Будьте в курсе событий</h1>
 					<span className={cn([cl.eventsInformationBlock, 'd-flex', 'flex-column'])}>
-						<div className={cn([cl.cards, 'd-flex'])}>
+						<div className={cn([cl.cards, 'd-grid'])}>
 							{eventsList.map(({ image, title, date }) => (
 								<div className={cn([cl.card, 'd-flex', 'flex-column'])}>
 									<img src={image} alt="event" className={cl.cardImage} />

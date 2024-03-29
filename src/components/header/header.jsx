@@ -1,5 +1,6 @@
 import cn from 'classnames'
 import React, { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 import calendar from '../../../assets/img/about/calendar.svg'
@@ -7,6 +8,7 @@ import career from '../../../assets/img/about/career.svg'
 import information from '../../../assets/img/about/i.svg'
 import loyaltyProgram from '../../../assets/img/about/loyaltyProgram.svg'
 import news from '../../../assets/img/about/news.svg'
+import burger from '../../../assets/img/header/burger.svg'
 import logo from '../../../assets/img/header/new_logo.svg'
 import user from '../../../assets/img/header/user.svg'
 import bodyRepair from '../../../assets/img/our-services/bodyRepair.svg'
@@ -16,10 +18,12 @@ import insurance from '../../../assets/img/our-services/insurance.svg'
 import lending from '../../../assets/img/our-services/lending.svg'
 import serviceСenter from '../../../assets/img/our-services/serviceСenter.svg'
 import tradeIn from '../../../assets/img/our-services/tradeIn.svg'
+import { setBurgerIsOpen } from '../../store/modules/modals.js'
 import Button from '../../ui/button/index.js'
 import cl from './header.module.scss'
 
 const Header = () => {
+	const dispatch = useDispatch()
 	const [isScrolled, setIsScrolled] = useState(false)
 	const [isOpenServices, setIsOpenServices] = useState(false)
 	const [isOpenAbout, setIsOpenAbout] = useState(false)
@@ -27,6 +31,10 @@ const Header = () => {
 	const handleScroll = () => {
 		const scrollTop = window.pageYOffset || document.documentElement.scrollTop
 		setIsScrolled(scrollTop > 0)
+	}
+
+	const openBurgerHandler = () => {
+		dispatch(setBurgerIsOpen(true))
 	}
 
 	useEffect(() => {
@@ -223,6 +231,9 @@ const Header = () => {
 								<img src={user} alt="userIcon" className={cl.buttonsAccountIcon} />
 								<span className={cl.buttonsAccountName}>Личный кабинет</span>
 							</Button>
+							<div className={cn([cl.buttonsBurger, 'd-flex', 'd-lg-none'])} onClick={openBurgerHandler}>
+								<img src={burger} alt="burgerIcon" />
+							</div>
 						</div>
 					</div>
 				</div>

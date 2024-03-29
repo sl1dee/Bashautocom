@@ -3,12 +3,14 @@ import { burgerIsOpenSelector, signUpIsOpenSelector } from '@store/selectors/mod
 import React, { memo } from 'react'
 import { useSelector } from 'react-redux'
 
+import Sidebar from '@components/header/sidebar/sidebar.jsx'
+
 import Footer from '../../components/footer/index.js'
 import Header from '../../components/header/index.js'
 
 const MainLayout = ({ children }) => {
 	// const signUpIsOpen = useSelector(signUpIsOpenSelector)
-	// const burgerIsOpen = useSelector(burgerIsOpenSelector)
+	const burgerIsOpen = useSelector(burgerIsOpenSelector)
 
 	useScrollTop()
 	return (
@@ -17,7 +19,7 @@ const MainLayout = ({ children }) => {
 			{children}
 			<Footer />
 			{/* <Cookie /> */}
-			{/* {burgerIsOpen && <Sidebar />} */}
+			{burgerIsOpen && <Sidebar />}
 			{/* {signUpIsOpen && <SignUpModal />} */}
 		</>
 	)

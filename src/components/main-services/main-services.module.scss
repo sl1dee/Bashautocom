@@ -194,9 +194,9 @@
         position: relative;
         background-color: #FFFFFF;
         border-radius: 20px;
-        padding: 30px;
+        padding: 20px;
         max-width: 426.66px;
-        max-height: 260px;
+        max-height: 160px;
         overflow: hidden;
 
         .card {
@@ -223,6 +223,8 @@
             position: absolute;
             bottom: 0;
             right: 0;
+            max-width: 152px;
+            max-height: 80px;
             transition: transform 1s;
             border-radius: 20px;
           }

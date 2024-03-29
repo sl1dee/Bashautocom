@@ -7,10 +7,16 @@
     border-radius: 20px;
     padding: 90px 160px 90px 160px;
     gap: 75px;
+    row-gap: 38px;
+
 
     &Text {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 3;
       max-width: 667px;
-      gap: 38px;
+      gap: 30px;
 
       .yourQuestion {
         gap: 20px;
@@ -60,13 +66,25 @@
       }
     }
 
+    .image {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      max-width: 667px;
+    }
+
     &Modal {
       max-width: 588px;
       padding: 40px 60px 40px 60px;
       border-radius: 20px;
       background-color: #FFFFFF;
       gap: 20px;
-      
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 4;
+
       &Block1 {
         gap: 16px;
 
@@ -128,7 +146,7 @@
       background-color: rgba(238, 240, 243, 0.7);
       border-radius: 20px;
       padding: 70px;
-      gap: 75px;
+      //gap: 75px;
 
       &Text {
         max-width: 557px;
@@ -162,6 +180,10 @@
             color: #111111;
           }
         }
+      }
+
+      .image {
+        max-width: 557px;
       }
 
       &Modal {
@@ -226,7 +248,7 @@
   }
 }
 
-@media (min-width: 1000px) and (max-width: 1400px) {
+@media (min-width: 993px) and (max-width: 1400px) {
   .question {
 
     &Information {
@@ -235,10 +257,15 @@
       border-radius: 20px;
       padding: 60px 40px 60px 40px;
       gap: 35px;
+      row-gap: 77px;
 
       &Text {
         max-width: 445px;
-        gap: 38px;
+        gap: 20px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
 
         .yourQuestion {
           gap: 20px;
@@ -287,9 +314,17 @@
           }
         }
 
-        .image {
-          margin-top: auto;
-        }
+        //.image {
+        //  margin-top: auto;
+        //}
+      }
+
+      .image {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        max-width: 445px;
       }
 
       &Modal {
@@ -298,6 +333,10 @@
         border-radius: 20px;
         background-color: #FFFFFF;
         gap: 20px;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 4;
 
         &Block1 {
           gap: 16px;
@@ -367,6 +406,10 @@
       &Text {
         max-width: 445px;
         gap: 20px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
 
         .yourQuestion {
           gap: 20px;
@@ -414,11 +457,15 @@
             }
           }
         }
+      }
 
-        .image {
-          margin-top: auto;
-          width: 480px;
-        }
+      .image {
+        margin-top: auto;
+        max-width: 480px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
       }
 
       &Modal {
@@ -427,6 +474,14 @@
         border-radius: 20px;
         background-color: #FFFFFF;
         gap: 20px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        .image {
+          margin-top: auto;
+          width: 480px;
+        }
 
         &Block1 {
           gap: 16px;

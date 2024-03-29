@@ -21,7 +21,10 @@ const Footer = () => {
 						<span className={cn([cl.footerContentContacts, 'd-flex', 'flex-column'])}>
 							<img src={logo} alt="" className={cl.logo} />
 							<div className={cn([cl.phone, 'd-flex', 'flex-column'])}>
-								<div className={cl.phoneNumber}>+7 (347) 123-45-67</div>
+								{/* <div className={cl.phoneNumber}>+7 (347) 123-45-67</div> */}
+								<a href="tel:+73471234567" className={cl.phoneNumber}>
+									+7 (347) 123-45-67
+								</a>
 								<Link to="/" className={cn([cl.phoneLink, 'd-flex'])}>
 									Заказать звонок
 								</Link>
@@ -37,8 +40,10 @@ const Footer = () => {
 									<img src={telegram} alt="" />
 								</Link>
 							</div>
-							<p className={cl.text}>Сайт носит информационный характер и предложения не являются публичной офертой.</p>
 						</span>
+						<p className={cn([cl.text, 'mb-0'])}>
+							Сайт носит информационный характер и предложения не являются публичной офертой.
+						</p>
 						<span className={cn([cl.footerContentBuy, 'd-flex', 'flex-column'])}>
 							<div className={cl.title}>Купить автомобиль</div>
 							<div className={cl.link}>
@@ -101,8 +106,8 @@ const Footer = () => {
 						</span>
 						<span className={cn([cl.footerContentDownload, 'd-flex', 'flex-column'])}>
 							<div className={cl.title}>Скачайте приложение Башавтоком</div>
-							<div className={cn([cl.icons, 'd-flex'])}>
-								<img src={qr} alt="" />
+							<div className={cn([cl.icons, 'd-flex', 'flex-column', 'flex-lg-row'])}>
+								<img src={qr} alt="" className={cl.qr} />
 								<div className={cn([cl.iconsLinks, 'd-flex', 'flex-column'])}>
 									<Link to="/">
 										<img src={appStore} alt="" />

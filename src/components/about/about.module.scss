@@ -222,7 +222,7 @@
   }
 }
 
-@media (min-width: 1000px) and (max-width: 1400px) {
+@media (min-width: 992px) and (max-width: 1400px) {
   .about {
 
     &Information {
@@ -318,6 +318,123 @@
             font-weight: 400;
             color: #111111;
             line-height: 19.52px;
+            gap: 20px;
+          }
+        }
+      }
+
+
+      .secondImg {
+        max-width: 470px;
+        max-height: 320px;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .about {
+
+    &Information {
+      padding: 75px 0 50px 0;
+      gap: 20px;
+      row-gap: 30px;
+
+      .firstImg {
+        max-width: 470px;
+        max-height: 320px;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+      }
+
+      .firstBlock {
+        max-width: 960px;
+        max-height: 390px;
+        gap: 30px;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+        &Title {
+          font-size: 32px;
+          font-weight: 500;
+          color: #111111;
+          line-height: 38.4px;
+        }
+
+        &Text {
+          font-size: 14px;
+          font-weight: 400;
+          color: #111111;
+          line-height: 16.8px;
+          gap: 20px;
+          max-width: 590px;
+
+          .firstIcon {
+            align-items: center;
+            gap: 14px;
+            &::before {
+              content: url("/assets/img/about/shield.svg");
+            }
+          }
+
+          .secondIcon {
+            align-items: center;
+            gap: 14px;
+            &::before {
+              content: url("/assets/img/about/setting.svg");
+            }
+          }
+
+          .thirdIcon {
+            align-items: center;
+            gap: 14px;
+            &::before {
+              content: url("/assets/img/about/users.svg");
+            }
+          }
+        }
+      }
+
+      .secondBlock {
+        align-items: center;
+        justify-content: space-between;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+
+
+        &Col {
+          max-width: 245px;
+          gap: 10px;
+
+          &Title {
+            font-size: 32px;
+            font-weight: 500;
+            color: #111111;
+            line-height: 38.4px;
+          }
+
+          &Text {
+            font-size: 14px;
+            font-weight: 400;
+            color: #111111;
+            line-height: 16.8px;
             gap: 20px;
           }
         }
