@@ -163,7 +163,7 @@ const Header = () => {
 								</Link>
 							</div>
 							<div>
-								<Link to="/">
+								<Link to="/used-cars">
 									<span>Авто с пробегом</span>
 								</Link>
 							</div>

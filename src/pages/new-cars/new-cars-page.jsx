@@ -1,8 +1,8 @@
 import React from 'react'
 
 import BreadcrumbsTop from '@components/breadcrumbs-top/index.js'
-import NewCarsFilter from '@components/new-cars-filter/new-cars-filter.jsx'
 import NewCarsSlider from '@components/new-cars-slider/index.js'
+import NewCars from '@components/new-cars/new-cars.jsx'
 
 import MainLayout from '../../layout/main/index.js'
 
@@ -11,7 +11,7 @@ const NewCarsPage = () => {
 		<MainLayout>
 			<BreadcrumbsTop />
 			<NewCarsSlider />
-			<NewCarsFilter />
+			<NewCars />
 		</MainLayout>
 	)
 }

@@ -1,0 +1,140 @@
+
+.usedCars {
+  row-gap: 40px;
+
+  .title {
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 60px;
+    color: #111111;
+  }
+
+  &Content {
+    gap: 108px;
+    padding-bottom: 150px;
+
+    &Filter {
+      width: 312px;
+      height: fit-content;
+      border-radius: 10px;
+      padding: 30px;
+      border: 1px solid #F1F1F1;
+      box-shadow: 7px 4px 29px rgba(47, 49, 64, 0.06);
+      gap: 24px;
+
+      &Title {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 31.2px;
+        color: #111111;
+      }
+
+      .block {
+        row-gap: 12px;
+
+        span {
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 25.2px;
+          color: #111111;
+        }
+      }
+    }
+
+    &Cards {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      row-gap: 30px;
+      width: 1230px;
+
+      &Card {
+        max-width: 390px;
+        height: 502px;
+
+        img {
+          border-radius: 20px 20px 0 0;
+        }
+
+        .information {
+          padding: 20px 30px 30px 30px;
+          gap: 18px;
+
+          .firstBlock {
+            gap: 3px;
+
+            .name {
+              font-size: 24px;
+              font-weight: 500;
+              line-height: 31.2px;
+              color: #111111;
+            }
+            .year {
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 19.52px;
+              color: rgba(17, 17, 17, 0.48);
+            }
+          }
+          .secondBlock {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            width: fit-content;
+
+            span {
+              gap: 10px;
+
+              div {
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 18.3px;
+                color: #111111;
+                gap: 6px;
+                padding: 4px 7px 4px 7px;
+                background-color: #F4F5F7;
+                border-radius: 4px;
+                //align-self: start;
+                width: fit-content;
+              }
+
+              .owner{
+                &::before {
+                  content: url("/assets/img/used-cars/owner.svg");
+                  width: 24px;
+                  height: 24px;
+                }
+              }
+              .mileage {
+                &::before {
+                  content: url("/assets/img/used-cars/speedometer.svg");
+                  width: 24px;
+                  height: 24px;
+                }
+              }
+              .gearbox {
+                &::before {
+                  content: url("/assets/img/used-cars/gearbox.svg");
+                  width: 24px;
+                  height: 24px;
+                }
+              }
+              .drive {
+                &::before {
+                  content: url("/assets/img/used-cars/wheel.svg");
+                  width: 24px;
+                  height: 24px;
+                }
+              }
+            }
+          }
+
+          .price {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 38.4px;
+            color: #111111;
+          }
+        }
+      }
+    }
+  }
+}

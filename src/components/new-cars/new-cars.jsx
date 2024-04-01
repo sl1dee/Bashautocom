@@ -21,9 +21,9 @@ import React, { useState } from 'react'
 
 import Button from '@ui/button/index.js'
 
-import cl from '@components/new-cars-filter/new-cars-filter.module.scss'
+import cl from '@components/new-cars/new-cars.module.scss'
 
-const NewCarsFilter = () => {
+const NewCars = () => {
 	const [comboboxValue, setComboboxValue] = useState(null)
 	const [value, setValue] = useState([20, 50])
 
@@ -218,4 +218,4 @@ const NewCarsFilter = () => {
 	)
 }
 
-export default NewCarsFilter
+export default NewCars

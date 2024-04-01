@@ -1,0 +1,58 @@
+
+
+.usedCarsSlider {
+  background-color: #FFFFFF;
+  padding: 20px 0 90px 0;
+
+  &Swiper {
+    position: relative;
+
+    .swiper {
+      height: 494px;
+
+      .banner {
+        border-radius: 20px;
+      }
+    }
+
+    .swiperArrow {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      transform: translateY(-50%);
+      top: 42%;
+      border: none;
+      background-color: #2F3140;
+      border-radius: 4px;
+      width: 46px;
+      height: 44px;
+
+
+      &Left {
+        left: -30px;
+        transform: translateX(-100%);
+
+        &::before {
+          content: url('/assets/img/special-offer/arrow-left.svg');
+          display: flex;
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      &Right {
+        right: -30px;
+        transform: translateX(100%);
+
+        &::before {
+          content: url('/assets/img/special-offer/arrow-right.svg');
+          display: flex;
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}
