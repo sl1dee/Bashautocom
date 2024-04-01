@@ -12,6 +12,10 @@ const BreadcrumbsTop = () => {
 		{
 			label: 'Сервисный центр',
 			href: '/service-center'
+		},
+		{
+			label: 'Новые автомобили',
+			href: '/new-cars'
 		}
 	]
 

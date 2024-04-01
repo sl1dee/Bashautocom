@@ -1,3 +1,4 @@
+import NewCarsPage from '@pages/new-cars/new-cars-page.jsx'
 import ServiceCenterPage from '@pages/service-center-page/index.js'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
@@ -12,6 +13,10 @@ const Routes = () => {
 		{
 			path: '/service-center',
 			element: <ServiceCenterPage />
+		},
+		{
+			path: '/new-cars',
+			element: <NewCarsPage />
 		}
 	])
 

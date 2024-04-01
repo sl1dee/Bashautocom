@@ -158,7 +158,7 @@ const Header = () => {
 						</div>
 						<div className={cn(cl.servicesLinks, 'd-none', 'd-lg-flex', 'align-items-center')}>
 							<div>
-								<Link to="/">
+								<Link to="/new-cars">
 									<span>Новые авто</span>
 								</Link>
 							</div>
