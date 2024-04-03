@@ -6,18 +6,14 @@ import KiaRioX from '@assets/img/used-cars/KiaRioX.png'
 import LadaVesta from '@assets/img/used-cars/LadaVesta.jpg'
 import { CheckboxGroup } from '@consta/uikit/CheckboxGroup'
 import { RadioGroup } from '@consta/uikit/RadioGroup'
+import { Select } from '@consta/uikit/Select'
 import cn from 'classnames'
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import cl from './used-cars.module.scss'
 
 const UsedCars = () => {
-	const [brand, setBrand] = useState(null)
-	const [body, setBody] = useState(null)
-	// const [value, setValue] = useState(items[0])
-	const [drive, setDrive] = useState(null)
-	const [gearbox, setGearbox] = useState(null)
-
 	const brands = [
 		{ name: 'Audi' },
 		{ name: 'BAIC' },
@@ -37,6 +33,36 @@ const UsedCars = () => {
 		{ name: 'Универсал' },
 		{ name: 'Пикап' }
 	]
+
+	const yearsFrom = [
+		{
+			label: '2017',
+			id: 1
+		},
+		{
+			label: '2016',
+			id: 2
+		},
+		{
+			label: '2015',
+			id: 3
+		}
+	]
+
+	const yearsBefore = [
+		{
+			label: '2023',
+			id: 1
+		},
+		{
+			label: '2022',
+			id: 2
+		},
+		{
+			label: '2021',
+			id: 3
+		}
+	]
 	// const owners = [{ name: 'Один владелец' }, { name: 'Не более 2 владельцев' }, { name: 'Не более 3 владельцев' }]
 	// const items = [
 	// 	{
@@ -51,6 +77,16 @@ const UsedCars = () => {
 	// ]
 	const drives = [{ name: 'Любой' }, { name: 'Передний' }, { name: 'Задний' }, { name: 'Полный' }]
 	const gearboxes = [{ name: 'Автоматическая' }, { name: 'Робот' }, { name: 'Вариатор' }, { name: 'Механическая' }]
+
+	const owners = ['Один владелец', 'Не более 2 владельцев', 'Не более 3 владельцев']
+
+	const [brand, setBrand] = useState(null)
+	const [body, setBody] = useState(null)
+	const [drive, setDrive] = useState(null)
+	const [gearbox, setGearbox] = useState(null)
+	const [yearFrom, setYearFrom] = useState(null)
+	const [yearBefore, setYearBefore] = useState(null)
+	const [owner, setOwner] = useState(owners[0])
 
 	const carsList = [
 		{
@@ -183,12 +219,38 @@ const UsedCars = () => {
 					<h5 className={cn([cl.usedCarsContentFilterTitle, 'mb-0'])}>Фильтры</h5>
 					<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
 						<span>Цена, руб</span>
+						<div className={cn([cl.inputs, 'd-flex', 'justify-content-between'])}>
+							<input type="text" placeholder="от 399 900" />
+							<input type="text" placeholder="до 399 900" />
+						</div>
 					</div>
 					<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
 						<span>Пробег, км</span>
+						<div className={cn([cl.inputs, 'd-flex'])}>
+							<input type="text" placeholder="от 13 000" />
+							<input type="text" placeholder="до 999 999" />
+						</div>
 					</div>
 					<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
 						<span>Год</span>
+						<div className={cn([cl.selectors, 'd-flex'])}>
+							<div className={cl.select}>
+								<Select
+									placeholder="от"
+									items={yearsFrom}
+									value={yearFrom}
+									onChange={({ value }) => setYearFrom(value)}
+								/>
+							</div>
+							<div className={cl.select}>
+								<Select
+									placeholder="до"
+									items={yearsBefore}
+									value={yearBefore}
+									onChange={({ value }) => setYearBefore(value)}
+								/>
+							</div>
+						</div>
 					</div>
 					<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
 						<span>Марка</span>
@@ -198,7 +260,7 @@ const UsedCars = () => {
 								items={brands}
 								getItemLabel={(item) => item.name}
 								getItemDisabled={(item) => item.disabled}
-								onChange={setBrand}
+								onChange={({ value }) => setBrand(value)}
 								name="CheckboxGroup"
 							/>
 						</div>
@@ -211,7 +273,7 @@ const UsedCars = () => {
 								items={bodies}
 								getItemLabel={(item) => item.name}
 								getItemDisabled={(item) => item.disabled}
-								onChange={setBody}
+								onChange={({ value }) => setBody(value)}
 								name="CheckboxGroup"
 							/>
 						</div>
@@ -219,13 +281,13 @@ const UsedCars = () => {
 					<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
 						<span>Количество владельцев</span>
 						<div>
-							{/* <RadioGroup */}
-							{/*	value={value} */}
-							{/*	items={items} */}
-							{/*	getItemLabel={(item) => item.name} */}
-							{/*	getItemDisabled={(item) => item.disabled} */}
-							{/*	onClick={({ value }) => setValue(value)} */}
-							{/* /> */}
+							<RadioGroup
+								value={owner}
+								items={owners}
+								getItemLabel={(item) => item}
+								onChange={({ value }) => setOwner(value)}
+								direction="column"
+							/>
 						</div>
 					</div>
 					<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
@@ -236,7 +298,7 @@ const UsedCars = () => {
 								items={drives}
 								getItemLabel={(item) => item.name}
 								getItemDisabled={(item) => item.disabled}
-								onChange={setDrive}
+								onChange={({ value }) => setDrive(value)}
 								name="CheckboxGroup"
 							/>
 						</div>
@@ -249,7 +311,7 @@ const UsedCars = () => {
 								items={gearboxes}
 								getItemLabel={(item) => item.name}
 								getItemDisabled={(item) => item.disabled}
-								onChange={setGearbox}
+								onChange={({ value }) => setGearbox(value)}
 								name="CheckboxGroup"
 							/>
 						</div>
@@ -257,26 +319,28 @@ const UsedCars = () => {
 				</div>
 				<div className={cn([cl.usedCarsContentCards, 'd-grid'])}>
 					{carsList.map(({ image, name, year, owner, mileage, gearbox, drive, price }) => (
-						<div className={cn([cl.usedCarsContentCardsCard, 'd-flex', 'flex-column'])}>
-							<img src={image} alt="" />
-							<div className={cn([cl.information, 'd-flex', 'flex-column'])}>
-								<div className={cn([cl.firstBlock, 'd-flex', 'flex-column'])}>
-									<h5 className={cn([cl.name, 'mb-0'])}>{name}</h5>
-									<div className={cl.year}>{year}</div>
+						<Link to="/used-car">
+							<div className={cn([cl.usedCarsContentCardsCard, 'd-flex', 'flex-column'])}>
+								<img src={image} alt="" />
+								<div className={cn([cl.information, 'd-flex', 'flex-column'])}>
+									<div className={cn([cl.firstBlock, 'd-flex', 'flex-column'])}>
+										<h5 className={cn([cl.name, 'mb-0'])}>{name}</h5>
+										<div className={cl.year}>{year}</div>
+									</div>
+									<div className={cn([cl.secondBlock, 'd-flex', 'flex-column'])}>
+										<span className={cn(['d-flex'])}>
+											<div className={cn([cl.owner, 'd-flex', 'align-items-center'])}>{owner}</div>
+											<div className={cn([cl.mileage, 'd-flex', 'align-items-center'])}>{mileage}</div>
+										</span>
+										<span className={cn(['d-flex'])}>
+											<div className={cn([cl.gearbox, 'd-flex', 'align-items-center'])}>{gearbox}</div>
+											<div className={cn([cl.drive, 'd-flex', 'align-items-center'])}>{drive}</div>
+										</span>
+									</div>
+									<h4 className={cn([cl.price, 'mb-0'])}>{price}</h4>
 								</div>
-								<div className={cn([cl.secondBlock, 'd-flex', 'flex-column'])}>
-									<span className={cn(['d-flex'])}>
-										<div className={cn([cl.owner, 'd-flex', 'align-items-center'])}>{owner}</div>
-										<div className={cn([cl.mileage, 'd-flex', 'align-items-center'])}>{mileage}</div>
-									</span>
-									<span className={cn(['d-flex'])}>
-										<div className={cn([cl.gearbox, 'd-flex', 'align-items-center'])}>{gearbox}</div>
-										<div className={cn([cl.drive, 'd-flex', 'align-items-center'])}>{drive}</div>
-									</span>
-								</div>
-								<h4 className={cn([cl.price, 'mb-0'])}>{price}</h4>
 							</div>
-						</div>
+						</Link>
 					))}
 				</div>
 			</div>

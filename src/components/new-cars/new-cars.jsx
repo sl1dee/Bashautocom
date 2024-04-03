@@ -182,7 +182,7 @@ const NewCars = () => {
 									size="l"
 									items={comboboxValues}
 									value={comboboxValue}
-									onChange={setComboboxValue}
+									onChange={({ value }) => setComboboxValue(value)}
 									multiple
 								/>
 							</div>
@@ -190,7 +190,12 @@ const NewCars = () => {
 						<div className={cn([cl.rightBlockSecond, 'd-flex', 'flex-column'])}>
 							<div className={cl.title}>Минимальная цена, руб</div>
 							<div>
-								<Slider step={5} label={`Значение ${value[0]}-${value[1]}`} onChange={setValue} value={value} />
+								<Slider
+									step={5}
+									// label={`Значение ${value[0]}-${value[1]}`}
+									onChange={({ value }) => setValue(value)}
+									value={value}
+								/>
 							</div>
 							<div className={cn([cl.inputs, 'd-flex', 'justify-content-between'])}>
 								<input type="text" placeholder="от" />

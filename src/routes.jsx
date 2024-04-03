@@ -1,5 +1,6 @@
 import NewCarsPage from '@pages/new-cars/new-cars-page.jsx'
 import ServiceCenterPage from '@pages/service-center-page/index.js'
+import UsedCarPage from '@pages/used-car/used-car-page.jsx'
 import UsedCarsPage from '@pages/used-cars/index.js'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
@@ -22,6 +23,10 @@ const Routes = () => {
 		{
 			path: '/used-cars',
 			element: <UsedCarsPage />
+		},
+		{
+			path: '/used-car',
+			element: <UsedCarPage />
 		}
 	])
 

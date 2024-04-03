@@ -54,7 +54,7 @@ const Reviews = () => {
 		<div className={cl.reviews}>
 			<div className="container p-0">
 				<div className={cn([cl.reviewsInformation, 'd-flex', 'flex-column'])}>
-					<h1 className={cn([cl.reviewsInformationTitle, 'mb-0'])}>Узнайте больше в наших обзорах</h1>
+					<h2 className={cn([cl.reviewsInformationTitle, 'mb-0'])}>Узнайте больше в наших обзорах</h2>
 					<div className="d-flex flex-column gap-4">
 						<div className={cl.reviewsSwiper}>
 							<button

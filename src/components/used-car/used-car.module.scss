@@ -1,0 +1,147 @@
+
+.usedCar {
+  gap: 90px;
+
+  &Image {
+    width: 800px;
+    row-gap: 20px;
+    //position: relative;
+    //
+    //.swiper {
+    //  //width: 800px;
+    //  //height: 100px;
+    //  //z-index: 0;
+    //}
+    //
+    //.swiperArrow {
+    //  position: absolute;
+    //  display: flex;
+    //  justify-content: center;
+    //  align-items: center;
+    //  z-index: 1;
+    //  transform: translateY(-50%);
+    //  top: 42%;
+    //  border: none;
+    //  background-color: #2F3140;
+    //  border-radius: 4px;
+    //  width: 46px;
+    //  height: 44px;
+    //
+    //
+    //  &Left {
+    //    left: -30px;
+    //    transform: translateX(-100%);
+    //
+    //    &::before {
+    //      content: url('/assets/img/special-offer/arrow-left.svg');
+    //      display: flex;
+    //      width: 24px;
+    //      height: 24px;
+    //    }
+    //  }
+    //
+    //  &Right {
+    //    right: -30px;
+    //    transform: translateX(100%);
+    //
+    //    &::before {
+    //      content: url('/assets/img/special-offer/arrow-right.svg');
+    //      display: flex;
+    //      width: 24px;
+    //      height: 24px;
+    //    }
+    //  }
+    //}
+  }
+
+  &Description {
+    width: 760px;
+
+    .card {
+      gap: 26px;
+
+      &Price {
+
+        .name {
+          font-size: 48px;
+          font-weight: 500;
+          line-height: 57.6px;
+          color: #111111;
+        }
+        .priceBlock {
+
+          &Price {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 38.4px;
+            color: #111111;
+          }
+          &Card {
+
+          }
+        }
+        .buttons {
+          gap: 14px;
+        }
+      }
+
+      &Characteristics {
+
+
+        .name {
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 24px;
+          color: #111111;
+        }
+        .columns {
+          grid-template-columns: repeat(2, 1fr);
+
+          .column1 {
+
+            .col1 {
+              font-size: 20px;
+              font-weight: 400;
+              line-height: 28px;
+              color: #6B6B6B;
+            }
+          }
+          .column2 {
+
+            .col2 {
+              font-size: 20px;
+              font-weight: 500;
+              line-height: 28px;
+              color: #111111;
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+      &Report {
+
+        .name {
+
+        }
+        .cards {
+          gap: 10px;
+
+          .card {
+            width: fit-content;
+            padding: 11.5px 20px 11.5px 20px;
+            border-radius: 4px;
+            background-color: rgba(42, 157, 143, 0.18);
+            gap: 10px;
+
+            .icon {
+
+            }
+            .text {
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

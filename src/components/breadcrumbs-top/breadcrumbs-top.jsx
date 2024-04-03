@@ -20,6 +20,10 @@ const BreadcrumbsTop = () => {
 		{
 			label: 'Авто с пробегом',
 			href: '/used-cars'
+		},
+		{
+			label: 'Страница автомобиля',
+			href: '/used-car'
 		}
 	]
 
