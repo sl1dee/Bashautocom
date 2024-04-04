@@ -92,7 +92,7 @@ const Question = () => {
 							<div className={cn([cl.tabs, 'd-flex', 'mb-0'])}>
 								<ChoiceGroup
 									value={value}
-									onChange={setValue}
+									onChange={({ value }) => setValue(value)}
 									items={items}
 									getItemLabel={(item) => item}
 									form="default"
@@ -122,7 +122,7 @@ const Question = () => {
 									size="l"
 									items={comboboxValues}
 									value={comboboxValue}
-									onChange={setComboboxValue}
+									onChange={({ value }) => setComboboxValue(value)}
 									multiple
 								/>
 							</div>

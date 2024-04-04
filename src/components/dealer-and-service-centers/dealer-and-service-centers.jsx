@@ -114,7 +114,7 @@ const DealerAndServiceCenters = ({ title }) => {
 							<div className="d-flex">
 								<ChoiceGroup
 									value={value}
-									onChange={setValue}
+									onChange={({ value }) => setValue(value)}
 									items={items}
 									getItemLabel={(item) => item}
 									form="default"
@@ -130,7 +130,7 @@ const DealerAndServiceCenters = ({ title }) => {
 									size="l"
 									items={comboboxValues}
 									value={comboboxValue}
-									onChange={setComboboxValue}
+									onChange={({ value }) => setComboboxValue(value)}
 									multiple
 								/>
 							</div>
@@ -152,6 +152,23 @@ const DealerAndServiceCenters = ({ title }) => {
 								onSwiper={(swiper) => setSwiper(swiper)}
 								pagination={{ clickable: true }}
 								scrollbar={{ draggable: true }}
+								breakpoints={{
+									// when window width is >= 640px
+									320: {
+										spaceBetween: 20,
+										slidesPerView: 'auto'
+									},
+									// when window width is >= 576px
+									576: {
+										spaceBetween: 20,
+										slidesPerView: 2
+									},
+									// when window width is >= 992px
+									1000: {
+										spaceBetween: 20,
+										slidesPerView: 3
+									}
+								}}
 							>
 								{cardList.map(({ bckgImg, street, number, sale, service, saleBrands, serviceBrands }) => (
 									<SwiperSlide>

@@ -95,7 +95,7 @@ const SpecialOffers = () => {
 							<div className="d-flex">
 								<ChoiceGroup
 									value={value}
-									onChange={setValue}
+									onChange={({ value }) => setValue(value)}
 									items={items}
 									getItemLabel={(item) => item}
 									form="default"
@@ -111,7 +111,7 @@ const SpecialOffers = () => {
 									size="l"
 									items={comboboxValues}
 									value={comboboxValue}
-									onChange={setComboboxValue}
+									onChange={({ value }) => setComboboxValue(value)}
 									multiple
 								/>
 							</div>
@@ -129,10 +129,27 @@ const SpecialOffers = () => {
 								className={cl.swiper}
 								modules={[Navigation, Pagination, Scrollbar, A11y]}
 								spaceBetween={30}
-								slidesPerView={'auto'}
+								slidesPerView={3}
 								onSwiper={(swiper) => setSwiper(swiper)}
 								pagination={{ clickable: true }}
 								scrollbar={{ draggable: true }}
+								breakpoints={{
+									// when window width is >= 640px
+									320: {
+										spaceBetween: 8,
+										slidesPerView: 'auto'
+									},
+									// when window width is >= 576px
+									576: {
+										spaceBetween: 10,
+										slidesPerView: 2
+									},
+									// when window width is >= 992px
+									1000: {
+										spaceBetween: 20,
+										slidesPerView: 3
+									}
+								}}
 							>
 								{cardList.map(({ image, link }) => (
 									<SwiperSlide>

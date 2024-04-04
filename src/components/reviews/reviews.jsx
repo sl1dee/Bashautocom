@@ -73,6 +73,23 @@ const Reviews = () => {
 								onSwiper={(swiper) => setSwiper(swiper)}
 								pagination={{ clickable: true }}
 								scrollbar={{ draggable: true }}
+								breakpoints={{
+									// when window width is >= 640px
+									320: {
+										spaceBetween: 8,
+										slidesPerView: 'auto'
+									},
+									// when window width is >= 576px
+									576: {
+										spaceBetween: 20,
+										slidesPerView: 2
+									},
+									// when window width is >= 992px
+									1000: {
+										spaceBetween: 20,
+										slidesPerView: 3
+									}
+								}}
 							>
 								{cardList.map(({ video, text }) => (
 									<SwiperSlide>

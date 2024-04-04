@@ -105,7 +105,7 @@ const Brands = ({ title, viewTabs }) => {
 							<div className={cl.brandsInformationTabs}>
 								<ChoiceGroup
 									value={value}
-									onChange={setValue}
+									onChange={({ value }) => setValue(value)}
 									items={items}
 									getItemLabel={(item) => item}
 									form="default"

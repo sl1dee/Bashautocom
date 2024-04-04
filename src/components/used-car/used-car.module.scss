@@ -5,6 +5,42 @@
   &Image {
     width: 800px;
     row-gap: 20px;
+    position: relative;
+
+    .swiperTop {
+
+      .wrapper {
+        max-width: 800px;
+        max-height: 600px;
+
+        img {
+          width: 800px;
+          height: 600px;
+          border-radius: 20px;
+        }
+      }
+    }
+
+    .swiperBottom {
+      max-width: 690px;
+      padding-top: 20px;
+
+      .wrapper {
+        max-width: 133.2px;
+        max-height: 100px;
+
+        img {
+          width: 133.2px;
+          height: 100px;
+          border-radius: 10px;
+        }
+      }
+
+      .swiper-slide-thumb-active {
+        border: 1px solid teal;
+      }
+
+    }
     //position: relative;
     //
     //.swiper {
@@ -13,79 +49,100 @@
     //  //z-index: 0;
     //}
     //
-    //.swiperArrow {
-    //  position: absolute;
-    //  display: flex;
-    //  justify-content: center;
-    //  align-items: center;
-    //  z-index: 1;
-    //  transform: translateY(-50%);
-    //  top: 42%;
-    //  border: none;
-    //  background-color: #2F3140;
-    //  border-radius: 4px;
-    //  width: 46px;
-    //  height: 44px;
-    //
-    //
-    //  &Left {
-    //    left: -30px;
-    //    transform: translateX(-100%);
-    //
-    //    &::before {
-    //      content: url('/assets/img/special-offer/arrow-left.svg');
-    //      display: flex;
-    //      width: 24px;
-    //      height: 24px;
-    //    }
-    //  }
-    //
-    //  &Right {
-    //    right: -30px;
-    //    transform: translateX(100%);
-    //
-    //    &::before {
-    //      content: url('/assets/img/special-offer/arrow-right.svg');
-    //      display: flex;
-    //      width: 24px;
-    //      height: 24px;
-    //    }
-    //  }
-    //}
+    .swiperArrow {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      transform: translateY(-50%);
+      top: 42%;
+      border: none;
+      background-color: #2F3140;
+      border-radius: 4px;
+      width: 46px;
+      height: 44px;
+
+
+      &Left {
+        //left: -30px;
+        left: 48px;
+        top: 648px;
+        transform: translateX(-100%);
+
+        &::before {
+          content: url('/assets/img/special-offer/arrow-left.svg');
+          display: flex;
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      &Right {
+        //right: -30px;
+        right: 48px;
+        top: 648px;
+        transform: translateX(100%);
+
+        &::before {
+          content: url('/assets/img/special-offer/arrow-right.svg');
+          display: flex;
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
   }
 
   &Description {
-    width: 760px;
+    width: 560px;
 
     .card {
       gap: 26px;
 
       &Price {
+        row-gap: 14px;
 
         .name {
           font-size: 48px;
           font-weight: 500;
           line-height: 57.6px;
           color: #111111;
+          margin-bottom: 0;
         }
         .priceBlock {
+          gap: 14px;
 
           &Price {
             font-size: 32px;
             font-weight: 500;
             line-height: 38.4px;
             color: #111111;
+            margin-bottom: 0;
           }
           &Card {
+            padding: 4px 10px 4px 10px;
+            border-radius: 4px;
+            background-color: rgba(42, 157, 143, 0.12);
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 19.6px;
+            color: #2A9D8F;
+
 
           }
         }
         .buttons {
           gap: 14px;
+          
+          .btn {
+            gap: 10px;
+          }
         }
       }
 
       &Characteristics {
+        row-gap: 14px;
 
 
         .name {
@@ -93,11 +150,13 @@
           font-weight: 500;
           line-height: 24px;
           color: #111111;
+          margin-bottom: 0;
         }
         .columns {
           grid-template-columns: repeat(2, 1fr);
 
           .column1 {
+            row-gap: 14px;
 
             .col1 {
               font-size: 20px;
@@ -107,6 +166,7 @@
             }
           }
           .column2 {
+            row-gap: 14px;
 
             .col2 {
               font-size: 20px;
@@ -119,9 +179,14 @@
         }
       }
       &Report {
+        row-gap: 14px;
 
         .name {
-
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 24px;
+          color: #111111;
+          margin-bottom: 0;
         }
         .cards {
           gap: 10px;
@@ -138,6 +203,128 @@
             }
             .text {
 
+            }
+          }
+        }
+      }
+
+      &Comment {
+        row-gap: 14px;
+
+        .name {
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 28px;
+          color: #111111;
+          margin-bottom: 0;
+        }
+
+        .comment {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 19.52px;
+          color: #111111;
+        }
+      }
+
+      &Contacts {
+        row-gap: 14px;
+
+        .name {
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 28px;
+          color: #111111;
+          margin-bottom: 0;
+        }
+        .group {
+          row-gap: 6px;
+
+          .address {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.52px;
+            color: #111111;
+            gap: 10px;
+
+            &::before {
+              content: url("/assets/img/used-car/location.svg");
+            }
+          }
+          .number {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.52px;
+            color: #111111;
+            padding-left: 34px;
+          }
+        }
+      }
+
+      &Equipment {
+        row-gap: 10px;
+
+        .name {
+          font-size: 40px;
+          font-weight: 500;
+          line-height: 48px;
+          color: #111111;
+          margin-bottom: 0;
+        }
+      }
+
+      &Benefit {
+        max-width: 560px;
+        height: 292px;
+
+        .name {
+          font-size: 40px;
+          font-weight: 500;
+          line-height: 48px;
+          color: #111111;
+          margin-bottom: 0;
+        }
+
+        .content {
+          row-gap: 20px;
+
+          .cardsGroup {
+            gap: 20px;
+
+            .credit {
+              padding: 24px 20px 24px 20px;
+              gap: 10px;
+
+              img {
+                max-width: 50px;
+                max-height: 50px;
+              }
+              .text {
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 24px;
+                color: #111111;
+                margin-bottom: 0;
+                text-align: center;
+              }
+            }
+
+            .exchange {
+              padding: 24px 20px 24px 20px;
+              gap: 10px;
+
+              img {
+                max-width: 50px;
+                max-height: 50px;
+              }
+              .text {
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 24px;
+                color: #111111;
+                margin-bottom: 0;
+                text-align: center;
+              }
             }
           }
         }

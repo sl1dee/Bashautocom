@@ -7,6 +7,7 @@ import LadaVesta from '@assets/img/used-cars/LadaVesta.jpg'
 import { CheckboxGroup } from '@consta/uikit/CheckboxGroup'
 import { RadioGroup } from '@consta/uikit/RadioGroup'
 import { Select } from '@consta/uikit/Select'
+import { Slider } from '@consta/uikit/Slider'
 import cn from 'classnames'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -14,6 +15,9 @@ import { Link } from 'react-router-dom'
 import cl from './used-cars.module.scss'
 
 const UsedCars = () => {
+	const [price, setPrice] = useState([20, 50])
+	const [mileage, setMileage] = useState([20, 50])
+
 	const brands = [
 		{ name: 'Audi' },
 		{ name: 'BAIC' },
@@ -63,18 +67,6 @@ const UsedCars = () => {
 			id: 3
 		}
 	]
-	// const owners = [{ name: 'Один владелец' }, { name: 'Не более 2 владельцев' }, { name: 'Не более 3 владельцев' }]
-	// const items = [
-	// 	{
-	// 		name: 'Один владелец'
-	// 	},
-	// 	{
-	// 		name: 'Не более 2 владельцев'
-	// 	},
-	// 	{
-	// 		name: 'Не более 3 владельцев'
-	// 	}
-	// ]
 	const drives = [{ name: 'Любой' }, { name: 'Передний' }, { name: 'Задний' }, { name: 'Полный' }]
 	const gearboxes = [{ name: 'Автоматическая' }, { name: 'Робот' }, { name: 'Вариатор' }, { name: 'Механическая' }]
 
@@ -219,16 +211,32 @@ const UsedCars = () => {
 					<h5 className={cn([cl.usedCarsContentFilterTitle, 'mb-0'])}>Фильтры</h5>
 					<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
 						<span>Цена, руб</span>
+						<div>
+							<Slider
+								step={5}
+								// label={`Значение ${value[0]}-${value[1]}`}
+								onChange={({ value }) => setPrice(value)}
+								value={price}
+							/>
+						</div>
 						<div className={cn([cl.inputs, 'd-flex', 'justify-content-between'])}>
-							<input type="text" placeholder="от 399 900" />
-							<input type="text" placeholder="до 399 900" />
+							<input type="text" placeholder={price[0]} />
+							<input type="text" placeholder={price[1]} />
 						</div>
 					</div>
 					<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
 						<span>Пробег, км</span>
+						<div>
+							<Slider
+								step={5}
+								// label={`Значение ${value[0]}-${value[1]}`}
+								onChange={({ value }) => setMileage(value)}
+								value={mileage}
+							/>
+						</div>
 						<div className={cn([cl.inputs, 'd-flex'])}>
-							<input type="text" placeholder="от 13 000" />
-							<input type="text" placeholder="до 999 999" />
+							<input type="text" placeholder={mileage[0]} />
+							<input type="text" placeholder={mileage[1]} />
 						</div>
 					</div>
 					<div className={cn([cl.block, 'd-flex', 'flex-column'])}>

@@ -1,3 +1,4 @@
+import user from '@assets/img/header/user.svg'
 import first from '@assets/img/used-car/1.jpg'
 import second from '@assets/img/used-car/2.jpg'
 import third from '@assets/img/used-car/3.jpg'
@@ -5,25 +6,32 @@ import fourth from '@assets/img/used-car/4.jpg'
 import fifth from '@assets/img/used-car/5.jpg'
 import brush from '@assets/img/used-car/brush.svg'
 import clipboard from '@assets/img/used-car/clipboard.svg'
+import credit from '@assets/img/used-car/credit.svg'
+import exchange from '@assets/img/used-car/exchange.svg'
 import key from '@assets/img/used-car/key.svg'
 import owner from '@assets/img/used-car/owner.svg'
+import refresh from '@assets/img/used-car/refresh.svg'
 import shield from '@assets/img/used-car/shield.svg'
 import tick from '@assets/img/used-car/tick.svg'
 import cn from 'classnames'
 import React, { useState } from 'react'
-import swiper, { Thumbs } from 'swiper'
+import swiper, { FreeMode, Navigation, Thumbs } from 'swiper'
+import 'swiper/css'
+import 'swiper/css/free-mode'
+import 'swiper/css/navigation'
+import 'swiper/css/thumbs'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import Button from '@ui/button/index.js'
 
-import UsedCarMainCard from '@components/used-car/used-car-main-card/used-car-main-card.jsx'
-import UsedCarSmallCard from '@components/used-car/used-car-small-card/used-car-small-card.jsx'
+import Equipment from '@components/equipment/equipment.jsx'
 
 import cl from './used-car.module.scss'
 
 const UsedCar = () => {
 	const [thumbsSwiper, setThumbsSwiper] = useState(null)
 	const [swiper, setSwiper] = useState(null)
+	// const [equipmentOpen, setEquipmentOpen] = useState(false)
 
 	const cardInformation = [
 		{
@@ -73,40 +81,44 @@ const UsedCar = () => {
 			number: '+7 (965) 923-98-79',
 			equipment: [
 				{
+					id: 0,
 					title: 'Безопасность',
-					description: ''
+					description: 'Фронтальные подушки безопасности, пассажирская - с отключением Антиблокировочная система (ABS)'
 				},
 				{
+					id: 1,
 					title: 'Интерьер',
-					description: ''
+					description: 'Фронтальные подушки безопасности, пассажирская - с отключением Антиблокировочная система (ABS)'
 				},
 				{
+					id: 2,
 					title: 'Экстерьер',
-					description: ''
+					description: 'Фронтальные подушки безопасности, пассажирская - с отключением Антиблокировочная система (ABS)'
 				},
 				{
+					id: 3,
 					title: 'Комфорт',
-					description: ''
+					description: 'Фронтальные подушки безопасности, пассажирская - с отключением Антиблокировочная система (ABS)'
 				},
 				{
 					title: 'Мультимедиа',
-					description: ''
+					description: 'Фронтальные подушки безопасности, пассажирская - с отключением Антиблокировочная система (ABS)'
 				},
 				{
 					title: 'Освещение',
-					description: ''
+					description: 'Фронтальные подушки безопасности, пассажирская - с отключением Антиблокировочная система (ABS)'
 				},
 				{
 					title: 'Охранные системы',
-					description: ''
+					description: 'Фронтальные подушки безопасности, пассажирская - с отключением Антиблокировочная система (ABS)'
 				},
 				{
 					title: 'Регулировки',
-					description: ''
+					description: 'Фронтальные подушки безопасности, пассажирская - с отключением Антиблокировочная система (ABS)'
 				},
 				{
 					title: 'Дополнительно',
-					description: ''
+					description: 'Фронтальные подушки безопасности, пассажирская - с отключением Антиблокировочная система (ABS)'
 				}
 			]
 		}
@@ -149,70 +161,82 @@ const UsedCar = () => {
 	]
 
 	const prevSwipeHandler = () => {
-		thumbsSwiper?.slidePrev()
+		swiper?.slidePrev()
 	}
 	const nextSwipeHandler = () => {
-		thumbsSwiper?.slideNext()
+		swiper?.slideNext()
 	}
 
 	return (
 		<div className={cn([cl.usedCar, 'container', 'p-0', 'd-flex'])}>
 			<div className={cl.usedCarImage}>
-				<Swiper modules={[Thumbs]} thumbs={{ swiper: thumbsSwiper }}>
+				<Swiper
+					className={cl.swiperTop}
+					modules={[FreeMode, Navigation, Thumbs]}
+					thumbs={{ swiper: thumbsSwiper }}
+					onSwiper={setSwiper}
+					// navigation={true}
+					spaceBetween={10}
+				>
 					{mainCards.map(({ mainImage }) => (
 						<SwiperSlide>
-							<UsedCarMainCard mainImage={mainImage} />
+							<div className={cl.wrapper}>
+								<img src={mainImage} alt="" />
+							</div>
 						</SwiperSlide>
 					))}
-
-					{/* <SwiperSlide>2</SwiperSlide> */}
-					{/* <SwiperSlide>3</SwiperSlide> */}
 				</Swiper>
 
 				{/* Thumbs Swiper -> store swiper instance */}
 				{/* It is also required to set watchSlidesProgress prop */}
 				<Swiper
-					// className={cl.swiper}
-					modules={[Thumbs]}
-					watchSlidesProgress
+					className={cl.swiperBottom}
+					modules={[FreeMode, Navigation, Thumbs]}
+					// modules={[Thumbs]}
 					onSwiper={setThumbsSwiper}
 					spaceBetween={6}
 					slidesPerView={5}
+					freeMode={true}
+					// loop={true}
+					watchSlidesProgress={true}
 				>
 					{smallCards.map(({ smallImage }) => (
 						<SwiperSlide>
-							<UsedCarSmallCard smallImage={smallImage} />
+							<div className={cl.wrapper}>
+								<img src={smallImage} alt="" />
+							</div>
 						</SwiperSlide>
 					))}
 				</Swiper>
-				{/*<button*/}
-				{/*	onClick={prevSwipeHandler}*/}
-				{/*	className={cn([cl.swiperArrow, cl.swiperArrowLeft, 'd-none', 'd-xxl-flex'])}*/}
-				{/*/>*/}
-				{/*<button*/}
-				{/*	onClick={nextSwipeHandler}*/}
-				{/*	className={cn([cl.swiperArrow, cl.swiperArrowRight, 'd-none', 'd-xxl-flex'])}*/}
-				{/*/>*/}
+				<div onClick={prevSwipeHandler} className={cn([cl.swiperArrow, cl.swiperArrowLeft, 'd-none', 'd-xxl-flex'])} />
+				<div onClick={nextSwipeHandler} className={cn([cl.swiperArrow, cl.swiperArrowRight, 'd-none', 'd-xxl-flex'])} />
 			</div>
 			<div className={cl.usedCarDescription}>
 				{cardInformation.map(({ id, name, price, characteristics, report, comment, address, number, equipment }) => (
 					<div key={id} className={cn([cl.card, 'd-flex', 'flex-column'])}>
-						<div className={cn([cl.cardPrice])}>
+						<div className={cn([cl.cardPrice, 'd-flex', 'flex-column'])}>
 							<h2 className={cl.name}>{name}</h2>
 							<div className={cn([cl.priceBlock, 'd-flex', 'align-items-center'])}>
 								<h4 className={cl.priceBlockPrice}>{price}</h4>
-								<div className={cl.priceBlockCard}>плашка хорошая цена</div>
+								<div className={cl.priceBlockCard}>Хорошая цена</div>
 							</div>
 							<div className={cn([cl.buttons, 'd-flex'])}>
-								<Button>Оставить заявку</Button>
-								<Button>Обменять</Button>
+								<Button sizeStyle="sizeContent">Оставить заявку</Button>
+								<Button
+									sizeStyle="sizeContent"
+									colorStyle="Secondary"
+									className={cn([cl.btn, 'd-flex', 'align-items-center'])}
+								>
+									<img src={refresh} alt="userIcon" className={cl.buttonsAccountIcon} />
+									<span className={cl.buttonsAccountName}>Обменять</span>
+								</Button>
 							</div>
 						</div>
-						<div className={cn([cl.cardCharacteristics])}>
+						<div className={cn([cl.cardCharacteristics, 'd-flex', 'flex-column'])}>
 							<h6 className={cl.name}>Основные характеристики</h6>
 							{characteristics.map(({ owners, year, mileage, engine, gearbox, drive, body, color }) => (
 								<div className={cn([cl.columns, 'd-grid'])}>
-									<div className={cl.column1}>
+									<div className={cn([cl.column1, 'd-flex', 'flex-column'])}>
 										<div className={cl.col1}>Владельцы</div>
 										<div className={cl.col1}>Год выпуска</div>
 										<div className={cl.col1}>Пробег</div>
@@ -222,7 +246,7 @@ const UsedCar = () => {
 										<div className={cl.col1}>Кузов</div>
 										<div className={cl.col1}>Цвет</div>
 									</div>
-									<div className={cl.column2}>
+									<div className={cn([cl.column2, 'd-flex', 'flex-column'])}>
 										<h6 className={cl.col2}>{owners}</h6>
 										<h6 className={cl.col2}>{year}</h6>
 										<h6 className={cl.col2}>{mileage}</h6>
@@ -235,7 +259,7 @@ const UsedCar = () => {
 								</div>
 							))}
 						</div>
-						<div className={cn([cl.cardReport])}>
+						<div className={cn([cl.cardReport, 'd-flex', 'flex-column'])}>
 							<h6 className={cl.name}>Отчет о проверке</h6>
 							<div className={cn([cl.cards, 'd-flex', 'flex-column'])}>
 								{report.map(({ icon, text }) => (
@@ -246,26 +270,54 @@ const UsedCar = () => {
 								))}
 							</div>
 						</div>
-						<div>
-							<h6>Комментарий</h6>
-							<div>{comment}</div>
+						<div className={cn([cl.cardComment, 'd-flex', 'flex-column'])}>
+							<h6 className={cl.name}>Комментарий</h6>
+							<div className={cl.comment}>{comment}</div>
 						</div>
-						<div>
-							<h6>Адрес и контакты</h6>
-							<div>{address}</div>
-							<div>{number}</div>
+						<div className={cn([cl.cardContacts, 'd-flex', 'flex-column'])}>
+							<h6 className={cl.name}>Адрес и контакты</h6>
+							<div className={cn([cl.group, 'd-flex', 'flex-column'])}>
+								<div className={cn([cl.address, 'd-flex', 'align-items-center'])}>{address}</div>
+								<div className={cl.number}>{number}</div>
+							</div>
 						</div>
-						<div>
-							<h3>Комплектация</h3>
-							{equipment.map(({ title, description }) => (
-								<div>
-									<div>{title}</div>
-									<div>{description}</div>
+						<div className={cn([cl.cardEquipment, 'd-flex', 'flex-column'])}>
+							<h3 className={cl.name}>Комплектация</h3>
+							<div>
+								{equipment.map(({ title, description }) => (
+									// <div key={id}>
+									// 	<div onClick={() => setEquipmentOpen((prev) => !prev)}>{title}</div>
+									// 	{equipmentOpen && <div>{description}</div>}
+									// </div>
+									<Equipment title={title} description={description} />
+								))}
+							</div>
+						</div>
+						<div className={cn([cl.cardBenefit])}>
+							<h3 className={cl.name}>Купите выгодно</h3>
+							<div className={cn([cl.content, 'd-flex', 'flex-column'])}>
+								<div className={cn([cl.cardsGroup, 'd-flex'])}>
+									<div
+										className={cn([cl.credit, 'd-flex', 'flex-column', 'justify-content-center', 'align-items-center'])}
+									>
+										<img src={credit} alt="" />
+										<h6 className={cl.text}>Выгодные ставки по автокредиту от 0,1 %</h6>
+									</div>
+									<div
+										className={cn([
+											cl.exchange,
+											'd-flex',
+											'flex-column',
+											'justify-content-center',
+											'align-items-center'
+										])}
+									>
+										<img src={exchange} alt="" />
+										<h6 className={cl.text}>Обменяйте старый авто на новый </h6>
+									</div>
 								</div>
-							))}
-						</div>
-						<div>
-							<h3>Купите выгодно</h3>
+								<Button>Оставить заявку</Button>
+							</div>
 						</div>
 					</div>
 				))}

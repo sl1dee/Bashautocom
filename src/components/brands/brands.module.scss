@@ -52,11 +52,16 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: ease .3s;
 
         &Logo {
           img {
 
           }
+        }
+
+        &:hover {
+          background-color: darkgray;
         }
       }
     }
