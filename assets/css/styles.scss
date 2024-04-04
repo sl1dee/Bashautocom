@@ -21,6 +21,24 @@ a {
   }
 }
 
+@media (min-width: 1400px) and (max-width: 1650px + 23px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1400px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
 @media (min-width: 576px) {
   .container {
     padding: 0;
@@ -31,6 +49,10 @@ a {
   .container {
     padding: 0 10px;
   }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  background: #2F3140;
 }
 //
 //

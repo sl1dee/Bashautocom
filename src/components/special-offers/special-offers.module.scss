@@ -20,6 +20,10 @@
 
       .swiper {
         height: 554px;
+
+        .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+          background: #2F3140;
+        }
       }
 
       .swiperArrow {
@@ -38,7 +42,7 @@
 
 
         &Left {
-          left: -30px;
+          left: -10px;
           transform: translateX(-100%);
 
           &::before {
@@ -50,7 +54,7 @@
         }
 
         &Right {
-          right: -30px;
+          right: -10px;
           transform: translateX(100%);
 
           &::before {

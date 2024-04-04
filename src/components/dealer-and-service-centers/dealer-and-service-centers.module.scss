@@ -38,7 +38,7 @@
 
 
         &Left {
-          left: -30px;
+          left: -10px;
           transform: translateX(-100%);
 
           &::before {
@@ -50,7 +50,7 @@
         }
 
         &Right {
-          right: -30px;
+          right: -10px;
           transform: translateX(100%);
 
           &::before {

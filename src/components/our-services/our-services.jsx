@@ -74,27 +74,19 @@ const OurServices = () => {
 					<div className={cn([cl.ourServicesInformationCards])}>
 						{servicesList.map(({ id, title, text, icon }) => (
 							<div className={cn([cl.cardWrapper, 'd-flex'])} key={id}>
-								<div
-									className={cn([
-										cl.card,
-										'd-flex',
-										'flex-column-reverse',
-										'flex-xxl-row'
-										// 'justify-content-lg-between'
-									])}
-								>
-									<div className="d-flex flex-column w-100">
-										<div className={cl.cardTitle}>{title}</div>
-										<div className={cl.cardText}>{text}</div>
-										<Button
-											sizeStyle="sizeL"
-											colorStyle="secondary"
-											className={cn([cl.cardButton], 'd-none', 'd-lg-flex')}
-										>
+								<div className={cn([cl.card, 'd-flex', 'flex-column', 'justify-content-between'])}>
+									<div className={cn([cl.cardGroup, 'd-flex', 'justify-content-between'])}>
+										<div className={cn([cl.cardGroupInfo, 'd-flex', 'flex-column'])}>
+											<div className={cl.cardGroupInfoTitle}>{title}</div>
+											<div className={cl.cardGroupInfoText}>{text}</div>
+										</div>
+										<img src={icon} alt="" className={cl.cardGroupImg} />
+									</div>
+									<div className={cl.btn}>
+										<Button sizeStyle="sizeL" colorStyle="secondary" className={cn([cl.button], 'd-none', 'd-lg-flex')}>
 											Подробнее
 										</Button>
 									</div>
-									<img src={icon} alt="" className={cl.cardImg} />
 								</div>
 							</div>
 						))}

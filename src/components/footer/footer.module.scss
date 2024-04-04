@@ -252,7 +252,7 @@
         grid-column-start: 3;
         grid-column-end: 4;
         grid-row-start: 2;
-        grid-row-end: 3;
+        grid-row-end: 4;
 
         .title {
           font-size: 16px;
@@ -278,7 +278,7 @@
         grid-column-start: 4;
         grid-column-end: 5;
         grid-row-start: 1;
-        grid-row-end: 3;
+        grid-row-end: 4;
 
         .title {
           font-size: 16px;
@@ -298,12 +298,19 @@
         }
       }
 
-      &Download {
-        gap: 16px;
+      .text {
         grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 2;
         grid-row-end: 3;
+      }
+
+      &Download {
+        gap: 16px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
 
         .title {
           font-size: 16px;
@@ -351,7 +358,7 @@
 
     &Content {
       padding: 40px 20px 20px 20px;
-      row-gap: 20px;
+      row-gap: 10px;
 
       &Contacts {
         max-width: 248px;
@@ -469,6 +476,13 @@
             color: #2F3140;
           }
         }
+      }
+
+      .text {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
       }
 
       &Download {

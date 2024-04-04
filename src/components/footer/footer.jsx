@@ -41,7 +41,7 @@ const Footer = () => {
 								</Link>
 							</div>
 						</span>
-						<p className={cn([cl.text, 'mb-0'])}>
+						<p className={cn([cl.text, 'mb-0', 'd-flex', 'align-items-center'])}>
 							Сайт носит информационный характер и предложения не являются публичной офертой.
 						</p>
 						<span className={cn([cl.footerContentBuy, 'd-flex', 'flex-column'])}>
