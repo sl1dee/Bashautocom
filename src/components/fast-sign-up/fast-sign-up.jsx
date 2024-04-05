@@ -1,12 +1,38 @@
 import mechanic from '@assets/img/fast-sign-up/mechanic.jpg'
+import { Combobox } from '@consta/uikit/Combobox'
 import cn from 'classnames'
-import React from 'react'
+import React, { useState } from 'react'
 
 import Button from '@ui/button/button.jsx'
 
 import cl from './fast-sign-up.module.scss'
 
 const FastSignUp = () => {
+	const [comboboxValue, setComboboxValue] = useState(null)
+
+	const comboboxValues = [
+		{
+			label: 'Changan Auto',
+			id: 1
+		},
+		{
+			label: 'Omoda',
+			id: 2
+		},
+		{
+			label: 'Haval',
+			id: 3
+		},
+		{
+			label: 'Москвич',
+			id: 4
+		},
+		{
+			label: 'Exeed',
+			id: 5
+		}
+	]
+
 	return (
 		<div className={cl.signUp}>
 			<div className="container p-o">
@@ -19,6 +45,16 @@ const FastSignUp = () => {
 						<span className={cn([cl.signUpInformationModalBlock2, 'd-flex', 'flex-column'])}>
 							<input type="text" className={cl.input} name="name" placeholder="Имя" />
 							<input type="text" className={cl.input} placeholder="Телефон" />
+							<div className={cl.combobox}>
+								<Combobox
+									placeholder="Выберите бренд"
+									size="l"
+									items={comboboxValues}
+									value={comboboxValue}
+									onChange={({ value }) => setComboboxValue(value)}
+									multiple
+								/>
+							</div>
 						</span>
 						<span className={cn([cl.signUpInformationModalBlock3, 'd-flex', 'flex-column'])}>
 							<div>

@@ -2,7 +2,7 @@
 
 .usedCarsSlider {
   background-color: #FFFFFF;
-  padding: 20px 0 90px 0;
+  padding: 40px 0 100px 0;
 
   &Swiper {
     position: relative;
@@ -12,6 +12,8 @@
 
       .banner {
         border-radius: 20px;
+        max-width: 1650px;
+        height: 450px;
       }
     }
 
@@ -51,6 +53,128 @@
           display: flex;
           width: 24px;
           height: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1401px) and (max-width: 1919px) {
+  .usedCarsSlider {
+    background-color: #FFFFFF;
+    padding: 40px 0 100px 0;
+
+    &Swiper {
+      position: relative;
+
+      .swiper {
+        height: 404px;
+
+        .banner {
+          border-radius: 20px;
+          max-width: 1320px;
+          height: 360px;
+        }
+      }
+
+      .swiperArrow {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        transform: translateY(-50%);
+        top: 42%;
+        border: none;
+        background-color: #2F3140;
+        border-radius: 4px;
+        width: 46px;
+        height: 44px;
+
+
+        &Left {
+          left: -8px;
+          transform: translateX(-100%);
+
+          &::before {
+            content: url('/assets/img/special-offer/arrow-left.svg');
+            display: flex;
+            width: 24px;
+            height: 24px;
+          }
+        }
+
+        &Right {
+          right: -8px;
+          transform: translateX(100%);
+
+          &::before {
+            content: url('/assets/img/special-offer/arrow-right.svg');
+            display: flex;
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1400px) {
+  .usedCarsSlider {
+    background-color: #FFFFFF;
+    padding: 40px 0 100px 0;
+
+    &Swiper {
+      position: relative;
+
+      .swiper {
+        height: 350px;
+
+        .banner {
+          border-radius: 20px;
+          max-width: 960px;
+          height: 306px;
+        }
+      }
+
+      .swiperArrow {
+        position: absolute;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        transform: translateY(-50%);
+        top: 42%;
+        border: none;
+        background-color: #2F3140;
+        border-radius: 4px;
+        width: 46px;
+        height: 44px;
+
+
+        &Left {
+          left: -8px;
+          transform: translateX(-100%);
+
+          &::before {
+            content: url('/assets/img/special-offer/arrow-left.svg');
+            display: flex;
+            width: 24px;
+            height: 24px;
+          }
+        }
+
+        &Right {
+          right: -8px;
+          transform: translateX(100%);
+
+          &::before {
+            content: url('/assets/img/special-offer/arrow-right.svg');
+            display: flex;
+            width: 24px;
+            height: 24px;
+          }
         }
       }
     }

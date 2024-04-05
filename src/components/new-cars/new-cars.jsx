@@ -173,7 +173,7 @@ const NewCars = () => {
 							</div>
 						))}
 					</div>
-					<div className={cn([cl.rightBlock, 'd-flex', 'flex-column', 'justify-content-between'])}>
+					<div className={cn([cl.rightBlock, 'd-flex', 'flex-column'])}>
 						<div className={cn([cl.rightBlockFirst, 'd-flex', 'flex-column'])}>
 							<div className={cl.title}>Бренд</div>
 							<div className={cl.combobox}>
@@ -211,8 +211,10 @@ const NewCars = () => {
 					<div className={cn([cl.newCarsCardsCard, 'd-flex', 'flex-column'])}>
 						<img src={image} alt="" className={cl.image} />
 						<div className={cn([cl.information, 'd-flex', 'flex-column', 'justify-content-between'])}>
-							<div className={cl.name}>{name}</div>
-							<div className={cl.description}>{description}</div>
+							<div className={cn([cl.group, 'd-flex', 'flex-column'])}>
+								<div className={cl.name}>{name}</div>
+								<div className={cl.description}>{description}</div>
+							</div>
 							<div className={cl.price}>{price}</div>
 							<Button>Подробнее</Button>
 						</div>

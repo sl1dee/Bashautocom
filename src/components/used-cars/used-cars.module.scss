@@ -11,7 +11,7 @@
 
   &Content {
     gap: 108px;
-    padding-bottom: 150px;
+    padding-bottom: 140px;
 
     &Filter {
       width: 312px;
@@ -75,19 +75,25 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 30px;
       row-gap: 30px;
-      width: 1230px;
+      max-width: 1230px;
 
       &Card {
         max-width: 390px;
         height: 502px;
+        border-radius: 20px;
 
         img {
           border-radius: 20px 20px 0 0;
+          max-width: 390px;
+          height: 250px;
+          object-fit: cover;
         }
 
         .information {
           padding: 20px 30px 30px 30px;
           gap: 18px;
+          border: 1px solid #F4F5F7;
+          border-top: 0;
 
           .firstBlock {
             gap: 3px;
@@ -162,6 +168,355 @@
             font-weight: 500;
             line-height: 38.4px;
             color: #111111;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1401px) and (max-width: 1919px) {
+
+  .usedCars {
+    row-gap: 40px;
+
+    .title {
+      font-size: 50px;
+      font-weight: 500;
+      line-height: 60px;
+      color: #111111;
+    }
+
+    &Content {
+      gap: 20px;
+      padding-bottom: 140px;
+
+      &Filter {
+        width: 312px;
+        height: fit-content;
+        border-radius: 10px;
+        padding: 20px;
+        border: 1px solid #F1F1F1;
+        box-shadow: 7px 4px 29px rgba(47, 49, 64, 0.06);
+        gap: 24px;
+
+        &Title {
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 31.2px;
+          color: #111111;
+        }
+
+        .block {
+          row-gap: 12px;
+
+          span {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 25.2px;
+            color: #111111;
+          }
+
+          .inputs {
+            gap: 12px;
+
+            input {
+              max-width: 120px;
+              height: 40px;
+              border: 1px solid #B6B6B6;
+              padding: 12px 16px 12px 16px;
+              border-radius: 4px;
+              font-size: 15px;
+              font-weight: 400;
+              line-height: 19.52px;
+            }
+          }
+
+          .selectors {
+            gap: 12px;
+
+            .select {
+              //width: 120px;
+              width: 100%;
+              height: 36px;
+              background: var(--color-control-bg-default);
+              border: var(--control-border-width) solid var(--container-border-color);
+              border-radius: var(--control-radius);
+              color: var(--color-control-typo-default);
+              padding: 0;
+            }
+          }
+        }
+      }
+
+      &Cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        row-gap: 30px;
+        max-width: 985px;
+
+        &Card {
+          max-width: 315px;
+          height: 502px;
+
+          img {
+            border-radius: 20px 20px 0 0;
+            max-width: 315px;
+            height: 250px;
+          }
+
+          .information {
+            padding: 20px 30px 30px 30px;
+            gap: 16px;
+
+            .firstBlock {
+              gap: 3px;
+
+              .name {
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 31.2px;
+                color: #111111;
+              }
+              .year {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 19.52px;
+                color: rgba(17, 17, 17, 0.48);
+              }
+            }
+            .secondBlock {
+              grid-template-columns: repeat(2, 1fr);
+              gap: 10px;
+              width: fit-content;
+
+              span {
+                gap: 10px;
+
+                div {
+                  font-size: 15px;
+                  font-weight: 400;
+                  line-height: 18.3px;
+                  color: #111111;
+                  gap: 6px;
+                  padding: 4px 7px 4px 7px;
+                  background-color: #F4F5F7;
+                  border-radius: 4px;
+                  //align-self: start;
+                  width: fit-content;
+                }
+
+                .owner{
+                  &::before {
+                    content: url("/assets/img/used-cars/owner.svg");
+                    width: 24px;
+                    height: 24px;
+                  }
+                }
+                .mileage {
+                  &::before {
+                    content: url("/assets/img/used-cars/speedometer.svg");
+                    width: 24px;
+                    height: 24px;
+                  }
+                }
+                .gearbox {
+                  &::before {
+                    content: url("/assets/img/used-cars/gearbox.svg");
+                    width: 24px;
+                    height: 24px;
+                  }
+                }
+                .drive {
+                  &::before {
+                    content: url("/assets/img/used-cars/wheel.svg");
+                    width: 24px;
+                    height: 24px;
+                  }
+                }
+              }
+            }
+
+            .price {
+              font-size: 32px;
+              font-weight: 500;
+              line-height: 38.4px;
+              color: #111111;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1400px) {
+  .usedCars {
+    row-gap: 40px;
+
+    .title {
+      font-size: 50px;
+      font-weight: 500;
+      line-height: 60px;
+      color: #111111;
+    }
+
+    &Content {
+      gap: 20px;
+      padding-bottom: 140px;
+
+      //&Filter {
+      //  width: 312px;
+      //  height: fit-content;
+      //  border-radius: 10px;
+      //  padding: 20px;
+      //  border: 1px solid #F1F1F1;
+      //  box-shadow: 7px 4px 29px rgba(47, 49, 64, 0.06);
+      //  gap: 24px;
+      //
+      //  &Title {
+      //    font-size: 24px;
+      //    font-weight: 500;
+      //    line-height: 31.2px;
+      //    color: #111111;
+      //  }
+      //
+      //  .block {
+      //    row-gap: 12px;
+      //
+      //    span {
+      //      font-size: 18px;
+      //      font-weight: 500;
+      //      line-height: 25.2px;
+      //      color: #111111;
+      //    }
+      //
+      //    .inputs {
+      //      gap: 12px;
+      //
+      //      input {
+      //        max-width: 120px;
+      //        height: 40px;
+      //        border: 1px solid #B6B6B6;
+      //        padding: 12px 16px 12px 16px;
+      //        border-radius: 4px;
+      //        font-size: 15px;
+      //        font-weight: 400;
+      //        line-height: 19.52px;
+      //      }
+      //    }
+      //
+      //    .selectors {
+      //      gap: 12px;
+      //
+      //      .select {
+      //        //width: 120px;
+      //        width: 100%;
+      //        height: 36px;
+      //        background: var(--color-control-bg-default);
+      //        border: var(--control-border-width) solid var(--container-border-color);
+      //        border-radius: var(--control-radius);
+      //        color: var(--color-control-typo-default);
+      //        padding: 0;
+      //      }
+      //    }
+      //  }
+      //}
+
+      &Cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        row-gap: 30px;
+        max-width: 985px;
+
+        &Card {
+          width: 306.67px;
+          height: 422px;
+
+          img {
+            border-radius: 20px 20px 0 0;
+            max-width: 306.67px;
+            height: 189px;
+          }
+
+          .information {
+            padding: 20px 26px 30px 26px;
+            gap: 12px;
+
+            .firstBlock {
+              gap: 3px;
+
+              .name {
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 31.2px;
+                color: #111111;
+              }
+              .year {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 19.52px;
+                color: rgba(17, 17, 17, 0.48);
+              }
+            }
+            .secondBlock {
+              grid-template-columns: repeat(2, 1fr);
+              gap: 10px;
+              width: fit-content;
+
+              span {
+                gap: 10px;
+
+                div {
+                  font-size: 14px;
+                  font-weight: 400;
+                  line-height: 16.8px;
+                  color: #111111;
+                  gap: 6px;
+                  padding: 4px 7px 4px 7px;
+                  background-color: #F4F5F7;
+                  border-radius: 4px;
+                  //align-self: start;
+                  width: fit-content;
+                }
+
+                .owner{
+                  &::before {
+                    content: url("/assets/img/used-cars/owner.svg");
+                    width: 24px;
+                    height: 24px;
+                  }
+                }
+                .mileage {
+                  &::before {
+                    content: url("/assets/img/used-cars/speedometer.svg");
+                    width: 24px;
+                    height: 24px;
+                  }
+                }
+                .gearbox {
+                  &::before {
+                    content: url("/assets/img/used-cars/gearbox.svg");
+                    width: 24px;
+                    height: 24px;
+                  }
+                }
+                .drive {
+                  &::before {
+                    content: url("/assets/img/used-cars/wheel.svg");
+                    width: 24px;
+                    height: 24px;
+                  }
+                }
+              }
+            }
+
+            .price {
+              font-size: 24px;
+              font-weight: 500;
+              line-height: 31.2px;
+              color: #111111;
+            }
           }
         }
       }

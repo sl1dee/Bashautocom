@@ -6,14 +6,27 @@
   &Information {
     background-color: #2F3140;
     border-radius: 20px;
-    padding: 34px 0 0 57px;
-    gap: 59px;
+    position: relative;
+    width: 1650px;
+    height: 660px;
+
+    img {
+      position: absolute;
+      width: 778px;
+      height: 626px;
+      object-fit: cover;
+      left: 60px;
+      bottom: 0;
+    }
 
     &Block {
+      position: absolute;
+      right: 120px;
+      bottom: 0;
       gap: 30px;
       color: #FFFFFF;
-      padding: 78px 125px 78px 0;
-      max-width: 680px;
+      padding: 78px 0;
+      max-width: 631px;
 
       h3 {
         font-size: 40px;
@@ -55,6 +68,159 @@
         font-weight: 500;
         line-height: 22.4px;
         align-self: start;
+      }
+    }
+  }
+}
+
+@media (min-width: 1401px) and (max-width: 1919px) {
+
+  .loyaltyProgram {
+    padding: 70px 0 70px 0;
+
+
+    &Information {
+      background-color: #2F3140;
+      border-radius: 20px;
+      position: relative;
+      width: 1320px;
+      height: 660px;
+
+      img {
+        position: absolute;
+        width: 622.4px;
+        height: 626px;
+        object-fit: cover;
+        left: 60px;
+        bottom: 0;
+      }
+
+      &Block {
+        position: absolute;
+        right: 80px;
+        bottom: 0;
+        gap: 30px;
+        color: #FFFFFF;
+        padding: 78px 0;
+        max-width: 504px;
+
+        h3 {
+          font-size: 40px;
+          font-weight: 500;
+          line-height: 48px;
+        }
+
+        h6 {
+          align-self: start;
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 24px;
+          border: 2px solid #FFFFFF;
+          border-radius: 80px;
+          padding: 10px 24px 10px 24px;
+        }
+
+        .ulList {
+
+          p {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 28px;
+          }
+
+          ul {
+            gap: 10px;
+          }
+
+          li {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 28px;
+          }
+        }
+
+        .btn {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22.4px;
+          align-self: start;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1400px) {
+  .loyaltyProgram {
+    padding: 70px 0 70px 0;
+
+
+    &Information {
+      background-color: #2F3140;
+      border-radius: 20px;
+      position: relative;
+      width: 960px;
+      height: 632px;
+
+      img {
+        position: absolute;
+        //width: 460px;
+        height: 80%;
+        object-fit: contain;
+        left: -120px;
+        bottom: 0;
+      }
+
+      &Block {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        gap: 30px;
+        color: #FFFFFF;
+        padding: 60px 0;
+        max-width: 418px;
+
+        h3 {
+          font-size: 32px;
+          font-weight: 500;
+          line-height: 38.4px;
+        }
+
+        h6 {
+          align-self: start;
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 24px;
+          border: 2px solid #FFFFFF;
+          border-radius: 80px;
+          padding: 10px 24px 10px 24px;
+        }
+
+        .ulList {
+
+          p {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 28px;
+          }
+
+          ul {
+            gap: 10px;
+          }
+
+          li {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 28px;
+          }
+        }
+
+        .btn {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22.4px;
+          align-self: start;
+        }
       }
     }
   }

@@ -208,8 +208,8 @@ const UsedCar = () => {
 						</SwiperSlide>
 					))}
 				</Swiper>
-				<div onClick={prevSwipeHandler} className={cn([cl.swiperArrow, cl.swiperArrowLeft, 'd-none', 'd-xxl-flex'])} />
-				<div onClick={nextSwipeHandler} className={cn([cl.swiperArrow, cl.swiperArrowRight, 'd-none', 'd-xxl-flex'])} />
+				<div onClick={prevSwipeHandler} className={cn([cl.swiperArrow, cl.swiperArrowLeft, 'd-none', 'd-lg-flex'])} />
+				<div onClick={nextSwipeHandler} className={cn([cl.swiperArrow, cl.swiperArrowRight, 'd-none', 'd-lg-flex'])} />
 			</div>
 			<div className={cl.usedCarDescription}>
 				{cardInformation.map(({ id, name, price, characteristics, report, comment, address, number, equipment }) => (

@@ -12,6 +12,8 @@ import cn from 'classnames'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
+import Button from '@ui/button/index.js'
+
 import cl from './used-cars.module.scss'
 
 const UsedCars = () => {
@@ -205,9 +207,16 @@ const UsedCars = () => {
 
 	return (
 		<div className={cn([cl.usedCars, 'container', 'p-0', 'd-flex', 'flex-column'])}>
-			<h1 className={cl.title}>Авто с пробегом</h1>
+			<div className="d-flex justify-content-between align-items-center">
+				<h1 className={cl.title}>Авто с пробегом</h1>
+				<div className="d-flex d-xxl-none">
+					<Button sizeStyle="sizeContent" colorStyle="Secondary">
+						Фильтры
+					</Button>
+				</div>
+			</div>
 			<div className={cn([cl.usedCarsContent, 'd-flex'])}>
-				<div className={cn([cl.usedCarsContentFilter, 'd-flex', 'flex-column'])}>
+				<div className={cn([cl.usedCarsContentFilter, 'd-none', 'd-xxl-flex', 'flex-column'])}>
 					<h5 className={cn([cl.usedCarsContentFilterTitle, 'mb-0'])}>Фильтры</h5>
 					<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
 						<span>Цена, руб</span>

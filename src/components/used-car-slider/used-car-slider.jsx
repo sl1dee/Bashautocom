@@ -174,6 +174,23 @@ const UsedCarSlider = () => {
 								onSwiper={(swiper) => setSwiper(swiper)}
 								// pagination={{ clickable: true }}
 								scrollbar={{ draggable: true }}
+								breakpoints={{
+									// // when window width is >= 640px
+									// 320: {
+									// 	spaceBetween: 20,
+									// 	slidesPerView: 'auto'
+									// },
+									// // when window width is >= 576px
+									// 576: {
+									// 	spaceBetween: 20,
+									// 	slidesPerView: 2
+									// },
+									// when window width is >= 992px
+									992: {
+										spaceBetween: 20,
+										slidesPerView: 3
+									}
+								}}
 							>
 								{carsList.map(({ image, name, year, owner, mileage, gearbox, drive, price }) => (
 									<SwiperSlide>
