@@ -121,10 +121,12 @@ const Brands = ({ title, viewTabs }) => {
 					</div>
 					<div className={cl.cards}>
 						{brandsist.map(({ id, imgPath }) => (
-							<div key={id} className={cl.card}>
+							<div>
 								<Link to="/">
-									<div className={cn([cl.cardLogo, 'd-flex', 'align-items-center', 'justify-content-center'])}>
-										<img src={imgPath} alt="car_logo" />
+									<div key={id} className={cl.card}>
+										<div className={cn([cl.cardLogo, 'd-flex', 'align-items-center', 'justify-content-center'])}>
+											<img src={imgPath} alt="car_logo" />
+										</div>
 									</div>
 								</Link>
 							</div>
