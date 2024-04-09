@@ -36,13 +36,13 @@ const FastSignUp = () => {
 	return (
 		<div className={cl.signUp}>
 			<div className="container p-o">
-				<div className={cn([cl.signUpInformation, 'd-flex'])}>
+				<div className={cn([cl.signUpInformation, 'd-flex', 'flex-column', 'flex-lg-row'])}>
 					<div className={cn([cl.signUpInformationModal, 'd-flex', 'flex-column'])}>
-						<span className={cn([cl.signUpInformationModalBlock1, 'd-flex', 'flex-column'])}>
+						<div className={cn([cl.signUpInformationModalBlock1, 'd-flex', 'flex-column'])}>
 							<h3 className="mb-0">Быстрая запись в сервисный центр</h3>
-							<p className="mb-0">Оставьте заявку через форму или позвоните по номеру +7 (ХХХ) ХХХ-ХХ-ХХ</p>
-						</span>
-						<span className={cn([cl.signUpInformationModalBlock2, 'd-flex', 'flex-column'])}>
+							<p className="mb-0">Оставьте заявку через форму или позвоните по номеру +7 (ХХХ) ХХХ-ХХ-ХХ</p>
+						</div>
+						<div className={cn([cl.signUpInformationModalBlock2, 'd-none', 'd-sm-flex', 'flex-column'])}>
 							<input type="text" className={cl.input} name="name" placeholder="Имя" />
 							<input type="text" className={cl.input} placeholder="Телефон" />
 							<div className={cl.combobox}>
@@ -55,15 +55,17 @@ const FastSignUp = () => {
 									multiple
 								/>
 							</div>
-						</span>
-						<span className={cn([cl.signUpInformationModalBlock3, 'd-flex', 'flex-column'])}>
+						</div>
+						<div className={cn([cl.signUpInformationModalBlock3, 'd-flex', 'flex-column'])}>
 							<div>
-								<Button sizeStyle="sizeL">Отправить вопрос</Button>
+								<Button sizeStyle="sizeL" className={cl.btn}>
+									Записаться
+								</Button>
 							</div>
-							<p className={cn([cl.policy, 'd-flex', 'mb-0'])}>
+							<p className={cn([cl.policy, 'd-none', 'd-sm-flex', 'mb-0'])}>
 								Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности
 							</p>
-						</span>
+						</div>
 					</div>
 					<img src={mechanic} alt="mechanic" />
 				</div>

@@ -2,6 +2,7 @@ import changanUNIK from '@assets/img/new-cars-filter/changan_uni-k.png'
 import changanUNIV from '@assets/img/new-cars-filter/changan_uni-v.png'
 import coupe from '@assets/img/new-cars-filter/coupe.png'
 import crossover from '@assets/img/new-cars-filter/crossover.png'
+import funnel from '@assets/img/new-cars-filter/funnel.svg'
 import gwm from '@assets/img/new-cars-filter/gwm.png'
 import hatchback from '@assets/img/new-cars-filter/hatchback.png'
 import havalDargo from '@assets/img/new-cars-filter/haval_dargo.png'
@@ -164,7 +165,7 @@ const NewCars = () => {
 		<div className={cn([cl.newCars, 'container', 'p-0', 'd-flex', 'flex-column'])}>
 			<div className={cn([cl.newCarsFilter, 'd-flex', 'flex-column'])}>
 				<h1 className={cn([cl.title, 'mb-0'])}>Новые автомобили</h1>
-				<div className={cn([cl.newCarsFilterContent, 'd-flex'])}>
+				<div className={cn([cl.newCarsFilterContent, 'd-none', 'd-sm-flex', 'flex-column', 'flex-lg-row'])}>
 					<div className={cn([cl.leftBlock, 'd-grid'])}>
 						{filterList.map(({ carType, name }) => (
 							<div className={cn([cl.leftBlockCard, 'd-flex', 'flex-column'])}>
@@ -174,36 +175,44 @@ const NewCars = () => {
 						))}
 					</div>
 					<div className={cn([cl.rightBlock, 'd-flex', 'flex-column'])}>
-						<div className={cn([cl.rightBlockFirst, 'd-flex', 'flex-column'])}>
-							<div className={cl.title}>Бренд</div>
-							<div className={cl.combobox}>
-								<Combobox
-									placeholder="Выберите бренд"
-									size="l"
-									items={comboboxValues}
-									value={comboboxValue}
-									onChange={({ value }) => setComboboxValue(value)}
-									multiple
-								/>
+						<div className={cn([cl.rightBlockGroup, 'd-flex', 'flex-row', 'flex-lg-column'])}>
+							<div className={cn([cl.rightBlockGroupFirst, 'd-flex', 'flex-column'])}>
+								<div className={cl.title}>Бренд</div>
+								<div className={cl.combobox}>
+									<Combobox
+										placeholder="Выберите бренд"
+										size="l"
+										items={comboboxValues}
+										value={comboboxValue}
+										onChange={({ value }) => setComboboxValue(value)}
+										multiple
+									/>
+								</div>
 							</div>
-						</div>
-						<div className={cn([cl.rightBlockSecond, 'd-flex', 'flex-column'])}>
-							<div className={cl.title}>Минимальная цена, руб</div>
-							<div>
-								<Slider
-									step={5}
-									// label={`Значение ${value[0]}-${value[1]}`}
-									onChange={({ value }) => setValue(value)}
-									value={value}
-								/>
-							</div>
-							<div className={cn([cl.inputs, 'd-flex', 'justify-content-between'])}>
-								<input type="text" placeholder="от" />
-								<input type="text" placeholder="до" />
+							<div className={cn([cl.rightBlockGroupSecond, 'd-flex', 'flex-column'])}>
+								<div className={cl.title}>Минимальная цена, руб</div>
+								<div>
+									<Slider
+										step={5}
+										// label={`Значение ${value[0]}-${value[1]}`}
+										onChange={({ value }) => setValue(value)}
+										value={value}
+									/>
+								</div>
+								<div className={cn([cl.inputs, 'd-flex', 'justify-content-between'])}>
+									<input type="text" placeholder="от" />
+									<input type="text" placeholder="до" />
+								</div>
 							</div>
 						</div>
 						<Button>Применить</Button>
 					</div>
+				</div>
+				<div className="d-xs-flex d-sm-none">
+					<Button sizeStyle="sizeContent" colorStyle="Secondary" className={cn([cl.btn, 'd-flex'])}>
+						<img src={funnel} alt="" />
+						<div>Фильтры</div>
+					</Button>
 				</div>
 			</div>
 			<div className={cn([cl.newCarsCards, 'd-grid'])}>
@@ -216,7 +225,11 @@ const NewCars = () => {
 								<div className={cl.description}>{description}</div>
 							</div>
 							<div className={cl.price}>{price}</div>
-							<Button>Подробнее</Button>
+							<div className="d-none d-sm-flex">
+								<Button sizeStyle="sizeContent" className={cl.btn}>
+									Подробнее
+								</Button>
+							</div>
 						</div>
 					</div>
 				))}

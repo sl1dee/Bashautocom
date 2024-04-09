@@ -168,7 +168,7 @@ const UsedCar = () => {
 	}
 
 	return (
-		<div className={cn([cl.usedCar, 'container', 'p-0', 'd-flex'])}>
+		<div className={cn([cl.usedCar, 'container', 'p-0', 'd-grid'])}>
 			<div className={cl.usedCarImage}>
 				<Swiper
 					className={cl.swiperTop}
@@ -211,9 +211,9 @@ const UsedCar = () => {
 				<div onClick={prevSwipeHandler} className={cn([cl.swiperArrow, cl.swiperArrowLeft, 'd-none', 'd-lg-flex'])} />
 				<div onClick={nextSwipeHandler} className={cn([cl.swiperArrow, cl.swiperArrowRight, 'd-none', 'd-lg-flex'])} />
 			</div>
-			<div className={cl.usedCarDescription}>
+			<div className={cn([cl.usedCarDescription, 'd-grid'])}>
 				{cardInformation.map(({ id, name, price, characteristics, report, comment, address, number, equipment }) => (
-					<div key={id} className={cn([cl.card, 'd-flex', 'flex-column'])}>
+					<div key={id} className={cn([cl.card, 'd-grid'])}>
 						<div className={cn([cl.cardPrice, 'd-flex', 'flex-column'])}>
 							<h2 className={cl.name}>{name}</h2>
 							<div className={cn([cl.priceBlock, 'd-flex', 'align-items-center'])}>
@@ -293,7 +293,7 @@ const UsedCar = () => {
 								))}
 							</div>
 						</div>
-						<div className={cn([cl.cardBenefit])}>
+						<div className={cn([cl.cardBenefit, 'd-flex', 'flex-column'])}>
 							<h3 className={cl.name}>Купите выгодно</h3>
 							<div className={cn([cl.content, 'd-flex', 'flex-column'])}>
 								<div className={cn([cl.cardsGroup, 'd-flex'])}>

@@ -23,6 +23,11 @@
         .card {
           max-width: 390px;
           gap: 20px;
+          display: none;
+
+          &:nth-of-type(-n+3) {
+            display: block;
+          }
 
           &Image {
             max-width: 390px;
@@ -167,6 +172,10 @@
               color: rgba(17, 17, 17, 0.48);
             }
           }
+
+          .card:nth-of-type(n+4) {
+            display: none!important;
+          }
         }
 
         .btn {
@@ -228,6 +237,10 @@
               line-height: 19.52px;
               color: rgba(17, 17, 17, 0.48);
             }
+          }
+
+          .card:nth-of-type(n+3) {
+            display: none!important;
           }
         }
 

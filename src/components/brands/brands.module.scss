@@ -7,7 +7,7 @@
     padding: 137px 0 70px 0;
     gap: 50px;
 
-    .head {
+    &Head {
 
       &Title {
         font-size: 50px;
@@ -75,7 +75,7 @@
       padding: 140px 0 70px 0;
       gap: 50px;
 
-      .head {
+      &Head {
 
         &Title {
           font-size: 50px;
@@ -136,8 +136,8 @@
       padding: 140px 0;
       gap: 50px;
 
-      .head {
-        gap: 50px;
+      &Head {
+        row-gap: 50px;
 
         &Title {
           font-size: 50px;
@@ -198,8 +198,8 @@
       padding: 100px 0 50px 0;
       gap: 30px;
 
-      .head {
-        gap: 30px;
+      &Head {
+        row-gap: 30px;
 
         &Title {
           font-size: 32px;
@@ -240,6 +240,71 @@
           width: 173px;
           height: 80px;
           border-radius: 20px;
+          background-color: #FAFAFA;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &Logo {
+            img {
+              width: 60%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+  .brands {
+
+    &Information {
+      padding: 40px 0 25px 0;
+      gap: 16px;
+
+      &Head {
+        row-gap: 16px;
+
+        &Title {
+          font-size: 18px;
+          font-weight: 500;
+          color: #111111;
+          line-height: 21.6px;
+        }
+
+        &Tabs {
+
+          .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 13px 20px 13px 20px;
+            gap: 0;
+            width: 176.67px;
+            height: 48px;
+            border-radius: 4px;
+            background-color: #FFFFFF;
+            color: #2F3140;
+            border: 1px solid #2F3140;
+          }
+
+          .btn:hover {
+            background-color: #2F3140;
+            color: #FFFFFF;
+          }
+        }
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+
+        .card {
+          width: 92px;
+          height: 43px;
+          border-radius: 4px;
           background-color: #FAFAFA;
           display: flex;
           justify-content: center;

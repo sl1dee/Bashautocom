@@ -91,7 +91,7 @@ const Brands = ({ title, viewTabs }) => {
 				<div className={cn([cl.brandsInformation, 'd-flex', 'flex-column'])}>
 					<div
 						className={cn([
-							cl.head,
+							cl.brandsInformationHead,
 							'd-flex',
 							'flex-column',
 							'flex-xxl-row',
@@ -100,9 +100,9 @@ const Brands = ({ title, viewTabs }) => {
 							'align-content-xxl-center'
 						])}
 					>
-						<h1 className={cn([cl.brandsInformationTitle, 'mb-0'])}>{title}</h1>
+						<h1 className={cn([cl.brandsInformationHeadTitle, 'mb-0'])}>{title}</h1>
 						{viewTabs === true ? (
-							<div className={cl.brandsInformationTabs}>
+							<div className={cl.brandsInformationHeadTabs}>
 								<ChoiceGroup
 									value={value}
 									onChange={({ value }) => setValue(value)}
@@ -116,7 +116,7 @@ const Brands = ({ title, viewTabs }) => {
 								/>
 							</div>
 						) : (
-							<div />
+							<div className="d-none" />
 						)}
 					</div>
 					<div className={cl.cards}>

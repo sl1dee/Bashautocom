@@ -6,6 +6,12 @@
     width: 800px;
     row-gap: 20px;
     position: relative;
+    //position: sticky;
+    //top: 100px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 8;
 
     .swiperTop {
 
@@ -97,13 +103,19 @@
   }
 
   &Description {
-    width: 560px;
+    width: 760px;
+
 
     .card {
       gap: 26px;
+      width: 560px;
 
       &Price {
         row-gap: 14px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
 
         .name {
           font-size: 48px;
@@ -145,6 +157,10 @@
 
       &Characteristics {
         row-gap: 14px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
 
 
         .name {
@@ -182,6 +198,10 @@
       }
       &Report {
         row-gap: 14px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
 
         .name {
           font-size: 20px;
@@ -212,6 +232,10 @@
 
       &Comment {
         row-gap: 14px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
 
         .name {
           font-size: 20px;
@@ -231,6 +255,10 @@
 
       &Contacts {
         row-gap: 14px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 6;
 
         .name {
           font-size: 20px;
@@ -265,6 +293,10 @@
 
       &Equipment {
         row-gap: 10px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 6;
+        grid-row-end: 7;
 
         .name {
           font-size: 40px;
@@ -278,6 +310,11 @@
       &Benefit {
         max-width: 560px;
         height: 292px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 7;
+        grid-row-end: 8;
+        row-gap: 20px;
 
         .name {
           font-size: 40px;
@@ -296,6 +333,8 @@
             .credit {
               padding: 24px 20px 24px 20px;
               gap: 10px;
+              border-radius: 10px;
+              background-color: #F4F5F7;
 
               img {
                 max-width: 50px;
@@ -314,6 +353,8 @@
             .exchange {
               padding: 24px 20px 24px 20px;
               gap: 10px;
+              border-radius: 10px;
+              background-color: #F4F5F7;
 
               img {
                 max-width: 50px;
@@ -765,9 +806,10 @@
     }
 
     &Description {
-      width: 560px;
+      width: 470px;
 
       .card {
+        width: 470px;
         gap: 26px;
 
         &Price {
@@ -959,7 +1001,8 @@
               gap: 20px;
 
               .credit {
-                padding: 24px 20px 24px 20px;
+                width: 225px;
+                padding: 24px 10px 24px 10px;
                 gap: 10px;
 
                 img {
@@ -977,7 +1020,8 @@
               }
 
               .exchange {
-                padding: 24px 20px 24px 20px;
+                width: 225px;
+                padding: 24px 10px 24px 10px;
                 gap: 10px;
 
                 img {
@@ -988,6 +1032,388 @@
                   font-size: 18px;
                   font-weight: 500;
                   line-height: 21.6px;
+                  color: #111111;
+                  margin-bottom: 0;
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .usedCar {
+    gap: 90px;
+
+    &Image {
+      width: 800px;
+      row-gap: 20px;
+      position: relative;
+      //position: sticky;
+      //top: 100px;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 8;
+
+      .swiperTop {
+
+        .wrapper {
+          max-width: 800px;
+          max-height: 600px;
+
+          img {
+            width: 800px;
+            height: 600px;
+            border-radius: 20px;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .swiperBottom {
+        max-width: 690px;
+        padding-top: 20px;
+
+        .wrapper {
+          max-width: 133.2px;
+          max-height: 100px;
+
+          img {
+            width: 133.2px;
+            height: 100px;
+            border-radius: 10px;
+            object-fit: cover;
+          }
+        }
+
+        .swiper-slide-thumb-active {
+          border: 1px solid teal;
+        }
+
+      }
+      //position: relative;
+      //
+      //.swiper {
+      //  //width: 800px;
+      //  //height: 100px;
+      //  //z-index: 0;
+      //}
+      //
+      .swiperArrow {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        transform: translateY(-50%);
+        top: 42%;
+        border: none;
+        background-color: #2F3140;
+        border-radius: 4px;
+        width: 46px;
+        height: 44px;
+
+
+        &Left {
+          //left: -30px;
+          left: 48px;
+          top: 648px;
+          transform: translateX(-100%);
+
+          &::before {
+            content: url('/assets/img/special-offer/arrow-left.svg');
+            display: flex;
+            width: 24px;
+            height: 24px;
+          }
+        }
+
+        &Right {
+          //right: -30px;
+          right: 48px;
+          top: 648px;
+          transform: translateX(100%);
+
+          &::before {
+            content: url('/assets/img/special-offer/arrow-right.svg');
+            display: flex;
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+
+    &Description {
+      width: 760px;
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 8;
+
+      .card {
+        gap: 26px;
+        width: 560px;
+
+        &Price {
+          row-gap: 14px;
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 1;
+          grid-row-end: 2;
+
+          .name {
+            font-size: 48px;
+            font-weight: 500;
+            line-height: 57.6px;
+            color: #111111;
+            margin-bottom: 0;
+          }
+          .priceBlock {
+            gap: 14px;
+
+            &Price {
+              font-size: 32px;
+              font-weight: 500;
+              line-height: 38.4px;
+              color: #111111;
+              margin-bottom: 0;
+            }
+            &Card {
+              padding: 4px 10px 4px 10px;
+              border-radius: 4px;
+              background-color: rgba(42, 157, 143, 0.12);
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 19.6px;
+              color: #2A9D8F;
+
+
+            }
+          }
+          .buttons {
+            gap: 14px;
+
+            .btn {
+              gap: 10px;
+            }
+          }
+        }
+
+        &Characteristics {
+          row-gap: 14px;
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 2;
+          grid-row-end: 3;
+
+
+          .name {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 24px;
+            color: #111111;
+            margin-bottom: 0;
+          }
+          .columns {
+            grid-template-columns: repeat(2, 1fr);
+
+            .column1 {
+              row-gap: 14px;
+
+              .col1 {
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 28px;
+                color: #6B6B6B;
+              }
+            }
+            .column2 {
+              row-gap: 14px;
+
+              .col2 {
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 28px;
+                color: #111111;
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+        &Report {
+          row-gap: 14px;
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 3;
+          grid-row-end: 4;
+
+          .name {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 24px;
+            color: #111111;
+            margin-bottom: 0;
+          }
+          .cards {
+            gap: 10px;
+
+            .card {
+              width: fit-content;
+              padding: 11.5px 20px 11.5px 20px;
+              border-radius: 4px;
+              background-color: rgba(42, 157, 143, 0.18);
+              gap: 10px;
+
+              .icon {
+
+              }
+              .text {
+
+              }
+            }
+          }
+        }
+
+        &Comment {
+          row-gap: 14px;
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 4;
+          grid-row-end: 5;
+
+          .name {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 28px;
+            color: #111111;
+            margin-bottom: 0;
+          }
+
+          .comment {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.52px;
+            color: #6B6B6B;
+          }
+        }
+
+        &Contacts {
+          row-gap: 14px;
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 5;
+          grid-row-end: 6;
+
+          .name {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 28px;
+            color: #111111;
+            margin-bottom: 0;
+          }
+          .group {
+            row-gap: 6px;
+
+            .address {
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 19.52px;
+              color: #6B6B6B;
+              gap: 10px;
+
+              &::before {
+                content: url("/assets/img/used-car/location.svg");
+              }
+            }
+            .number {
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 19.52px;
+              color: #6B6B6B;
+              padding-left: 34px;
+            }
+          }
+        }
+
+        &Equipment {
+          row-gap: 10px;
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 6;
+          grid-row-end: 7;
+
+          .name {
+            font-size: 40px;
+            font-weight: 500;
+            line-height: 48px;
+            color: #111111;
+            margin-bottom: 0;
+          }
+        }
+
+        &Benefit {
+          max-width: 560px;
+          height: 292px;
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 7;
+          grid-row-end: 8;
+          row-gap: 20px;
+
+          .name {
+            font-size: 40px;
+            font-weight: 500;
+            line-height: 48px;
+            color: #111111;
+            margin-bottom: 0;
+          }
+
+          .content {
+            row-gap: 20px;
+
+            .cardsGroup {
+              gap: 20px;
+
+              .credit {
+                padding: 24px 20px 24px 20px;
+                gap: 10px;
+                border-radius: 10px;
+                background-color: #F4F5F7;
+
+                img {
+                  max-width: 50px;
+                  max-height: 50px;
+                }
+                .text {
+                  font-size: 20px;
+                  font-weight: 500;
+                  line-height: 24px;
+                  color: #111111;
+                  margin-bottom: 0;
+                  text-align: center;
+                }
+              }
+
+              .exchange {
+                padding: 24px 20px 24px 20px;
+                gap: 10px;
+                border-radius: 10px;
+                background-color: #F4F5F7;
+
+                img {
+                  max-width: 50px;
+                  max-height: 50px;
+                }
+                .text {
+                  font-size: 20px;
+                  font-weight: 500;
+                  line-height: 24px;
                   color: #111111;
                   margin-bottom: 0;
                   text-align: center;

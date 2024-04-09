@@ -18,18 +18,20 @@ const Footer = () => {
 			<div className={cl.footer}>
 				<div className="container p-0">
 					<div className={cn([cl.footerContent, 'd-grid'])}>
-						<span className={cn([cl.footerContentContacts, 'd-flex', 'flex-column'])}>
-							<img src={logo} alt="" className={cl.logo} />
-							<div className={cn([cl.phone, 'd-flex', 'flex-column'])}>
-								{/* <div className={cl.phoneNumber}>+7 (347) 123-45-67</div> */}
-								<a href="tel:+73471234567" className={cl.phoneNumber}>
-									+7 (347) 123-45-67
-								</a>
-								<Link to="/" className={cn([cl.phoneLink, 'd-flex'])}>
-									Заказать звонок
-								</Link>
+						<div className={cn([cl.footerContentContacts, 'd-flex', 'flex-sm-column'])}>
+							<div className={cn([cl.footerContentContactsGroup, 'd-flex', 'flex-column'])}>
+								<img src={logo} alt="" className={cl.logo} />
+								<div className={cn([cl.phone, 'd-flex', 'flex-column'])}>
+									{/* <div className={cl.phoneNumber}>+7 (347) 123-45-67</div> */}
+									<a href="tel:+73471234567" className={cl.phoneNumber}>
+										+7 (347) 123-45-67
+									</a>
+									<Link to="/" className={cn([cl.phoneLink, 'd-flex'])}>
+										Заказать звонок
+									</Link>
+								</div>
 							</div>
-							<div className="d-flex gap-4">
+							<div className={cn([cl.footerContentContactsIcons, 'd-flex'])}>
 								<Link to="/">
 									<img src={vk} alt="" />
 								</Link>
@@ -40,7 +42,7 @@ const Footer = () => {
 									<img src={telegram} alt="" />
 								</Link>
 							</div>
-						</span>
+						</div>
 						<p className={cn([cl.text, 'mb-0', 'd-flex', 'align-items-center'])}>
 							Сайт носит информационный характер и предложения не являются публичной офертой.
 						</p>
@@ -104,7 +106,7 @@ const Footer = () => {
 								<Link to="/">Аренда автомобиля</Link>
 							</div>
 						</span>
-						<span className={cn([cl.footerContentDownload, 'd-flex', 'flex-column'])}>
+						<span className={cn([cl.footerContentDownload, 'd-none', 'd-sm-flex', 'flex-column'])}>
 							<div className={cl.title}>Скачайте приложение Башавтоком</div>
 							<div className={cn([cl.icons, 'd-flex', 'flex-column', 'flex-lg-row'])}>
 								<img src={qr} alt="" className={cl.qr} />
@@ -126,7 +128,7 @@ const Footer = () => {
 			</div>
 			<div className={cl.footer2}>
 				<div className="container p-0">
-					<div className={cn([cl.footer2Links, 'd-flex', 'justify-content-between'])}>
+					<div className={cn([cl.footer2Links, 'd-flex', 'justify-content-between', 'flex-column', 'flex-sm-row'])}>
 						<p>
 							<Link to="/">Политика конфиденциальности</Link>
 						</p>

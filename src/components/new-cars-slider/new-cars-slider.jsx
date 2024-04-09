@@ -1,4 +1,6 @@
 import moskvich from '@assets/img/new-cars-slider/moskvich.jpg'
+import moskvichMobile from '@assets/img/new-cars-slider/moskvichMobile.jpg'
+import moskvichTablet from '@assets/img/new-cars-slider/moskvichTablet.jpg'
 import cn from 'classnames'
 import React, { useState } from 'react'
 import { A11y, Navigation, Pagination, Scrollbar } from 'swiper'
@@ -11,13 +13,19 @@ const NewCarsSlider = () => {
 
 	const bannerList = [
 		{
-			banner: moskvich
+			banner: moskvich,
+			bannerTablet: moskvichTablet,
+			bannerMobile: moskvichMobile
 		},
 		{
-			banner: moskvich
+			banner: moskvich,
+			bannerTablet: moskvichTablet,
+			bannerMobile: moskvichMobile
 		},
 		{
-			banner: moskvich
+			banner: moskvich,
+			bannerTablet: moskvichTablet,
+			bannerMobile: moskvichMobile
 		}
 	]
 
@@ -45,7 +53,13 @@ const NewCarsSlider = () => {
 					>
 						{bannerList.map(({ banner }) => (
 							<SwiperSlide>
-								<img src={banner} alt="banner" className={cl.banner} />
+								<img src={banner} alt="banner" className={cn([cl.banner, 'd-none', 'd-lg-flex'])} />
+								<img
+									src={moskvichTablet}
+									alt="banner"
+									className={cn([cl.banner, 'd-none', 'd-sm-flex', 'd-lg-none'])}
+								/>
+								<img src={moskvichMobile} alt="banner" className={cn([cl.banner, 'd-xs-flex', 'd-sm-none'])} />
 							</SwiperSlide>
 						))}
 					</Swiper>

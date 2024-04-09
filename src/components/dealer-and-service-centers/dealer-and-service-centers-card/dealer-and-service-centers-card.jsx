@@ -21,17 +21,21 @@ const DealerAndServiceCentersCard = ({ bckgImg, street, number, sale, service, s
 				{saleBrands?.length > 0 && (
 					<div className={cn([cl.Block2Sale, 'd-flex', 'flex-column', 'mb-0'])}>
 						<div className={cn([cl.Block2SaleTitle, 'mb-0'])}>Продажа</div>
-						{saleBrands.map((item) => (
-							<p className="mb-0">{item}</p>
-						))}
+						<div className={cn([cl.Block2SaleItems, 'mb-0'])}>
+							{saleBrands.map((item) => (
+								<p className="mb-0">{item}</p>
+							))}
+						</div>
 					</div>
 				)}
 				{saleBrands?.length > 0 && (
 					<div className={cn([cl.Block2Service, 'd-flex', 'flex-column', 'mb-0'])}>
-						<div className={cn([cl.Block2SaleTitle, 'mb-0'])}>Сервис</div>
-						{serviceBrands.map((item) => (
-							<p className="mb-0">{item}</p>
-						))}
+						<div className={cn([cl.Block2ServiceTitle, 'mb-0'])}>Сервис</div>
+						<div className={cn([cl.Block2ServiceItems, 'mb-0', 'd-grid'])}>
+							{serviceBrands.map((item) => (
+								<p className="mb-0">{item}</p>
+							))}
+						</div>
 					</div>
 				)}
 			</div>

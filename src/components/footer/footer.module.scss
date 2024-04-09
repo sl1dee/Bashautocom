@@ -14,26 +14,39 @@
       grid-row-start: 1;
       grid-row-end: 2;
 
-      .logo {
-        max-width: 307px;
-      }
+      &Group {
 
-      .phone {
-        gap: 14px;
-
-        &Number {
-          font-size: 32px;
-          font-weight: 500;
-          line-height: 38.4px;
-          color: #2F3140;
+        .logo {
+          max-width: 307px;
         }
 
-        &Link {
-          font-size: 16px;
-          font-weight: 400;
-          line-height: 19.2px;
-          color: #2F3140;
-          //border-bottom: 1px solid #2F3140;
+        .phone {
+          gap: 14px;
+
+          &Number {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 38.4px;
+            color: #2F3140;
+          }
+
+          &Link {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.2px;
+            color: #2F3140;
+            text-decoration-line: underline;
+            align-self: start;
+          }
+        }
+      }
+
+      &Icons {
+        gap: 24px;
+        height: 40px;
+        img {
+          width: 40px;
+          height: 40px;
         }
       }
     }
@@ -189,34 +202,46 @@
         grid-row-start: 1;
         grid-row-end: 2;
 
-        .logo {
-          max-width: 307px;
-        }
+        &Group {
 
-        .phone {
-          gap: 14px;
-
-          &Number {
-            font-size: 32px;
-            font-weight: 500;
-            line-height: 38.4px;
-            color: #2F3140;
+          .logo {
+            max-width: 307px;
           }
 
-          &Link {
-            font-size: 16px;
+          .phone {
+            gap: 14px;
+
+            &Number {
+              font-size: 32px;
+              font-weight: 500;
+              line-height: 38.4px;
+              color: #2F3140;
+            }
+
+            &Link {
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 19.2px;
+              color: #2F3140;
+              //border-bottom: 1px solid #2F3140;
+            }
+          }
+
+          .text {
+            font-size: 14px;
             font-weight: 400;
-            line-height: 19.2px;
-            color: #2F3140;
-            //border-bottom: 1px solid #2F3140;
+            line-height: 16.8px;
+            color: rgba(17, 17, 17, 0.31);
           }
         }
 
-        .text {
-          font-size: 14px;
-          font-weight: 400;
-          line-height: 16.8px;
-          color: rgba(17, 17, 17, 0.31);
+        &Icons {
+          gap: 20px;
+          height: 40px;
+          img {
+            width: 40px;
+            height: 40px;
+          }
         }
       }
 
@@ -368,35 +393,47 @@
         grid-row-start: 1;
         grid-row-end: 2;
 
-        .logo {
-          max-width: 179px;
-        }
+        &Group {
 
-        .phone {
-          gap: 14px;
-
-          &Number {
-            font-size: 20px;
-            font-weight: 500;
-            line-height: 24px;
-            color: #2F3140;
+          .logo {
+            max-width: 179px;
           }
 
-          &Link {
-            font-size: 14px;
+          .phone {
+            gap: 14px;
+
+            &Number {
+              font-size: 20px;
+              font-weight: 500;
+              line-height: 24px;
+              color: #2F3140;
+            }
+
+            &Link {
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 16.8px;
+              color: #2F3140;
+              //border-bottom: 1px solid #2F3140;
+            }
+          }
+
+          .text {
+            font-size: 12px;
             font-weight: 400;
-            line-height: 16.8px;
-            color: #2F3140;
-            //border-bottom: 1px solid #2F3140;
+            line-height: 14.4px;
+            color: rgba(17, 17, 17, 0.31);
+            max-width: 248px;
           }
         }
 
-        .text {
-          font-size: 12px;
-          font-weight: 400;
-          line-height: 14.4px;
-          color: rgba(17, 17, 17, 0.31);
-          max-width: 248px;
+        &Icons {
+          gap: 20px;
+          height: 40px;
+          img {
+            width: 40px;
+            height: 40px;
+          }
         }
       }
 
@@ -526,6 +563,178 @@
         font-size: 14px;
         font-weight: 400;
         line-height: 17.08px;
+        color: #6B6B6B;
+        margin: 0;
+      }
+
+      a {
+        color: #6B6B6B;
+        border-bottom: 1px solid #6B6B6B;
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+
+  .footer {
+
+    &Content {
+      padding: 20px 10px 10px 10px;
+      row-gap: 16px;
+
+      &Contacts {
+        max-width: 248px;
+        gap: 28px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+        &Group {
+          row-gap: 16px;
+
+          .logo {
+            max-width: 143px;
+          }
+
+          .phone {
+            gap: 4px;
+
+            &Number {
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 16.8px;
+              color: #2F3140;
+            }
+
+            &Link {
+              font-size: 12px;
+              font-weight: 400;
+              line-height: 15.6px;
+              color: #2F3140;
+              //border-bottom: 1px solid #2F3140;
+            }
+          }
+
+          .text {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 14.4px;
+            color: rgba(17, 17, 17, 0.31);
+            max-width: 248px;
+          }
+        }
+
+        &Icons {
+          gap: 10px;
+          height: 30px;
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+
+      &Buy {
+        max-width: 200px;
+        gap: 6px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+        .title {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22.4px;
+          color: #2F3140;
+        }
+
+        .link {
+
+          a {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.8px;
+            color: #2F3140;
+          }
+        }
+      }
+
+      &Company {
+        max-width: 200px;
+        gap: 6px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+
+        .title {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22.4px;
+          color: #2F3140;
+        }
+
+        .link {
+
+          a {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.8px;
+            color: #2F3140;
+          }
+        }
+      }
+
+      &Services {
+        max-width: 200px;
+        gap: 6px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
+
+        .title {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22.4px;
+          color: #2F3140;
+        }
+
+        .link {
+
+          a {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.8px;
+            color: #2F3140;
+          }
+        }
+      }
+
+      .text {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 6;
+      }
+    }
+  }
+
+  .footer2 {
+    background-color: #EDEEF0;
+    padding: 10px;
+
+    &Links {
+      padding: 0;
+      row-gap: 10px;
+
+      p {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 15.6px;
         color: #6B6B6B;
         margin: 0;
       }

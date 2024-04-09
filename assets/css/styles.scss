@@ -39,6 +39,12 @@ a {
   }
 }
 
+@media (min-width: 320px) and (max-width: 576px) {
+  .container {
+    max-width: 300px;
+  }
+}
+
 @media (min-width: 576px) {
   .container {
     padding: 0;

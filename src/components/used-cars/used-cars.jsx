@@ -1,3 +1,4 @@
+import funnel from '@assets/img/new-cars-filter/funnel.svg'
 import JetourDashing from '@assets/img/used-cars/JetourDashing.jpg'
 import JetourX90Plus from '@assets/img/used-cars/JetourX90Plus.jpg'
 import KiaPicanto from '@assets/img/used-cars/KiaPicanto.jpg'
@@ -206,162 +207,166 @@ const UsedCars = () => {
 	]
 
 	return (
-		<div className={cn([cl.usedCars, 'container', 'p-0', 'd-flex', 'flex-column'])}>
-			<div className="d-flex justify-content-between align-items-center">
-				<h1 className={cl.title}>Авто с пробегом</h1>
-				<div className="d-flex d-xxl-none">
-					<Button sizeStyle="sizeContent" colorStyle="Secondary">
-						Фильтры
-					</Button>
-				</div>
-			</div>
-			<div className={cn([cl.usedCarsContent, 'd-flex'])}>
-				<div className={cn([cl.usedCarsContentFilter, 'd-none', 'd-xxl-flex', 'flex-column'])}>
-					<h5 className={cn([cl.usedCarsContentFilterTitle, 'mb-0'])}>Фильтры</h5>
-					<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
-						<span>Цена, руб</span>
-						<div>
-							<Slider
-								step={5}
-								// label={`Значение ${value[0]}-${value[1]}`}
-								onChange={({ value }) => setPrice(value)}
-								value={price}
-							/>
-						</div>
-						<div className={cn([cl.inputs, 'd-flex', 'justify-content-between'])}>
-							<input type="text" placeholder={price[0]} />
-							<input type="text" placeholder={price[1]} />
-						</div>
-					</div>
-					<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
-						<span>Пробег, км</span>
-						<div>
-							<Slider
-								step={5}
-								// label={`Значение ${value[0]}-${value[1]}`}
-								onChange={({ value }) => setMileage(value)}
-								value={mileage}
-							/>
-						</div>
-						<div className={cn([cl.inputs, 'd-flex'])}>
-							<input type="text" placeholder={mileage[0]} />
-							<input type="text" placeholder={mileage[1]} />
-						</div>
-					</div>
-					<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
-						<span>Год</span>
-						<div className={cn([cl.selectors, 'd-flex'])}>
-							<div className={cl.select}>
-								<Select
-									placeholder="от"
-									items={yearsFrom}
-									value={yearFrom}
-									onChange={({ value }) => setYearFrom(value)}
-								/>
-							</div>
-							<div className={cl.select}>
-								<Select
-									placeholder="до"
-									items={yearsBefore}
-									value={yearBefore}
-									onChange={({ value }) => setYearBefore(value)}
-								/>
-							</div>
-						</div>
-					</div>
-					<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
-						<span>Марка</span>
-						<div>
-							<CheckboxGroup
-								value={brand}
-								items={brands}
-								getItemLabel={(item) => item.name}
-								getItemDisabled={(item) => item.disabled}
-								onChange={({ value }) => setBrand(value)}
-								name="CheckboxGroup"
-							/>
-						</div>
-					</div>
-					<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
-						<span>Кузов</span>
-						<div>
-							<CheckboxGroup
-								value={body}
-								items={bodies}
-								getItemLabel={(item) => item.name}
-								getItemDisabled={(item) => item.disabled}
-								onChange={({ value }) => setBody(value)}
-								name="CheckboxGroup"
-							/>
-						</div>
-					</div>
-					<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
-						<span>Количество владельцев</span>
-						<div>
-							<RadioGroup
-								value={owner}
-								items={owners}
-								getItemLabel={(item) => item}
-								onChange={({ value }) => setOwner(value)}
-								direction="column"
-							/>
-						</div>
-					</div>
-					<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
-						<span>Привод</span>
-						<div>
-							<CheckboxGroup
-								value={drive}
-								items={drives}
-								getItemLabel={(item) => item.name}
-								getItemDisabled={(item) => item.disabled}
-								onChange={({ value }) => setDrive(value)}
-								name="CheckboxGroup"
-							/>
-						</div>
-					</div>
-					<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
-						<span>Коробка</span>
-						<div>
-							<CheckboxGroup
-								value={gearbox}
-								items={gearboxes}
-								getItemLabel={(item) => item.name}
-								getItemDisabled={(item) => item.disabled}
-								onChange={({ value }) => setGearbox(value)}
-								name="CheckboxGroup"
-							/>
-						</div>
+		<>
+			<div>фильтр</div>
+			<div className={cn([cl.usedCars, 'container', 'p-0', 'd-flex', 'flex-column'])}>
+				<div className="d-flex justify-content-between align-items-center flex-xs-column flex-sm-row">
+					<h1 className={cl.title}>Авто с пробегом</h1>
+					<div className="d-flex d-xxl-none">
+						<Button sizeStyle="sizeContent" colorStyle="Secondary" className={cn([cl.btn, 'd-flex'])}>
+							<img src={funnel} alt="" />
+							<div>Фильтры</div>
+						</Button>
 					</div>
 				</div>
-				<div className={cn([cl.usedCarsContentCards, 'd-grid'])}>
-					{carsList.map(({ image, name, year, owner, mileage, gearbox, drive, price }) => (
-						<Link to="/used-car">
-							<div className={cn([cl.usedCarsContentCardsCard, 'd-flex', 'flex-column'])}>
-								<img src={image} alt="" />
-								<div className={cn([cl.information, 'd-flex', 'flex-column'])}>
-									<div className={cn([cl.firstBlock, 'd-flex', 'flex-column'])}>
-										<h5 className={cn([cl.name, 'mb-0'])}>{name}</h5>
-										<div className={cl.year}>{year}</div>
-									</div>
-									<div className={cn([cl.secondBlock, 'd-flex', 'flex-column'])}>
-										<span className={cn(['d-flex'])}>
-											<div className={cn([cl.owner, 'd-flex', 'align-items-center'])}>{owner}</div>
-											<div className={cn([cl.mileage, 'd-flex', 'align-items-center'])}>{mileage}</div>
-										</span>
-										<span className={cn(['d-flex'])}>
-											<div className={cn([cl.gearbox, 'd-flex', 'align-items-center'])}>{gearbox}</div>
-											<div className={cn([cl.drive, 'd-flex', 'align-items-center'])}>{drive}</div>
-										</span>
-									</div>
-									<h4 className={cn([cl.price, 'mb-0'])}>{price}</h4>
+				<div className={cn([cl.usedCarsContent, 'd-flex'])}>
+					<div className={cn([cl.usedCarsContentFilter, 'd-none', 'd-xxl-flex', 'flex-column'])}>
+						<h5 className={cn([cl.usedCarsContentFilterTitle, 'mb-0'])}>Фильтры</h5>
+						<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
+							<span>Цена, руб</span>
+							<div>
+								<Slider
+									step={5}
+									// label={`Значение ${value[0]}-${value[1]}`}
+									onChange={({ value }) => setPrice(value)}
+									value={price}
+								/>
+							</div>
+							<div className={cn([cl.inputs, 'd-flex', 'justify-content-between'])}>
+								<input type="text" placeholder={price[0]} />
+								<input type="text" placeholder={price[1]} />
+							</div>
+						</div>
+						<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
+							<span>Пробег, км</span>
+							<div>
+								<Slider
+									step={5}
+									// label={`Значение ${value[0]}-${value[1]}`}
+									onChange={({ value }) => setMileage(value)}
+									value={mileage}
+								/>
+							</div>
+							<div className={cn([cl.inputs, 'd-flex'])}>
+								<input type="text" placeholder={mileage[0]} />
+								<input type="text" placeholder={mileage[1]} />
+							</div>
+						</div>
+						<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
+							<span>Год</span>
+							<div className={cn([cl.selectors, 'd-flex'])}>
+								<div className={cl.select}>
+									<Select
+										placeholder="от"
+										items={yearsFrom}
+										value={yearFrom}
+										onChange={({ value }) => setYearFrom(value)}
+									/>
+								</div>
+								<div className={cl.select}>
+									<Select
+										placeholder="до"
+										items={yearsBefore}
+										value={yearBefore}
+										onChange={({ value }) => setYearBefore(value)}
+									/>
 								</div>
 							</div>
-						</Link>
-					))}
+						</div>
+						<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
+							<span>Марка</span>
+							<div>
+								<CheckboxGroup
+									value={brand}
+									items={brands}
+									getItemLabel={(item) => item.name}
+									getItemDisabled={(item) => item.disabled}
+									onChange={({ value }) => setBrand(value)}
+									name="CheckboxGroup"
+								/>
+							</div>
+						</div>
+						<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
+							<span>Кузов</span>
+							<div>
+								<CheckboxGroup
+									value={body}
+									items={bodies}
+									getItemLabel={(item) => item.name}
+									getItemDisabled={(item) => item.disabled}
+									onChange={({ value }) => setBody(value)}
+									name="CheckboxGroup"
+								/>
+							</div>
+						</div>
+						<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
+							<span>Количество владельцев</span>
+							<div>
+								<RadioGroup
+									value={owner}
+									items={owners}
+									getItemLabel={(item) => item}
+									onChange={({ value }) => setOwner(value)}
+									direction="column"
+								/>
+							</div>
+						</div>
+						<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
+							<span>Привод</span>
+							<div>
+								<CheckboxGroup
+									value={drive}
+									items={drives}
+									getItemLabel={(item) => item.name}
+									getItemDisabled={(item) => item.disabled}
+									onChange={({ value }) => setDrive(value)}
+									name="CheckboxGroup"
+								/>
+							</div>
+						</div>
+						<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
+							<span>Коробка</span>
+							<div>
+								<CheckboxGroup
+									value={gearbox}
+									items={gearboxes}
+									getItemLabel={(item) => item.name}
+									getItemDisabled={(item) => item.disabled}
+									onChange={({ value }) => setGearbox(value)}
+									name="CheckboxGroup"
+								/>
+							</div>
+						</div>
+					</div>
+					<div className={cn([cl.usedCarsContentCards, 'd-grid'])}>
+						{carsList.map(({ image, name, year, owner, mileage, gearbox, drive, price }) => (
+							<Link to="/used-car">
+								<div className={cn([cl.usedCarsContentCardsCard, 'd-flex', 'flex-column'])}>
+									<img src={image} alt="" />
+									<div className={cn([cl.information, 'd-flex', 'flex-column'])}>
+										<div className={cn([cl.firstBlock, 'd-flex', 'flex-column'])}>
+											<h5 className={cn([cl.name, 'mb-0'])}>{name}</h5>
+											<div className={cl.year}>{year}</div>
+										</div>
+										<div className={cn([cl.secondBlock, 'd-none', 'd-sm-flex', 'flex-column'])}>
+											<span className={cn(['d-flex'])}>
+												<div className={cn([cl.owner, 'd-flex', 'align-items-center'])}>{owner}</div>
+												<div className={cn([cl.mileage, 'd-flex', 'align-items-center'])}>{mileage}</div>
+											</span>
+											<span className={cn(['d-flex'])}>
+												<div className={cn([cl.gearbox, 'd-flex', 'align-items-center'])}>{gearbox}</div>
+												<div className={cn([cl.drive, 'd-flex', 'align-items-center'])}>{drive}</div>
+											</span>
+										</div>
+										<h4 className={cn([cl.price, 'mb-0'])}>{price}</h4>
+									</div>
+								</div>
+							</Link>
+						))}
+					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	)
 }
 

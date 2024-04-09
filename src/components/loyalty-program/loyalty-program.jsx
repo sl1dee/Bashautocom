@@ -16,7 +16,7 @@ const LoyaltyProgram = () => {
 						<h3 className="mb-0">Выгоднее с программой лояльности Башавтоком</h3>
 						<h6 className="d-flex mb-0">Бонусная система 1 бонус = 1 рубль</h6>
 						<span className={cl.ulList}>
-							<p className="mb-0">Вы сможете:</p>
+							<p>Вы сможете:</p>
 							<ul className="d-flex flex-column mb-0">
 								<li>
 									Накапливать бонусные баллы и оплачивать ими услуги сервиса, покупку запчастей в любом нашем дилерском
@@ -26,9 +26,16 @@ const LoyaltyProgram = () => {
 								<li>Записываться в сервисный центр</li>
 							</ul>
 						</span>
-						<Button sizeStyle="sizeL" colorStyle="Secondary" className={cn([cl.btn, 'd-flex'])}>
-							Стать участником бонусной программы
-						</Button>
+						<div className="d-none d-sm-flex">
+							<Button sizeStyle="sizeL" colorStyle="Secondary" className={cn([cl.btn])}>
+								Стать участником бонусной программы
+							</Button>
+						</div>
+						<div className="d-xs-flex d-sm-none">
+							<Button sizeStyle="sizeL" colorStyle="Secondary" className={cn([cl.btn])}>
+								Стать участником программы
+							</Button>
+						</div>
 					</div>
 				</div>
 			</div>

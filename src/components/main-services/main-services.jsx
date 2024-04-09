@@ -94,15 +94,17 @@ const MainServices = () => {
 				<div className={cn([cl.mainServicesCards])}>
 					{/* <div className="row row-cols-5 gap-5"> */}
 					{servicesList.map(({ id, path, title, text, imgPath }) => (
-						<Link to={path}>
-							<div className={cn([cl.cardWrapper, 'elem', 'd-flex', 'justify-content-center'])} key={id}>
-								<div className={cn([cl.card])}>
-									<div className={cl.cardTitle}>{title}</div>
-									<div className={cl.cardText}>{text}</div>
-									<img src={imgPath} alt="" className={cl.cardImg} />
+						<div>
+							<Link to={path}>
+								<div className={cn([cl.cardWrapper, 'elem', 'd-flex', 'justify-content-center'])} key={id}>
+									<div className={cn([cl.card])}>
+										<div className={cl.cardTitle}>{title}</div>
+										<div className={cl.cardText}>{text}</div>
+										<img src={imgPath} alt="" className={cl.cardImg} />
+									</div>
 								</div>
-							</div>
-						</Link>
+							</Link>
+						</div>
 					))}
 					{/* </div> */}
 				</div>

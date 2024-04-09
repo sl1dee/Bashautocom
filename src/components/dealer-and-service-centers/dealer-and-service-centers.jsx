@@ -109,9 +109,19 @@ const DealerAndServiceCenters = ({ title }) => {
 			<div className="container p-0">
 				<div className={cn([cl.centersInformation, 'd-flex', 'flex-column'])}>
 					<h1 className={cn([cl.centersInformationTitle, 'mb-0'])}>{title}</h1>
-					<div className="d-flex flex-column gap-4">
-						<div className="d-flex flex-column flex-lg-row justify-content-lg-between align-items-lg-center">
-							<div className="d-flex">
+					<div className={cn([cl.centersInformationBlock, 'd-flex', 'flex-column'])}>
+						{/*<div className="d-flex flex-column flex-lg-row justify-content-lg-between align-items-lg-center">*/}
+						<div
+							className={cn([
+								cl.centersInformationBlockFilters,
+								'd-flex',
+								'flex-column',
+								'flex-lg-row',
+								'justify-content-lg-between',
+								'align-items-lg-center'
+							])}
+						>
+							<div className="d-none d-sm-flex">
 								<ChoiceGroup
 									value={value}
 									onChange={({ value }) => setValue(value)}
@@ -124,7 +134,7 @@ const DealerAndServiceCenters = ({ title }) => {
 									multiple={false}
 								/>
 							</div>
-							<div className={cl.combobox}>
+							<div className={cn([cl.combobox, 'd-none', 'd-sm-flex'])}>
 								<Combobox
 									placeholder="Выберите бренд"
 									size="l"

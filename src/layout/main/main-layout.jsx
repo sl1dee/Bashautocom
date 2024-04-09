@@ -20,6 +20,7 @@ const MainLayout = ({ children }) => {
 			<Footer />
 			{/* <Cookie /> */}
 			{burgerIsOpen && <Sidebar />}
+			{/* !!!!!!! <Sidebar /> нужно сделать сайдбар всегда вмонитрованным */}
 			{/* {signUpIsOpen && <SignUpModal />} */}
 		</>
 	)

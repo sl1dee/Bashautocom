@@ -1,4 +1,6 @@
 import autoCredit from '@assets/img/used-cars-slider/autoCredit.jpg'
+import autoCreditMobile from '@assets/img/used-cars-slider/autoCreditMobile.jpg'
+import autoCreditTablet from '@assets/img/used-cars-slider/autoCreditTablet.jpg'
 import cn from 'classnames'
 import React, { useState } from 'react'
 import { A11y, Navigation, Pagination, Scrollbar } from 'swiper'
@@ -11,13 +13,19 @@ const UsedCarsSlider = () => {
 
 	const bannerList = [
 		{
-			banner: autoCredit
+			banner: autoCredit,
+			bannerTablet: autoCreditTablet,
+			bannerMobile: autoCreditMobile
 		},
 		{
-			banner: autoCredit
+			banner: autoCredit,
+			bannerTablet: autoCreditTablet,
+			bannerMobile: autoCreditMobile
 		},
 		{
-			banner: autoCredit
+			banner: autoCredit,
+			bannerTablet: autoCreditTablet,
+			bannerMobile: autoCreditMobile
 		}
 	]
 
@@ -43,9 +51,11 @@ const UsedCarsSlider = () => {
 						pagination={{ clickable: true }}
 						scrollbar={{ draggable: true }}
 					>
-						{bannerList.map(({ banner }) => (
+						{bannerList.map(({ banner, bannerTablet, bannerMobile }) => (
 							<SwiperSlide>
-								<img src={banner} alt="banner" className={cl.banner} />
+								<img src={banner} alt="banner" className={cn([cl.banner, 'd-none', 'd-lg-flex'])} />
+								<img src={bannerTablet} alt="banner" className={cn([cl.banner, 'd-none', 'd-sm-flex', 'd-lg-none'])} />
+								<img src={bannerMobile} alt="banner" className={cn([cl.banner, 'd-xs-flex', 'd-sm-none'])} />
 							</SwiperSlide>
 						))}
 					</Swiper>
