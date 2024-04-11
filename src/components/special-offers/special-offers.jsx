@@ -89,7 +89,10 @@ const SpecialOffers = () => {
 		<div className={cl.specialOffers}>
 			<div className="container p-0">
 				<div className={cn([cl.specialOffersInformation, 'd-flex', 'flex-column'])}>
-					<h1 className={cn([cl.specialOffersInformationTitle, 'mb-0'])}>Специальные предложения</h1>
+					<h1 className={cn([cl.specialOffersInformationTitle, 'mb-0', 'd-none', 'd-sm-flex'])}>
+						Специальные предложения
+					</h1>
+					<h1 className={cn([cl.specialOffersInformationTitle, 'mb-0', 'd-xs-flex', 'd-sm-none'])}>Спецпредложения</h1>
 					<div className="d-flex flex-column gap-4">
 						<div className="d-flex justify-content-between align-items-center">
 							<div className="d-flex">

@@ -176,19 +176,27 @@ const UsedCarSlider = () => {
 								scrollbar={{ draggable: true }}
 								breakpoints={{
 									// // when window width is >= 640px
-									// 320: {
-									// 	spaceBetween: 20,
-									// 	slidesPerView: 'auto'
-									// },
+									320: {
+										spaceBetween: 10,
+										slidesPerView: 2
+									},
 									// // when window width is >= 576px
-									// 576: {
-									// 	spaceBetween: 20,
-									// 	slidesPerView: 2
-									// },
+									576: {
+										spaceBetween: 20,
+										slidesPerView: 2
+									},
 									// when window width is >= 992px
 									992: {
 										spaceBetween: 20,
 										slidesPerView: 3
+									},
+									1400: {
+										spaceBetween: 30,
+										slidesPerView: 3
+									},
+									1920: {
+										spaceBetween: 30,
+										slidesPerView: 4
 									}
 								}}
 							>

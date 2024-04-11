@@ -15,7 +15,7 @@ const Card = ({ image, name, year, owner, mileage, gearbox, drive, price }) => {
 							<h5 className={cn([cl.name, 'mb-0'])}>{name}</h5>
 							<div className={cl.year}>{year}</div>
 						</div>
-						<div className={cn([cl.secondBlock, 'd-flex', 'flex-column'])}>
+						<div className={cn([cl.secondBlock, 'd-none', 'd-sm-flex', 'flex-column'])}>
 							<span className={cn(['d-flex'])}>
 								<div className={cn([cl.owner, 'd-flex', 'align-items-center'])}>{owner}</div>
 								<div className={cn([cl.mileage, 'd-flex', 'align-items-center'])}>{mileage}</div>

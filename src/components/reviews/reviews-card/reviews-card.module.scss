@@ -110,3 +110,31 @@
     }
   }
 }
+
+@media (min-width: 320px) and (max-width: 576px) {
+  .reviewsCard {
+    width: 222px;
+    height: 136px;
+    background-color: #FFFFFF;
+    gap: 8px;
+
+    &Video {
+      border-radius: 20px;
+      //position: relative;
+
+      &::after {
+        content: url("/assets/img/reviews/play.svg");
+        //position: absolute;
+        //top: 50%;
+        //left: 50%;
+      }
+    }
+
+    &Text {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16.8px;
+      color: #111111;
+    }
+  }
+}

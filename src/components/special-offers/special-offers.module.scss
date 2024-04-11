@@ -207,3 +207,35 @@
     }
   }
 }
+
+@media (min-width: 320px) and (max-width: 576px) {
+  .specialOffers {
+
+    &Information {
+      padding: 25px 0 25px 0;
+      gap: 30px;
+
+      &Title {
+        font-size: 18px;
+        font-weight: 500;
+        color: #111111;
+        line-height: 21.6px;
+      }
+
+      .specialOffersSwiper {
+        position: relative;
+        z-index: 0;
+
+        .swiper {
+          height: 250px;
+
+        }
+      }
+
+      .combobox {
+        width: 390px;
+        z-index: 1;
+      }
+    }
+  }
+}

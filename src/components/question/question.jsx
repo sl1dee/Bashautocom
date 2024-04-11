@@ -62,12 +62,15 @@ const Question = () => {
 					<div className={cn([cl.questionInformationText, 'd-flex', 'flex-column'])}>
 						<div className={cn([cl.yourQuestion, 'd-flex', 'flex-column'])}>
 							<h1 className={cn([cl.title, 'mb-0'])}>У вас возник вопрос?</h1>
-							<p className={cn([cl.text, 'mb-0'])}>
+							<p className={cn([cl.text, 'mb-0', 'd-none', 'd-sm-flex'])}>
 								Задайте свой вопрос в форме, выбрав тему Покупка, Сервис или Услуги. Мы свяжемся с вами в течении дня,
 								ответим на все вопросы, запишем на тест-драйв, сервис или ремонт при необходимости.
 							</p>
+							<p className={cn([cl.text, 'mb-0', 'd-xs-flex', 'd-sm-none'])}>
+								Мы ответим на все вопросы, запишем на тест-драйв, сервис или ремонт при необходимости.
+							</p>
 						</div>
-						<div className={cn([cl.socialNetwork, 'd-flex', 'flex-column'])}>
+						<div className={cn([cl.socialNetwork, 'd-none', 'd-sm-flex', 'flex-column'])}>
 							<p className={cn([cl.secondTitle, 'mb-0'])}>Или напишите нам в социальных сетях</p>
 							<div className={cn([cl.btns, 'd-flex', 'mb-0'])}>
 								<Link to="/" className={cn([cl.btn, 'd-flex', 'align-items-center'])}>
@@ -86,7 +89,12 @@ const Question = () => {
 						</div>
 					</div>
 					<img src={car} alt="" className={cl.image} />
-					<div className={cn([cl.questionInformationModal, 'd-flex', 'flex-column'])}>
+					<div className={cn([cl.btn, 'd-xs-flex', 'd-sm-none'])}>
+						<Button sizeStyle="sizeS" className={cl.button}>
+							Задать вопрос
+						</Button>
+					</div>
+					<div className={cn([cl.questionInformationModal, 'd-none', 'd-sm-flex', 'flex-column'])}>
 						<div className={cn([cl.questionInformationModalBlock1, 'd-flex', 'flex-column'])}>
 							<h6 className={cn([cl.theme, 'mb-0'])}>Выберите тему вопроса</h6>
 							<div className={cn([cl.tabs, 'd-flex', 'mb-0'])}>

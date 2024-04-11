@@ -537,3 +537,68 @@
     }
   }
 }
+
+@media (min-width: 320px) and (max-width: 576px) {
+  .question {
+
+    &Information {
+      margin: 25px 0 25px 0;
+      background-color: rgba(238, 240, 243, 0.7);
+      border-radius: 20px;
+      padding: 24px 20px;
+      gap: 10px;
+      position: relative;
+
+      &Text {
+        max-width: 445px;
+        gap: 10px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+        .yourQuestion {
+          gap: 10px;
+
+          .title {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 21.6px;
+            color: #111111;
+          }
+
+          .text {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 15.6px;
+            color: #111111;
+          }
+        }
+      }
+
+      .image {
+        position: absolute;
+        margin-top: auto;
+        max-width: 300px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        bottom: 0;
+      }
+
+      .btn {
+        z-index: 1;
+
+        .button {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 19.6px;
+          width: 140px;
+          height: 32px;
+          padding: 6px 12px;
+        }
+      }
+    }
+  }
+}

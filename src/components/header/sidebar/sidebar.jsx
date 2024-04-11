@@ -170,10 +170,14 @@ const Sidebar = () => {
 						</Link>
 					</div>
 					<div className={cn([cl.buttons, 'd-flex'])}>
-						<Button sizeStyle="sizeContent" className={cn([cl.buttonsSignUp])}>
+						<Button sizeStyle="sizeContent" className={cn([cl.buttonsSignUp, 'd-none', 'd-sm-flex'])}>
 							Записаться
 						</Button>
-						<Button sizeStyle="sizeContent" colorStyle="Secondary" className={cl.buttonsAccount}>
+						<Button
+							sizeStyle="sizeContent"
+							colorStyle="Secondary"
+							className={cn([cl.buttonsAccount, 'd-none', 'd-sm-flex'])}
+						>
 							<img src={user} alt="userIcon" className={cl.buttonsAccountIcon} />
 						</Button>
 						<div className={cn([cl.buttonsBurger, 'd-flex', 'd-lg-none'])} onClick={closeHandler}>
@@ -189,9 +193,10 @@ const Sidebar = () => {
 									<h6 className={cn([cl.headerLinks, 'mb-0'])}>{header}</h6>
 								</div>
 							</Link>
-							{links?.map(({ id, text, href }) => (
+							{links?.map(({ id, text, href, icon }) => (
 								<Link key={id} to={href}>
-									<div>
+									<div className={cn([cl.group, 'd-flex'])}>
+										<img src={icon} alt="" />
 										<p className={cn([cl.subLinks, 'mb-0'])}>{text}</p>
 									</div>
 								</Link>

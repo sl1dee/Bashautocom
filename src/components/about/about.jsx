@@ -19,31 +19,31 @@ const About = () => {
 								Официальный дилер брендов Omoda, Changan Auto, Jaecoo, Exeed, Москвич, Lada, Haval.
 							</p>
 							<p className={cn([cl.secondIcon, 'd-flex', 'mb-0'])}>
-								Обслуживаем автомобили в нашем сервисном центре, обеспечивая безопасность и комфорт
+								Обслуживаем автомобили в нашем сервисном центре, обеспечивая безопасность и комфорт
 							</p>
 							<p className={cn([cl.thirdIcon, 'd-flex', 'mb-0'])}>
-								850 сотрудников Башавтоком — профессионалы своего дела, и каждый день делают всё для вашего удобства
+								850 сотрудников Башавтоком — профессионалы своего дела, и каждый день делают всё для вашего удобства
 							</p>
 						</span>
 						<div className="d-flex">
 							<Button sizeStyle="sizeL">Подробнее о компании</Button>
 						</div>
 					</span>
-					<div className={cn([cl.secondBlock, 'd-flex'])}>
+					<div className={cn([cl.secondBlock, 'd-none', 'd-sm-flex'])}>
 						<span className={cn([cl.secondBlockCol, 'd-flex', 'flex-column'])}>
 							<h1 className={cn([cl.secondBlockColTitle, 'd-flex', 'mb-0'])}>30 лет</h1>
-							<p className={cn([cl.secondBlockColText, 'd-flex', 'mb-0'])}>Продаём автомобили с 1992 года</p>
+							<p className={cn([cl.secondBlockColText, 'd-flex', 'mb-0'])}>Продаём автомобили с 1992 года</p>
 						</span>
 						<span className={cn([cl.secondBlockCol, 'd-flex', 'flex-column'])}>
 							<h1 className={cn([cl.secondBlockColTitle, 'd-flex', 'mb-0'])}>100 000+</h1>
-							<p className={cn([cl.secondBlockColText, 'd-flex', 'mb-0'])}>Автомобилей продали за все время работы</p>
+							<p className={cn([cl.secondBlockColText, 'd-flex', 'mb-0'])}>Автомобилей продали за все время работы</p>
 						</span>
 						<span className={cn([cl.secondBlockCol, 'd-flex', 'flex-column'])}>
 							<h1 className={cn([cl.secondBlockColTitle, 'd-flex', 'mb-0'])}>4 города</h1>
 							<p className={cn([cl.secondBlockColText, 'd-flex', 'mb-0'])}>Уфа, Октябрьский, Стерлитамак, Белебей</p>
 						</span>
 					</div>
-					<img className={cl.secondImg} src={car} alt="car" />
+					<img className={cn([cl.secondImg, 'd-none', 'd-sm-flex'])} src={car} alt="car" />
 				</div>
 			</div>
 		</div>

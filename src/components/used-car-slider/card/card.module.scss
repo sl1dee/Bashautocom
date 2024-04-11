@@ -363,3 +363,198 @@
     }
   }
 }
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .wrapper {
+
+    .card {
+      max-width: 255px;
+      height: 370px;
+
+      img {
+        border-radius: 20px 20px 0 0;
+        max-width: 255px;
+        height: 180px;
+      }
+
+      .information {
+        padding: 20px 20px 30px 20px;
+        gap: 10px;
+
+        .firstBlock {
+          gap: 3px;
+
+          .name {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 21.6px;
+            color: #111111;
+          }
+          .year {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.8px;
+            color: rgba(17, 17, 17, 0.48);
+          }
+        }
+        .secondBlock {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+          width: fit-content;
+
+          span {
+            gap: 6px;
+
+            div {
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 16.8px;
+              color: #111111;
+              gap: 6px;
+              padding: 4px 7px 4px 7px;
+              background-color: #F4F5F7;
+              border-radius: 4px;
+              //align-self: start;
+              width: fit-content;
+            }
+
+            .owner{
+              &::before {
+                display: none;
+                content: url("/assets/img/used-cars/owner.svg");
+                width: 24px;
+                height: 24px;
+              }
+            }
+            .mileage {
+              &::before {
+                display: none;
+                content: url("/assets/img/used-cars/speedometer.svg");
+                width: 24px;
+                height: 24px;
+              }
+            }
+            .gearbox {
+              &::before {
+                display: none;
+                content: url("/assets/img/used-cars/gearbox.svg");
+                width: 24px;
+                height: 24px;
+              }
+            }
+            .drive {
+              &::before {
+                display: none;
+                content: url("/assets/img/used-cars/wheel.svg");
+                width: 24px;
+                height: 24px;
+              }
+            }
+          }
+        }
+
+        .price {
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 21.6px;
+          color: #111111;
+        }
+      }
+    }
+  }
+  .reviewsCard {
+    width: 530px;
+    height: 368px;
+    background-color: #FFFFFF;
+    gap: 20px;
+
+    &Video {
+      border-radius: 20px;
+      //position: relative;
+
+      &::after {
+        content: url("/assets/img/reviews/play.svg");
+        //position: absolute;
+        //top: 50%;
+        //left: 50%;
+      }
+    }
+
+    &Text {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 24px;
+      color: #111111;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+  .wrapper {
+
+    .card {
+      max-width: 140px;
+      height: 185px;
+
+      img {
+        border-radius: 14px 14px 0 0;
+        max-width: 140px;
+        height: 103px;
+      }
+
+      .information {
+        padding: 10px;
+        gap: 6px;
+
+        .firstBlock {
+          gap: 3px;
+
+          .name {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 19.6px;
+            color: #111111;
+          }
+          .year {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 15.6px;
+            color: rgba(17, 17, 17, 0.48);
+          }
+        }
+
+        .price {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 19.6px;
+          color: #111111;
+        }
+      }
+    }
+  }
+  .reviewsCard {
+    width: 530px;
+    height: 368px;
+    background-color: #FFFFFF;
+    gap: 20px;
+
+    &Video {
+      border-radius: 20px;
+      //position: relative;
+
+      &::after {
+        content: url("/assets/img/reviews/play.svg");
+        //position: absolute;
+        //top: 50%;
+        //left: 50%;
+      }
+    }
+
+    &Text {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 24px;
+      color: #111111;
+    }
+  }
+}

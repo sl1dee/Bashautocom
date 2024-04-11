@@ -68,7 +68,15 @@ const OurServices = () => {
 		<div className={cl.ourServices}>
 			<div className="container p-0">
 				<div className={cn([cl.ourServicesInformation, 'd-flex', 'flex-column'])}>
-					<h1 className={cn([cl.ourServicesInformationTitle, 'd-flex', 'justify-content-center', 'mb-0'])}>
+					<h1
+						className={cn([
+							cl.ourServicesInformationTitle,
+							'd-flex',
+							'justify-content-sm-center',
+							'justify-content-xs-start',
+							'mb-0'
+						])}
+					>
 						Наши услуги
 					</h1>
 					<div className={cn([cl.ourServicesInformationCards])}>
@@ -82,7 +90,7 @@ const OurServices = () => {
 										</div>
 										<img src={icon} alt="" className={cl.cardGroupImg} />
 									</div>
-									<div className={cl.btn}>
+									<div className={cn([cl.btn, 'd-none', 'd-lg-flex'])}>
 										<Button sizeStyle="sizeL" colorStyle="secondary" className={cn([cl.button], 'd-none', 'd-lg-flex')}>
 											Подробнее
 										</Button>
