@@ -9,16 +9,16 @@ import information from '../../../assets/img/about/i.svg'
 import loyaltyProgram from '../../../assets/img/about/loyaltyProgram.svg'
 import news from '../../../assets/img/about/news.svg'
 import burger from '../../../assets/img/header/burger.svg'
-import burger_mobile from '../../../assets/img/header/burger_mobile.svg'
+import burgerMobile from '../../../assets/img/header/burger_mobile.svg'
 import logo from '../../../assets/img/header/new_logo.svg'
-import logo_mobile from '../../../assets/img/header/new_logo_mobile.svg'
+import logoMobile from '../../../assets/img/header/new_logo_mobile.svg'
 import user from '../../../assets/img/header/user.svg'
 import bodyRepair from '../../../assets/img/our-services/bodyRepair.svg'
 import carsRent from '../../../assets/img/our-services/carsRent.svg'
 import detailing from '../../../assets/img/our-services/detailing.svg'
 import insurance from '../../../assets/img/our-services/insurance.svg'
 import lending from '../../../assets/img/our-services/lending.svg'
-import serviceСenter from '../../../assets/img/our-services/serviceСenter.svg'
+import serviceCenter from '../../../assets/img/our-services/serviceСenter.svg'
 import tradeIn from '../../../assets/img/our-services/tradeIn.svg'
 import { setBurgerIsOpen } from '../../store/modules/modals.js'
 import Button from '../../ui/button/index.js'
@@ -57,7 +57,7 @@ const Header = () => {
 			id: 2,
 			title: 'Сервисный центр',
 			text: 'Технический осмотр, диагностика и др.',
-			icon: serviceСenter
+			icon: serviceCenter
 		},
 		{
 			id: 3,
@@ -152,7 +152,15 @@ const Header = () => {
 							</Link>
 						</div>
 					</div>
-					<div className={cn([cl.headerInformationLinks], 'container', 'd-flex', 'justify-content-between')}>
+					<div
+						className={cn(
+							[cl.headerInformationLinks],
+							'container',
+							'd-flex',
+							'justify-content-between',
+							'align-items-center'
+						)}
+					>
 						<div className={cn([cl.logo, 'd-none', 'd-sm-flex', 'align-items-center'])}>
 							<Link to="/">
 								<img src={logo} alt="logo" />
@@ -160,7 +168,7 @@ const Header = () => {
 						</div>
 						<div className={cn([cl.logo, 'd-xs-flex', 'd-sm-none', 'align-items-center'])}>
 							<Link to="/">
-								<img src={logo_mobile} alt="logo" />
+								<img src={logoMobile} alt="logo" />
 							</Link>
 						</div>
 						<div className={cn(cl.servicesLinks, 'd-none', 'd-lg-flex', 'align-items-center')}>
@@ -245,7 +253,7 @@ const Header = () => {
 								className={cn([cl.buttonsBurger, 'd-xs-flex', 'd-sm-none', 'd-lg-none'])}
 								onClick={openBurgerHandler}
 							>
-								<img src={burger_mobile} alt="burgerIcon" />
+								<img src={burgerMobile} alt="burgerIcon" />
 							</div>
 						</div>
 					</div>

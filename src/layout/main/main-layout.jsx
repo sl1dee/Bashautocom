@@ -4,6 +4,7 @@ import React, { memo } from 'react'
 import { useSelector } from 'react-redux'
 
 import Sidebar from '@components/header/sidebar/sidebar.jsx'
+import Navbar from '@components/navbar/navbar.jsx'
 
 import Footer from '../../components/footer/index.js'
 import Header from '../../components/header/index.js'
@@ -20,6 +21,7 @@ const MainLayout = ({ children }) => {
 			<Footer />
 			{/* <Cookie /> */}
 			{burgerIsOpen && <Sidebar />}
+			<Navbar />
 			{/* !!!!!!! <Sidebar /> нужно сделать сайдбар всегда вмонитрованным */}
 			{/* {signUpIsOpen && <SignUpModal />} */}
 		</>

@@ -1,4 +1,88 @@
 
+.filter {
+  background-color: #F4F5F7;
+  padding: 40px 10px;
+  row-gap: 10px;
+
+  &Title {
+
+  }
+
+  &Cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    row-gap: 6px;
+
+    &Card {
+      background-color: #FFFFFF;
+      padding: 8px;
+      border-radius: 10px;
+      row-gap: 2px;
+
+      &Image {
+        max-width: 80px;
+        height: 36px;
+
+      }
+      &Name {
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 14px;
+        text-align: center;
+      }
+    }
+  }
+
+  .brand {
+    background-color: #FFFFFF;
+    padding: 20px 14px 20px 14px;
+    border-radius: 10px;
+    row-gap: 10px;
+
+    &Title {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16.8px;
+      color: #111111;
+    }
+
+    &Input  {
+      width: 272px;
+      height: 32px;
+      border: 1px solid #B6B6B6;
+      padding: 10px;
+      border-radius: 4px;
+    }
+  }
+
+  .minPrice {
+    background-color: #FFFFFF;
+    padding: 20px 14px 20px 14px;
+    border-radius: 10px;
+    row-gap: 10px;
+
+    &Title {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16.8px;
+      color: #111111;
+    }
+
+    &Inputs {
+      gap: 12px;
+
+      input {
+        width: 130px;
+        height: 32px;
+        border: 1px solid #B6B6B6;
+        padding: 10px;
+        border-radius: 4px;
+      }
+    }
+  }
+
+}
+
 .newCars {
   row-gap: 60px;
 
@@ -596,6 +680,7 @@
 }
 
 @media (min-width: 320px) and (max-width: 576px) {
+
   .newCars {
     row-gap: 16px;
 

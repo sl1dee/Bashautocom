@@ -4,7 +4,9 @@ import information from '@assets/img/about/i.svg'
 import loyaltyProgram from '@assets/img/about/loyaltyProgram.svg'
 import news from '@assets/img/about/news.svg'
 import burger from '@assets/img/header/burger.svg'
+import close from '@assets/img/header/close.svg'
 import logo from '@assets/img/header/new_logo.svg'
+import logoMobile from '@assets/img/header/new_logo_mobile.svg'
 import user from '@assets/img/header/user.svg'
 import bodyRepair from '@assets/img/our-services/bodyRepair.svg'
 import carsRent from '@assets/img/our-services/carsRent.svg'
@@ -163,10 +165,15 @@ const Sidebar = () => {
 					'h-100'
 				])}
 			>
-				<div className={cn([cl.sidebarContentHeader, 'd-flex', 'justify-content-between'])}>
-					<div className={cn([cl.logo, 'd-flex', 'align-items-center'])}>
+				<div className={cn([cl.sidebarContentHeader, 'd-flex', 'justify-content-between', 'align-items-center'])}>
+					<div className={cn([cl.logo, 'd-none', 'd-sm-flex', 'align-items-center'])}>
 						<Link to="/">
 							<img src={logo} alt="logo" />
+						</Link>
+					</div>
+					<div className={cn([cl.logo, 'd-xs-flex', 'd-sm-none', 'align-items-center'])}>
+						<Link to="/">
+							<img src={logoMobile} alt="logo" />
 						</Link>
 					</div>
 					<div className={cn([cl.buttons, 'd-flex'])}>
@@ -180,8 +187,11 @@ const Sidebar = () => {
 						>
 							<img src={user} alt="userIcon" className={cl.buttonsAccountIcon} />
 						</Button>
-						<div className={cn([cl.buttonsBurger, 'd-flex', 'd-lg-none'])} onClick={closeHandler}>
+						<div className={cn([cl.buttonsBurger, 'd-none', 'd-sm-flex', 'd-lg-none'])} onClick={closeHandler}>
 							<img src={burger} alt="burgerIcon" />
+						</div>
+						<div className={cn([cl.buttonsBurger, 'd-xs-flex', 'd-sm-none'])} onClick={closeHandler}>
+							<img src={close} alt="burgerIcon" />
 						</div>
 					</div>
 				</div>

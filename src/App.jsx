@@ -1,9 +1,14 @@
+import { burgerIsOpenSelector } from '@store/selectors/modals.js'
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { Routes } from 'react-router-dom'
 
+import {useSelector} from "react-redux";
 import footer from './Bars/footer2/footer2'
 import header from './Bars/header2/header2'
 import MakeRecord from './components/modals/sign-up-modal/sign-up-modal.jsx'
+import {burgerIsOpenSelector} from "@store/selectors/modals.js";
+import Sidebar from "@components/header/sidebar/sidebar.jsx";
 
 export default function App() {
 	return (

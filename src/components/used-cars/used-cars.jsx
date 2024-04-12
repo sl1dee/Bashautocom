@@ -208,7 +208,130 @@ const UsedCars = () => {
 
 	return (
 		<>
-			<div>фильтр</div>
+			<div className={cn([cl.sidebar])}>
+				<div className={cn([cl.sidebarFilter, 'd-flex', 'd-xxl-none', 'flex-column'])}>
+					<h5 className={cn([cl.sidebarFilterTitle, 'mb-0'])}>Фильтры</h5>
+					<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
+						<span>Цена, руб</span>
+						<div>
+							<Slider
+								step={5}
+								// label={`Значение ${value[0]}-${value[1]}`}
+								onChange={({ value }) => setPrice(value)}
+								value={price}
+							/>
+						</div>
+						<div className={cn([cl.inputs, 'd-flex', 'justify-content-between'])}>
+							<input type="text" placeholder={price[0]} />
+							<input type="text" placeholder={price[1]} />
+						</div>
+					</div>
+					<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
+						<span>Пробег, км</span>
+						<div>
+							<Slider
+								step={5}
+								// label={`Значение ${value[0]}-${value[1]}`}
+								onChange={({ value }) => setMileage(value)}
+								value={mileage}
+							/>
+						</div>
+						<div className={cn([cl.inputs, 'd-flex'])}>
+							<input type="text" placeholder={mileage[0]} />
+							<input type="text" placeholder={mileage[1]} />
+						</div>
+					</div>
+					<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
+						<span>Год</span>
+						<div className={cn([cl.selectors, 'd-flex'])}>
+							<div className={cl.select}>
+								<Select
+									placeholder="от"
+									items={yearsFrom}
+									value={yearFrom}
+									onChange={({ value }) => setYearFrom(value)}
+								/>
+							</div>
+							<div className={cl.select}>
+								<Select
+									placeholder="до"
+									items={yearsBefore}
+									value={yearBefore}
+									onChange={({ value }) => setYearBefore(value)}
+								/>
+							</div>
+						</div>
+					</div>
+					<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
+						<span>Марка</span>
+						<div>
+							<CheckboxGroup
+								value={brand}
+								items={brands}
+								getItemLabel={(item) => item.name}
+								getItemDisabled={(item) => item.disabled}
+								onChange={({ value }) => setBrand(value)}
+								name="CheckboxGroup"
+							/>
+						</div>
+					</div>
+					<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
+						<span>Кузов</span>
+						<div>
+							<CheckboxGroup
+								value={body}
+								items={bodies}
+								getItemLabel={(item) => item.name}
+								getItemDisabled={(item) => item.disabled}
+								onChange={({ value }) => setBody(value)}
+								name="CheckboxGroup"
+							/>
+						</div>
+					</div>
+					<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
+						<span>Количество владельцев</span>
+						<div>
+							<RadioGroup
+								value={owner}
+								items={owners}
+								getItemLabel={(item) => item}
+								onChange={({ value }) => setOwner(value)}
+								direction="column"
+							/>
+						</div>
+					</div>
+					<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
+						<span>Привод</span>
+						<div>
+							<CheckboxGroup
+								value={drive}
+								items={drives}
+								getItemLabel={(item) => item.name}
+								getItemDisabled={(item) => item.disabled}
+								onChange={({ value }) => setDrive(value)}
+								name="CheckboxGroup"
+							/>
+						</div>
+					</div>
+					<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
+						<span>Коробка</span>
+						<div>
+							<CheckboxGroup
+								value={gearbox}
+								items={gearboxes}
+								getItemLabel={(item) => item.name}
+								getItemDisabled={(item) => item.disabled}
+								onChange={({ value }) => setGearbox(value)}
+								name="CheckboxGroup"
+							/>
+						</div>
+					</div>
+					<div>
+						<Button colorStyle="primary">Принять</Button>
+					</div>
+				</div>
+			</div>
+
 			<div className={cn([cl.usedCars, 'container', 'p-0', 'd-flex', 'flex-column'])}>
 				<div className="d-flex justify-content-between align-items-center flex-xs-column flex-sm-row">
 					<h1 className={cl.title}>Авто с пробегом</h1>
