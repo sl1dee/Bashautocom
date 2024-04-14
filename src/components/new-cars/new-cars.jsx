@@ -1,5 +1,6 @@
 import changanUNIK from '@assets/img/new-cars-filter/changan_uni-k.png'
 import changanUNIV from '@assets/img/new-cars-filter/changan_uni-v.png'
+import close from '@assets/img/new-cars-filter/close.svg'
 import coupe from '@assets/img/new-cars-filter/coupe.png'
 import crossover from '@assets/img/new-cars-filter/crossover.png'
 import funnel from '@assets/img/new-cars-filter/funnel.svg'
@@ -18,6 +19,7 @@ import vnedorozhnik from '@assets/img/new-cars-filter/vnedorozhnik.png'
 import { CheckboxGroup } from '@consta/uikit/CheckboxGroup'
 import { Combobox } from '@consta/uikit/Combobox'
 import { Slider } from '@consta/uikit/Slider'
+import { setBurgerIsOpen } from '@store/modules/modals.js'
 import cn from 'classnames'
 import React, { useState } from 'react'
 
@@ -173,45 +175,56 @@ const NewCars = () => {
 
 	const [brand, setBrand] = useState(null)
 
+	const [isOpen, setIsOpen] = useState(false)
+
 	return (
 		<>
-			<div className={cn([cl.filter, 'd-flex', 'flex-column', 'd-sm-none'])}>
-				<div className={cl.filterTitle}>Фильтры</div>
-				<div className={cn([cl.filterCards, 'd-grid'])}>
-					{filterList.map(({ carType, name }) => (
-						<div className={cn([cl.filterCardsCard, 'd-flex', 'flex-column'])}>
-							<img src={carType} alt="" className={cl.filterCardsCardImage} />
-							<div className={cl.filterCardsCardName}>{name}</div>
+			<div className={`${cl.sidebar} ${isOpen ? '' : cl.active}`}>
+				<div className={`${isOpen ? cl.sidebarBckg : ''}`} title="Закрыть" onClick={() => setIsOpen(!isOpen)} />
+				<div className={cn([cl.group, 'd-flex', 'flex-column', 'd-sm-none'])}>
+					<div className={cn([cl.filter, 'd-flex', 'flex-column', 'd-sm-none'])}>
+						<div className="d-flex align-items-center justify-content-between">
+							<div className={cl.filterTitle}>Фильтры</div>
+							<img src={close} alt="close" onClick={() => setIsOpen(!isOpen)} />
 						</div>
-					))}
-				</div>
-				<div className={cn([cl.brand, 'd-flex', 'flex-column'])}>
-					<div className={cl.brandTitle}>Выберите бренд</div>
-					<input className={cl.brandInput} type="text" placeholder="Поиск по названию" />
-					<div>
-						<CheckboxGroup
-							value={brand}
-							items={brands}
-							getItemLabel={(item) => item.name}
-							getItemDisabled={(item) => item.disabled}
-							onChange={({ value }) => setBrand(value)}
-							name="CheckboxGroup"
-						/>
-					</div>
-				</div>
-				<div className={cn([cl.minPrice, 'd-flex', 'flex-column'])}>
-					<div className={cl.minPriceTitle}>Минимальная цена, руб</div>
-					<div>
-						<Slider
-							step={5}
-							// label={`Значение ${value[0]}-${value[1]}`}
-							onChange={({ value }) => setValue(value)}
-							value={value}
-						/>
-					</div>
-					<div className={cn([cl.minPriceInputs, 'd-flex', 'justify-content-between'])}>
-						<input type="text" placeholder="от" />
-						<input type="text" placeholder="до" />
+						<div className={cn([cl.filterCards, 'd-grid'])}>
+							{filterList.map(({ carType, name }) => (
+								<div className={cn([cl.filterCardsCard, 'd-flex', 'flex-column'])}>
+									<img src={carType} alt="" className={cl.filterCardsCardImage} />
+									<div className={cl.filterCardsCardName}>{name}</div>
+								</div>
+							))}
+						</div>
+						<div className={cn([cl.brand, 'd-flex', 'flex-column'])}>
+							<div className={cl.brandTitle}>Выберите бренд</div>
+							<input className={cl.brandInput} type="text" placeholder="Поиск по названию" />
+							<div>
+								<CheckboxGroup
+									value={brand}
+									items={brands}
+									getItemLabel={(item) => item.name}
+									getItemDisabled={(item) => item.disabled}
+									onChange={({ value }) => setBrand(value)}
+									name="CheckboxGroup"
+								/>
+							</div>
+						</div>
+						<div className={cn([cl.minPrice, 'd-flex', 'flex-column'])}>
+							<div className={cl.minPriceTitle}>Минимальная цена, руб</div>
+							<div>
+								<Slider
+									step={5}
+									// label={`Значение ${value[0]}-${value[1]}`}
+									onChange={({ value }) => setValue(value)}
+									value={value}
+								/>
+							</div>
+							<div className={cn([cl.minPriceInputs, 'd-flex', 'justify-content-between'])}>
+								<input type="text" placeholder="от" />
+								<input type="text" placeholder="до" />
+							</div>
+						</div>
+						<Button onClick={() => setIsOpen(!isOpen)}>Применить</Button>
 					</div>
 				</div>
 			</div>
@@ -261,7 +274,7 @@ const NewCars = () => {
 							<Button>Применить</Button>
 						</div>
 					</div>
-					<div className="d-xs-flex d-sm-none">
+					<div className="d-xs-flex d-sm-none" onClick={() => setIsOpen(!isOpen)}>
 						<Button sizeStyle="sizeContent" colorStyle="Secondary" className={cn([cl.btn, 'd-flex'])}>
 							<img src={funnel} alt="" />
 							<div>Фильтры</div>

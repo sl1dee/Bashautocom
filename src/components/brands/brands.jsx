@@ -81,7 +81,7 @@ const Brands = ({ title, viewTabs }) => {
 		}
 	]
 
-	const items = ['Все бренды', 'Продаем', 'Ремонтируем']
+	const items = ['Все', 'Продаем', 'Ремонтируем']
 
 	const [value, setValue] = useState(items[0])
 
@@ -104,12 +104,13 @@ const Brands = ({ title, viewTabs }) => {
 						{viewTabs === true ? (
 							<div className={cl.brandsInformationHeadTabs}>
 								<ChoiceGroup
+									// className={cl.choice}
 									value={value}
 									onChange={({ value }) => setValue(value)}
 									items={items}
 									getItemLabel={(item) => item}
 									form="default"
-									size="l"
+									size="m"
 									view="primary"
 									name="ChoiceGroupExampleForm"
 									multiple={false}

@@ -1,7 +1,10 @@
+import close from '@assets/img/header/close.svg'
 import cn from 'classnames'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
+
+import Sidebar from '@components/header/sidebar/sidebar.jsx'
 
 import calendar from '../../../assets/img/about/calendar.svg'
 import career from '../../../assets/img/about/career.svg'
@@ -124,43 +127,267 @@ const Header = () => {
 		}
 	]
 
+	const navigationList = useMemo(
+		() => [
+			{
+				id: 0,
+				href: '/',
+				header: 'Новые автомобили'
+			},
+			{
+				id: 1,
+				href: '/used-cars',
+				header: 'Автомобили с пробегом'
+			},
+			{
+				id: 2,
+				href: '/',
+				header: 'Корпоративным клиентам'
+			},
+
+			{
+				id: 3,
+				href: '/',
+				header: 'Услуги',
+				links: [
+					{
+						id: 0,
+						href: '/',
+						icon: tradeIn,
+						text: 'Выкуп и Trade-In'
+					},
+					{
+						id: 1,
+						href: '/',
+						icon: serviceCenter,
+						text: 'Сервисный центр'
+					},
+					{
+						id: 2,
+						href: '/',
+						icon: bodyRepair,
+						text: 'Кузовной ремонт'
+					},
+					{
+						id: 3,
+						href: '/',
+						icon: detailing,
+						text: 'Детейлинг'
+					},
+					{
+						id: 4,
+						href: '/',
+						icon: lending,
+						text: 'Кредитование'
+					},
+					{
+						id: 5,
+						href: '/',
+						icon: insurance,
+						text: 'Страхование'
+					},
+					{
+						id: 6,
+						href: '/',
+						icon: carsRent,
+						text: 'Аренда автомобилей'
+					}
+				]
+			},
+
+			{
+				id: 4,
+				href: '/',
+				header: 'О компании',
+				links: [
+					{
+						id: 0,
+						href: '/',
+						icon: information,
+						text: 'О компании'
+					},
+					{
+						id: 1,
+						href: '/',
+						icon: career,
+						text: 'Карьера'
+					},
+					{
+						id: 2,
+						href: '/',
+						icon: news,
+						text: 'Новости'
+					},
+					{
+						id: 3,
+						href: '/',
+						icon: calendar,
+						text: 'История компании'
+					},
+					{
+						id: 4,
+						href: '/',
+						icon: loyaltyProgram,
+						text: 'Программа лояльности'
+					}
+				]
+			},
+			{
+				id: 5,
+				href: '/',
+				header: 'Контакты'
+			}
+		],
+		[]
+	)
+
+	const [isOpen, setIsOpen] = useState(false)
+
 	return (
-		<header className={`${cl.header} ${isScrolled ? cl.scrolled : ''}`}>
-			<div className="d-flex flex-column p-0">
-				<div className={cl.headerInformation}>
-					<div
-						className={cn([cl.headerInformationTopLinks], 'container', 'd-none', 'd-lg-flex', 'justify-content-end')}
-					>
-						<div>
-							<Link to="/">
-								<span>Программа лояльности</span>
-							</Link>
+		<>
+			<header className={`${cl.header} ${isScrolled ? cl.scrolled : ''}`}>
+				<div className="d-flex flex-column p-0">
+					<div className={cl.headerInformation}>
+						<div
+							className={cn([cl.headerInformationTopLinks], 'container', 'd-none', 'd-lg-flex', 'justify-content-end')}
+						>
+							<div>
+								<Link to="/">
+									<span>Программа лояльности</span>
+								</Link>
+							</div>
+							<div>
+								<Link to="/">
+									<span>Написать гендиректору</span>
+								</Link>
+							</div>
+							<div>
+								<Link to="/">
+									<span>+7 (347) 123-45-67</span>
+								</Link>
+							</div>
+							<div>
+								<Link to="/">
+									<span>Заказать звонок</span>
+								</Link>
+							</div>
 						</div>
-						<div>
-							<Link to="/">
-								<span>Написать гендиректору</span>
-							</Link>
-						</div>
-						<div>
-							<Link to="/">
-								<span>+7 (347) 123-45-67</span>
-							</Link>
-						</div>
-						<div>
-							<Link to="/">
-								<span>Заказать звонок</span>
-							</Link>
+						<div
+							className={cn(
+								[cl.headerInformationLinks],
+								'container',
+								'd-flex',
+								'justify-content-between',
+								'align-items-center'
+							)}
+						>
+							<div className={cn([cl.logo, 'd-none', 'd-sm-flex', 'align-items-center'])}>
+								<Link to="/">
+									<img src={logo} alt="logo" />
+								</Link>
+							</div>
+							<div className={cn([cl.logo, 'd-xs-flex', 'd-sm-none', 'align-items-center'])}>
+								<Link to="/">
+									<img src={logoMobile} alt="logo" />
+								</Link>
+							</div>
+							<div className={cn(cl.servicesLinks, 'd-none', 'd-lg-flex', 'align-items-center')}>
+								<div>
+									<Link to="/new-cars">
+										<span>Новые авто</span>
+									</Link>
+								</div>
+								<div>
+									<Link to="/used-cars">
+										<span>Авто с пробегом</span>
+									</Link>
+								</div>
+								<div className="d-none d-xxl-flex">
+									<Link to="/">
+										<span>Корпоративным клиентам</span>
+									</Link>
+								</div>
+								<div>
+									<Link to="/" onClick={() => setIsOpenServices(!isOpenServices)}>
+										<span>Услуги</span>
+									</Link>
+									<div className={isOpenServices ? cn([cl.dropdown, cl.dropdownOpen]) : cl.dropdown}>
+										<div className={cn([cl.cards, 'container'])}>
+											{servicesList.map(({ id, title, text, icon }) => (
+												<div className={cn([cl.cardWrapper, 'd-flex'])} key={id}>
+													<div className={cn([cl.card, 'd-flex', 'flex-column'])}>
+														<div className={cn([cl.cardDescription, 'd-flex', 'flex-column'])}>
+															<div className={cl.cardDescriptionTitle}>{title}</div>
+															<div className={cl.cardDescriptionText}>{text}</div>
+														</div>
+														<img src={icon} alt="" className={cl.cardImg} />
+													</div>
+												</div>
+											))}
+										</div>
+									</div>
+								</div>
+								<div>
+									<Link to="/" onClick={() => setIsOpenAbout(!isOpenAbout)}>
+										<span>О компании</span>
+									</Link>
+									<div className={isOpenAbout ? cn([cl.dropdown, cl.dropdownOpen]) : cl.dropdown}>
+										<div className={cn([cl.cards, 'container'])}>
+											{aboutList.map(({ id, title, text, icon }) => (
+												<div className={cn([cl.cardWrapper, 'd-flex'])} key={id}>
+													<div className={cn([cl.card, 'd-flex', 'flex-column'])}>
+														<div className={cn([cl.cardDescription, 'd-flex', 'flex-column'])}>
+															<div className={cl.cardDescriptionTitle}>{title}</div>
+															<div className={cl.cardDescriptionText}>{text}</div>
+														</div>
+														<img src={icon} alt="" className={cl.cardImg} />
+													</div>
+												</div>
+											))}
+										</div>
+									</div>
+								</div>
+								<div className="d-none d-xxl-flex">
+									<Link to="/">
+										<span>Контакты</span>
+									</Link>
+								</div>
+								<div className="d-flex d-xxl-none">
+									<Link to="/">
+										<span>Еще</span>
+									</Link>
+								</div>
+							</div>
+							<div className={cl.buttons}>
+								<Button sizeStyle="sizeContent" className={cn([cl.buttonsSignUp])}>
+									Записаться
+								</Button>
+								<Button sizeStyle="sizeContent" colorStyle="Secondary" className={cn([cl.buttonsAccount])}>
+									<img src={user} alt="userIcon" className={cl.buttonsAccountIcon} />
+									<span className={cl.buttonsAccountName}>Личный кабинет</span>
+								</Button>
+								<div
+									className={cn([cl.buttonsBurger, 'd-none', 'd-sm-flex', 'd-lg-none'])}
+									onClick={() => setIsOpen(!isOpen)}
+								>
+									<img src={burger} alt="burgerIcon" />
+								</div>
+								<div
+									className={cn([cl.buttonsBurger, 'd-xs-flex', 'd-sm-none', 'd-lg-none'])}
+									onClick={() => setIsOpen(!isOpen)}
+								>
+									<img src={burgerMobile} alt="burgerIcon" />
+								</div>
+							</div>
 						</div>
 					</div>
-					<div
-						className={cn(
-							[cl.headerInformationLinks],
-							'container',
-							'd-flex',
-							'justify-content-between',
-							'align-items-center'
-						)}
-					>
+				</div>
+			</header>
+
+			<div className={`${cl.sidebar} ${isOpen ? '' : cl.active}`}>
+				<div className={`${isOpen ? cl.sidebarBckg : ''}`} title="Закрыть" onClick={() => setIsOpen(!isOpen)} />
+				<div className={cn([cl.sidebarContent, 'd-flex', 'flex-column', 'justify-content-md-between', 'h-100'])}>
+					<div className={cn([cl.sidebarContentHeader, 'd-flex', 'justify-content-between', 'align-items-center'])}>
 						<div className={cn([cl.logo, 'd-none', 'd-sm-flex', 'align-items-center'])}>
 							<Link to="/">
 								<img src={logo} alt="logo" />
@@ -171,95 +398,61 @@ const Header = () => {
 								<img src={logoMobile} alt="logo" />
 							</Link>
 						</div>
-						<div className={cn(cl.servicesLinks, 'd-none', 'd-lg-flex', 'align-items-center')}>
-							<div>
-								<Link to="/new-cars">
-									<span>Новые авто</span>
-								</Link>
-							</div>
-							<div>
-								<Link to="/used-cars">
-									<span>Авто с пробегом</span>
-								</Link>
-							</div>
-							<div className="d-none d-xxl-flex">
-								<Link to="/">
-									<span>Корпоративным клиентам</span>
-								</Link>
-							</div>
-							<div>
-								<Link to="/" onClick={() => setIsOpenServices(!isOpenServices)}>
-									<span>Услуги</span>
-								</Link>
-								<div className={isOpenServices ? cn([cl.dropdown, cl.dropdownOpen]) : cl.dropdown}>
-									<div className={cn([cl.cards, 'container'])}>
-										{servicesList.map(({ id, title, text, icon }) => (
-											<div className={cn([cl.cardWrapper, 'd-flex'])} key={id}>
-												<div className={cn([cl.card, 'd-flex', 'flex-column'])}>
-													<div className={cn([cl.cardDescription, 'd-flex', 'flex-column'])}>
-														<div className={cl.cardDescriptionTitle}>{title}</div>
-														<div className={cl.cardDescriptionText}>{text}</div>
-													</div>
-													<img src={icon} alt="" className={cl.cardImg} />
-												</div>
-											</div>
-										))}
-									</div>
-								</div>
-							</div>
-							<div>
-								<Link to="/" onClick={() => setIsOpenAbout(!isOpenAbout)}>
-									<span>О компании</span>
-								</Link>
-								<div className={isOpenAbout ? cn([cl.dropdown, cl.dropdownOpen]) : cl.dropdown}>
-									<div className={cn([cl.cards, 'container'])}>
-										{aboutList.map(({ id, title, text, icon }) => (
-											<div className={cn([cl.cardWrapper, 'd-flex'])} key={id}>
-												<div className={cn([cl.card, 'd-flex', 'flex-column'])}>
-													<div className={cn([cl.cardDescription, 'd-flex', 'flex-column'])}>
-														<div className={cl.cardDescriptionTitle}>{title}</div>
-														<div className={cl.cardDescriptionText}>{text}</div>
-													</div>
-													<img src={icon} alt="" className={cl.cardImg} />
-												</div>
-											</div>
-										))}
-									</div>
-								</div>
-							</div>
-							<div className="d-none d-xxl-flex">
-								<Link to="/">
-									<span>Контакты</span>
-								</Link>
-							</div>
-							<div className="d-flex d-xxl-none">
-								<Link to="/">
-									<span>Еще</span>
-								</Link>
-							</div>
-						</div>
-						<div className={cl.buttons}>
-							<Button sizeStyle="sizeContent" className={cn([cl.buttonsSignUp])}>
+						<div className={cn([cl.buttons, 'd-flex'])}>
+							<Button sizeStyle="sizeContent" className={cn([cl.buttonsSignUp, 'd-none', 'd-sm-flex'])}>
 								Записаться
 							</Button>
-							<Button sizeStyle="sizeContent" colorStyle="Secondary" className={cn([cl.buttonsAccount])}>
+							<Button
+								sizeStyle="sizeContent"
+								colorStyle="Secondary"
+								className={cn([cl.buttonsAccount, 'd-none', 'd-sm-flex'])}
+							>
 								<img src={user} alt="userIcon" className={cl.buttonsAccountIcon} />
-								<span className={cl.buttonsAccountName}>Личный кабинет</span>
 							</Button>
-							<div className={cn([cl.buttonsBurger, 'd-none', 'd-sm-flex', 'd-lg-none'])} onClick={openBurgerHandler}>
+							<div
+								className={cn([cl.buttonsBurger, 'd-none', 'd-sm-flex', 'd-lg-none'])}
+								onClick={() => setIsOpen(!isOpen)}
+							>
 								<img src={burger} alt="burgerIcon" />
 							</div>
-							<div
-								className={cn([cl.buttonsBurger, 'd-xs-flex', 'd-sm-none', 'd-lg-none'])}
-								onClick={openBurgerHandler}
-							>
-								<img src={burgerMobile} alt="burgerIcon" />
+							<div className={cn([cl.buttonsBurger, 'd-xs-flex', 'd-sm-none'])} onClick={() => setIsOpen(!isOpen)}>
+								<img src={close} alt="burgerIcon" />
 							</div>
+						</div>
+					</div>
+					<div className={cn([cl.sidebarContentBody, 'd-flex', 'flex-column'])}>
+						{navigationList.map(({ id, header, href, links }) => (
+							<div key={id} className={cn([cl.sidebarContentBodyLinks, 'd-flex', 'flex-column'])}>
+								<Link to={href}>
+									<div onClick={() => setIsOpen(!isOpen)}>
+										<h6 className={cn([cl.headerLinks, 'mb-0'])}>{header}</h6>
+									</div>
+								</Link>
+								{links?.map(({ id, text, href, icon }) => (
+									<Link key={id} to={href}>
+										<div className={cn([cl.group, 'd-flex'])} onClick={() => setIsOpen(!isOpen)}>
+											<img src={icon} alt="" />
+											<p className={cn([cl.subLinks, 'mb-0'])}>{text}</p>
+										</div>
+									</Link>
+								))}
+							</div>
+						))}
+						<div className={cn([cl.sidebarContentBodyFooter, 'd-flex', 'flex-column'])}>
+							<a href="tel:+73471234567" className={cl.phone}>
+								+7 (347) 123-45-67
+							</a>
+							<Link to="/" className={cl.modal}>
+								Заказать звонок
+							</Link>
+							<Link to="/" className={cl.modal}>
+								Написать гендиректору
+							</Link>
 						</div>
 					</div>
 				</div>
 			</div>
-		</header>
+		</>
 	)
 }
 

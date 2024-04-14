@@ -1,4 +1,79 @@
+.sidebar {
+  position: fixed;
+  opacity: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: -576px;
+  z-index: 1000;
+  //pointer-events: none;
+  transition: transform 0.3s ease;
 
+  &Bckg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: -100%;
+    bottom: 0;
+    z-index: -1;
+    background-color: #00000070;
+    cursor: pointer;
+  }
+
+  .group {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 576px;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &Filter {
+      width: 576px;
+      height: 100%;
+      padding: 50px 20px 30px 20px;
+      background-color: #FFFFFF;
+      border: 1px solid #F1F1F1;
+      gap: 30px;
+
+      &Title {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 31.2px;
+        color: #111111;
+      }
+
+      .filter {
+        background-color: #FFFFFF;
+        padding: 20px 18px 36px 18px;
+        border-radius: 10px;
+        row-gap: 16px;
+
+        &Title {
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 21.6px;
+          color: #111111;
+        }
+
+        &Input  {
+          width: 100%;
+          height: 40px;
+          border: 1px solid #B6B6B6;
+          padding: 10px;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
+.active {
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
 
 .specialOffers {
   background-color: #FFFFFF;
@@ -209,6 +284,84 @@
 }
 
 @media (min-width: 320px) and (max-width: 576px) {
+
+  .sidebar {
+    position: fixed;
+    opacity: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: -320px;
+    z-index: 1000;
+    //pointer-events: none;
+    transition: transform 0.3s ease;
+
+    &Bckg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: -100%;
+      bottom: 0;
+      z-index: -1;
+      background-color: #00000070;
+      cursor: pointer;
+    }
+
+    .group {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      max-width: 320px;
+      overflow-y: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &Filter {
+        width: 320px;
+        height: 100%;
+        padding: 50px 20px 30px 20px;
+        background-color: #FFFFFF;
+        border: 1px solid #F1F1F1;
+        gap: 30px;
+
+        &Title {
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 31.2px;
+          color: #111111;
+        }
+
+        .filter {
+          background-color: #FFFFFF;
+          padding: 20px 10px 30px 10px;
+          border-radius: 10px;
+          row-gap: 16px;
+
+          &Title {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 21.6px;
+            color: #111111;
+          }
+
+          &Input  {
+            width: 100%;
+            height: 40px;
+            border: 1px solid #B6B6B6;
+            padding: 10px;
+            border-radius: 4px;
+          }
+        }
+      }
+    }
+  }
+  .active {
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
   .specialOffers {
 
     &Information {
@@ -220,6 +373,15 @@
         font-weight: 500;
         color: #111111;
         line-height: 21.6px;
+      }
+
+      div {
+
+        .btn {
+          color: #111111;
+          padding: 6px 12px;
+          gap: 6px;
+        }
       }
 
       .specialOffersSwiper {

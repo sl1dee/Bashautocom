@@ -114,14 +114,15 @@ const DealerAndServiceCenters = ({ title }) => {
 						<div
 							className={cn([
 								cl.centersInformationBlockFilters,
-								'd-flex',
+								'd-none',
+								'd-sm-flex',
 								'flex-column',
 								'flex-lg-row',
 								'justify-content-lg-between',
 								'align-items-lg-center'
 							])}
 						>
-							<div className="d-none d-sm-flex">
+							<div>
 								<ChoiceGroup
 									value={value}
 									onChange={({ value }) => setValue(value)}
@@ -134,7 +135,7 @@ const DealerAndServiceCenters = ({ title }) => {
 									multiple={false}
 								/>
 							</div>
-							<div className={cn([cl.combobox, 'd-none', 'd-sm-flex'])}>
+							<div className={cn([cl.combobox])}>
 								<Combobox
 									placeholder="Выберите бренд"
 									size="l"

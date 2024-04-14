@@ -1,5 +1,5 @@
 import { burgerIsOpenSelector } from '@store/selectors/modals.js'
-import React from 'react'
+import React, {useState} from 'react'
 import { useSelector } from 'react-redux'
 import { Routes } from 'react-router-dom'
 
@@ -11,6 +11,7 @@ import {burgerIsOpenSelector} from "@store/selectors/modals.js";
 import Sidebar from "@components/header/sidebar/sidebar.jsx";
 
 export default function App() {
+
 	return (
 		<>
 			<header />

@@ -32,32 +32,41 @@ const Modal = () => {
 		}
 	]
 
+	const [isOpen, setIsOpen] = useState(false)
+
 	return (
 		<div className={cn([cl.modal, 'd-flex', 'flex-column', 'd-sm-none'])}>
-			<div className={cl.modalTitle}>Запись в сервисный центр</div>
-			<div className={cn([cl.modalInputs, 'd-flex', 'flex-column'])}>
-				<input type="text" className={cl.input} name="name" placeholder="Имя" />
-				<input type="text" className={cl.input} placeholder="Телефон" />
-				<div className={cl.combobox}>
-					<Combobox
-						placeholder="Выберите бренд"
-						size="l"
-						items={comboboxValues}
-						value={comboboxValue}
-						onChange={({ value }) => setComboboxValue(value)}
-						multiple
-					/>
+			<div className={cn([cl.modalWrapper, 'd-flex', 'justify-content-center', 'align-items-center'])}>
+				<div className={cl.modalWrapperContent}>
+					<div className="d-flex align-items-center justify-content-between">
+						<div className={cl.modalWrapperContentTitle}>Запись в сервисный центр</div>
+						<img src="" alt="иконка" />
+					</div>
+					<div className={cn([cl.modalWrapperContentInputs, 'd-flex', 'flex-column'])}>
+						<input type="text" className={cl.input} name="name" placeholder="Имя" />
+						<input type="text" className={cl.input} placeholder="Телефон" />
+						<div className={cl.combobox}>
+							<Combobox
+								placeholder="Выберите бренд"
+								size="s"
+								items={comboboxValues}
+								value={comboboxValue}
+								onChange={({ value }) => setComboboxValue(value)}
+								multiple
+							/>
+						</div>
+					</div>
+					<div className={cn([cl.modalWrapperContentGroup, 'd-flex', 'flex-column'])}>
+						<div>
+							<Button sizeStyle="sizeL" className={cl.btn}>
+								Записаться
+							</Button>
+						</div>
+						<p className={cn([cl.policy, 'd-flex', 'd-sm-none', 'mb-0'])}>
+							Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности
+						</p>
+					</div>
 				</div>
-			</div>
-			<div className={cn([cl.modalGroup, 'd-flex', 'flex-column'])}>
-				<div>
-					<Button sizeStyle="sizeL" className={cl.btn}>
-						Записаться
-					</Button>
-				</div>
-				<p className={cn([cl.policy, 'd-flex', 'd-sm-none', 'mb-0'])}>
-					Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности
-				</p>
 			</div>
 		</div>
 	)

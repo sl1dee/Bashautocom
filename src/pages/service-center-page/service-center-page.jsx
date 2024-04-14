@@ -20,7 +20,7 @@ const ServiceCenterPage = () => {
 			<Brands title="Мы обслуживаем и ремонтируем бренды" viewTabs={false} />
 			<LoyaltyProgram />
 			<FastSignUp />
-			<Modal />
+			{/* <Modal /> */}
 			<DealerAndServiceCenters title="Сервисные центры" />
 		</MainLayout>
 	)
