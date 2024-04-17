@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@consta/icons": "^0.5.2",
-    "@consta/uikit": "^4.17.0",
+    "@consta/uikit": "4.24.0",
     "@pbe/react-yandex-maps": "^1.2.5",
     "@reduxjs/toolkit": "^2.0.1",
     "bootstrap": "5.3.3",

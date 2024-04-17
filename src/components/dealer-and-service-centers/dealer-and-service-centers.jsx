@@ -26,8 +26,8 @@ const DealerAndServiceCenters = ({ title }) => {
 			number: '+7 (347) 246-65-47',
 			sale: '3',
 			service: '7',
-			saleBrands: ['Haval', 'Changan Auto'],
-			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan Auto']
+			saleBrands: ['Haval', 'Changan'],
+			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
 		},
 		{
 			bckgImg: moskvich,
@@ -35,8 +35,8 @@ const DealerAndServiceCenters = ({ title }) => {
 			number: '+7 (347) 246-65-47',
 			sale: '2',
 			service: '7',
-			saleBrands: ['Haval', 'Changan Auto'],
-			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan Auto']
+			saleBrands: ['Haval', 'Changan'],
+			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
 		},
 		{
 			bckgImg: omoda,
@@ -44,29 +44,35 @@ const DealerAndServiceCenters = ({ title }) => {
 			number: '+7 (347) 246-65-47',
 			sale: '2',
 			service: '7',
-			saleBrands: ['Haval', 'Changan Auto'],
-			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan Auto']
+			saleBrands: ['Haval', 'Changan'],
+			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
 		},
 		{
 			bckgImg: haval,
 			street: 'Уфа, ул. Проспект Салавата Юлаева, 89',
 			number: '+7 (347) 246-65-47',
 			sale: '3',
-			service: '7'
+			service: '7',
+			saleBrands: ['Haval', 'Changan'],
+			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
 		},
 		{
 			bckgImg: moskvich,
 			street: 'Уфа, ул. Рубежная, 168',
 			number: '+7 (347) 246-65-47',
 			sale: '2',
-			service: '7'
+			service: '7',
+			saleBrands: ['Haval', 'Changan'],
+			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
 		},
 		{
 			bckgImg: omoda,
 			street: 'Уфа, ул. Адмирала Макарова, 32',
 			number: '+7 (347) 246-65-47',
 			sale: '2',
-			service: '7'
+			service: '7',
+			saleBrands: ['Haval', 'Changan'],
+			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
 		}
 	]
 
@@ -105,7 +111,7 @@ const DealerAndServiceCenters = ({ title }) => {
 	const [value, setValue] = useState(items[0])
 
 	return (
-		<div className={cl.centers}>
+		<div className={cn[(cl.centers, 'd-xs-none', 'd-sm-flex')]}>
 			<div className="container p-0">
 				<div className={cn([cl.centersInformation, 'd-flex', 'flex-column'])}>
 					<h1 className={cn([cl.centersInformationTitle, 'mb-0'])}>{title}</h1>
@@ -122,7 +128,7 @@ const DealerAndServiceCenters = ({ title }) => {
 								'align-items-lg-center'
 							])}
 						>
-							<div>
+							<div className="d-none d-lg-flex">
 								<ChoiceGroup
 									value={value}
 									onChange={({ value }) => setValue(value)}
@@ -135,10 +141,33 @@ const DealerAndServiceCenters = ({ title }) => {
 									multiple={false}
 								/>
 							</div>
-							<div className={cn([cl.combobox])}>
+							<div className="d-none d-sm-flex d-lg-none">
+								<ChoiceGroup
+									value={value}
+									onChange={({ value }) => setValue(value)}
+									items={items}
+									getItemLabel={(item) => item}
+									form="default"
+									size="m"
+									view="primary"
+									name="ChoiceGroupExampleForm"
+									multiple={false}
+								/>
+							</div>
+							<div className={cn([cl.combobox, 'd-none', 'd-lg-flex'])}>
 								<Combobox
 									placeholder="Выберите бренд"
 									size="l"
+									items={comboboxValues}
+									value={comboboxValue}
+									onChange={({ value }) => setComboboxValue(value)}
+									multiple
+								/>
+							</div>
+							<div className={cn([cl.combobox, 'd-none', 'd-sm-flex', 'd-lg-none'])}>
+								<Combobox
+									placeholder="Выберите бренд"
+									size="m"
 									items={comboboxValues}
 									value={comboboxValue}
 									onChange={({ value }) => setComboboxValue(value)}
@@ -163,11 +192,12 @@ const DealerAndServiceCenters = ({ title }) => {
 								onSwiper={(swiper) => setSwiper(swiper)}
 								pagination={{ clickable: true }}
 								scrollbar={{ draggable: true }}
+								loop={true}
 								breakpoints={{
 									// when window width is >= 640px
 									320: {
 										spaceBetween: 20,
-										slidesPerView: 'auto'
+										slidesPerView: 1
 									},
 									// when window width is >= 576px
 									576: {

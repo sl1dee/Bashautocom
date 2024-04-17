@@ -144,6 +144,7 @@
 
     .combobox {
       width: 390px;
+      height: 48px;
       z-index: 1;
     }
   }
@@ -283,7 +284,7 @@
   }
 }
 
-@media (min-width: 320px) and (max-width: 576px) {
+@media (max-width: 576px) {
 
   .sidebar {
     position: fixed;

@@ -26,7 +26,9 @@ const About = () => {
 							</p>
 						</span>
 						<div className="d-flex">
-							<Button sizeStyle="sizeL">Подробнее о компании</Button>
+							<Button sizeStyle="sizeL" className={cl.btn}>
+								Подробнее о компании
+							</Button>
 						</div>
 					</span>
 					<div className={cn([cl.secondBlock, 'd-none', 'd-sm-flex'])}>

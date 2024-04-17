@@ -9,6 +9,16 @@ a {
   text-decoration: none;
 }
 
+//.ChoiceGroupExampleAdaptiveScroll {
+//  overflow: auto;
+//  width: 100%;
+//
+//  &::-webkit-scrollbar {
+//    width: 0;
+//    height: 0;
+//  }
+//}
+
 @media (min-width: 1920px) {
   .container {
     padding: 0;

@@ -52,42 +52,49 @@ const Header = () => {
 	const servicesList = [
 		{
 			id: 1,
+			href: '/',
 			title: 'Выкуп и Trade-In',
 			text: 'Выкупим или обменяем ваш автомобиль на новый',
 			icon: tradeIn
 		},
 		{
 			id: 2,
+			href: '/service-center',
 			title: 'Сервисный центр',
 			text: 'Технический осмотр, диагностика и др.',
 			icon: serviceCenter
 		},
 		{
 			id: 3,
+			href: '/',
 			title: 'Кузовной ремонт',
 			text: 'Ремонт деталей кузова, покраска, полировка и др.',
 			icon: bodyRepair
 		},
 		{
 			id: 4,
+			href: '/',
 			title: 'Детейлинг',
 			text: 'Полировка кузова, пленка, химчистка и др.',
 			icon: detailing
 		},
 		{
 			id: 5,
+			href: '/',
 			title: 'Кредитование',
 			text: 'Выгодные условия от 0,1%',
 			icon: lending
 		},
 		{
 			id: 6,
+			href: '/',
 			title: 'Страхование',
 			text: 'ОСАГО, КАСКО и др.',
 			icon: insurance
 		},
 		{
 			id: 7,
+			href: '/',
 			title: 'Аренда автомобилей',
 			text: 'Автомобиль для любых целей',
 			icon: carsRent
@@ -97,30 +104,35 @@ const Header = () => {
 	const aboutList = [
 		{
 			id: 1,
+			href: '/',
 			title: 'О компании',
 			text: 'Лидер авторынка в Башкирии',
 			icon: information
 		},
 		{
 			id: 2,
+			href: '/',
 			title: 'Карьера',
 			text: 'Работа и карьера в компании мечты',
 			icon: career
 		},
 		{
 			id: 3,
+			href: '/',
 			title: 'Новости',
 			text: 'Будьте в курсе событий Башавтоком',
 			icon: news
 		},
 		{
 			id: 4,
+			href: '/',
 			title: 'История компании',
 			text: 'Рассказываем про наш путь с 1992 года',
 			icon: calendar
 		},
 		{
 			id: 5,
+			href: '/',
 			title: 'Программа лояльности',
 			text: 'Позволь себе больше',
 			icon: loyaltyProgram
@@ -131,7 +143,7 @@ const Header = () => {
 		() => [
 			{
 				id: 0,
-				href: '/',
+				href: '/new-cars',
 				header: 'Новые автомобили'
 			},
 			{
@@ -158,7 +170,7 @@ const Header = () => {
 					},
 					{
 						id: 1,
-						href: '/',
+						href: '/service-center',
 						icon: serviceCenter,
 						text: 'Сервисный центр'
 					},
@@ -292,70 +304,99 @@ const Header = () => {
 								</Link>
 							</div>
 							<div className={cn(cl.servicesLinks, 'd-none', 'd-lg-flex', 'align-items-center')}>
-								<div>
+								<div className={cl.servicesLinksLink}>
 									<Link to="/new-cars">
 										<span>Новые авто</span>
 									</Link>
 								</div>
-								<div>
+								<div className={cl.servicesLinksLink}>
 									<Link to="/used-cars">
 										<span>Авто с пробегом</span>
 									</Link>
 								</div>
-								<div className="d-none d-xxl-flex">
+								<div className={cn([cl.servicesLinksLink, 'd-none', 'd-xxl-flex'])}>
 									<Link to="/">
 										<span>Корпоративным клиентам</span>
 									</Link>
 								</div>
-								<div>
-									<Link to="/" onClick={() => setIsOpenServices(!isOpenServices)}>
+								<div className={cl.servicesLinksLink}>
+									{/*<Link to="/" onClick={() => setIsOpenServices(!isOpenServices)}>*/}
+									{/*	<span>Услуги</span>*/}
+									{/*</Link>*/}
+									<div className={cl.droplink}>
 										<span>Услуги</span>
-									</Link>
-									<div className={isOpenServices ? cn([cl.dropdown, cl.dropdownOpen]) : cl.dropdown}>
+									</div>
+									{/*<div className={isOpenServices ? cn([cl.dropdown, cl.dropdownOpen]) : cl.dropdown}>*/}
+									<div className={cl.dropdown}>
 										<div className={cn([cl.cards, 'container'])}>
-											{servicesList.map(({ id, title, text, icon }) => (
-												<div className={cn([cl.cardWrapper, 'd-flex'])} key={id}>
-													<div className={cn([cl.card, 'd-flex', 'flex-column'])}>
-														<div className={cn([cl.cardDescription, 'd-flex', 'flex-column'])}>
-															<div className={cl.cardDescriptionTitle}>{title}</div>
-															<div className={cl.cardDescriptionText}>{text}</div>
+											{servicesList.map(({ id, href, title, text, icon }) => (
+												<Link to={href}>
+													<div className={cn([cl.cardWrapper, 'd-flex'])} key={id}>
+														<div className={cn([cl.card, 'd-flex', 'flex-column'])}>
+															<div className={cn([cl.cardDescription, 'd-flex', 'flex-column'])}>
+																<div className={cl.cardDescriptionTitle}>{title}</div>
+																<div className={cl.cardDescriptionText}>{text}</div>
+															</div>
+															<img src={icon} alt="" className={cl.cardImg} />
 														</div>
-														<img src={icon} alt="" className={cl.cardImg} />
 													</div>
-												</div>
+												</Link>
 											))}
 										</div>
 									</div>
 								</div>
-								<div>
-									<Link to="/" onClick={() => setIsOpenAbout(!isOpenAbout)}>
+								<div className={cl.servicesLinksLink}>
+									{/*<Link to="/" onClick={() => setIsOpenAbout(!isOpenAbout)}>*/}
+									{/*	<span>О компании</span>*/}
+									{/*</Link>*/}
+									<div className={cl.droplink}>
 										<span>О компании</span>
-									</Link>
-									<div className={isOpenAbout ? cn([cl.dropdown, cl.dropdownOpen]) : cl.dropdown}>
+									</div>
+									{/*<div className={isOpenAbout ? cn([cl.dropdown, cl.dropdownOpen]) : cl.dropdown}>*/}
+									<div className={cl.dropdown}>
 										<div className={cn([cl.cards, 'container'])}>
-											{aboutList.map(({ id, title, text, icon }) => (
-												<div className={cn([cl.cardWrapper, 'd-flex'])} key={id}>
-													<div className={cn([cl.card, 'd-flex', 'flex-column'])}>
-														<div className={cn([cl.cardDescription, 'd-flex', 'flex-column'])}>
-															<div className={cl.cardDescriptionTitle}>{title}</div>
-															<div className={cl.cardDescriptionText}>{text}</div>
+											{aboutList.map(({ id, href, title, text, icon }) => (
+												<Link to={href}>
+													<div className={cn([cl.cardWrapper, 'd-flex'])} key={id}>
+														<div className={cn([cl.card, 'd-flex', 'flex-column'])}>
+															<div className={cn([cl.cardDescription, 'd-flex', 'flex-column'])}>
+																<div className={cl.cardDescriptionTitle}>{title}</div>
+																<div className={cl.cardDescriptionText}>{text}</div>
+															</div>
+															<img src={icon} alt="" className={cl.cardImg} />
 														</div>
-														<img src={icon} alt="" className={cl.cardImg} />
 													</div>
-												</div>
+												</Link>
 											))}
 										</div>
 									</div>
 								</div>
-								<div className="d-none d-xxl-flex">
+								<div className={cn([cl.servicesLinksLink, 'd-none', 'd-xxl-flex'])}>
 									<Link to="/">
 										<span>Контакты</span>
 									</Link>
 								</div>
-								<div className="d-flex d-xxl-none">
-									<Link to="/">
-										<span>Еще</span>
-									</Link>
+								<div className={cn([cl.servicesLinksLink, 'd-none', 'd-lg-flex', 'd-xxl-none'])}>
+									{/*<Link to="/">*/}
+									{/*	<span>Еще</span>*/}
+									{/*</Link>*/}
+									<div className={cl.smalldrop}>
+										<div className={cl.smalldroplink}>
+											<span>Еще</span>
+										</div>
+										<div className={cn([cl.smalldropdown, 'd-flex', 'flex-column'])}>
+											<div className={cl.smalldropdownBlock}>
+												<Link to="" className={cl.smalldropdownBlockLink}>
+													Корпоративным клиентам
+												</Link>
+											</div>
+											<div className={cl.smalldropdownBlock}>
+												<Link to="" className={cl.smalldropdownBlockLink}>
+													Контакты
+												</Link>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div className={cl.buttons}>

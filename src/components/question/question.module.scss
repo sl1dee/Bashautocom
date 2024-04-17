@@ -104,7 +104,7 @@
         gap: 16px;
 
         .input {
-          padding: 15px 16px 15px 10px;
+          padding: 13px 16px 13px 16px;
           background: #FFFFFF;
           border-radius: 4px;
           border: 1px solid #6B6B6B;
@@ -126,12 +126,28 @@
       &Block3 {
         gap: 12px;
 
+        .btn {
+          padding: 11.5px 20px 11.5px 20px;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 25.2px;
+        }
+
         .policy {
           font-size: 14px;
           font-weight: 400;
           line-height: 16.8px;
           color: rgba(17, 17, 17, 0.48);
           text-align: center;
+
+          .link {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.8px;
+            color: rgba(17, 17, 17, 0.48);
+            text-align: center;
+            text-decoration-line: underline;
+          }
         }
       }
     }
@@ -212,7 +228,7 @@
           gap: 16px;
 
           .input {
-            padding: 15px 16px 15px 10px;
+            padding: 13px 16px 13px 16px;
             background: #FFFFFF;
             border-radius: 4px;
             border: 1px solid #6B6B6B;
@@ -241,6 +257,15 @@
             line-height: 16.8px;
             color: rgba(17, 17, 17, 0.48);
             text-align: center;
+
+            .link {
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 16.8px;
+              color: rgba(17, 17, 17, 0.48);
+              text-align: center;
+              text-decoration-line: underline;
+            }
           }
         }
       }
@@ -357,7 +382,7 @@
           gap: 16px;
 
           .input {
-            padding: 15px 16px 15px 10px;
+            padding: 13px 16px 13px 16px;
             background: #FFFFFF;
             border-radius: 4px;
             border: 1px solid #6B6B6B;
@@ -386,6 +411,15 @@
             line-height: 16.8px;
             color: rgba(17, 17, 17, 0.48);
             text-align: center;
+
+            .link {
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 16.8px;
+              color: rgba(17, 17, 17, 0.48);
+              text-align: center;
+              text-decoration-line: underline;
+            }
           }
         }
       }
@@ -502,13 +536,13 @@
           gap: 16px;
 
           .input {
-            padding: 15px 16px 15px 10px;
+            padding: 9px 16px 9px 16px;
             background: #FFFFFF;
             border-radius: 4px;
             border: 1px solid #6B6B6B;
             font-weight: 400;
-            font-size: 18px;
-            line-height: 19.52px;
+            font-size: 16px;
+            line-height: 20.8px;
             width: 100%;
             color: #6B6B6B;
 
@@ -525,12 +559,28 @@
         &Block3 {
           gap: 12px;
 
+          .btn {
+            padding: 7px 16px 7px 16px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22.4px;
+          }
+
           .policy {
             font-size: 14px;
             font-weight: 400;
             line-height: 16.8px;
             color: rgba(17, 17, 17, 0.48);
             text-align: center;
+
+            .link {
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 16.8px;
+              color: rgba(17, 17, 17, 0.48);
+              text-align: center;
+              text-decoration-line: underline;
+            }
           }
         }
       }
@@ -538,7 +588,7 @@
   }
 }
 
-@media (min-width: 320px) and (max-width: 576px) {
+@media (max-width: 576px) {
   .question {
 
     &Information {
@@ -548,6 +598,7 @@
       padding: 24px 20px;
       gap: 10px;
       position: relative;
+      overflow: hidden;
 
       &Text {
         max-width: 445px;

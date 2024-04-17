@@ -97,7 +97,7 @@ const Question = () => {
 					<div className={cn([cl.questionInformationModal, 'd-none', 'd-sm-flex', 'flex-column'])}>
 						<div className={cn([cl.questionInformationModalBlock1, 'd-flex', 'flex-column'])}>
 							<h6 className={cn([cl.theme, 'mb-0'])}>Выберите тему вопроса</h6>
-							<div className={cn([cl.tabs, 'd-flex', 'mb-0'])}>
+							<div className={cn([cl.tabs, 'd-none', 'd-lg-flex', 'mb-0'])}>
 								<ChoiceGroup
 									value={value}
 									onChange={({ value }) => setValue(value)}
@@ -105,6 +105,20 @@ const Question = () => {
 									getItemLabel={(item) => item}
 									form="default"
 									size="l"
+									view="primary"
+									width="full"
+									name="ChoiceGroupExampleForm"
+									multiple={false}
+								/>
+							</div>
+							<div className={cn([cl.tabs, 'd-none', 'd-sm-flex', 'd-lg-none', 'mb-0'])}>
+								<ChoiceGroup
+									value={value}
+									onChange={({ value }) => setValue(value)}
+									items={items}
+									getItemLabel={(item) => item}
+									form="default"
+									size="m"
 									view="primary"
 									width="full"
 									name="ChoiceGroupExampleForm"
@@ -124,7 +138,7 @@ const Question = () => {
 								required
 							/>
 							<input className={cl.input} name="phone" type="hidden" tabIndex={-1} readOnly value={phone} />
-							<div className={cl.combobox}>
+							<div className={cn([cl.combobox, 'd-none', 'd-lg-flex'])}>
 								<Combobox
 									placeholder="Выберите бренд"
 									size="l"
@@ -134,13 +148,28 @@ const Question = () => {
 									multiple
 								/>
 							</div>
+							<div className={cn([cl.combobox, 'd-none', 'd-sm-flex', 'd-lg-none'])}>
+								<Combobox
+									placeholder="Выберите бренд"
+									size="m"
+									items={comboboxValues}
+									value={comboboxValue}
+									onChange={({ value }) => setComboboxValue(value)}
+									multiple
+								/>
+							</div>
 						</div>
 						<div className={cn([cl.questionInformationModalBlock3, 'd-flex', 'flex-column'])}>
 							<div>
-								<Button sizeStyle="sizeL">Отправить вопрос</Button>
+								<Button sizeStyle="sizeContent" className={cl.btn}>
+									Отправить вопрос
+								</Button>
 							</div>
-							<p className={cn([cl.policy, 'd-flex', 'mb-0'])}>
-								Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности
+							<p className={cn([cl.policy, 'd-flex', 'flex-column', 'mb-0'])}>
+								Нажимая на кнопку, вы соглашаетесь с{' '}
+								<Link to="/privacy-policy" className={cl.link}>
+									Политикой конфиденциальности
+								</Link>
 							</p>
 						</div>
 					</div>

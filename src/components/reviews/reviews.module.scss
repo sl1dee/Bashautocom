@@ -83,7 +83,7 @@
         position: relative;
 
         .swiper {
-          height: 422px;
+          height: 362px;
         }
 
         .swiperArrow {
@@ -149,7 +149,7 @@
         position: relative;
 
         .swiper {
-          height: 360px;
+          height: 290px;
         }
       }
     }
@@ -175,14 +175,14 @@
         position: relative;
 
         .swiper {
-          height: 272px;
+          height: 252px;
         }
       }
     }
   }
 }
 
-@media (min-width: 320px) and (max-width: 576px) {
+@media (max-width: 576px) {
   .reviews {
     background-color: #FFFFFF;
 
@@ -201,7 +201,7 @@
         position: relative;
 
         .swiper {
-          height: 250px;
+          height: 230px;
         }
       }
     }

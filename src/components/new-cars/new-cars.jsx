@@ -3,6 +3,7 @@ import changanUNIV from '@assets/img/new-cars-filter/changan_uni-v.png'
 import close from '@assets/img/new-cars-filter/close.svg'
 import coupe from '@assets/img/new-cars-filter/coupe.png'
 import crossover from '@assets/img/new-cars-filter/crossover.png'
+import done from '@assets/img/new-cars-filter/done.svg'
 import funnel from '@assets/img/new-cars-filter/funnel.svg'
 import gwm from '@assets/img/new-cars-filter/gwm.png'
 import hatchback from '@assets/img/new-cars-filter/hatchback.png'
@@ -177,6 +178,19 @@ const NewCars = () => {
 
 	const [isOpen, setIsOpen] = useState(false)
 
+	const [isActive, setIsActive] = useState(false)
+
+	const [activeStates, setActiveStates] = useState(filterList.map(() => false))
+
+	// Функция для переключения состояния активности карточки по индексу
+	const toggleActive = (index) => {
+		setActiveStates((prevStates) => {
+			const newStates = [...prevStates]
+			newStates[index] = !newStates[index]
+			return newStates
+		})
+	}
+
 	return (
 		<>
 			<div className={`${cl.sidebar} ${isOpen ? '' : cl.active}`}>
@@ -188,10 +202,21 @@ const NewCars = () => {
 							<img src={close} alt="close" onClick={() => setIsOpen(!isOpen)} />
 						</div>
 						<div className={cn([cl.filterCards, 'd-grid'])}>
-							{filterList.map(({ carType, name }) => (
-								<div className={cn([cl.filterCardsCard, 'd-flex', 'flex-column'])}>
+							{filterList.map(({ carType, name }, index) => (
+								<div
+									key={index}
+									onClick={() => toggleActive(index)}
+									className={`${cl.filterCardsCard} ${activeStates[index] ? cl.active2 : ''}`}
+								>
+									{/* <div className={cn([cl.filterCardsCard, 'd-flex', 'flex-column'])} onClick={() => setIsActive(!isActive)}> */}
 									<img src={carType} alt="" className={cl.filterCardsCardImage} />
 									<div className={cl.filterCardsCardName}>{name}</div>
+									<img src={done} alt="" className={cl.filterCardsCardDone} />
+									<img
+										src={done}
+										alt=""
+										className={`${cl.filterCardsCardDone} ${activeStates[index] ? cl.active2Done : ''}`}
+									/>
 								</div>
 							))}
 						</div>
@@ -233,10 +258,20 @@ const NewCars = () => {
 					<h1 className={cn([cl.title, 'mb-0'])}>Новые автомобили</h1>
 					<div className={cn([cl.newCarsFilterContent, 'd-none', 'd-sm-flex', 'flex-column', 'flex-lg-row'])}>
 						<div className={cn([cl.leftBlock, 'd-grid'])}>
-							{filterList.map(({ carType, name }) => (
-								<div className={cn([cl.leftBlockCard, 'd-flex', 'flex-column'])}>
+							{filterList.map(({ carType, name }, index) => (
+								<div
+									key={index}
+									onClick={() => toggleActive(index)}
+									className={`${cl.leftBlockCard} ${activeStates[index] ? cl.active2 : ''}`}
+								>
+									{/* <div className={cn([cl.filterCardsCard, 'd-flex', 'flex-column'])} onClick={() => setIsActive(!isActive)}> */}
 									<img src={carType} alt="" className={cl.leftBlockCardImage} />
 									<div className={cl.leftBlockCardName}>{name}</div>
+									<img
+										src={done}
+										alt=""
+										className={`${cl.leftBlockCardDone} ${activeStates[index] ? cl.active2Done : ''}`}
+									/>
 								</div>
 							))}
 						</div>
@@ -244,10 +279,20 @@ const NewCars = () => {
 							<div className={cn([cl.rightBlockGroup, 'd-flex', 'flex-row', 'flex-lg-column'])}>
 								<div className={cn([cl.rightBlockGroupFirst, 'd-flex', 'flex-column'])}>
 									<div className={cl.title}>Бренд</div>
-									<div className={cl.combobox}>
+									<div className={cn([cl.combobox, 'd-none', 'd-lg-flex'])}>
 										<Combobox
 											placeholder="Выберите бренд"
 											size="l"
+											items={comboboxValues}
+											value={comboboxValue}
+											onChange={({ value }) => setComboboxValue(value)}
+											multiple
+										/>
+									</div>
+									<div className={cn([cl.combobox, 'd-none', 'd-sm-flex', 'd-lg-none'])}>
+										<Combobox
+											placeholder="Выберите бренд"
+											size="s"
 											items={comboboxValues}
 											value={comboboxValue}
 											onChange={({ value }) => setComboboxValue(value)}

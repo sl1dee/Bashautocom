@@ -49,61 +49,95 @@ const Footer = () => {
 						<span className={cn([cl.footerContentBuy, 'd-flex', 'flex-column'])}>
 							<div className={cl.title}>Купить автомобиль</div>
 							<div className={cl.link}>
-								<Link to="/">Новые автомобили</Link>
+								<Link to="/new-cars" className={cl.actlink}>
+									Новые автомобили
+								</Link>
 							</div>
 							<div className={cl.link}>
-								<Link to="/">Авто с пробегом</Link>
+								<Link to="/used-cars" className={cl.actlink}>
+									Авто с пробегом
+								</Link>
 							</div>
 							<div className={cl.link}>
-								<Link to="/">Специальные предложения</Link>
+								<Link to="/" className={cl.actlink}>
+									Специальные предложения
+								</Link>
 							</div>
 						</span>
 						<span className={cn([cl.footerContentCompany, 'd-flex', 'flex-column'])}>
 							<div className={cl.title}>Компания</div>
 							<div className={cl.link}>
-								<Link to="/">О компании</Link>
+								<Link to="/" className={cl.actlink}>
+									О компании
+								</Link>
 							</div>
 							<div className={cl.link}>
-								<Link to="/">Карьера</Link>
+								<Link to="/" className={cl.actlink}>
+									Карьера
+								</Link>
 							</div>
 							<div className={cl.link}>
-								<Link to="/">Программа лояльности</Link>
+								<Link to="/" className={cl.actlink}>
+									Программа лояльности
+								</Link>
 							</div>
 							<div className={cl.link}>
-								<Link to="/">Новости</Link>
+								<Link to="/" className={cl.actlink}>
+									Новости
+								</Link>
 							</div>
 							<div className={cl.link}>
-								<Link to="/">История компании</Link>
+								<Link to="/" className={cl.actlink}>
+									История компании
+								</Link>
 							</div>
 							<div className={cl.link}>
-								<Link to="/">Контакты</Link>
+								<Link to="/" className={cl.actlink}>
+									Контакты
+								</Link>
 							</div>
 						</span>
 						<span className={cn([cl.footerContentServices, 'd-flex', 'flex-column'])}>
 							<div className={cl.title}>Услуги</div>
 							<div className={cl.link}>
-								<Link to="/">Корпоративным клиентам</Link>
+								<Link to="/" className={cl.actlink}>
+									Корпоративным клиентам
+								</Link>
 							</div>
 							<div className={cl.link}>
-								<Link to="/">Сервисный центр</Link>
+								<Link to="/service-center" className={cl.actlink}>
+									Сервисный центр
+								</Link>
 							</div>
 							<div className={cl.link}>
-								<Link to="/">Кузовной ремонт</Link>
+								<Link to="/" className={cl.actlink}>
+									Кузовной ремонт
+								</Link>
 							</div>
 							<div className={cl.link}>
-								<Link to="/">Детейлинг</Link>
+								<Link to="/" className={cl.actlink}>
+									Детейлинг
+								</Link>
 							</div>
 							<div className={cl.link}>
-								<Link to="/">Выкуп и Trade-In</Link>
+								<Link to="/" className={cl.actlink}>
+									Выкуп и Trade-In
+								</Link>
 							</div>
 							<div className={cl.link}>
-								<Link to="/">Страхование</Link>
+								<Link to="/" className={cl.actlink}>
+									Страхование
+								</Link>
 							</div>
 							<div className={cl.link}>
-								<Link to="/">Кредитование</Link>
+								<Link to="/" className={cl.actlink}>
+									Кредитование
+								</Link>
 							</div>
 							<div className={cl.link}>
-								<Link to="/">Аренда автомобиля</Link>
+								<Link to="/" className={cl.actlink}>
+									Аренда автомобиля
+								</Link>
 							</div>
 						</span>
 						<span className={cn([cl.footerContentDownload, 'd-none', 'd-sm-flex', 'flex-column'])}>
@@ -130,7 +164,7 @@ const Footer = () => {
 				<div className="container p-0">
 					<div className={cn([cl.footer2Links, 'd-flex', 'justify-content-between', 'flex-column', 'flex-sm-row'])}>
 						<p>
-							<Link to="/">Политика конфиденциальности</Link>
+							<Link to="/privacy-policy">Политика конфиденциальности</Link>
 						</p>
 						<p>
 							Разработка сайтка -{' '}

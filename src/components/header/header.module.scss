@@ -239,27 +239,38 @@
     }
 
     &Links {
-      padding: 16px 0 18px 0;
+      //padding: 16px 0 18px 0;
 
-      > div {
+      .logo {
+        position: relative;
+        img {
+          max-width: 260px;
+          max-height: 24px;
+        }
+      }
 
-        .dropdown {
-          z-index: 1000;
-          position: absolute;
-          top: calc(99.5%);
-          left: 0;
-          right: 0;
-          padding: 50px 0 70px 0;
-          background-color: #F4F5F7;
-          opacity: 0;
-          transform: translateY(-10px);
-          visibility: hidden;
-          transition: .3s;
+      .servicesLinks {
+        gap: 20px;
 
-          &Open {
-            transform: translateY(0);
-            opacity: 1;
-            visibility: visible;
+        &Link {
+          padding: 30px 0 34px 0;
+
+          .droplink {
+
+          }
+
+          .dropdown {
+            z-index: 100;
+            position: absolute;
+            top: calc(99.5%);
+            width: 100%;
+            left: 0;
+            right: 0;
+            padding: 50px 0 70px 0;
+            background-color: #F4F5F7;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .3s ease;
 
             .cards {
               display: grid;
@@ -272,6 +283,7 @@
                 padding: 30px;
                 width: 210px;
                 height: 220px;
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
 
                 .card {
 
@@ -303,25 +315,86 @@
               }
             }
           }
-        }
 
-        span {
-          color: #000000;
-          font-size: 16px;
-          font-weight: 400;
-          //line-height: 110%;
-        }
-      }
+          span {
+            color: #000000;
+            font-size: 16px;
+            font-weight: 400;
+            //line-height: 110%;
+            cursor: pointer;
+          }
 
-      .logo {
-        img {
-          max-width: 260px;
-          max-height: 24px;
-        }
-      }
+          &:hover {
+            .dropdown {
+              opacity: 1;
+              pointer-events: auto;
+            }
+          }
 
-      .servicesLinks {
-        gap: 20px;
+          .smalldrop {
+            position: relative;
+
+            .smalldroplink {
+
+            }
+
+            .smalldropdown {
+              z-index: 100;
+              position: absolute;
+              top: calc(230%);
+              width: 233px;
+              height: 94px;
+              left: -15px;
+              right: 0;
+              padding: 8px 0 ;
+              background-color: #F4F5F7;
+              border-radius: 4px;
+              border: 1px solid #D4D4D4;
+              opacity: 0;
+              //transform: translate(-50%, 0);
+              //transition: top .3s ease, transform .3s ease;
+              //pointer-events: auto;
+              //transition: opacity .3s ease;
+              pointer-events: none;
+              transition: opacity .3s ease;
+
+              &Block {
+                width: 250px;
+                height: 41px;
+                padding: 10px 16px 10px 16px;
+
+                &Link {
+                  font-size: 16px;
+                  font-weight: 400;
+                  line-height: 20.8px;
+                  color: #111111;
+                }
+              }
+            }
+
+            span {
+              color: #000000;
+              font-size: 16px;
+              font-weight: 400;
+              //line-height: 110%;
+              cursor: pointer;
+            }
+
+
+          }
+          &:hover {
+            .smalldropdown {
+              //opacity: 1;
+              //pointer-events: none;
+              //top: 250%;
+              //opacity: 1;
+              //transform: translate(-50%, 0);
+              //pointer-events: auto;
+              opacity: 1;
+              pointer-events: auto;
+            }
+          }
+        }
         
       }
 
@@ -388,27 +461,31 @@
       }
 
       &Links {
-        padding: 16px 0 18px 0;
+        //padding: 16px 0 18px 0;
 
-        > div {
 
-          .dropdown {
-            z-index: 1000;
-            position: absolute;
-            top: calc(99.5%);
-            left: 0;
-            right: 0;
-            padding: 50px 0 70px 0;
-            background-color: #F4F5F7;
-            opacity: 0;
-            transform: translateY(-10px);
-            visibility: hidden;
-            transition: .3s;
+        .servicesLinks {
+          gap: 20px;
 
-            &Open {
-              transform: translateY(0);
-              opacity: 1;
-              visibility: visible;
+          &Link {
+            padding: 29.5px 0 31.5px 0;
+
+            .droplink {
+
+            }
+
+            .dropdown {
+              z-index: 100;
+              position: absolute;
+              top: calc(99.5%);
+              width: 100%;
+              left: 0;
+              right: 0;
+              padding: 50px 0 70px 0;
+              background-color: #F4F5F7;
+              opacity: 0;
+              pointer-events: none;
+              transition: opacity .3s ease;
 
               .cards {
                 display: grid;
@@ -419,8 +496,9 @@
                   background-color: #FFFFFF;
                   border-radius: 20px;
                   padding: 30px;
-                  width: 248px;
+                  width: 210px;
                   height: 220px;
+                  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
 
                   .card {
 
@@ -452,18 +530,23 @@
                 }
               }
             }
-          }
 
-          span {
-            color: #000000;
-            font-size: 16px;
-            font-weight: 400;
-            //line-height: 110%;
-          }
-        }
+            span {
+              color: #000000;
+              font-size: 16px;
+              font-weight: 400;
+              //line-height: 110%;
+              cursor: pointer;
+            }
 
-        .servicesLinks {
-          gap: 20px;
+            &:hover {
+              .dropdown {
+                opacity: 1;
+                pointer-events: auto;
+              }
+            }
+
+          }
 
         }
 
@@ -519,27 +602,37 @@
       }
 
       &Links {
-        padding: 16px 0 18px 0;
+        //padding: 16px 0 18px 0;
 
-        > div {
+        .logo {
+          img {
+            max-width: 224px;
+            max-height: 20px;
+          }
+        }
 
-          .dropdown {
-            z-index: 1000;
-            position: absolute;
-            top: calc(99.5%);
-            left: 0;
-            right: 0;
-            padding: 50px 0 70px 0;
-            background-color: #F4F5F7;
-            opacity: 0;
-            transform: translateY(-10px);
-            visibility: hidden;
-            transition: .3s;
+        .servicesLinks {
+          gap: 20px;
 
-            &Open {
-              transform: translateY(0);
-              opacity: 1;
-              visibility: visible;
+          &Link {
+            padding: 29.5px 0 31.5px 0;
+
+            .droplink {
+
+            }
+
+            .dropdown {
+              z-index: 100;
+              position: absolute;
+              top: calc(99.5%);
+              width: 100%;
+              left: 0;
+              right: 0;
+              padding: 50px 0 70px 0;
+              background-color: #F4F5F7;
+              opacity: 0;
+              pointer-events: none;
+              transition: opacity .3s ease;
 
               .cards {
                 display: grid;
@@ -552,6 +645,7 @@
                   padding: 30px;
                   width: 210px;
                   height: 220px;
+                  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
 
                   .card {
 
@@ -583,25 +677,22 @@
                 }
               }
             }
-          }
 
-          span {
-            color: #000000;
-            font-size: 16px;
-            font-weight: 400;
-            //line-height: 110%;
-          }
-        }
+            span {
+              color: #000000;
+              font-size: 16px;
+              font-weight: 400;
+              //line-height: 110%;
+              cursor: pointer;
+            }
 
-        .logo {
-          img {
-            max-width: 224px;
-            max-height: 20px;
+            &:hover {
+              .dropdown {
+                opacity: 1;
+                pointer-events: auto;
+              }
+            }
           }
-        }
-
-        .servicesLinks {
-          gap: 20px;
 
         }
 
@@ -763,7 +854,7 @@
   }
 }
 
-@media (min-width: 320px) and (max-width: 576px) {
+@media (max-width: 576px) {
 
   .sidebar {
     position: fixed;
@@ -774,7 +865,6 @@
     left: -320px;
     z-index: 200;
     transition: transform 0.3s ease;
-    background-color: #2F3140;
     //pointer-events: none;
 
     //animation: open .3s ease;
@@ -982,6 +1072,7 @@
 
   .header {
     background-color: #2F3140;
+    box-shadow: none;
 
     &Information {
 

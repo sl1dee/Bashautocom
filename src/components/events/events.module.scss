@@ -54,10 +54,23 @@
       .btn {
         gap: 14px;
         align-items: center;
-        &::after {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 25.2px;
+        padding: 11.5px 20px;
+
+        .arrow {
           content: url("/assets/img/events/arrow-right.svg");
-          width: 24px;
-          height: 24px;
+          max-width: 24px;
+          max-height: 24px;
+        }
+
+        &:hover {
+          .arrow {
+            content: url("/assets/img/events/arrow-right-blue.svg");
+            max-width: 24px;
+            max-height: 24px;
+          }
         }
       }
     }
@@ -115,11 +128,7 @@
         .btn {
           gap: 14px;
           align-items: center;
-          &::after {
-            content: url("/assets/img/events/arrow-right.svg");
-            width: 24px;
-            height: 24px;
-          }
+
         }
       }
     }
@@ -181,11 +190,7 @@
         .btn {
           gap: 14px;
           align-items: center;
-          &::after {
-            content: url("/assets/img/events/arrow-right.svg");
-            width: 24px;
-            height: 24px;
-          }
+
         }
       }
     }
@@ -198,13 +203,13 @@
 
     &Information {
       padding: 50px 0 100px 0;
-      gap: 50px;
+      gap: 30px;
 
       &Title {
-        font-size: 50px;
+        font-size: 38px;
         font-weight: 500;
         color: #111111;
-        line-height: 60px;
+        line-height: 38.4px;
       }
 
       &Block {
@@ -247,24 +252,20 @@
         .btn {
           gap: 14px;
           align-items: center;
-          &::after {
-            content: url("/assets/img/events/arrow-right.svg");
-            width: 24px;
-            height: 24px;
-          }
+
         }
       }
     }
   }
 }
 
-@media (min-width: 320px) and (max-width: 576px) {
+@media (max-width: 576px) {
   .events {
     background-color: #FFFFFF;
 
     &Information {
       padding: 25px 0 50px 0;
-      gap: 50px;
+      gap: 16px;
 
       &Title {
         font-size: 18px;
@@ -274,6 +275,7 @@
       }
 
       &Block {
+        gap: 16px;
 
         .cards {
           gap: 30px;
@@ -313,10 +315,23 @@
         .btn {
           gap: 14px;
           align-items: center;
-          &::after {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 19.6px;
+          padding: 6px 12px;
+
+          .arrow {
             content: url("/assets/img/events/arrow-right.svg");
-            width: 24px;
-            height: 24px;
+            max-width: 18px;
+            max-height: 18px;
+          }
+
+          &:hover {
+            .arrow {
+              content: url("/assets/img/events/arrow-right-blue.svg");
+              max-width: 18px;
+              max-height: 18px;
+            }
           }
         }
       }

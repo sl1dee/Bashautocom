@@ -11,6 +11,7 @@ import cl from './reviews.module.scss'
 import jaecoo from '/assets/img/reviews/jaecoo.jpg'
 import moskvich from '/assets/img/reviews/moskvich.jpg'
 import omoda from '/assets/img/reviews/omoda.jpg'
+import play from '/assets/img/reviews/play.svg'
 
 const Reviews = () => {
 	const [swiper, setSwiper] = useState(null)
@@ -73,11 +74,12 @@ const Reviews = () => {
 								onSwiper={(swiper) => setSwiper(swiper)}
 								pagination={{ clickable: true }}
 								scrollbar={{ draggable: true }}
+								loop={true}
 								breakpoints={{
 									// when window width is >= 640px
 									320: {
 										spaceBetween: 8,
-										slidesPerView: 'auto'
+										slidesPerView: 1.3
 									},
 									// when window width is >= 576px
 									576: {
@@ -93,7 +95,7 @@ const Reviews = () => {
 							>
 								{cardList.map(({ video, text }) => (
 									<SwiperSlide>
-										<ReviewsCard text={text} video={video} />
+										<ReviewsCard text={text} video={video} play={play} />
 									</SwiperSlide>
 								))}
 								{/*<div className="swiper-pagination"></div>*/}

@@ -1,6 +1,7 @@
 import { Combobox } from '@consta/uikit/Combobox'
 import cn from 'classnames'
-import { useState } from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import Button from '@ui/button/button.jsx'
 
@@ -63,7 +64,10 @@ const Modal = () => {
 							</Button>
 						</div>
 						<p className={cn([cl.policy, 'd-flex', 'd-sm-none', 'mb-0'])}>
-							Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности
+							Нажимая на кнопку, вы соглашаетесь с{' '}
+							<Link to="/privacy-policy" className={cl.link}>
+								Политикой конфиденциальности
+							</Link>
 						</p>
 					</div>
 				</div>

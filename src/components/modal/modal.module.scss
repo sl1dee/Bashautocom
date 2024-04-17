@@ -70,6 +70,15 @@
           line-height: 15.6px;
           color: rgba(17, 17, 17, 0.48);
           text-align: center;
+
+          .link {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 15.6px;
+            color: rgba(17, 17, 17, 0.48);
+            text-align: center;
+            text-decoration-line: underline;
+          }
         }
       }
     }

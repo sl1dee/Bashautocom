@@ -173,7 +173,7 @@ const SpecialOffers = () => {
 										items={items}
 										getItemLabel={(item) => item}
 										form="default"
-										size="m"
+										size="l"
 										view="primary"
 										name="ChoiceGroupExampleOne"
 										multiple={false}
@@ -182,7 +182,7 @@ const SpecialOffers = () => {
 								<div className={cn([cl.combobox, 'd-none', 'd-lg-flex'])}>
 									<Combobox
 										placeholder="Выберите бренд"
-										size="m"
+										size="l"
 										items={comboboxValues}
 										value={comboboxValue}
 										onChange={({ value }) => setComboboxValue(value)}
@@ -218,11 +218,12 @@ const SpecialOffers = () => {
 									onSwiper={(swiper) => setSwiper(swiper)}
 									pagination={{ clickable: true }}
 									scrollbar={{ draggable: true }}
+									loop={true}
 									breakpoints={{
 										// when window width is >= 640px
 										320: {
 											spaceBetween: 8,
-											slidesPerView: 'auto'
+											slidesPerView: 1.3
 										},
 										// when window width is >= 576px
 										576: {

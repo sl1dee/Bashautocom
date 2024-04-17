@@ -174,6 +174,7 @@ const UsedCarSlider = () => {
 								onSwiper={(swiper) => setSwiper(swiper)}
 								// pagination={{ clickable: true }}
 								scrollbar={{ draggable: true }}
+								loop={true}
 								breakpoints={{
 									// // when window width is >= 640px
 									320: {

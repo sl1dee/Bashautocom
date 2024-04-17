@@ -268,19 +268,14 @@
   resolved "https://registry.yarnpkg.com/@consta/icons/-/icons-0.5.2.tgz#eaa529818adf2fe5dd167f3749b87fdf31c6da5f"
   integrity sha512-Q5j+aCs/uzR8JbiN/UYpQ8FbxC22rUVAvEIzfAum4B8rl7FkiIguYvHjfFesuQCocj1OR0HJHIGkfKycR9e9LQ==
 
-"@consta/icons@^0.9.0":
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/@consta/icons/-/icons-0.9.3.tgz#8b50c9ca5caf93cd33f60a893945b45827c512d7"
-  integrity sha512-YukqZZPCjYRKDAJhk8axUu78qXX4T47Ub1m5N+BynlnuvHHs0ejPYIZ0G18EK9YtLIxb+fqangoVrjKQsAQL0w==
-
-"@consta/uikit@^4.17.0":
-  version "4.33.1"
-  resolved "https://registry.yarnpkg.com/@consta/uikit/-/uikit-4.33.1.tgz#8c2b57d5e12aece61e649cacc509babd5e6ab903"
-  integrity sha512-7w2cnX+ExITRWAzNIASuiUYgwpLQwrTx6Uny/P8X/XgIlhpR8vqVOttg5WxpRiToRndXlhBlwC01y43qLFnPGw==
+"@consta/uikit@4.24.0":
+  version "4.24.0"
+  resolved "https://registry.yarnpkg.com/@consta/uikit/-/uikit-4.24.0.tgz#c21d3d3db69e4a55f607fa991e276ed43e65fe1e"
+  integrity sha512-GSQ+/3PcmoEg9rmHFYzuwLceomDLcC8oHn++t7uxrLb+rJCXaehViZ3hsijgyBXQw4efiyX7RUvwgHHSnz+Qrw==
   dependencies:
     "@bem-react/classname" "^1.5.12"
     "@bem-react/classnames" "^1.3.10"
-    "@consta/icons" "^0.9.0"
+    "@consta/icons" "^0.5.2"
     compute-scroll-into-view "^1.0.17"
     date-fns "^2.29.1"
     focus-trap-react "8.7.0"

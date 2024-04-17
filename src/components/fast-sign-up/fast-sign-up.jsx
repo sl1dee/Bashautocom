@@ -3,6 +3,7 @@ import mechanic from '@assets/img/fast-sign-up/mechanic.jpg'
 import { Combobox } from '@consta/uikit/Combobox'
 import cn from 'classnames'
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import Button from '@ui/button/button.jsx'
 
@@ -66,8 +67,11 @@ const FastSignUp = () => {
 										Записаться
 									</Button>
 								</div>
-								<p className={cn([cl.policy, 'd-none', 'd-sm-flex', 'mb-0'])}>
-									Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности
+								<p className={cn([cl.policy, 'd-none', 'd-sm-flex', 'flex-column', 'mb-0'])}>
+									Нажимая на кнопку, вы соглашаетесь с{' '}
+									<Link to="/privacy-policy" className={cl.link}>
+										Политикой конфиденциальности
+									</Link>
 								</p>
 							</div>
 						</div>
@@ -77,9 +81,9 @@ const FastSignUp = () => {
 			</div>
 
 			{isOpen && (
-				<div className={cn([cl.modal, 'd-flex', 'flex-column', 'd-sm-none'])}>
+				<div className={cn([cl.modal, 'd-flex', 'flex-column', 'd-sm-none'])} onClick={() => setIsOpen(!isOpen)}>
 					<div className={cn([cl.modalWrapper, 'd-flex', 'justify-content-center', 'align-items-center'])}>
-						<div className={cn([cl.modalWrapperContent, 'd-flex', 'flex-column'])}>
+						<div className={cn([cl.modalWrapperContent, 'd-flex', 'flex-column'])} onClick={(e) => e.stopPropagation()}>
 							{/* <div className="d-flex align-items-center justify-content-between"> */}
 							<div
 								className={cn([
@@ -95,9 +99,8 @@ const FastSignUp = () => {
 							<div className={cn([cl.modalWrapperContentInputs, 'd-flex', 'flex-column'])}>
 								<input type="text" className={cl.input} name="name" placeholder="Имя" />
 								<input type="text" className={cl.input} placeholder="Телефон" />
-								<div>
+								<div className={cl.combobox}>
 									<Combobox
-										className={cl.combobox}
 										placeholder="Выберите бренд"
 										size="s"
 										items={comboboxValues}
@@ -113,8 +116,11 @@ const FastSignUp = () => {
 										Записаться
 									</Button>
 								</div>
-								<p className={cn([cl.policy, 'd-flex', 'd-sm-none', 'mb-0'])}>
-									Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности
+								<p className={cn([cl.policy, 'd-flex', 'flex-column', 'd-sm-none', 'mb-0'])}>
+									Нажимая на кнопку, вы соглашаетесь с{' '}
+									<Link to="/privacy-policy" className={cl.link}>
+										Политикой конфиденциальности
+									</Link>
 								</p>
 							</div>
 						</div>
