@@ -3,7 +3,6 @@ import jaecoo from '@assets/img/events/jaecoo.jpg'
 import lada from '@assets/img/events/lada.jpg'
 import omoda from '@assets/img/events/omoda.jpg'
 import cn from 'classnames'
-import { Link } from 'react-router-dom'
 
 import Button from '../../ui/button/index.js'
 import cl from './events.module.scss'
@@ -11,30 +10,22 @@ import cl from './events.module.scss'
 const Events = () => {
 	const eventsList = [
 		{
-			id: 0,
 			image: omoda,
-			href: '/',
 			title: 'ОМОDА СУПЕРКАСКО по супер цене в Башавтоком!',
 			date: '23.01.2024'
 		},
 		{
-			id: 1,
 			image: jaecoo,
-			href: '/',
 			title: 'JAECOO наращивает присутствие на глобальном рынке',
 			date: '24.11.2023'
 		},
 		{
-			id: 2,
 			image: lada,
-			href: '/',
 			title: 'Новое специальное предложение на шиномонтаж в LADA «Башавтоком»',
 			date: '23.01.2024'
 		},
 		{
-			id: 3,
 			image: lada,
-			href: '/',
 			title: 'Новое специальное предложение на шиномонтаж в LADA «Башавтоком»',
 			date: '23.01.2024'
 		}
@@ -47,14 +38,12 @@ const Events = () => {
 					<h1 className={cn([cl.eventsInformationTitle, 'mb-0'])}>Будьте в курсе событий</h1>
 					<span className={cn([cl.eventsInformationBlock, 'd-flex', 'flex-column'])}>
 						<div className={cn([cl.cards, 'd-grid'])}>
-							{eventsList.map(({ id, image, href, title, date }) => (
-								<Link to={href}>
-									<div key={id} className={cn([cl.card, 'd-flex', 'flex-column'])}>
-										<img src={image} alt="event" className={cl.cardImage} />
-										<h6 className={cn([cl.cardTitle, 'mb-0'])}>{title}</h6>
-										<p className={cn([cl.cardDate, 'mb-0'])}>{date}</p>
-									</div>
-								</Link>
+							{eventsList.map(({ image, title, date }) => (
+								<div className={cn([cl.card, 'd-flex', 'flex-column'])}>
+									<img src={image} alt="event" className={cl.cardImage} />
+									<h6 className={cn([cl.cardTitle, 'mb-0'])}>{title}</h6>
+									<p className={cn([cl.cardDate, 'mb-0'])}>{date}</p>
+								</div>
 							))}
 						</div>
 						<div className="d-flex align-self-start align-self-sm-end">
