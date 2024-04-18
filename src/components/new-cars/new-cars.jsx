@@ -30,7 +30,8 @@ import cl from '@components/new-cars/new-cars.module.scss'
 
 const NewCars = () => {
 	const [comboboxValue, setComboboxValue] = useState(null)
-	const [value, setValue] = useState([20, 50])
+	// const [value, setValue] = useState([20, 50])
+	const [price, setPrice] = useState([20, 50])
 
 	const filterList = [
 		{
@@ -240,13 +241,13 @@ const NewCars = () => {
 								<Slider
 									step={5}
 									// label={`Значение ${value[0]}-${value[1]}`}
-									onChange={({ value }) => setValue(value)}
-									value={value}
+									onChange={({ value }) => setPrice(value)}
+									value={price}
 								/>
 							</div>
 							<div className={cn([cl.minPriceInputs, 'd-flex', 'justify-content-between'])}>
-								<input type="text" placeholder="от" />
-								<input type="text" placeholder="до" />
+								<input type="text" placeholder={price[0]} />
+								<input type="text" placeholder={price[1]} />
 							</div>
 						</div>
 						<Button onClick={() => setIsOpen(!isOpen)}>Применить</Button>
@@ -303,16 +304,18 @@ const NewCars = () => {
 								<div className={cn([cl.rightBlockGroupSecond, 'd-flex', 'flex-column'])}>
 									<div className={cl.title}>Минимальная цена, руб</div>
 									<div>
-										<Slider
-											step={5}
-											// label={`Значение ${value[0]}-${value[1]}`}
-											onChange={({ value }) => setValue(value)}
-											value={value}
-										/>
+										<div>
+											<Slider
+												step={5}
+												// label={`Значение ${value[0]}-${value[1]}`}
+												onChange={({ value }) => setPrice(value)}
+												value={price}
+											/>
+										</div>
 									</div>
 									<div className={cn([cl.inputs, 'd-flex', 'justify-content-between'])}>
-										<input type="text" placeholder="от" />
-										<input type="text" placeholder="до" />
+										<input type="text" placeholder={price[0]} />
+										<input type="text" placeholder={price[1]} />
 									</div>
 								</div>
 							</div>

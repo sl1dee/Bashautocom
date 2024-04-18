@@ -65,13 +65,15 @@
       }
 
       .buttons {
-
+        gap: 10px;
       }
     }
 
     &Body {
       padding: 20px 18px 40px;
       row-gap: 10px;
+      //position: fixed;
+      //top: 64px;
 
       &Links {
         padding: 20px;
