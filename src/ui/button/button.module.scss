@@ -70,6 +70,19 @@
       border: 2px solid #F1F1F1;
     }
   }
+
+  &Secondary2 {
+    background-color: #F1F1F1;
+    color: #111111;
+    border: 2px solid #F1F1F1;
+    transition: color .3s ease, background-color .3s ease;
+
+    &:hover {
+      color: #F1F1F1;
+      background-color: transparent;
+      border: 2px solid #F1F1F1;
+    }
+  }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {

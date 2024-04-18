@@ -13,36 +13,36 @@ import moskvich from '/assets/img/reviews/moskvich.jpg'
 import omoda from '/assets/img/reviews/omoda.jpg'
 import play from '/assets/img/reviews/play.svg'
 
-const Reviews = () => {
+const Reviews = ({ reviewsCards }) => {
 	const [swiper, setSwiper] = useState(null)
 	// const { isDesktop, isTablet, isTabletSmall } = useMatchMedia()
 
-	const cardList = [
-		{
-			video: omoda,
-			text: '2024 Chery Omoda 5 — Великолепный компактный внедорожник!'
-		},
-		{
-			video: moskvich,
-			text: 'МОСКВИЧ 3 — лучше Лады! Двигатель, вариатор, подвеска, бензин и цена / тест и обзор'
-		},
-		{
-			video: jaecoo,
-			text: 'JAECOO J7 ТЕСТ ДРАЙВ У ДИЛЕРА, обзор jaecoo j7, лучший китайский кроссовер за 3 миллиона рублей'
-		},
-		{
-			video: omoda,
-			text: '2024 Chery Omoda 5 — Великолепный компактный внедорожник!'
-		},
-		{
-			video: moskvich,
-			text: 'МОСКВИЧ 3 — лучше Лады! Двигатель, вариатор, подвеска, бензин и цена / тест и обзор'
-		},
-		{
-			video: jaecoo,
-			text: 'JAECOO J7 ТЕСТ ДРАЙВ У ДИЛЕРА, обзор jaecoo j7, лучший китайский кроссовер за 3 миллиона рублей'
-		}
-	]
+	// const reviewsCards = [
+	// 	{
+	// 		video: omoda,
+	// 		text: '2024 Chery Omoda 5 — Великолепный компактный внедорожник!'
+	// 	},
+	// 	{
+	// 		video: moskvich,
+	// 		text: 'МОСКВИЧ 3 — лучше Лады! Двигатель, вариатор, подвеска, бензин и цена / тест и обзор'
+	// 	},
+	// 	{
+	// 		video: jaecoo,
+	// 		text: 'JAECOO J7 ТЕСТ ДРАЙВ У ДИЛЕРА, обзор jaecoo j7, лучший китайский кроссовер за 3 миллиона рублей'
+	// 	},
+	// 	{
+	// 		video: omoda,
+	// 		text: '2024 Chery Omoda 5 — Великолепный компактный внедорожник!'
+	// 	},
+	// 	{
+	// 		video: moskvich,
+	// 		text: 'МОСКВИЧ 3 — лучше Лады! Двигатель, вариатор, подвеска, бензин и цена / тест и обзор'
+	// 	},
+	// 	{
+	// 		video: jaecoo,
+	// 		text: 'JAECOO J7 ТЕСТ ДРАЙВ У ДИЛЕРА, обзор jaecoo j7, лучший китайский кроссовер за 3 миллиона рублей'
+	// 	}
+	// ]
 
 	const prevSwipeHandler = () => {
 		swiper?.slidePrev()
@@ -93,7 +93,7 @@ const Reviews = () => {
 									}
 								}}
 							>
-								{cardList.map(({ video, text }) => (
+								{reviewsCards.map(({ video, text }) => (
 									<SwiperSlide>
 										<ReviewsCard text={text} video={video} play={play} />
 									</SwiperSlide>

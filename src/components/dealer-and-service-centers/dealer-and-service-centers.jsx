@@ -1,3 +1,6 @@
+import havalBckg from '@assets/img/dealer-and-service-centers/haval.jpg'
+import moskvichBckg from '@assets/img/dealer-and-service-centers/moskvich.jpg'
+import omodaBckg from '@assets/img/dealer-and-service-centers/omoda.jpg'
 import { ChoiceGroup } from '@consta/uikit/ChoiceGroup'
 import { Combobox } from '@consta/uikit/Combobox'
 import cn from 'classnames'
@@ -6,98 +9,98 @@ import { A11y, Navigation, Pagination, Scrollbar } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/scss/pagination'
 
-import haval from '../../../assets/img/dealer-and-service-centers/haval.jpg'
-import moskvich from '../../../assets/img/dealer-and-service-centers/moskvich.jpg'
-import omoda from '../../../assets/img/dealer-and-service-centers/omoda.jpg'
+// import haval from '../../../assets/img/dealer-and-service-centers/haval.jpg'
+// import moskvich from '../../../assets/img/dealer-and-service-centers/moskvich.jpg'
+// import omoda from '../../../assets/img/dealer-and-service-centers/omoda.jpg'
 import Button from '../../ui/button/button.jsx'
 import SpecialOffersCard from '../special-offers/special-offers-card/index.js'
 import DealerAndServiceCentersCard from './dealer-and-service-centers-card/index.js'
 import cl from './dealer-and-service-centers.module.scss'
 
-const DealerAndServiceCenters = ({ title }) => {
+const DealerAndServiceCenters = ({ title, cardList, comboboxValues, items }) => {
 	const [swiper, setSwiper] = useState(null)
 	const [comboboxValue, setComboboxValue] = useState(null)
 	// const { isDesktop, isTablet, isTabletSmall } = useMatchMedia()
 
-	const cardList = [
-		{
-			bckgImg: haval,
-			street: 'Уфа, ул. Проспект Салавата Юлаева, 89',
-			number: '+7 (347) 246-65-47',
-			sale: '3',
-			service: '7',
-			saleBrands: ['Haval', 'Changan'],
-			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
-		},
-		{
-			bckgImg: moskvich,
-			street: 'Уфа, ул. Рубежная, 168',
-			number: '+7 (347) 246-65-47',
-			sale: '2',
-			service: '7',
-			saleBrands: ['Haval', 'Changan'],
-			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
-		},
-		{
-			bckgImg: omoda,
-			street: 'Уфа, ул. Адмирала Макарова, 32',
-			number: '+7 (347) 246-65-47',
-			sale: '2',
-			service: '7',
-			saleBrands: ['Haval', 'Changan'],
-			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
-		},
-		{
-			bckgImg: haval,
-			street: 'Уфа, ул. Проспект Салавата Юлаева, 89',
-			number: '+7 (347) 246-65-47',
-			sale: '3',
-			service: '7',
-			saleBrands: ['Haval', 'Changan'],
-			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
-		},
-		{
-			bckgImg: moskvich,
-			street: 'Уфа, ул. Рубежная, 168',
-			number: '+7 (347) 246-65-47',
-			sale: '2',
-			service: '7',
-			saleBrands: ['Haval', 'Changan'],
-			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
-		},
-		{
-			bckgImg: omoda,
-			street: 'Уфа, ул. Адмирала Макарова, 32',
-			number: '+7 (347) 246-65-47',
-			sale: '2',
-			service: '7',
-			saleBrands: ['Haval', 'Changan'],
-			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
-		}
-	]
+	// const cardList = [
+	// 	{
+	// 		bckgImg: havalBckg,
+	// 		street: 'Уфа, ул. Проспект Салавата Юлаева, 89',
+	// 		number: '+7 (347) 246-65-47',
+	// 		saleCount: '3',
+	// 		serviceCount: '7',
+	// 		saleBrands: ['Haval', 'Changan'],
+	// 		serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
+	// 	},
+	// 	{
+	// 		bckgImg: moskvichBckg,
+	// 		street: 'Уфа, ул. Рубежная, 168',
+	// 		number: '+7 (347) 246-65-47',
+	// 		saleCount: '2',
+	// 		serviceCount: '7',
+	// 		saleBrands: ['Haval', 'Changan'],
+	// 		serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
+	// 	},
+	// 	{
+	// 		bckgImg: omodaBckg,
+	// 		street: 'Уфа, ул. Адмирала Макарова, 32',
+	// 		number: '+7 (347) 246-65-47',
+	// 		saleCount: '2',
+	// 		serviceCount: '7',
+	// 		saleBrands: ['Haval', 'Changan'],
+	// 		serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
+	// 	},
+	// 	{
+	// 		bckgImg: havalBckg,
+	// 		street: 'Уфа, ул. Проспект Салавата Юлаева, 89',
+	// 		number: '+7 (347) 246-65-47',
+	// 		saleCount: '3',
+	// 		serviceCount: '7',
+	// 		saleBrands: ['Haval', 'Changan'],
+	// 		serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
+	// 	},
+	// 	{
+	// 		bckgImg: moskvichBckg,
+	// 		street: 'Уфа, ул. Рубежная, 168',
+	// 		number: '+7 (347) 246-65-47',
+	// 		saleCount: '2',
+	// 		serviceCount: '7',
+	// 		saleBrands: ['Haval', 'Changan'],
+	// 		serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
+	// 	},
+	// 	{
+	// 		bckgImg: omodaBckg,
+	// 		street: 'Уфа, ул. Адмирала Макарова, 32',
+	// 		number: '+7 (347) 246-65-47',
+	// 		saleCount: '2',
+	// 		serviceCount: '7',
+	// 		saleBrands: ['Haval', 'Changan'],
+	// 		serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
+	// 	}
+	// ]
 
-	const comboboxValues = [
-		{
-			label: 'Changan Auto',
-			id: 1
-		},
-		{
-			label: 'Omoda',
-			id: 2
-		},
-		{
-			label: 'Haval',
-			id: 3
-		},
-		{
-			label: 'Москвич',
-			id: 4
-		},
-		{
-			label: 'Exeed',
-			id: 5
-		}
-	]
+	// const comboboxValues = [
+	// 	{
+	// 		label: 'Changan Auto',
+	// 		id: 1
+	// 	},
+	// 	{
+	// 		label: 'Omoda',
+	// 		id: 2
+	// 	},
+	// 	{
+	// 		label: 'Haval',
+	// 		id: 3
+	// 	},
+	// 	{
+	// 		label: 'Москвич',
+	// 		id: 4
+	// 	},
+	// 	{
+	// 		label: 'Exeed',
+	// 		id: 5
+	// 	}
+	// ]
 
 	const prevSwipeHandler = () => {
 		swiper?.slidePrev()
@@ -106,7 +109,7 @@ const DealerAndServiceCenters = ({ title }) => {
 		swiper?.slideNext()
 	}
 
-	const items = ['Все', 'Уфа', 'Стерлитамак', 'Октябрьский', 'Белебей']
+	// const items = ['Все', 'Уфа', 'Стерлитамак', 'Октябрьский', 'Белебей']
 
 	const [value, setValue] = useState(items[0])
 
@@ -211,14 +214,14 @@ const DealerAndServiceCenters = ({ title }) => {
 									}
 								}}
 							>
-								{cardList.map(({ bckgImg, street, number, sale, service, saleBrands, serviceBrands }) => (
+								{cardList.map(({ bckgImg, street, number, saleCount, serviceCount, saleBrands, serviceBrands }) => (
 									<SwiperSlide>
 										<DealerAndServiceCentersCard
 											bckgImg={bckgImg}
 											street={street}
 											number={number}
-											sale={sale}
-											service={service}
+											saleCount={saleCount}
+											serviceCount={serviceCount}
 											saleBrands={saleBrands}
 											serviceBrands={serviceBrands}
 										/>

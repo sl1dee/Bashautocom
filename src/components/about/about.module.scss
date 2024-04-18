@@ -45,28 +45,9 @@
         gap: 20px;
         max-width: 590px;
 
-        .firstIcon {
+        .pointGroup {
           align-items: center;
           gap: 14px;
-          &::before {
-            content: url("/assets/img/about/shield.svg");
-          }
-        }
-
-        .secondIcon {
-          align-items: center;
-          gap: 14px;
-          &::before {
-            content: url("/assets/img/about/setting.svg");
-          }
-        }
-
-        .thirdIcon {
-          align-items: center;
-          gap: 14px;
-          &::before {
-            content: url("/assets/img/about/users.svg");
-          }
         }
       }
     }
@@ -158,28 +139,9 @@
           gap: 20px;
           max-width: 590px;
 
-          .firstIcon {
+          .pointGroup {
             align-items: center;
             gap: 14px;
-            &::before {
-              content: url("/assets/img/about/shield.svg");
-            }
-          }
-
-          .secondIcon {
-            align-items: center;
-            gap: 14px;
-            &::before {
-              content: url("/assets/img/about/setting.svg");
-            }
-          }
-
-          .thirdIcon {
-            align-items: center;
-            gap: 14px;
-            &::before {
-              content: url("/assets/img/about/users.svg");
-            }
           }
         }
       }
@@ -273,28 +235,9 @@
           gap: 20px;
           max-width: 590px;
 
-          .firstIcon {
+          .pointGroup {
             align-items: center;
             gap: 14px;
-            &::before {
-              content: url("/assets/img/about/shield.svg");
-            }
-          }
-
-          .secondIcon {
-            align-items: center;
-            gap: 14px;
-            &::before {
-              content: url("/assets/img/about/setting.svg");
-            }
-          }
-
-          .thirdIcon {
-            align-items: center;
-            gap: 14px;
-            &::before {
-              content: url("/assets/img/about/users.svg");
-            }
           }
         }
       }
@@ -390,28 +333,9 @@
           gap: 20px;
           max-width: 590px;
 
-          .firstIcon {
+          .pointGroup {
             align-items: center;
             gap: 14px;
-            &::before {
-              content: url("/assets/img/about/shield.svg");
-            }
-          }
-
-          .secondIcon {
-            align-items: center;
-            gap: 14px;
-            &::before {
-              content: url("/assets/img/about/setting.svg");
-            }
-          }
-
-          .thirdIcon {
-            align-items: center;
-            gap: 14px;
-            &::before {
-              content: url("/assets/img/about/users.svg");
-            }
           }
         }
       }
@@ -514,34 +438,9 @@
           gap: 20px;
           max-width: 590px;
 
-          .firstIcon {
-            align-items: start;
-            gap: 10px;
-            &::before {
-              content: url("/assets/img/about/shield.svg");
-              max-width: 24px;
-              max-height: 24px;
-            }
-          }
-
-          .secondIcon {
-            align-items: start;
-            gap: 10px;
-            &::before {
-              content: url("/assets/img/about/setting.svg");
-              max-width: 24px;
-              max-height: 24px;
-            }
-          }
-
-          .thirdIcon {
-            align-items: start;
-            gap: 10px;
-            &::before {
-              content: url("/assets/img/about/users.svg");
-              max-width: 24px;
-              max-height: 24px;
-            }
+          .pointGroup {
+            align-items: center;
+            gap: 14px;
           }
         }
       }

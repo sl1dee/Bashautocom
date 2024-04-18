@@ -6,30 +6,27 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/scss/pagination'
 
 import cl from './service-slider.module.scss'
-import dueDiligence from '/assets/img/service-slider/dueDiligence.jpg'
-import dueDiligenceMobile from '/assets/img/service-slider/dueDiligenceMobile.jpg'
-import dueDiligenceTablet from '/assets/img/service-slider/dueDiligenceTablet.jpg'
 
-const ServiceSlider = () => {
+const ServiceSlider = ({ bannerList }) => {
 	const [swiper, setSwiper] = useState(null)
 
-	const bannerList = [
-		{
-			banner: dueDiligence,
-			bannerTablet: dueDiligenceTablet,
-			bannerMobile: dueDiligenceMobile
-		},
-		{
-			banner: dueDiligence,
-			bannerTablet: dueDiligenceTablet,
-			bannerMobile: dueDiligenceMobile
-		},
-		{
-			banner: dueDiligence,
-			bannerTablet: dueDiligenceTablet,
-			bannerMobile: dueDiligenceMobile
-		}
-	]
+	// const bannerList = [
+	// 	{
+	// 		banner: dueDiligence,
+	// 		bannerTablet: dueDiligenceTablet,
+	// 		bannerMobile: dueDiligenceMobile
+	// 	},
+	// 	{
+	// 		banner: dueDiligence,
+	// 		bannerTablet: dueDiligenceTablet,
+	// 		bannerMobile: dueDiligenceMobile
+	// 	},
+	// 	{
+	// 		banner: dueDiligence,
+	// 		bannerTablet: dueDiligenceTablet,
+	// 		bannerMobile: dueDiligenceMobile
+	// 	}
+	// ]
 
 	const prevSwipeHandler = () => {
 		swiper?.slidePrev()
@@ -58,12 +55,25 @@ const ServiceSlider = () => {
 						onSwiper={(swiper) => setSwiper(swiper)}
 						pagination={{ clickable: true }}
 						scrollbar={{ draggable: true }}
+						loop={true}
 					>
-						{bannerList.map(({ banner, bannerTablet, bannerMobile }) => (
+						{bannerList.map(({ bannerDesktop, bannerSmallDesktop, bannerTablet, bannerMobile }) => (
 							<SwiperSlide>
-								<img src={banner} alt="banner" className={cn([cl.banner, 'd-none', 'd-lg-flex'])} />
-								<img src={bannerTablet} alt="banner" className={cn([cl.banner, 'd-none', 'd-sm-flex', 'd-lg-none'])} />
-								<img src={bannerMobile} alt="banner" className={cn([cl.banner, 'd-xs-flex', 'd-sm-none'])} />
+								<picture>
+									<source srcSet={bannerMobile} media="(max-width: 575px)" className={cl.banner} />
+									<source
+										srcSet={bannerTablet}
+										media="(min-width: 567px) and (max-width: 991px)"
+										className={cl.banner}
+									/>
+									<source
+										srcSet={bannerSmallDesktop}
+										media="(min-width: 992px) and (max-width: 1400)"
+										className={cl.banner}
+									/>
+									<source srcSet={bannerDesktop} media="(min-width: 14001)" className={cl.banner} />
+									<img src={bannerDesktop} className={cl.banner} />
+								</picture>
 							</SwiperSlide>
 						))}
 					</Swiper>
