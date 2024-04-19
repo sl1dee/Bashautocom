@@ -2,9 +2,9 @@
 
 .brands {
   background-color: #FFFFFF;
+  padding: 137px 0 70px 0;
 
   &Information {
-    padding: 137px 0 70px 0;
     gap: 50px;
 
     &Head {
@@ -74,9 +74,9 @@
 
 @media (min-width: 1401px) and (max-width: 1919px) {
   .brands {
+    padding: 140px 0 70px 0;
 
     &Information {
-      padding: 140px 0 70px 0;
       gap: 50px;
 
       &Head {
@@ -135,9 +135,9 @@
 
 @media (min-width: 1000px) and (max-width: 1400px) {
   .brands {
+    padding: 140px 0;
 
     &Information {
-      padding: 140px 0;
       gap: 50px;
 
       &Head {
@@ -197,9 +197,9 @@
 
 @media (min-width: 576px) and (max-width: 992px) {
   .brands {
+    padding: 100px 0 50px 0;
 
     &Information {
-      padding: 100px 0 50px 0;
       gap: 30px;
 
       &Head {
@@ -262,9 +262,9 @@
 
 @media (max-width: 576px) {
   .brands {
+    padding: 40px 0 25px 0;
 
     &Information {
-      padding: 40px 0 25px 0;
       gap: 16px;
 
       &Head {

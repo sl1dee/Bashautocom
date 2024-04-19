@@ -97,7 +97,7 @@ const MainServices = ({ mainServicesList }) => {
 						<div>
 							<Link to={path}>
 								<div className={cn([cl.cardWrapper, 'elem', 'd-flex', 'justify-content-center'])} key={id}>
-									<div className={cn([cl.card])}>
+									<div className={cn([cl.card, 'd-flex', 'flex-column'])}>
 										<div className={cl.cardTitle}>{title}</div>
 										<div className={cl.cardText}>{text}</div>
 										<img src={imgPath} alt="" className={cl.cardImg} />

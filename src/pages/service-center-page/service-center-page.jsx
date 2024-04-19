@@ -351,13 +351,6 @@ const ServiceCenterPage = () => {
 						)
 				}
 			})}
-			{/* <ServiceSlider /> */}
-			{/* <TypesOfJobs title="Виды работ" /> */}
-			{/* <Brands title="Мы обслуживаем и ремонтируем бренды" viewTabs={false} /> */}
-			{/* <LoyaltyProgram /> */}
-			{/* <FastSignUp /> */}
-			{/* /!* <Modal /> *!/ */}
-			{/* <DealerAndServiceCenters title="Сервисные центры" /> */}
 		</MainLayout>
 	)
 }

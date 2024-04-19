@@ -1,8 +1,8 @@
 
 .question {
+  padding: 75px 0 76px 0;
 
   &Information {
-    margin: 75px 0 76px 0;
     background-color: rgba(238, 240, 243, 0.7);
     border-radius: 20px;
     padding: 90px 160px 90px 160px;
@@ -56,9 +56,9 @@
             border-radius: 4px;
 
             p {
-              font-size: 16px;
+              font-size: 18px;
               font-weight: 500;
-              line-height: 22.4px;
+              line-height: 25.2px;
               color: #111111;
             }
           }
@@ -156,9 +156,9 @@
 
 @media (min-width: 1401px) and (max-width: 1919px) {
   .question {
+    padding: 75px 0 76px 0;
 
     &Information {
-      margin: 75px 0 76px 0;
       background-color: rgba(238, 240, 243, 0.7);
       border-radius: 20px;
       padding: 70px;
@@ -275,9 +275,9 @@
 
 @media (min-width: 993px) and (max-width: 1400px) {
   .question {
+    padding: 75px 0 76px 0;
 
     &Information {
-      margin: 75px 0 76px 0;
       background-color: rgba(238, 240, 243, 0.7);
       border-radius: 20px;
       padding: 60px 40px 60px 40px;
@@ -354,7 +354,7 @@
 
       &Modal {
         max-width: 548px;
-        padding: 40px 60px 40px 60px;
+        padding: 30px;
         border-radius: 20px;
         background-color: #FFFFFF;
         gap: 20px;
@@ -429,9 +429,9 @@
 
 @media (min-width: 576px) and (max-width: 992px) {
   .question {
+    padding: 50px 0 50px 0;
 
     &Information {
-      margin: 50px 0 50px 0;
       background-color: rgba(238, 240, 243, 0.7);
       border-radius: 20px;
       padding: 50px 30px 50px 30px;
@@ -474,7 +474,7 @@
           }
 
           .btns {
-            gap: 10px;
+            gap: 11px;
 
             .btn {
               gap: 10px;
@@ -483,9 +483,9 @@
               border-radius: 4px;
 
               p {
-                font-size: 16px;
+                font-size: 18px;
                 font-weight: 500;
-                line-height: 22.4px;
+                line-height: 25.2px;
                 color: #111111;
               }
             }
@@ -590,9 +590,9 @@
 
 @media (max-width: 576px) {
   .question {
+    padding: 25px 0 25px 0;
 
     &Information {
-      margin: 25px 0 25px 0;
       background-color: rgba(238, 240, 243, 0.7);
       border-radius: 20px;
       padding: 24px 20px;

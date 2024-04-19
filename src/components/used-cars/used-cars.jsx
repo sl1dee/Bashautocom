@@ -344,8 +344,17 @@ const UsedCars = () => {
 			</div>
 
 			<div className={cn([cl.usedCars, 'container', 'p-0', 'd-flex', 'flex-column'])}>
-				<div className="d-flex justify-content-between align-items-center flex-xs-column flex-sm-row">
-					<h1 className={cl.title}>Авто с пробегом</h1>
+				<div
+					className={cn([
+						cl.head,
+						'd-flex',
+						'justify-content-sm-between',
+						'align-items-sm-center',
+						'flex-column',
+						'flex-sm-row'
+					])}
+				>
+					<h1 className={cn([cl.title, 'mb-0'])}>Авто с пробегом</h1>
 					<div className="d-flex d-xxl-none">
 						<Button
 							sizeStyle="sizeContent"

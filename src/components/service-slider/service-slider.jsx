@@ -57,7 +57,7 @@ const ServiceSlider = ({ bannerList }) => {
 						scrollbar={{ draggable: true }}
 						loop={true}
 					>
-						{bannerList.map(({ bannerDesktop, bannerSmallDesktop, bannerTablet, bannerMobile }) => (
+						{bannerList.map(({ bannerDesktop, bannerTablet, bannerMobile }) => (
 							<SwiperSlide>
 								<picture>
 									<source srcSet={bannerMobile} media="(max-width: 575px)" className={cl.banner} />

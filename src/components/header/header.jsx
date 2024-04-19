@@ -260,164 +260,164 @@ const Header = () => {
 			<header className={`${cl.header} ${isScrolled ? cl.scrolled : ''}`}>
 				<div className="d-flex flex-column p-0">
 					<div className={cl.headerInformation}>
-						<div
-							className={cn([cl.headerInformationTopLinks], 'container', 'd-none', 'd-lg-flex', 'justify-content-end')}
-						>
-							<div>
-								<Link to="/">
-									<span>Программа лояльности</span>
-								</Link>
-							</div>
-							<div>
-								<Link to="/">
-									<span>Написать гендиректору</span>
-								</Link>
-							</div>
-							<div>
-								<Link to="/">
-									<span>+7 (347) 123-45-67</span>
-								</Link>
-							</div>
-							<div>
-								<Link to="/">
-									<span>Заказать звонок</span>
-								</Link>
-							</div>
-						</div>
-						<div
-							className={cn(
-								[cl.headerInformationLinks],
-								'container',
-								'd-flex',
-								'justify-content-between',
-								'align-items-center'
-							)}
-						>
-							<div className={cn([cl.logo, 'd-none', 'd-sm-flex', 'align-items-center'])}>
-								<Link to="/">
-									<img src={logo} alt="logo" />
-								</Link>
-							</div>
-							<div className={cn([cl.logo, 'd-xs-flex', 'd-sm-none', 'align-items-center'])}>
-								<Link to="/">
-									<img src={logoMobile} alt="logo" />
-								</Link>
-							</div>
-							<div className={cn(cl.servicesLinks, 'd-none', 'd-lg-flex', 'align-items-center')}>
-								<div className={cl.servicesLinksLink}>
-									<Link to="/new-cars">
-										<span>Новые авто</span>
-									</Link>
-								</div>
-								<div className={cl.servicesLinksLink}>
-									<Link to="/used-cars">
-										<span>Авто с пробегом</span>
-									</Link>
-								</div>
-								<div className={cn([cl.servicesLinksLink, 'd-none', 'd-xxl-flex'])}>
+						<div className="container">
+							<div className={cn([cl.headerInformationTopLinks], 'd-none', 'd-lg-flex', 'justify-content-end')}>
+								<div>
 									<Link to="/">
-										<span>Корпоративным клиентам</span>
+										<span>Программа лояльности</span>
 									</Link>
 								</div>
-								<div className={cl.servicesLinksLink}>
-									{/*<Link to="/" onClick={() => setIsOpenServices(!isOpenServices)}>*/}
-									{/*	<span>Услуги</span>*/}
-									{/*</Link>*/}
-									<div className={cl.droplink}>
-										<span>Услуги</span>
-									</div>
-									{/*<div className={isOpenServices ? cn([cl.dropdown, cl.dropdownOpen]) : cl.dropdown}>*/}
-									<div className={cl.dropdown}>
-										<div className={cn([cl.cards, 'container'])}>
-											{servicesList.map(({ id, href, title, text, icon }) => (
-												<Link to={href}>
-													<div className={cn([cl.cardWrapper, 'd-flex'])} key={id}>
-														<div className={cn([cl.card, 'd-flex', 'flex-column'])}>
-															<div className={cn([cl.cardDescription, 'd-flex', 'flex-column'])}>
-																<div className={cl.cardDescriptionTitle}>{title}</div>
-																<div className={cl.cardDescriptionText}>{text}</div>
-															</div>
-															<img src={icon} alt="" className={cl.cardImg} />
-														</div>
-													</div>
-												</Link>
-											))}
-										</div>
-									</div>
-								</div>
-								<div className={cl.servicesLinksLink}>
-									{/*<Link to="/" onClick={() => setIsOpenAbout(!isOpenAbout)}>*/}
-									{/*	<span>О компании</span>*/}
-									{/*</Link>*/}
-									<div className={cl.droplink}>
-										<span>О компании</span>
-									</div>
-									{/*<div className={isOpenAbout ? cn([cl.dropdown, cl.dropdownOpen]) : cl.dropdown}>*/}
-									<div className={cl.dropdown}>
-										<div className={cn([cl.cards, 'container'])}>
-											{aboutList.map(({ id, href, title, text, icon }) => (
-												<Link to={href}>
-													<div className={cn([cl.cardWrapper, 'd-flex'])} key={id}>
-														<div className={cn([cl.card, 'd-flex', 'flex-column'])}>
-															<div className={cn([cl.cardDescription, 'd-flex', 'flex-column'])}>
-																<div className={cl.cardDescriptionTitle}>{title}</div>
-																<div className={cl.cardDescriptionText}>{text}</div>
-															</div>
-															<img src={icon} alt="" className={cl.cardImg} />
-														</div>
-													</div>
-												</Link>
-											))}
-										</div>
-									</div>
-								</div>
-								<div className={cn([cl.servicesLinksLink, 'd-none', 'd-xxl-flex'])}>
+								<div>
 									<Link to="/">
-										<span>Контакты</span>
+										<span>Написать гендиректору</span>
 									</Link>
 								</div>
-								<div className={cn([cl.servicesLinksLink, 'd-none', 'd-lg-flex', 'd-xxl-none'])}>
-									{/*<Link to="/">*/}
-									{/*	<span>Еще</span>*/}
-									{/*</Link>*/}
-									<div className={cl.smalldrop}>
-										<div className={cl.smalldroplink}>
-											<span>Еще</span>
+								<div>
+									<Link to="/">
+										<span>+7 (347) 123-45-67</span>
+									</Link>
+								</div>
+								<div>
+									<Link to="/">
+										<span>Заказать звонок</span>
+									</Link>
+								</div>
+							</div>
+							<div
+								className={cn(
+									[cl.headerInformationLinks],
+									'container',
+									'd-flex',
+									'justify-content-between',
+									'align-items-center'
+								)}
+							>
+								<div className={cn([cl.logo, 'd-none', 'd-sm-flex', 'align-items-center'])}>
+									<Link to="/">
+										<img src={logo} alt="logo" />
+									</Link>
+								</div>
+								<div className={cn([cl.logo, 'd-xs-flex', 'd-sm-none', 'align-items-center'])}>
+									<Link to="/">
+										<img src={logoMobile} alt="logo" />
+									</Link>
+								</div>
+								<div className={cn(cl.servicesLinks, 'd-none', 'd-lg-flex', 'align-items-center')}>
+									<div className={cl.servicesLinksLink}>
+										<Link to="/new-cars">
+											<span>Новые авто</span>
+										</Link>
+									</div>
+									<div className={cl.servicesLinksLink}>
+										<Link to="/used-cars">
+											<span>Авто с пробегом</span>
+										</Link>
+									</div>
+									<div className={cn([cl.servicesLinksLink, 'd-none', 'd-xxl-flex'])}>
+										<Link to="/">
+											<span>Корпоративным клиентам</span>
+										</Link>
+									</div>
+									<div className={cl.servicesLinksLink}>
+										{/*<Link to="/" onClick={() => setIsOpenServices(!isOpenServices)}>*/}
+										{/*	<span>Услуги</span>*/}
+										{/*</Link>*/}
+										<div className={cl.droplink}>
+											<span>Услуги</span>
 										</div>
-										<div className={cn([cl.smalldropdown, 'd-flex', 'flex-column'])}>
-											<div className={cl.smalldropdownBlock}>
-												<Link to="" className={cl.smalldropdownBlockLink}>
-													Корпоративным клиентам
-												</Link>
-											</div>
-											<div className={cl.smalldropdownBlock}>
-												<Link to="" className={cl.smalldropdownBlockLink}>
-													Контакты
-												</Link>
+										{/*<div className={isOpenServices ? cn([cl.dropdown, cl.dropdownOpen]) : cl.dropdown}>*/}
+										<div className={cl.dropdown}>
+											<div className={cn([cl.cards, 'container'])}>
+												{servicesList.map(({ id, href, title, text, icon }) => (
+													<Link to={href}>
+														<div className={cn([cl.cardWrapper, 'd-flex'])} key={id}>
+															<div className={cn([cl.card, 'd-flex', 'flex-column'])}>
+																<div className={cn([cl.cardDescription, 'd-flex', 'flex-column'])}>
+																	<div className={cl.cardDescriptionTitle}>{title}</div>
+																	<div className={cl.cardDescriptionText}>{text}</div>
+																</div>
+																<img src={icon} alt="" className={cl.cardImg} />
+															</div>
+														</div>
+													</Link>
+												))}
 											</div>
 										</div>
 									</div>
+									<div className={cl.servicesLinksLink}>
+										{/*<Link to="/" onClick={() => setIsOpenAbout(!isOpenAbout)}>*/}
+										{/*	<span>О компании</span>*/}
+										{/*</Link>*/}
+										<div className={cl.droplink}>
+											<span>О компании</span>
+										</div>
+										{/*<div className={isOpenAbout ? cn([cl.dropdown, cl.dropdownOpen]) : cl.dropdown}>*/}
+										<div className={cl.dropdown}>
+											<div className={cn([cl.cards, 'container'])}>
+												{aboutList.map(({ id, href, title, text, icon }) => (
+													<Link to={href}>
+														<div className={cn([cl.cardWrapper, 'd-flex'])} key={id}>
+															<div className={cn([cl.card, 'd-flex', 'flex-column'])}>
+																<div className={cn([cl.cardDescription, 'd-flex', 'flex-column'])}>
+																	<div className={cl.cardDescriptionTitle}>{title}</div>
+																	<div className={cl.cardDescriptionText}>{text}</div>
+																</div>
+																<img src={icon} alt="" className={cl.cardImg} />
+															</div>
+														</div>
+													</Link>
+												))}
+											</div>
+										</div>
+									</div>
+									<div className={cn([cl.servicesLinksLink, 'd-none', 'd-xxl-flex'])}>
+										<Link to="/">
+											<span>Контакты</span>
+										</Link>
+									</div>
+									<div className={cn([cl.servicesLinksLink, 'd-none', 'd-lg-flex', 'd-xxl-none'])}>
+										{/*<Link to="/">*/}
+										{/*	<span>Еще</span>*/}
+										{/*</Link>*/}
+										<div className={cl.smalldrop}>
+											<div className={cl.smalldroplink}>
+												<span>Еще</span>
+											</div>
+											<div className={cn([cl.smalldropdown, 'd-flex', 'flex-column'])}>
+												<div className={cl.smalldropdownBlock}>
+													<Link to="" className={cl.smalldropdownBlockLink}>
+														Корпоративным клиентам
+													</Link>
+												</div>
+												<div className={cl.smalldropdownBlock}>
+													<Link to="" className={cl.smalldropdownBlockLink}>
+														Контакты
+													</Link>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
-							</div>
-							<div className={cl.buttons}>
-								<Button sizeStyle="sizeContent" className={cn([cl.buttonsSignUp])}>
-									Записаться
-								</Button>
-								<Button sizeStyle="sizeContent" colorStyle="Secondary" className={cn([cl.buttonsAccount])}>
-									<img src={user} alt="userIcon" className={cl.buttonsAccountIcon} />
-									<span className={cl.buttonsAccountName}>Личный кабинет</span>
-								</Button>
-								<div
-									className={cn([cl.buttonsBurger, 'd-none', 'd-sm-flex', 'd-lg-none'])}
-									onClick={() => setIsOpen(!isOpen)}
-								>
-									<img src={burger} alt="burgerIcon" />
-								</div>
-								<div
-									className={cn([cl.buttonsBurger, 'd-xs-flex', 'd-sm-none', 'd-lg-none'])}
-									onClick={() => setIsOpen(!isOpen)}
-								>
-									<img src={burgerMobile} alt="burgerIcon" />
+								<div className={cl.buttons}>
+									<Button sizeStyle="sizeContent" className={cn([cl.buttonsSignUp])}>
+										Записаться
+									</Button>
+									<Button sizeStyle="sizeContent" colorStyle="Secondary" className={cn([cl.buttonsAccount])}>
+										<img src={user} alt="userIcon" className={cl.buttonsAccountIcon} />
+										<span className={cl.buttonsAccountName}>Личный кабинет</span>
+									</Button>
+									<div
+										className={cn([cl.buttonsBurger, 'd-none', 'd-sm-flex', 'd-lg-none'])}
+										onClick={() => setIsOpen(!isOpen)}
+									>
+										<img src={burger} alt="burgerIcon" />
+									</div>
+									<div
+										className={cn([cl.buttonsBurger, 'd-xs-flex', 'd-sm-none', 'd-lg-none'])}
+										onClick={() => setIsOpen(!isOpen)}
+									>
+										<img src={burgerMobile} alt="burgerIcon" />
+									</div>
 								</div>
 							</div>
 						</div>
@@ -471,7 +471,7 @@ const Header = () => {
 								</Link>
 								{links?.map(({ id, text, href, icon }) => (
 									<Link key={id} to={href}>
-										<div className={cn([cl.group, 'd-flex'])} onClick={() => setIsOpen(!isOpen)}>
+										<div className={cn([cl.group, 'd-flex', 'align-items-center'])} onClick={() => setIsOpen(!isOpen)}>
 											<img src={icon} alt="" />
 											<p className={cn([cl.subLinks, 'mb-0'])}>{text}</p>
 										</div>

@@ -215,6 +215,10 @@
           background-color: #FFFFFF;
           cursor: pointer;
           border: 2px solid transparent;
+          display: flex;
+          flex-direction: column;
+          row-gap: 4px;
+          user-select: none;
 
           &Image {
             max-width: 181.75px;
@@ -292,6 +296,13 @@
             }
           }
         }
+
+        .btn {
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 25.2px;
+          padding: 9.5px 20px 9.5px 20px;
+        }
       }
     }
   }
@@ -346,6 +357,13 @@
           font-weight: 500;
           line-height: 38.4px;
           color: #111111;
+        }
+
+        .btn {
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 25.2px;
+          padding: 9.5px 20px 9.5px 20px;
         }
       }
     }
@@ -615,6 +633,7 @@
       &Card {
         max-width: 299.33px;
         height: 458px;
+        row-gap: 2px;
 
         .image {
           max-width: 299.33px;
@@ -756,6 +775,13 @@
               }
             }
           }
+
+          .btn {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22.4px;
+            padding: 7px 16px 7px 16px;
+          }
         }
       }
     }
@@ -818,7 +844,7 @@
             font-size: 16px;
             font-weight: 500;
             line-height: 22.4px;
-            padding: 6.5px 16px;
+            padding: 7px 16px 7px 16px;
           }
         }
       }

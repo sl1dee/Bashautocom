@@ -1,0 +1,68 @@
+
+.showroom {
+
+  &Wrapper {
+    width: 1650px;
+    row-gap: 50px;
+    padding: 170px 0;
+
+    &Block1 {
+      row-gap: 106px;
+
+      .title {
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        color: #111111;
+      }
+
+      .cards {
+        gap: 30px;
+
+        .card {
+          height: 163px;
+          position: relative;
+
+          .number {
+            position: absolute;
+            top: -24%;
+            left: 42%;
+            font-size: 40px;
+            font-weight: 500;
+            line-height: 48px;
+            color: #F4F5F7;
+            width: 84px;
+            height: 84px;
+            background-color: #2F3140;
+            border-radius: 20px;
+            align-self: start;
+          }
+
+          .text {
+            text-align: center;
+            //position: absolute;
+            bottom: 0;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 31.2px;
+            color: #111111;
+            width: 530px;
+            padding: 40px 30px 30px 30px;
+            border-radius: 20px;
+            background-color: #FFFFFF;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+          }
+        }
+      }
+    }
+
+    &Block2 {
+      width: 994px;
+      text-align: center;
+      font-size: 50px;
+      font-weight: 500;
+      line-height: 60px;
+      color: #111111;
+    }
+  }
+}

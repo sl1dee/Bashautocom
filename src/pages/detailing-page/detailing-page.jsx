@@ -15,94 +15,105 @@ import volkswagen from '@assets/img/brands/volkswagen.svg'
 import havalBckg from '@assets/img/dealer-and-service-centers/haval.jpg'
 import moskvichBckg from '@assets/img/dealer-and-service-centers/moskvich.jpg'
 import omodaBckg from '@assets/img/dealer-and-service-centers/omoda.jpg'
-import polisher from '@assets/img/fast-sign-up/polisher.jpg'
+import detailing from '@assets/img/fast-sign-up/detailing.jpg'
 import phones from '@assets/img/loyalty-program/phones.png'
-import pic1 from '@assets/img/our-works/body-repair/pic1.jpg'
-import pic2 from '@assets/img/our-works/body-repair/pic2.jpg'
-import bodyRepairDesktop from '@assets/img/service-slider/bodyRepairDesktop.jpg'
-import bodyRepairMobile from '@assets/img/service-slider/bodyRepairMobile.jpg'
-import bodyRepairTablet from '@assets/img/service-slider/bodyRepairTablet.jpg'
-import bodyDetails from '@assets/img/types-of-jobs/bodyDetails.png'
-import dentRepair from '@assets/img/types-of-jobs/dentRepair.png'
-import geometry from '@assets/img/types-of-jobs/geometry.png'
-import painting from '@assets/img/types-of-jobs/painting.png'
-import plasticDetails from '@assets/img/types-of-jobs/plasticDetails.png'
-import polishing from '@assets/img/types-of-jobs/polishing.png'
+import pic1 from '@assets/img/our-works/detailing/pic1.jpg'
+import pic2 from '@assets/img/our-works/detailing/pic2.jpg'
+import pic3 from '@assets/img/our-works/detailing/pic3.jpg'
+import detailingDesktop from '@assets/img/service-slider/detailingDesktop.jpg'
+import detailingMobile from '@assets/img/service-slider/detailingMobile.jpg'
+import detailingTablet from '@assets/img/service-slider/detailingTablet.jpg'
+import dentRepairDetailing from '@assets/img/types-of-jobs/dentRepairDetailing.png'
+import dryCleaning from '@assets/img/types-of-jobs/dryCleaning.png'
+import film from '@assets/img/types-of-jobs/film.png'
+import glassRepair from '@assets/img/types-of-jobs/glassRepair.png'
+import polishingDetailing from '@assets/img/types-of-jobs/polishingDetailing.png'
+import protectiveCompounds from '@assets/img/types-of-jobs/protectiveCompounds.png'
+import scratchRepair from '@assets/img/types-of-jobs/scratchRepair.png'
+import washing from '@assets/img/types-of-jobs/washing.png'
 import React from 'react'
-
-import Breadcrumbs from '@helpers/Breadcrumbs.jsx'
 
 import Brands from '@components/brands/index.js'
 import DealerAndServiceCenters from '@components/dealer-and-service-centers/index.js'
 import FastSignUp from '@components/fast-sign-up/index.js'
 import LoyaltyProgram from '@components/loyalty-program/loyalty-program.jsx'
 import OurWorksBodyRepair from '@components/our-works/our-works-body-repair/our-works-body-repair.jsx'
+import OurWorksDetailing from '@components/our-works/our-works-detailing/our-works-detailing.jsx'
 import ServiceSlider from '@components/service-slider/index.js'
-import TypesOfJobsBodyRepair from '@components/types-of-jobs-body-repair/types-of-jobs-body-repair.jsx'
 import TypesOfJobs from '@components/types-of-jobs/types-of-jobs.jsx'
 
 import MainLayout from '../../layout/main/main-layout.jsx'
 
-const BodyRepairPage = () => {
+const DetailingPage = () => {
 	const blocks = [
 		{
-			alias: 'BodyRepairSlider',
+			alias: 'ServiceSlider',
 			value: [
 				{
-					bannerDesktop: bodyRepairDesktop,
-					bannerTablet: bodyRepairTablet,
-					bannerMobile: bodyRepairMobile
+					bannerDesktop: detailingDesktop,
+					bannerTablet: detailingTablet,
+					bannerMobile: detailingMobile
 				},
 				{
-					bannerDesktop: bodyRepairDesktop,
-					bannerTablet: bodyRepairTablet,
-					bannerMobile: bodyRepairMobile
+					bannerDesktop: detailingDesktop,
+					bannerTablet: detailingTablet,
+					bannerMobile: detailingMobile
 				},
 				{
-					bannerDesktop: bodyRepairDesktop,
-					bannerTablet: bodyRepairTablet,
-					bannerMobile: bodyRepairMobile
+					bannerDesktop: detailingDesktop,
+					bannerTablet: detailingTablet,
+					bannerMobile: detailingMobile
 				}
 			]
 		},
 		{
-			alias: 'TypesOfJobsBodyRepair',
+			alias: 'TypesOfJobs',
 			title: 'Виды работ',
 			value: [
 				{
 					id: 1,
-					image: bodyDetails,
-					title: 'Ремонт деталей корпуса'
+					image: polishingDetailing,
+					title: 'Полировка кузова и стекол'
 				},
 				{
 					id: 2,
-					image: geometry,
-					title: 'Восстановление геометрии кузова'
+					image: film,
+					title: 'Декоративная и защитная пленка'
 				},
 				{
 					id: 3,
-					image: painting,
-					title: 'Покраска автомобиля'
-				},
-				{
-					id: 4,
-					image: dentRepair,
+					image: dentRepairDetailing,
 					title: 'Ремонт вмятин без покраски'
 				},
 				{
+					id: 4,
+					image: protectiveCompounds,
+					title: 'Нанесение защитных составов'
+				},
+				{
 					id: 5,
-					image: polishing,
-					title: 'Полировка кузова'
+					image: washing,
+					title: 'Мойка и очистка кузова'
 				},
 				{
 					id: 6,
-					image: plasticDetails,
-					title: 'Ремонт пластиковых деталей'
+					image: dryCleaning,
+					title: 'Химчистка салона'
+				},
+				{
+					id: 7,
+					image: scratchRepair,
+					title: 'Ремонт сколов и царапин'
+				},
+				{
+					id: 8,
+					image: glassRepair,
+					title: 'Ремонт лобового стекла'
 				}
 			]
 		},
 		{
-			alias: 'OurWorksBodyRepair',
+			alias: 'OurWorksDetailing',
 			title: 'Наши работы',
 			value: [
 				{
@@ -114,20 +125,20 @@ const BodyRepairPage = () => {
 					image: pic2
 				},
 				{
-					id: 0,
+					id: 2,
+					image: pic3
+				},
+				{
+					id: 3,
 					image: pic1
 				},
 				{
-					id: 1,
+					id: 4,
 					image: pic2
 				},
 				{
-					id: 0,
-					image: pic1
-				},
-				{
-					id: 1,
-					image: pic2
+					id: 5,
+					image: pic3
 				}
 			]
 		},
@@ -138,72 +149,72 @@ const BodyRepairPage = () => {
 			value: [
 				{
 					id: 1,
-					href: '/service-center',
+					href: '',
 					imgPath: haval
 				},
 				{
 					id: 2,
-					href: '/service-center',
+					href: '',
 					imgPath: changan
 				},
 				{
 					id: 3,
-					href: '/service-center',
+					href: '',
 					imgPath: omoda
 				},
 				{
 					id: 4,
-					href: '/service-center',
+					href: '',
 					imgPath: jaecoo
 				},
 				{
 					id: 5,
-					href: '/service-center',
+					href: '',
 					imgPath: exeed
 				},
 				{
 					id: 6,
-					href: '/service-center',
+					href: '',
 					imgPath: moskvich
 				},
 				{
 					id: 7,
-					href: '/service-center',
+					href: '',
 					imgPath: lada
 				},
 				{
 					id: 8,
-					href: '/service-center',
+					href: '',
 					imgPath: volkswagen
 				},
 				{
 					id: 9,
-					href: '/service-center',
+					href: '',
 					imgPath: nissan
 				},
 				{
 					id: 10,
-					href: '/service-center',
+					href: '',
 					imgPath: honda
 				},
 				{
 					id: 11,
-					href: '/service-center',
+					href: '',
 					imgPath: skoda
 				},
 				{
 					id: 12,
-					href: '/service-center',
+					href: '',
 					imgPath: infinity
 				},
 				{
 					id: 13,
-					href: '/service-center',
+					href: '',
 					imgPath: datsun
 				},
 				{
 					id: 14,
-					href: '/service-center',
+					href: '',
 					imgPath: suzuki
 				}
 			]
@@ -227,12 +238,12 @@ const BodyRepairPage = () => {
 			alias: 'FastSignUp',
 			value: [
 				{
-					title: 'Быстрая запись в сервисный центр',
+					title: 'Быстрая запись на детейлинг',
 					description: 'Оставьте заявку через форму или позвоните по номеру +7 (ХХХ) ХХХ-ХХ-ХХ',
 					btn: 'Записаться',
 					policyText: 'Нажимая на кнопку, вы соглашаетесь с ',
 					policyLink: 'Политикой конфиденциальности',
-					image: polisher,
+					image: detailing,
 					titleMobile: 'Запись в сервисный центр'
 				}
 			],
@@ -350,12 +361,12 @@ const BodyRepairPage = () => {
 			{/* <Breadcrumbs url={window.location.pathname.slice(1)} type="breadcrumbs/page/" /> */}
 			{blocks.map((block) => {
 				switch (block.alias) {
-					case 'BodyRepairSlider':
+					case 'ServiceSlider':
 						return <ServiceSlider bannerList={block.value} />
-					case 'TypesOfJobsBodyRepair':
-						return <TypesOfJobsBodyRepair title={block.title} typesList={block.value} />
-					case 'OurWorksBodyRepair':
-						return <OurWorksBodyRepair title={block.title} ourWorksList={block.value} />
+					case 'TypesOfJobs':
+						return <TypesOfJobs title={block.title} typesList={block.value} />
+					case 'OurWorksDetailing':
+						return <OurWorksDetailing title={block.title} ourWorksDetailingList={block.value} />
 					case 'Brands':
 						return <Brands title={block.title} viewTabs={block.viewTabs} brandsList={block.value} />
 					case 'LoyaltyProgram':
@@ -377,4 +388,4 @@ const BodyRepairPage = () => {
 	)
 }
 
-export default BodyRepairPage
+export default DetailingPage

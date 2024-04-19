@@ -2,37 +2,15 @@
 
 .mainServices {
   background-color: #2F3140;
+  padding: 74px 0 89px 0;
 
   &Cards {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 
-    padding: 74px 0 89px 0;
     color: #FFFFFF;
     gap: 20px;
     row-gap: 29px;
-
-    //&:nth-of-type(-n + 6) {
-    //  //grid-column: span 4;
-    //  background-color: orange;
-    //}
-    //
-    //&:nth-last-of-type(n - 4) {
-    //  //grid-column: span 3;
-    //}
-
-    //&:nth-child(-n+6) {
-    //  background-color: green;
-    //  //grid-column: span 4;
-    //  grid-template-columns: repeat(3, 1fr);
-    //}
-    //
-    //&:nth-child(n+7) {
-    //  background-color: red;
-    //  //grid-column: span 3;
-    //  grid-template-columns: repeat(4, 1fr);
-    //}
-
 
     .cardWrapper {
       position: relative;
@@ -46,7 +24,7 @@
       .card {
         height: 100%;
         width: 100%;
-
+        row-gap: 6px;
 
         &Title {
           font-size: 24px;
@@ -83,9 +61,9 @@
 
 @media (min-width: 1401px) and (max-width: 1919px) {
   .mainServices {
+    padding: 60px 0;
 
     &Cards {
-      padding: 60px 0;
       color: #FFFFFF;
       gap: 20px;
       row-gap: 30px;
@@ -133,10 +111,10 @@
 
 @media (min-width: 992px) and (max-width: 1400px) {
   .mainServices {
+    padding: 50px 0;
 
     &Cards {
       grid-template-columns: repeat(12, 1fr);
-      padding: 50px 0;
       color: #FFFFFF;
       gap: 20px;
       row-gap: 30px;
@@ -234,14 +212,10 @@
 
 @media (min-width: 576px) and (max-width: 992px) {
   .mainServices {
+    padding: 50px 0;
 
     &Cards {
       grid-template-columns: repeat(2, 1fr);
-      //grid-template-areas:
-      //      "a a a ."
-      //      "a a a ."
-      //      "a a a a";
-      padding: 50px 0;
       color: #FFFFFF;
       gap: 10px;
 
@@ -267,6 +241,7 @@
           }
 
           &Text {
+            width: 130px;
             font-size: 16px;
             font-weight: 400;
             line-height: 19.52px;
@@ -291,10 +266,10 @@
 
 @media (max-width: 576px) {
   .mainServices {
+    padding: 10px 0 30px 0;
 
     &Cards {
       grid-template-columns: repeat(2, 1fr);
-      padding: 10px 0 30px 0;
       color: #FFFFFF;
       gap: 10px;
 

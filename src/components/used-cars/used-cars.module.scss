@@ -100,11 +100,14 @@
 .usedCars {
   row-gap: 40px;
 
-  .title {
-    font-size: 50px;
-    font-weight: 500;
-    line-height: 60px;
-    color: #111111;
+  .head {
+
+    .title {
+      font-size: 50px;
+      font-weight: 500;
+      line-height: 60px;
+      color: #111111;
+    }
   }
 
   &Content {
@@ -279,11 +282,14 @@
   .usedCars {
     row-gap: 40px;
 
-    .title {
-      font-size: 50px;
-      font-weight: 500;
-      line-height: 60px;
-      color: #111111;
+    .head {
+
+      .title {
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        color: #111111;
+      }
     }
 
     &Content {
@@ -453,19 +459,22 @@
   .usedCars {
     row-gap: 40px;
 
-    .title {
-      font-size: 50px;
-      font-weight: 500;
-      line-height: 60px;
-      color: #111111;
-    }
+    .head {
 
-    div {
-
-      .btn {
+      .title {
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
         color: #111111;
-        padding: 11.5px 20px 11.5px 20px;
-        gap: 10px;
+      }
+
+      div {
+
+        .btn {
+          color: #111111;
+          padding: 11.5px 20px 11.5px 20px;
+          gap: 10px;
+        }
       }
     }
 
@@ -732,19 +741,22 @@
   .usedCars {
     row-gap: 40px;
 
-    .title {
-      font-size: 32px;
-      font-weight: 500;
-      line-height: 38.4px;
-      color: #111111;
-    }
+    .head {
 
-    div {
-
-      .btn {
+      .title {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 38.4px;
         color: #111111;
-        padding: 6px 12px;
-        gap: 6px;
+      }
+
+      div {
+
+        .btn {
+          color: #111111;
+          padding: 6px 12px;
+          gap: 6px;
+        }
       }
     }
 
@@ -955,21 +967,25 @@
   }
 
   .usedCars {
-    row-gap: 40px;
+    row-gap: 16px;
 
-    .title {
-      font-size: 18px;
-      font-weight: 500;
-      line-height: 21.6px;
-      color: #111111;
-    }
+    .head {
+      row-gap: 16px;
 
-    div {
-
-      .btn {
+      .title {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21.6px;
         color: #111111;
-        padding: 6px 12px;
-        gap: 6px;
+      }
+
+      div {
+
+        .btn {
+          color: #111111;
+          padding: 6px 12px;
+          gap: 6px;
+        }
       }
     }
 

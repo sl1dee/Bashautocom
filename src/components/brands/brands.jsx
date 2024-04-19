@@ -112,7 +112,7 @@ const Brands = ({ title, viewTabs, brandsList }) => {
 							'flex-xxl-row',
 							'justify-content-start',
 							'justify-content-xxl-between',
-							'align-content-xxl-center'
+							'align-items-xxl-center'
 						])}
 					>
 						<h1 className={cn([cl.brandsInformationHeadTitle, 'mb-0'])}>{title}</h1>

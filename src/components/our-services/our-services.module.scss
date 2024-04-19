@@ -94,7 +94,8 @@
       &Cards {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 30px;
+        gap: 20px;
+        row-gap: 30px;
 
         .cardWrapper {
           background-color: #FFFFFF;
@@ -244,7 +245,7 @@
       &Cards {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        gap: 10px;
 
         .cardWrapper {
           background-color: #FFFFFF;
@@ -305,9 +306,10 @@
 
 @media (max-width: 576px) {
   .ourServices {
+    margin: 0 4px;
 
     &Information {
-      padding: 55px 10px;
+      padding: 55px 4px;
       gap: 16px;
 
       &Title {

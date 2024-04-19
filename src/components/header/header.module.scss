@@ -242,6 +242,7 @@
 
     &Links {
       //padding: 16px 0 18px 0;
+      height: 82px;
 
       .logo {
         position: relative;
@@ -253,9 +254,14 @@
 
       .servicesLinks {
         gap: 20px;
+        height: 82px;
 
         &Link {
-          padding: 30px 0 34px 0;
+          //padding: 30px 0 34px 0;
+          height: 82px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
 
           .droplink {
 
@@ -408,6 +414,7 @@
         &SignUp {
           min-width: 172px;
           max-height: 48px;
+          padding: 11.5px 20px;
         }
 
         &Account {
@@ -737,7 +744,7 @@
     &Information {
 
       &Links {
-        padding: 12px 18px 12px 18px;
+        padding: 12px 0 12px 0;
         max-height: 64px;
 
         > div {
@@ -829,17 +836,21 @@
           gap: 10px;
 
           &SignUp {
-            min-width: 141px;
+            min-width: 100px;
             max-height: 48px;
-            padding: 11.5px 20px 11.5px 20px;
+            padding: 7px 16px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22.4px;
           }
 
           &Account {
             display: flex;
             gap: 10px;
-            min-width: 48px;
-            max-height: 48px;
+            width: 40px;
+            height: 40px;
             padding: 12px;
+            min-width: 30px;
 
             &Icon {
               display: flex;

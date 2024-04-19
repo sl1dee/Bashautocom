@@ -319,7 +319,9 @@ const NewCars = () => {
 									</div>
 								</div>
 							</div>
-							<Button>Применить</Button>
+							<Button sizeStyle="sizeS" className={cl.btn}>
+								Применить
+							</Button>
 						</div>
 					</div>
 					<div className="d-xs-flex d-sm-none" onClick={() => setIsOpen(!isOpen)}>
@@ -339,11 +341,9 @@ const NewCars = () => {
 									<div className={cl.description}>{description}</div>
 								</div>
 								<div className={cl.price}>{price}</div>
-								<div className="d-none d-sm-flex">
-									<Button sizeStyle="sizeContent" className={cl.btn}>
-										Подробнее
-									</Button>
-								</div>
+								<Button sizeStyle="sizeS" className={cn([cl.btn, 'd-none', 'd-sm-flex'])}>
+									Подробнее
+								</Button>
 							</div>
 						</div>
 					))}
