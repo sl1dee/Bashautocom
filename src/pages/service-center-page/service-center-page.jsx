@@ -16,7 +16,6 @@ import mechanic from '@assets/img/fast-sign-up/mechanic.jpg'
 import phones from '@assets/img/loyalty-program/phones.png'
 import dueDiligenceDesktop from '@assets/img/service-slider/dueDiligenceDesktop.jpg'
 import dueDiligenceMobile from '@assets/img/service-slider/dueDiligenceMobile.jpg'
-import dueDiligenceSmallDesktop from '@assets/img/service-slider/dueDiligenceSmallDesktop.jpg'
 import dueDiligenceTablet from '@assets/img/service-slider/dueDiligenceTablet.jpg'
 import automaticTransmissionReplacement from '@assets/img/types-of-jobs/automaticTransmissionReplacement.png'
 import changeOfOil from '@assets/img/types-of-jobs/changeOfOil.png'
@@ -51,19 +50,16 @@ const ServiceCenterPage = () => {
 			value: [
 				{
 					bannerDesktop: dueDiligenceDesktop,
-					bannerSmallDesktop: dueDiligenceSmallDesktop,
 					bannerTablet: dueDiligenceTablet,
 					bannerMobile: dueDiligenceMobile
 				},
 				{
 					bannerDesktop: dueDiligenceDesktop,
-					bannerSmallDesktop: dueDiligenceSmallDesktop,
 					bannerTablet: dueDiligenceTablet,
 					bannerMobile: dueDiligenceMobile
 				},
 				{
 					bannerDesktop: dueDiligenceDesktop,
-					bannerSmallDesktop: dueDiligenceSmallDesktop,
 					bannerTablet: dueDiligenceTablet,
 					bannerMobile: dueDiligenceMobile
 				}
@@ -331,7 +327,7 @@ const ServiceCenterPage = () => {
 	return (
 		<MainLayout>
 			{/* <BreadcrumbsTop /> */}
-			<Breadcrumbs url={window.location.pathname.slice(1)} type="breadcrumbs/page/" />
+			{/* <Breadcrumbs url={window.location.pathname.slice(1)} type="breadcrumbs/page/" /> */}
 			{blocks.map((block) => {
 				switch (block.alias) {
 					case 'ServiceSlider':

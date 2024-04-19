@@ -8,38 +8,38 @@ import { Link } from 'react-router-dom'
 import Button from '../../ui/button/index.js'
 import cl from './events.module.scss'
 
-const Events = ({events}) => {
-	const events = [
-		{
-			title: '',
-			cards: [
-				{
-					image: omoda,
-					href: '/',
-					title: 'ОМОDА СУПЕРКАСКО по супер цене в Башавтоком!',
-					date: '23.01.2024'
-				},
-				{
-					image: jaecoo,
-					href: '/',
-					title: 'JAECOO наращивает присутствие на глобальном рынке',
-					date: '24.11.2023'
-				},
-				{
-					image: lada,
-					href: '/',
-					title: 'Новое специальное предложение на шиномонтаж в LADA «Башавтоком»',
-					date: '23.01.2024'
-				},
-				{
-					image: changan,
-					href: '/',
-					title: 'CHANGAN: 20 лет инноваций, с богатым наследием итальянского дизайна',
-					date: '23.01.2024'
-				}
-			]
-		}
-	]
+const Events = ({ events }) => {
+	// const events = [
+	// 	{
+	// 		title: '',
+	// 		cards: [
+	// 			{
+	// 				image: omoda,
+	// 				href: '/',
+	// 				title: 'ОМОDА СУПЕРКАСКО по супер цене в Башавтоком!',
+	// 				date: '23.01.2024'
+	// 			},
+	// 			{
+	// 				image: jaecoo,
+	// 				href: '/',
+	// 				title: 'JAECOO наращивает присутствие на глобальном рынке',
+	// 				date: '24.11.2023'
+	// 			},
+	// 			{
+	// 				image: lada,
+	// 				href: '/',
+	// 				title: 'Новое специальное предложение на шиномонтаж в LADA «Башавтоком»',
+	// 				date: '23.01.2024'
+	// 			},
+	// 			{
+	// 				image: changan,
+	// 				href: '/',
+	// 				title: 'CHANGAN: 20 лет инноваций, с богатым наследием итальянского дизайна',
+	// 				date: '23.01.2024'
+	// 			}
+	// 		]
+	// 	}
+	// ]
 
 	return (
 		<>

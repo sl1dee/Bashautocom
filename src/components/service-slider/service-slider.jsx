@@ -66,12 +66,7 @@ const ServiceSlider = ({ bannerList }) => {
 										media="(min-width: 567px) and (max-width: 991px)"
 										className={cl.banner}
 									/>
-									<source
-										srcSet={bannerSmallDesktop}
-										media="(min-width: 992px) and (max-width: 1400)"
-										className={cl.banner}
-									/>
-									<source srcSet={bannerDesktop} media="(min-width: 14001)" className={cl.banner} />
+									<source srcSet={bannerDesktop} media="(min-width: 992)" className={cl.banner} />
 									<img src={bannerDesktop} className={cl.banner} />
 								</picture>
 							</SwiperSlide>
