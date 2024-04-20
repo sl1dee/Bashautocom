@@ -510,6 +510,8 @@
           gap: 3px;
 
           .name {
+            height: 20px;
+            overflow: hidden;
             font-size: 14px;
             font-weight: 500;
             line-height: 19.6px;

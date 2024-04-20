@@ -179,6 +179,7 @@ const UsedCar = () => {
 							onSwiper={setSwiper}
 							// navigation={true}
 							spaceBetween={10}
+							loop={true}
 						>
 							{mainCards.map(({ mainImage }) => (
 								<SwiperSlide>
@@ -199,7 +200,7 @@ const UsedCar = () => {
 							spaceBetween={6}
 							slidesPerView={5}
 							freeMode={true}
-							// loop={true}
+							loop={true}
 							watchSlidesProgress={true}
 						>
 							{smallCards.map(({ smallImage }) => (
@@ -318,7 +319,9 @@ const UsedCar = () => {
 									<h6 className={cl.text}>Обменяйте старый авто на новый </h6>
 								</div>
 							</div>
-							<Button>Оставить заявку</Button>
+							<Button className={cl.btn} sizeStyle="sizeS">
+								Оставить заявку
+							</Button>
 						</div>
 					</div>
 				</div>

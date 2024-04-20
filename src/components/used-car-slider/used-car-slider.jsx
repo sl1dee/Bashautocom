@@ -179,17 +179,17 @@ const UsedCarSlider = () => {
 									// // when window width is >= 640px
 									320: {
 										spaceBetween: 10,
-										slidesPerView: 2
+										slidesPerView: 2.1
 									},
 									// // when window width is >= 576px
 									576: {
 										spaceBetween: 20,
-										slidesPerView: 2
+										slidesPerView: 2.1
 									},
 									// when window width is >= 992px
 									992: {
 										spaceBetween: 20,
-										slidesPerView: 3
+										slidesPerView: 3.1
 									},
 									1400: {
 										spaceBetween: 30,

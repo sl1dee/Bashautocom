@@ -148,8 +148,16 @@ const SpecialOffers = ({ specialOffersText, specialOffersCards, comboboxValues, 
 						<div className="container p-0">
 							<div className={cn([cl.specialOffersInformation, 'd-flex', 'flex-column'])}>
 								<h1 className={cn([cl.specialOffersInformationTitle, 'mb-0', 'd-none', 'd-sm-flex'])}>{title}</h1>
-								<div className="d-flex d-sm-none align-items-center justify-content-between">
-									<h1 className={cn([cl.specialOffersInformationTitle, 'mb-0'])}>{titleMobile}</h1>
+								<div
+									className={cn([
+										cl.specialOffersInformationGroup,
+										'd-flex',
+										'd-sm-none',
+										'align-items-center',
+										'justify-content-between'
+									])}
+								>
+									<h1 className={cn([cl.specialOffersInformationGroupTitle, 'mb-0'])}>{titleMobile}</h1>
 									<div>
 										<Button
 											sizeStyle="sizeContent"
@@ -164,7 +172,7 @@ const SpecialOffers = ({ specialOffersText, specialOffersCards, comboboxValues, 
 								</div>
 								<div className="d-flex flex-column gap-4">
 									<div className="d-flex justify-content-between align-items-center d-none d-sm-flex">
-										<div className="d-none d-sm-flex">
+										<div className="d-none d-lg-flex">
 											<ChoiceGroup
 												value={value}
 												onChange={({ value }) => setValue(value)}
@@ -172,6 +180,19 @@ const SpecialOffers = ({ specialOffersText, specialOffersCards, comboboxValues, 
 												getItemLabel={(item) => item}
 												form="default"
 												size="l"
+												view="primary"
+												name="ChoiceGroupExampleOne"
+												multiple={false}
+											/>
+										</div>
+										<div className="d-sm-flex d-lg-none">
+											<ChoiceGroup
+												value={value}
+												onChange={({ value }) => setValue(value)}
+												items={items}
+												getItemLabel={(item) => item}
+												form="default"
+												size="m"
 												view="primary"
 												name="ChoiceGroupExampleOne"
 												multiple={false}
@@ -189,13 +210,13 @@ const SpecialOffers = ({ specialOffersText, specialOffersCards, comboboxValues, 
 										</div>
 										<div className="d-flex d-lg-none">
 											<Button
-												sizeStyle="sizeContent"
+												sizeStyle="sizeS"
 												colorStyle="Secondary"
-												className={cn([cl.btn, 'd-flex'])}
+												className={cn([cl.btn, 'd-flex', 'align-items-center'])}
 												onClick={() => setIsOpen(!isOpen)}
 											>
 												<img src={funnel} alt="" />
-												<div>Фильтры</div>
+												<div>Бренд</div>
 											</Button>
 										</div>
 									</div>

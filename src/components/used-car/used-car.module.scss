@@ -152,6 +152,10 @@
 
           .btn {
             gap: 10px;
+            padding: 9.5px 20px 9.5px 20px;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 25.2px;
           }
         }
       }
@@ -337,6 +341,7 @@
             gap: 20px;
 
             .credit {
+              width: 270px;
               padding: 24px 20px 24px 20px;
               gap: 10px;
               border-radius: 10px;
@@ -357,6 +362,7 @@
             }
 
             .exchange {
+              width: 270px;
               padding: 24px 20px 24px 20px;
               gap: 10px;
               border-radius: 10px;
@@ -375,6 +381,13 @@
                 text-align: center;
               }
             }
+          }
+
+          .btn {
+            padding: 9.5px 20px 9.5px 20px;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 25.2px;
           }
         }
       }
@@ -1365,7 +1378,7 @@
         }
 
         &Benefit {
-          max-width: 470px;
+          max-width: 540px;
           height: 278px;
           grid-column-start: 1;
           grid-column-end: 2;
@@ -1384,10 +1397,10 @@
             row-gap: 20px;
 
             .cardsGroup {
-              gap: 20px;
+              gap: 10px;
 
               .credit {
-                width: 225px;
+                width: 265px;
                 padding: 24px 10px 24px 10px;
                 gap: 10px;
 
@@ -1406,7 +1419,7 @@
               }
 
               .exchange {
-                width: 225px;
+                width: 265px;
                 padding: 24px 10px 24px 10px;
                 gap: 10px;
 
@@ -1577,11 +1590,14 @@
             }
           }
           .buttons {
-            gap: 14px;
+            gap: 6px;
 
             .btn {
-              gap: 10px;
-              padding: 6px 12px;
+              gap: 6px;
+              padding: 2px 12px 2px 12px;
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 19.6px;
             }
           }
         }
@@ -1803,6 +1819,12 @@
                   text-align: center;
                 }
               }
+            }
+            .btn {
+              padding: 4px 12px 4px 12px;
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 19.6px;
             }
           }
         }
