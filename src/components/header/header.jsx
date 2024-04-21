@@ -352,6 +352,7 @@ const Header = () => {
 											<span>О компании</span>
 										</div>
 										{/*<div className={isOpenAbout ? cn([cl.dropdown, cl.dropdownOpen]) : cl.dropdown}>*/}
+										{/*<div className={cl.bckg}></div>*/}
 										<div className={cl.dropdown}>
 											<div className={cn([cl.cards, 'container'])}>
 												{aboutList.map(({ id, href, title, text, icon }) => (
@@ -416,7 +417,7 @@ const Header = () => {
 										className={cn([cl.buttonsBurger, 'd-xs-flex', 'd-sm-none', 'd-lg-none'])}
 										onClick={() => setIsOpen(!isOpen)}
 									>
-										<img src={burgerMobile} alt="burgerIcon" />
+										{isOpen ? <img src={close} alt="burgerIcon" /> : <img src={burgerMobile} alt="burgerIcon" />}
 									</div>
 								</div>
 							</div>
@@ -428,39 +429,39 @@ const Header = () => {
 			<div className={`${cl.sidebar} ${isOpen ? '' : cl.active}`}>
 				<div className={`${isOpen ? cl.sidebarBckg : ''}`} title="Закрыть" onClick={() => setIsOpen(!isOpen)} />
 				<div className={cn([cl.sidebarContent, 'd-flex', 'flex-column', 'justify-content-md-between', 'h-100'])}>
-					<div className={cn([cl.sidebarContentHeader, 'd-flex', 'justify-content-between', 'align-items-center'])}>
-						<div className={cn([cl.logo, 'd-none', 'd-sm-flex', 'align-items-center'])}>
-							<Link to="/">
-								<img src={logo} alt="logo" />
-							</Link>
-						</div>
-						<div className={cn([cl.logo, 'd-xs-flex', 'd-sm-none', 'align-items-center'])}>
-							<Link to="/">
-								<img src={logoMobile} alt="logo" />
-							</Link>
-						</div>
-						<div className={cn([cl.buttons, 'd-flex'])}>
-							<Button sizeStyle="sizeContent" className={cn([cl.buttonsSignUp, 'd-none', 'd-sm-flex'])}>
-								Записаться
-							</Button>
-							<Button
-								sizeStyle="sizeContent"
-								colorStyle="Secondary"
-								className={cn([cl.buttonsAccount, 'd-none', 'd-sm-flex'])}
-							>
-								<img src={user} alt="userIcon" className={cl.buttonsAccountIcon} />
-							</Button>
-							<div
-								className={cn([cl.buttonsBurger, 'd-none', 'd-sm-flex', 'd-lg-none'])}
-								onClick={() => setIsOpen(!isOpen)}
-							>
-								<img src={burger} alt="burgerIcon" />
-							</div>
-							<div className={cn([cl.buttonsBurger, 'd-xs-flex', 'd-sm-none'])} onClick={() => setIsOpen(!isOpen)}>
-								<img src={close} alt="burgerIcon" />
-							</div>
-						</div>
-					</div>
+					{/*<div className={cn([cl.sidebarContentHeader, 'd-flex', 'justify-content-between', 'align-items-center'])}>*/}
+					{/*	<div className={cn([cl.logo, 'd-none', 'd-sm-flex', 'align-items-center'])}>*/}
+					{/*		<Link to="/">*/}
+					{/*			<img src={logo} alt="logo" />*/}
+					{/*		</Link>*/}
+					{/*	</div>*/}
+					{/*	<div className={cn([cl.logo, 'd-xs-flex', 'd-sm-none', 'align-items-center'])}>*/}
+					{/*		<Link to="/">*/}
+					{/*			<img src={logoMobile} alt="logo" />*/}
+					{/*		</Link>*/}
+					{/*	</div>*/}
+					{/*	<div className={cn([cl.buttons, 'd-flex'])}>*/}
+					{/*		<Button sizeStyle="sizeContent" className={cn([cl.buttonsSignUp, 'd-none', 'd-sm-flex'])}>*/}
+					{/*			Записаться*/}
+					{/*		</Button>*/}
+					{/*		<Button*/}
+					{/*			sizeStyle="sizeContent"*/}
+					{/*			colorStyle="Secondary"*/}
+					{/*			className={cn([cl.buttonsAccount, 'd-none', 'd-sm-flex'])}*/}
+					{/*		>*/}
+					{/*			<img src={user} alt="userIcon" className={cl.buttonsAccountIcon} />*/}
+					{/*		</Button>*/}
+					{/*		<div*/}
+					{/*			className={cn([cl.buttonsBurger, 'd-none', 'd-sm-flex', 'd-lg-none'])}*/}
+					{/*			onClick={() => setIsOpen(!isOpen)}*/}
+					{/*		>*/}
+					{/*			<img src={burger} alt="burgerIcon" />*/}
+					{/*		</div>*/}
+					{/*		<div className={cn([cl.buttonsBurger, 'd-xs-flex', 'd-sm-none'])} onClick={() => setIsOpen(!isOpen)}>*/}
+					{/*			<img src={close} alt="burgerIcon" />*/}
+					{/*		</div>*/}
+					{/*	</div>*/}
+					{/*</div>*/}
 					<div className={cn([cl.sidebarContentBody, 'd-flex', 'flex-column'])}>
 						{navigationList.map(({ id, header, href, links }) => (
 							<div key={id} className={cn([cl.sidebarContentBodyLinks, 'd-flex', 'flex-column'])}>

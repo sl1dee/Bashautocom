@@ -215,9 +215,9 @@ const UsedCars = () => {
 				<div className={`${isOpen ? cl.sidebarBckg : ''}`} title="Закрыть" onClick={() => setIsOpen(!isOpen)} />
 				<div className={cn(cl.group)}>
 					<div className={cn([cl.groupFilter, 'd-flex', 'd-xxl-none', 'flex-column'])}>
-						<div className="d-flex align-items-center justify-content-between">
-							<h5 className={cn([cl.groupFilterTitle, 'mb-0'])}>Фильтры</h5>
-							<img src={close} alt="close" onClick={() => setIsOpen(!isOpen)} />
+						<div className={cn([cl.groupFilterHead, 'd-flex', 'align-items-center', 'justify-content-between'])}>
+							<h5 className={cn([cl.groupFilterHeadTitle, 'mb-0'])}>Фильтры</h5>
+							<img className={cl.groupFilterHeadClose} src={close} alt="close" onClick={() => setIsOpen(!isOpen)} />
 						</div>
 						<div className={cn([cl.block, 'd-flex', 'flex-column'])}>
 							<span>Цена, руб</span>
@@ -334,11 +334,9 @@ const UsedCars = () => {
 								/>
 							</div>
 						</div>
-						<div>
-							<Button colorStyle="primary" onClick={() => setIsOpen(!isOpen)}>
-								Принять
-							</Button>
-						</div>
+						<Button className={cl.btn} colorStyle="primary" sizeStyle="sizeS" onClick={() => setIsOpen(!isOpen)}>
+							Принять
+						</Button>
 					</div>
 				</div>
 			</div>

@@ -21,8 +21,8 @@ const DealerAndServiceCentersCard = ({
 					<div className={cl.Block1TextNumber}>{number}</div>
 				</div>
 				<div className={cn([cl.Block1Bottom, 'd-flex', 'flex-column', 'flex-lg-row', 'justify-content-between'])}>
-					<p className="mb-0">Продажа {saleCount} брендов</p>
-					<p className="mb-0">Сервис {serviceCount} брендов</p>
+					<p className="mb-0 d-flex align-items-center justify-content-center">Продажа {saleCount} брендов</p>
+					<p className="mb-0 d-flex align-items-center justify-content-center">Сервис {serviceCount} брендов</p>
 				</div>
 			</div>
 			<div className={cn([cl.Block2])}>

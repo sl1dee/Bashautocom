@@ -20,6 +20,10 @@ import volkswagen from '@assets/img/brands/volkswagen.svg'
 import havalBckg from '@assets/img/dealer-and-service-centers/haval.jpg'
 import moskvichBckg from '@assets/img/dealer-and-service-centers/moskvich.jpg'
 import omodaBckg from '@assets/img/dealer-and-service-centers/omoda.jpg'
+import changanEvent from '@assets/img/events/changan.jpg'
+import jaecooEvent from '@assets/img/events/jaecoo.jpg'
+import ladaEvent from '@assets/img/events/lada.jpg'
+import omodaEvent from '@assets/img/events/omoda.jpg'
 import bodyRepair from '@assets/img/main-services/bodyRepair.png'
 import carsRent from '@assets/img/main-services/carsRent.png'
 import detailing from '@assets/img/main-services/detailing.png'
@@ -470,25 +474,25 @@ const MainPage = () => {
 			title: '',
 			cards: [
 				{
-					image: omoda,
+					image: omodaEvent,
 					href: '/',
 					title: 'ОМОDА СУПЕРКАСКО по супер цене в Башавтоком!',
 					date: '23.01.2024'
 				},
 				{
-					image: jaecoo,
+					image: jaecooEvent,
 					href: '/',
 					title: 'JAECOO наращивает присутствие на глобальном рынке',
 					date: '24.11.2023'
 				},
 				{
-					image: lada,
+					image: ladaEvent,
 					href: '/',
 					title: 'Новое специальное предложение на шиномонтаж в LADA «Башавтоком»',
 					date: '23.01.2024'
 				},
 				{
-					image: changan,
+					image: changanEvent,
 					href: '/',
 					title: 'CHANGAN: 20 лет инноваций, с богатым наследием итальянского дизайна',
 					date: '23.01.2024'

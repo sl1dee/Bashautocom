@@ -27,6 +27,7 @@ const SpecialOffers = ({ specialOffersText, specialOffersCards, comboboxValues, 
 	const [swiper, setSwiper] = useState(null)
 	const [comboboxValue, setComboboxValue] = useState(null)
 	const [brand, setBrand] = useState(null)
+	const [service, setService] = useState(null)
 	// const { isDesktop, isTablet, isTabletSmall } = useMatchMedia()
 
 	// const specialOffersCards = [
@@ -107,6 +108,8 @@ const SpecialOffers = ({ specialOffersText, specialOffersCards, comboboxValues, 
 		{ name: 'Chery' }
 	]
 
+	const services = [{ name: 'Все' }, { name: 'Продажа' }, { name: 'Сервис' }, { name: 'Cadillac' }]
+
 	const [isOpen, setIsOpen] = useState(false)
 
 	return (
@@ -117,9 +120,23 @@ const SpecialOffers = ({ specialOffersText, specialOffersCards, comboboxValues, 
 						<div className={`${isOpen ? cl.sidebarBckg : ''}`} title="Закрыть" onClick={() => setIsOpen(!isOpen)} />
 						<div className={cn(cl.group)}>
 							<div className={cn([cl.groupFilter, 'd-flex', 'd-xxl-none', 'flex-column'])}>
-								<div className="d-flex align-items-center justify-content-between">
-									<h5 className={cn([cl.groupFilterTitle, 'mb-0'])}>Фильтры</h5>
-									<img src={close} alt="close" onClick={() => setIsOpen(!isOpen)} />
+								<div className={cn([cl.groupFilterHead, 'd-flex', 'align-items-center', 'justify-content-between'])}>
+									<h5 className={cn([cl.groupFilterHeadTitle, 'mb-0'])}>Фильтры</h5>
+									<img className={cl.groupFilterHeadClose} src={close} alt="close" onClick={() => setIsOpen(!isOpen)} />
+								</div>
+								<div className={cn([cl.filter, 'd-flex', 'flex-column'])}>
+									<div className={cl.filterTitle}>Выберите тип услуги</div>
+									<div>
+										<CheckboxGroup
+											value={service}
+											items={services}
+											getItemLabel={(item) => item.name}
+											getItemDisabled={(item) => item.disabled}
+											onChange={({ value }) => setService(value)}
+											name="CheckboxGroup"
+										/>
+									</div>
+									<div onClick={() => setService(null)}>Сбросить все</div>
 								</div>
 								<div className={cn([cl.filter, 'd-flex', 'flex-column'])}>
 									<div className={cl.filterTitle}>Выберите бренд</div>
@@ -134,12 +151,18 @@ const SpecialOffers = ({ specialOffersText, specialOffersCards, comboboxValues, 
 											name="CheckboxGroup"
 										/>
 									</div>
+									<div onClick={() => setBrand(null)}>Сбросить все</div>
 								</div>
-								<div>
-									<Button colorStyle="primary" onClick={() => setIsOpen(!isOpen)}>
-										Принять
-									</Button>
-								</div>
+								{/*<div className={cn([cl.btn, 'd-flex'])}>*/}
+								<Button
+									className={cn([cl.btn, 'd-flex'])}
+									colorStyle="primary"
+									sizeStyle="sizeS"
+									onClick={() => setIsOpen(!isOpen)}
+								>
+									Принять
+								</Button>
+								{/*</div>*/}
 							</div>
 						</div>
 					</div>
@@ -171,7 +194,15 @@ const SpecialOffers = ({ specialOffersText, specialOffersCards, comboboxValues, 
 									</div>
 								</div>
 								<div className="d-flex flex-column gap-4">
-									<div className="d-flex justify-content-between align-items-center d-none d-sm-flex">
+									<div
+										className={cn([
+											cl.specialOffersBtngroup,
+											'd-none',
+											'd-sm-flex',
+											'justify-content-between',
+											'align-items-center'
+										])}
+									>
 										<div className="d-none d-lg-flex">
 											<ChoiceGroup
 												value={value}
@@ -210,7 +241,7 @@ const SpecialOffers = ({ specialOffersText, specialOffersCards, comboboxValues, 
 										</div>
 										<div className="d-flex d-lg-none">
 											<Button
-												sizeStyle="sizeS"
+												sizeStyle="sizeContent"
 												colorStyle="Secondary"
 												className={cn([cl.btn, 'd-flex', 'align-items-center'])}
 												onClick={() => setIsOpen(!isOpen)}

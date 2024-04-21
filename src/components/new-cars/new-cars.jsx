@@ -198,9 +198,9 @@ const NewCars = () => {
 				<div className={`${isOpen ? cl.sidebarBckg : ''}`} title="Закрыть" onClick={() => setIsOpen(!isOpen)} />
 				<div className={cn([cl.group, 'd-flex', 'flex-column', 'd-sm-none'])}>
 					<div className={cn([cl.filter, 'd-flex', 'flex-column', 'd-sm-none'])}>
-						<div className="d-flex align-items-center justify-content-between">
-							<div className={cl.filterTitle}>Фильтры</div>
-							<img src={close} alt="close" onClick={() => setIsOpen(!isOpen)} />
+						<div className={cn([cl.filterHead, 'd-flex', 'align-items-center', 'justify-content-between'])}>
+							<div className={cl.filterHeadTitle}>Фильтры</div>
+							<img className={cl.filterHeadClose} src={close} alt="close" onClick={() => setIsOpen(!isOpen)} />
 						</div>
 						<div className={cn([cl.filterCards, 'd-grid'])}>
 							{filterList.map(({ carType, name }, index) => (
@@ -250,7 +250,9 @@ const NewCars = () => {
 								<input type="text" placeholder={price[1]} />
 							</div>
 						</div>
-						<Button onClick={() => setIsOpen(!isOpen)}>Применить</Button>
+						<Button className={cl.btn} sizeStyle="sizeS" onClick={() => setIsOpen(!isOpen)}>
+							Применить
+						</Button>
 					</div>
 				</div>
 			</div>
