@@ -1,34 +1,33 @@
-import alfa from '@assets/img/banks/alfa.png'
-import autofinance from '@assets/img/banks/autofinance.png'
-import driveclick from '@assets/img/banks/driveclick.png'
-import ekspobank from '@assets/img/banks/ekspobank.png'
-import evropabank from '@assets/img/banks/evropabank.png'
-import fastbank from '@assets/img/banks/fastbank.png'
-import lokobank from '@assets/img/banks/lokobank.png'
-import otkrytie from '@assets/img/banks/otkrytie.png'
-import otpbank from '@assets/img/banks/otpbank.png'
-import rosbank from '@assets/img/banks/rosbank.png'
-import sovkombank from '@assets/img/banks/sovkombank.png'
-import tinkoff from '@assets/img/banks/tinkoff.png'
-import uralsib from '@assets/img/banks/uralsib.png'
-import vtb from '@assets/img/banks/vtb.png'
 import insuranceDesktop from '@assets/img/banner/insurance/insuranceDesktop.jpg'
 import insuranceMobile from '@assets/img/banner/insurance/insuranceMobile.jpg'
 import insuranceTablet from '@assets/img/banner/insurance/insuranceTablet.jpg'
-import credit from '@assets/img/fast-sign-up/credit.jpg'
+import insurance from '@assets/img/fast-sign-up/insurance.jpg'
+import alfa from '@assets/img/insurance/alfa.png'
 import check from '@assets/img/insurance/check.svg'
+import energogarant from '@assets/img/insurance/energogarant.png'
+import ingosstrah from '@assets/img/insurance/ingosstrah.png'
 import kasko from '@assets/img/insurance/kasko.png'
+import max from '@assets/img/insurance/max.png'
+import megaruss from '@assets/img/insurance/megaruss.png'
 import osago from '@assets/img/insurance/osago.png'
+import peco from '@assets/img/insurance/peco.png'
 import prolongation from '@assets/img/insurance/prolongation.png'
+import rosgosstrah from '@assets/img/insurance/rosgosstrah.png'
+import sber from '@assets/img/insurance/sber.png'
 import service from '@assets/img/insurance/service.svg'
 import shield from '@assets/img/insurance/shield.svg'
+import sogaz from '@assets/img/insurance/sogaz.png'
+import soglasie from '@assets/img/insurance/soglasie.png'
 import time from '@assets/img/insurance/time.svg'
+import ugory from '@assets/img/insurance/ugory.png'
+import vsk from '@assets/img/insurance/vsk.png'
 
 import Banks from '@components/banks/banks.jsx'
 import Banner from '@components/banner/banner.jsx'
 import BenefitsOfInsurance from '@components/benefits-of-insurance/benefits-of-insurance.jsx'
 import InOurShowrooms from '@components/in-our-showrooms/in-our-showrooms.jsx'
 import Credit from '@components/sign-ups/credit/credit.jsx'
+import Insurance from '@components/sign-ups/insurance/insurance.jsx'
 import TypesOfInsurance from '@components/types-of-insurance/types-of-insurance.jsx'
 
 import MainLayout from '../../layout/main/main-layout.jsx'
@@ -107,76 +106,69 @@ const InsurancePage = () => {
 		},
 		{
 			alias: 'Banks',
+			title: 'Страховые компании',
 			value: [
 				{
 					id: 0,
-					image: tinkoff
-				},
-				{
-					id: 1,
 					image: alfa
 				},
 				{
+					id: 1,
+					image: sber
+				},
+				{
 					id: 2,
-					image: vtb
+					image: sogaz
 				},
 				{
 					id: 3,
-					image: rosbank
+					image: rosgosstrah
 				},
 				{
 					id: 4,
-					image: uralsib
+					image: ugory
 				},
 				{
 					id: 5,
-					image: sovkombank
+					image: energogarant
 				},
 				{
 					id: 6,
-					image: otkrytie
+					image: soglasie
 				},
 				{
 					id: 7,
-					image: evropabank
+					image: peco
 				},
 				{
 					id: 8,
-					image: otpbank
+					image: megaruss
 				},
 				{
 					id: 9,
-					image: autofinance
+					image: max
 				},
 				{
 					id: 10,
-					image: fastbank
+					image: ingosstrah
 				},
 				{
 					id: 11,
-					image: driveclick
-				},
-				{
-					id: 12,
-					image: lokobank
-				},
-				{
-					id: 13,
-					image: ekspobank
+					image: vsk
 				}
 			]
 		},
 		{
-			alias: 'Credit',
+			alias: 'Insurance',
 			value: [
 				{
 					title: 'Оставьте заявку на страхование',
-					description: 'Оставьте заявку через форму или позвоните по номеру +7 (ХХХ) ХХХ-ХХ-ХХ',
+					description: 'Оставьте заявку через форму или позвоните по номеру +7 (905) 181-87-68',
 					btn: 'Записаться',
 					policyText: 'Нажимая на кнопку, вы соглашаетесь с ',
 					policyLink: 'Политикой конфиденциальности',
-					image: credit,
-					titleMobile: 'Оставить заявку на кредитование'
+					image: insurance,
+					titleMobile: 'Оставьте заявку на страхование'
 				}
 			],
 			brands: [
@@ -215,9 +207,9 @@ const InsurancePage = () => {
 					case 'TypesOfInsurance':
 						return <TypesOfInsurance typesList={block.value} />
 					case 'Banks':
-						return <Banks banksList={block.value} />
-					case 'Credit':
-						return <Credit creditList={block.value} comboboxValues={block.brands} />
+						return <Banks title={block.title} banksList={block.value} />
+					case 'Insurance':
+						return <Insurance insuranceList={block.value} comboboxValues={block.brands} />
 				}
 			})}
 		</MainLayout>

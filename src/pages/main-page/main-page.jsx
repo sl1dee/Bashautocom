@@ -87,7 +87,7 @@ const MainPage = () => {
 		},
 		{
 			id: 4,
-			path: '/',
+			path: '/body-repair',
 			title: 'Кузовной ремонт',
 			text: 'Ремонт деталей кузова, покраска, полировка и др.',
 			imgPath: bodyRepair
@@ -101,21 +101,21 @@ const MainPage = () => {
 		},
 		{
 			id: 6,
-			path: '/',
+			path: '/detailing',
 			title: 'Детейлинг',
 			text: 'Полировка кузова, пленка, химчистка и др.',
 			imgPath: detailing
 		},
 		{
 			id: 7,
-			path: '/',
+			path: '/insurance',
 			title: 'Страхование',
 			text: 'ОСАГО, КАСКО и др.',
 			imgPath: insurance
 		},
 		{
 			id: 8,
-			path: '/',
+			path: '/credit',
 			title: 'Кредитование',
 			text: 'Выгодные условия от 0,1%',
 			imgPath: lending
@@ -139,72 +139,72 @@ const MainPage = () => {
 	const brandsList = [
 		{
 			id: 1,
-			href: '',
+			href: '/service-center',
 			imgPath: haval
 		},
 		{
 			id: 2,
-			href: '',
+			href: '/service-center',
 			imgPath: changan
 		},
 		{
 			id: 3,
-			href: '',
+			href: '/service-center',
 			imgPath: omoda
 		},
 		{
 			id: 4,
-			href: '',
+			href: '/service-center',
 			imgPath: jaecoo
 		},
 		{
 			id: 5,
-			href: '',
+			href: '/service-center',
 			imgPath: exeed
 		},
 		{
 			id: 6,
-			href: '',
+			href: '/service-center',
 			imgPath: moskvich
 		},
 		{
 			id: 7,
-			href: '',
+			href: '/service-center',
 			imgPath: lada
 		},
 		{
 			id: 8,
-			href: '',
+			href: '/service-center',
 			imgPath: volkswagen
 		},
 		{
 			id: 9,
-			href: '',
+			href: '/service-center',
 			imgPath: nissan
 		},
 		{
 			id: 10,
-			href: '',
+			href: '/service-center',
 			imgPath: honda
 		},
 		{
 			id: 11,
-			href: '',
+			href: '/service-center',
 			imgPath: skoda
 		},
 		{
 			id: 12,
-			href: '',
+			href: '/service-center',
 			imgPath: infinity
 		},
 		{
 			id: 13,
-			href: '',
+			href: '/service-center',
 			imgPath: datsun
 		},
 		{
 			id: 14,
-			href: '',
+			href: '/service-center',
 			imgPath: suzuki
 		}
 	]
@@ -346,7 +346,7 @@ const MainPage = () => {
 		},
 		{
 			id: 3,
-			href: '/',
+			href: '/credit',
 			title: 'Кредитование',
 			text: 'Выгодные условия от 0,1%',
 			icon: lendingIcon
@@ -367,21 +367,21 @@ const MainPage = () => {
 		},
 		{
 			id: 6,
-			href: '/',
+			href: '/body-repair',
 			title: 'Кузовной ремонт',
 			text: 'Ремонт деталей кузова, покраска, полировка и др.',
 			icon: bodyRepairIcon
 		},
 		{
 			id: 7,
-			href: '/',
+			href: '/insurance',
 			title: 'Страхование',
 			text: 'ОСАГО, КАСКО и др.',
 			icon: insuranceIcon
 		},
 		{
 			id: 8,
-			href: '/',
+			href: '/detailing',
 			title: 'Детейлинг',
 			text: 'Полировка кузова, пленка, химчистка и др.',
 			icon: detailingIcon

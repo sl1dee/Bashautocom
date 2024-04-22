@@ -17,7 +17,7 @@ import React from 'react'
 
 import cl from './banks.module.scss'
 
-const Banks = ({ banksList }) => {
+const Banks = ({ title, banksList }) => {
 	// const banksList = [
 	// 	{
 	// 		id: 0,
@@ -81,7 +81,7 @@ const Banks = ({ banksList }) => {
 		<div className={cl.banks}>
 			<div className="container">
 				<div className={cn([cl.banksWrapper, 'd-flex', 'flex-column'])}>
-					<h2 className={cn([cl.banksWrapperTitle, 'mb-0'])}>Банки партнеры</h2>
+					<h2 className={cn([cl.banksWrapperTitle, 'mb-0'])}>{title}</h2>
 					<div className={cn([cl.banksWrapperCards, 'd-grid'])}>
 						{banksList.map(({ id, image }) => (
 							<div

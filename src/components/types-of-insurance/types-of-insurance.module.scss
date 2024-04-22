@@ -22,6 +22,7 @@
         border-radius: 30px;
         row-gap: 20px;
         background-color: #FAFAFA;
+        min-height: 539px;
 
         .image {
           max-width: 389px;
@@ -30,7 +31,7 @@
         }
 
         .group {
-          row-gap: 20px;
+          height: 100%;
 
           &Text {
             row-gap: 10px;
@@ -73,9 +74,9 @@
 
         &Card {
           padding: 20px 15.5px 40px 15.5px;
+          min-height: 619px;
 
           .group {
-            row-gap: 20px;
             padding: 0 24.5px;
 
             &Text {
@@ -98,6 +99,7 @@
 
         &Card {
           padding: 20px 30px 30px 30px;
+          min-height: 456px;
 
           .image {
             max-width: 240px;
@@ -149,6 +151,7 @@
           border-radius: 20px;
           gap: 20px;
           background-color: #FAFAFA;
+          min-height: 200px;
 
           .image {
             max-width: 206px;
@@ -197,8 +200,9 @@
         &Card {
           padding: 20px;
           border-radius: 14px;
-          row-gap: 20px;
+          row-gap: 10px;
           background-color: #FAFAFA;
+          min-height: 200px;
 
           .image {
             max-width: 221px;

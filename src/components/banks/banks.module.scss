@@ -1,6 +1,6 @@
 
 .banks {
-  padding: 140px 0 70px;
+  padding: 70px 0 70px;
 
   &Wrapper {
     row-gap: 50px;
@@ -21,6 +21,11 @@
         height: 140px;
         background-color: #FAFAFA;
         border-radius: 20px;
+        transition: ease .3s;
+
+        &:hover {
+          background-color: #D4D4D4;
+        }
 
         .image {
           max-width: 228px;
@@ -60,7 +65,7 @@
 
 @media (min-width: 576px) and (max-width: 992px) {
   .banks {
-    padding: 100px 0 50px;
+    padding: 50px 0 50px;
 
     &Wrapper {
       row-gap: 30px;
@@ -90,7 +95,7 @@
 
 @media (max-width: 576px) {
   .banks {
-    padding: 50px 0 25px;
+    padding: 25px 0 25px;
 
     &Wrapper {
       row-gap: 16px;

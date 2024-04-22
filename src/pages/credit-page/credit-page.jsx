@@ -61,6 +61,7 @@ const CreditPage = () => {
 		},
 		{
 			alias: 'Banks',
+			title: 'Банки партнеры',
 			value: [
 				{
 					id: 0,
@@ -167,7 +168,7 @@ const CreditPage = () => {
 					case 'InOurShowrooms':
 						return <InOurShowrooms title={block.title} cardList={block.value} description={block.description} />
 					case 'Banks':
-						return <Banks banksList={block.value} />
+						return <Banks title={block.title} banksList={block.value} />
 					case 'Credit':
 						return <Credit creditList={block.value} comboboxValues={block.brands} />
 				}

@@ -150,72 +150,72 @@ const DetailingPage = () => {
 			value: [
 				{
 					id: 1,
-					href: '',
+					href: '/service-center',
 					imgPath: haval
 				},
 				{
 					id: 2,
-					href: '',
+					href: '/service-center',
 					imgPath: changan
 				},
 				{
 					id: 3,
-					href: '',
+					href: '/service-center',
 					imgPath: omoda
 				},
 				{
 					id: 4,
-					href: '',
+					href: '/service-center',
 					imgPath: jaecoo
 				},
 				{
 					id: 5,
-					href: '',
+					href: '/service-center',
 					imgPath: exeed
 				},
 				{
 					id: 6,
-					href: '',
+					href: '/service-center',
 					imgPath: moskvich
 				},
 				{
 					id: 7,
-					href: '',
+					href: '/service-center',
 					imgPath: lada
 				},
 				{
 					id: 8,
-					href: '',
+					href: '/service-center',
 					imgPath: volkswagen
 				},
 				{
 					id: 9,
-					href: '',
+					href: '/service-center',
 					imgPath: nissan
 				},
 				{
 					id: 10,
-					href: '',
+					href: '/service-center',
 					imgPath: honda
 				},
 				{
 					id: 11,
-					href: '',
+					href: '/service-center',
 					imgPath: skoda
 				},
 				{
 					id: 12,
-					href: '',
+					href: '/service-center',
 					imgPath: infinity
 				},
 				{
 					id: 13,
-					href: '',
+					href: '/service-center',
 					imgPath: datsun
 				},
 				{
 					id: 14,
-					href: '',
+					href: '/service-center',
 					imgPath: suzuki
 				}
 			]

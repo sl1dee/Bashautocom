@@ -66,28 +66,28 @@ const Header = () => {
 		},
 		{
 			id: 3,
-			href: '/',
+			href: '/body-repair',
 			title: 'Кузовной ремонт',
 			text: 'Ремонт деталей кузова, покраска, полировка и др.',
 			icon: bodyRepair
 		},
 		{
 			id: 4,
-			href: '/',
+			href: '/detailing',
 			title: 'Детейлинг',
 			text: 'Полировка кузова, пленка, химчистка и др.',
 			icon: detailing
 		},
 		{
 			id: 5,
-			href: '/',
+			href: '/credit',
 			title: 'Кредитование',
 			text: 'Выгодные условия от 0,1%',
 			icon: lending
 		},
 		{
 			id: 6,
-			href: '/',
+			href: '/insurance',
 			title: 'Страхование',
 			text: 'ОСАГО, КАСКО и др.',
 			icon: insurance
@@ -176,25 +176,25 @@ const Header = () => {
 					},
 					{
 						id: 2,
-						href: '/',
+						href: '/body-repair',
 						icon: bodyRepair,
 						text: 'Кузовной ремонт'
 					},
 					{
 						id: 3,
-						href: '/',
+						href: '/detailing',
 						icon: detailing,
 						text: 'Детейлинг'
 					},
 					{
 						id: 4,
-						href: '/',
+						href: '/credit',
 						icon: lending,
 						text: 'Кредитование'
 					},
 					{
 						id: 5,
-						href: '/',
+						href: '/insurance',
 						icon: insurance,
 						text: 'Страхование'
 					},

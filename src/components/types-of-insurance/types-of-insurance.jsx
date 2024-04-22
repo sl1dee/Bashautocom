@@ -53,7 +53,7 @@ const TypesOfInsurance = ({ typesList }) => {
 								key={id}
 							>
 								<img className={cl.image} src={image} alt="" />
-								<div className={cn([cl.group, 'd-flex', 'flex-column', 'align-content-between'])}>
+								<div className={cn([cl.group, 'd-flex', 'flex-column', 'justify-content-between'])}>
 									<div className={cn([cl.groupText, 'd-flex', 'flex-column'])}>
 										<div className={cn(cl.groupTextTitle)}>{title}</div>
 										<div className={cn(cl.groupTextDescription)}>{description}</div>

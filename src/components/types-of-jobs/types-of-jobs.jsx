@@ -67,10 +67,8 @@ const TypesOfJobs = ({ title, typesList }) => {
 						<div className={cn([cl.cards, 'd-grid'])}>
 							{typesList.map(({ image, title }) => (
 								<div className={cn([cl.card, 'd-flex', 'flex-column'])}>
-									<Link to="/">
-										<h6 className={cn([cl.cardTitle, 'mb-0'])}>{title}</h6>
-										<img src={image} alt="event" className={cl.cardImage} />
-									</Link>
+									<h6 className={cn([cl.cardTitle, 'mb-0'])}>{title}</h6>
+									<img src={image} alt="event" className={cl.cardImage} />
 								</div>
 							))}
 						</div>

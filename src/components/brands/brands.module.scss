@@ -65,7 +65,7 @@
         }
 
         &:hover {
-          background-color: darkgray;
+          background-color: #D4D4D4;
         }
       }
     }
@@ -74,7 +74,7 @@
 
 @media (min-width: 1401px) and (max-width: 1919px) {
   .brands {
-    padding: 140px 0 70px 0;
+    padding: 140px 0 0 0;
 
     &Information {
       gap: 50px;
@@ -135,7 +135,7 @@
 
 @media (min-width: 1000px) and (max-width: 1400px) {
   .brands {
-    padding: 140px 0;
+    padding: 140px 0 70px 0;
 
     &Information {
       gap: 50px;

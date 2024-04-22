@@ -1,6 +1,6 @@
 import useScrollTop from '@hooks/use-scroll-top.js'
 import { burgerIsOpenSelector, signUpIsOpenSelector } from '@store/selectors/modals.js'
-import React, { memo } from 'react'
+import React, { Suspense, memo } from 'react'
 import { useSelector } from 'react-redux'
 
 import Sidebar from '@components/header/sidebar/sidebar.jsx'
@@ -17,7 +17,7 @@ const MainLayout = ({ children }) => {
 	return (
 		<>
 			<Header />
-			{children}
+			<Suspense>{children}</Suspense>
 			<Footer />
 			{/* <Cookie /> */}
 			{burgerIsOpen && <Sidebar />}

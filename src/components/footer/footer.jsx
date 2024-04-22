@@ -110,12 +110,12 @@ const Footer = () => {
 								</Link>
 							</div>
 							<div className={cl.link}>
-								<Link to="/" className={cl.actlink}>
+								<Link to="/body-repair" className={cl.actlink}>
 									Кузовной ремонт
 								</Link>
 							</div>
 							<div className={cl.link}>
-								<Link to="/" className={cl.actlink}>
+								<Link to="/detailing" className={cl.actlink}>
 									Детейлинг
 								</Link>
 							</div>
@@ -125,12 +125,12 @@ const Footer = () => {
 								</Link>
 							</div>
 							<div className={cl.link}>
-								<Link to="/" className={cl.actlink}>
+								<Link to="/insurance" className={cl.actlink}>
 									Страхование
 								</Link>
 							</div>
 							<div className={cl.link}>
-								<Link to="/" className={cl.actlink}>
+								<Link to="/credit" className={cl.actlink}>
 									Кредитование
 								</Link>
 							</div>
