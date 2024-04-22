@@ -17,6 +17,9 @@ import insuranceMobile from '@assets/img/banner/insurance/insuranceMobile.jpg'
 import insuranceTablet from '@assets/img/banner/insurance/insuranceTablet.jpg'
 import credit from '@assets/img/fast-sign-up/credit.jpg'
 import check from '@assets/img/insurance/check.svg'
+import kasko from '@assets/img/insurance/kasko.png'
+import osago from '@assets/img/insurance/osago.png'
+import prolongation from '@assets/img/insurance/prolongation.png'
 import service from '@assets/img/insurance/service.svg'
 import shield from '@assets/img/insurance/shield.svg'
 import time from '@assets/img/insurance/time.svg'
@@ -26,6 +29,7 @@ import Banner from '@components/banner/banner.jsx'
 import BenefitsOfInsurance from '@components/benefits-of-insurance/benefits-of-insurance.jsx'
 import InOurShowrooms from '@components/in-our-showrooms/in-our-showrooms.jsx'
 import Credit from '@components/sign-ups/credit/credit.jsx'
+import TypesOfInsurance from '@components/types-of-insurance/types-of-insurance.jsx'
 
 import MainLayout from '../../layout/main/main-layout.jsx'
 
@@ -67,6 +71,37 @@ const InsurancePage = () => {
 					icon: shield,
 					title: 'Нет дополнительных комиссий',
 					text: 'Наша услуга бесплатна и мы работаем по тарифам СК'
+				}
+			]
+		},
+		{
+			alias: 'TypesOfInsurance',
+			value: [
+				{
+					id: 0,
+					image: kasko,
+					title: 'Автострахование КАСКО',
+					description:
+						'Добровольное страхование каско обеспечит финансовую защиту в случае угона, ущерба и полной гибели вашего автомобиля.',
+					button: 'Оставить заявку на страхование',
+					buttonMobile: 'Оставить заявку'
+				},
+				{
+					id: 1,
+					image: osago,
+					title: 'Автострахование ОСАГО',
+					description:
+						'Обязательное страхование автогражданской ответственности. Покрывает ущерб имуществу, здоровью и жизни пострадавшей стороне в ДТП.',
+					button: 'Оставить заявку на страхование',
+					buttonMobile: 'Оставить заявку'
+				},
+				{
+					id: 2,
+					image: prolongation,
+					title: 'Пролонгация',
+					description: 'Повторное заключение договора страхования на новый период страхования',
+					button: 'Оставить заявку на пролонгацию',
+					buttonMobile: 'Оставить заявку'
 				}
 			]
 		},
@@ -177,6 +212,8 @@ const InsurancePage = () => {
 						return <Banner bannerList={block.value} />
 					case 'BenefitsOfInsurance':
 						return <BenefitsOfInsurance benefitsList={block.value} />
+					case 'TypesOfInsurance':
+						return <TypesOfInsurance typesList={block.value} />
 					case 'Banks':
 						return <Banks banksList={block.value} />
 					case 'Credit':

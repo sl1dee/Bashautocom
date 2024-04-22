@@ -1,32 +1,233 @@
 
 .types {
+  padding: 140px 0 70px 0;
+  background-color: #FFFFFF;
 
   &Wrapper {
+    row-gap: 50px;
 
     &Title {
-
+      font-size: 50px;
+      font-weight: 500;
+      line-height: 60px;
+      color: #111111;
     }
 
     &Cards {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
 
       &Card {
+        padding: 20px 40px 40px 40px;
+        border-radius: 30px;
+        row-gap: 20px;
+        background-color: #FAFAFA;
 
         .image {
-
+          max-width: 389px;
+          height: 280px;
+          object-fit: cover;
         }
 
         .group {
-
-          &Title {
-
-          }
+          row-gap: 20px;
 
           &Text {
+            row-gap: 10px;
 
+            &Title {
+              font-size: 32px;
+              font-weight: 500;
+              line-height: 38.4px;
+              color: #111111;
+            }
+
+            &Description {
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 20.8px;
+              color: #1111117A;
+            }
           }
 
           .btn {
+            padding: 9.5px 20px 9.5px 20px;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 25.2px;
+            align-self: start;
+          }
+        }
+      }
+    }
+  }
+}
 
+@media (min-width: 1401px) and (max-width: 1919px) {
+
+  .types {
+
+    &Wrapper {
+
+      &Cards {
+
+        &Card {
+          padding: 20px 15.5px 40px 15.5px;
+
+          .group {
+            row-gap: 20px;
+            padding: 0 24.5px;
+
+            &Text {
+              row-gap: 10px;
+              max-width: 310px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1400px) {
+  .types {
+
+    &Wrapper {
+
+      &Cards {
+
+        &Card {
+          padding: 20px 30px 30px 30px;
+
+          .image {
+            max-width: 240px;
+            height: 160px;
+            object-fit: cover;
+          }
+
+          .group {
+            row-gap: 20px;
+
+            &Text {
+              row-gap: 10px;
+
+              &Title {
+                font-size: 24px;
+                line-height: 31.2px;
+              }
+
+              &Description {
+                font-size: 14px;
+                line-height: 16.8px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .types {
+    padding: 100px 0 50px 0;
+
+    &Wrapper {
+      row-gap: 30px;
+
+      &Title {
+        font-size: 32px;
+        line-height: 38.4px;
+      }
+
+      &Cards {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
+
+        &Card {
+          padding: 30px;
+          border-radius: 20px;
+          gap: 20px;
+          background-color: #FAFAFA;
+
+          .image {
+            max-width: 206px;
+            height: 165px;
+            object-fit: cover;
+          }
+
+          .group {
+            row-gap: 16px;
+
+            &Text {
+
+              &Title {
+                font-size: 24px;
+                line-height: 31.2px;
+              }
+
+              &Description {
+                font-size: 14px;
+                line-height: 16.8px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .types {
+    padding: 50px 0 25px 0;
+
+    &Wrapper {
+      row-gap: 16px;
+
+      &Title {
+        font-size: 18px;
+        line-height: 21.6px;
+      }
+
+      &Cards {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
+
+        &Card {
+          padding: 20px;
+          border-radius: 14px;
+          row-gap: 20px;
+          background-color: #FAFAFA;
+
+          .image {
+            max-width: 221px;
+            height: 140px;
+            object-fit: cover;
+          }
+
+          .group {
+            row-gap: 8px;
+
+            &Text {
+              row-gap: 4px;
+
+              &Title {
+                font-size: 14px;
+                line-height: 19.6px;
+              }
+
+              &Description {
+                font-size: 12px;
+                line-height: 15.6px;
+              }
+            }
+
+            .btn {
+              padding: 4px 12px 4px 12px;
+              font-size: 14px;
+              line-height: 19.6px;
+            }
           }
         }
       }
