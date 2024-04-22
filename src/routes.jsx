@@ -14,7 +14,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 const MainPage = lazy(() => import('./pages/main-page'))
 const ServiceCenterPage = lazy(() => import('@pages/service-center-page/index.js'))
-const BodyRepairPage = lazy(() => import('@pages/body-repair-page/index.j'))
+const BodyRepairPage = lazy(() => import('@pages/body-repair-page/index.js'))
 const DetailingPage = lazy(() => import('@pages/detailing-page/index.js'))
 const CreditPage = lazy(() => import('@pages/credit-page/credit-page.jsx'))
 const InsurancePage = lazy(() => import('@pages/insurance-page/insurance-page.jsx'))
