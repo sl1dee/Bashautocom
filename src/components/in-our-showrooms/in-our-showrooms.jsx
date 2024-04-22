@@ -38,7 +38,16 @@ const InOurShowrooms = ({ title, cardList, description }) => {
 						])}
 					>
 						<div className={cl.title}>{title}</div>
-						<div className={cn([cl.cards, 'd-flex'])}>
+						<div
+							className={cn([
+								cl.cards,
+								'd-grid'
+								// 'flex-column',
+								// 'flex-lg-row',
+								// 'justify-content-center',
+								// 'align-items-center'
+							])}
+						>
 							{cardList.map(({ id, number, text }) => (
 								<div
 									key={id}
@@ -47,14 +56,12 @@ const InOurShowrooms = ({ title, cardList, description }) => {
 									<div className={cn(cl.number, 'd-flex', 'justify-content-center', 'align-items-center')}>
 										{number}
 									</div>
-									<div className={cl.text}>{text}</div>
+									<div className={cn([cl.text, 'd-flex', 'justify-content-center', 'align-items-center'])}>{text}</div>
 								</div>
 							))}
 						</div>
 					</div>
-					<div className={cn([cl.showroomWrapperBlock2])}>
-						и всё это можно совместить с приятным выбором автомобиля мечты
-					</div>
+					<div className={cn([cl.showroomWrapperBlock2])}>{description}</div>
 				</div>
 			</div>
 		</div>

@@ -4,10 +4,10 @@ import cl from './banner.module.scss'
 
 const Banner = ({ bannerList }) => {
 	return (
-		<div>
+		<div className={cl.bannerWrapper}>
 			<div className="container">
 				{bannerList.map(({ bannerDesktop, bannerTablet, bannerMobile }) => (
-					<picture>
+					<picture className="d-flex justify-content-center">
 						<source srcSet={bannerMobile} media="(max-width: 575px)" className={cl.banner} />
 						<source srcSet={bannerTablet} media="(min-width: 567px) and (max-width: 991px)" className={cl.banner} />
 						<source srcSet={bannerDesktop} media="(min-width: 992)" className={cl.banner} />

@@ -32,10 +32,9 @@ import Breadcrumbs from '@helpers/Breadcrumbs.jsx'
 import Brands from '@components/brands/index.js'
 import BreadcrumbsTop from '@components/breadcrumbs-top/index.js'
 import DealerAndServiceCenters from '@components/dealer-and-service-centers/index.js'
-import FastSignUp from '@components/fast-sign-up/index.js'
 import LoyaltyProgram from '@components/loyalty-program/loyalty-program.jsx'
-import Modal from '@components/modal/modal.jsx'
 import ServiceSlider from '@components/service-slider/index.js'
+import Service from '@components/sign-ups/service/service.jsx'
 import TypesOfJobs from '@components/types-of-jobs/types-of-jobs.jsx'
 
 import havalBckg from '../../../assets/img/dealer-and-service-centers/haval.jpg'
@@ -204,7 +203,7 @@ const ServiceCenterPage = () => {
 			]
 		},
 		{
-			alias: 'FastSignUp',
+			alias: 'Service',
 			value: [
 				{
 					title: 'Быстрая запись в сервисный центр',
@@ -338,8 +337,8 @@ const ServiceCenterPage = () => {
 						return <Brands title={block.title} viewTabs={block.viewTabs} brandsList={block.value} />
 					case 'LoyaltyProgram':
 						return <LoyaltyProgram textList={block.value} />
-					case 'FastSignUp':
-						return <FastSignUp signUpList={block.value} comboboxValues={block.brands} />
+					case 'Service':
+						return <Service serviceList={block.value} comboboxValues={block.brands} />
 					case 'DealerAndServiceCenters':
 						return (
 							<DealerAndServiceCenters

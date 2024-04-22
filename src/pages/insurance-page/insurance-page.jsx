@@ -12,50 +12,61 @@ import sovkombank from '@assets/img/banks/sovkombank.png'
 import tinkoff from '@assets/img/banks/tinkoff.png'
 import uralsib from '@assets/img/banks/uralsib.png'
 import vtb from '@assets/img/banks/vtb.png'
-import creditDesktop from '@assets/img/banner/credit/creditDesktop.jpg'
-import creditMobile from '@assets/img/banner/credit/creditMobile.jpg'
-import creditTablet from '@assets/img/banner/credit/creditTablet.jpg'
+import insuranceDesktop from '@assets/img/banner/insurance/insuranceDesktop.jpg'
+import insuranceMobile from '@assets/img/banner/insurance/insuranceMobile.jpg'
+import insuranceTablet from '@assets/img/banner/insurance/insuranceTablet.jpg'
 import credit from '@assets/img/fast-sign-up/credit.jpg'
-import React from 'react'
+import check from '@assets/img/insurance/check.svg'
+import service from '@assets/img/insurance/service.svg'
+import shield from '@assets/img/insurance/shield.svg'
+import time from '@assets/img/insurance/time.svg'
 
 import Banks from '@components/banks/banks.jsx'
 import Banner from '@components/banner/banner.jsx'
+import BenefitsOfInsurance from '@components/benefits-of-insurance/benefits-of-insurance.jsx'
 import InOurShowrooms from '@components/in-our-showrooms/in-our-showrooms.jsx'
 import Credit from '@components/sign-ups/credit/credit.jsx'
 
 import MainLayout from '../../layout/main/main-layout.jsx'
 
-const CreditPage = () => {
+const InsurancePage = () => {
 	const blocks = [
 		{
 			alias: 'Banner',
 			value: [
 				{
-					bannerDesktop: creditDesktop,
-					bannerTablet: creditTablet,
-					bannerMobile: creditMobile
+					bannerDesktop: insuranceDesktop,
+					bannerTablet: insuranceTablet,
+					bannerMobile: insuranceMobile
 				}
 			]
 		},
 		{
-			alias: 'InOurShowrooms',
-			title: 'В наших салонах',
-			description: 'и всё это можно совместить с приятным выбором автомобиля мечты',
+			alias: 'BenefitsOfInsurance',
 			value: [
 				{
 					id: 0,
-					number: '1',
-					text: 'Вас проконсультируют по поводу автокредитования'
+					icon: check,
+					title: 'Большой выбор страховых компаний',
+					text: 'Более 10 самых крупных и надежных страховых компаний'
 				},
 				{
 					id: 1,
-					number: '2',
-					text: 'Получите условия предоставления кредитов от разных банков'
+					icon: service,
+					title: 'Предложения сразу нескольких страховых ',
+					text: 'С расчетом стоимости страхового полиса'
 				},
 				{
 					id: 2,
-					number: '3',
-					text: 'Наши менеджеры помогут в оформлении документов, передадут полный пакет документов в банк'
+					icon: time,
+					title: 'Оформляем полис прямо в дилерском центре',
+					text: 'В это время ваш автомобиль может пройти очередное ТО'
+				},
+				{
+					id: 3,
+					icon: shield,
+					title: 'Нет дополнительных комиссий',
+					text: 'Наша услуга бесплатна и мы работаем по тарифам СК'
 				}
 			]
 		},
@@ -124,7 +135,7 @@ const CreditPage = () => {
 			alias: 'Credit',
 			value: [
 				{
-					title: 'Проконсультируем по автокредитованию',
+					title: 'Оставьте заявку на страхование',
 					description: 'Оставьте заявку через форму или позвоните по номеру +7 (ХХХ) ХХХ-ХХ-ХХ',
 					btn: 'Записаться',
 					policyText: 'Нажимая на кнопку, вы соглашаетесь с ',
@@ -164,8 +175,8 @@ const CreditPage = () => {
 				switch (block.alias) {
 					case 'Banner':
 						return <Banner bannerList={block.value} />
-					case 'InOurShowrooms':
-						return <InOurShowrooms title={block.title} cardList={block.value} description={block.description} />
+					case 'BenefitsOfInsurance':
+						return <BenefitsOfInsurance benefitsList={block.value} />
 					case 'Banks':
 						return <Banks banksList={block.value} />
 					case 'Credit':
@@ -176,4 +187,4 @@ const CreditPage = () => {
 	)
 }
 
-export default CreditPage
+export default InsurancePage

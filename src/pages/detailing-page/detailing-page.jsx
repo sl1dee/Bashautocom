@@ -35,11 +35,12 @@ import React from 'react'
 
 import Brands from '@components/brands/index.js'
 import DealerAndServiceCenters from '@components/dealer-and-service-centers/index.js'
-import FastSignUp from '@components/fast-sign-up/index.js'
 import LoyaltyProgram from '@components/loyalty-program/loyalty-program.jsx'
 import OurWorksBodyRepair from '@components/our-works/our-works-body-repair/our-works-body-repair.jsx'
 import OurWorksDetailing from '@components/our-works/our-works-detailing/our-works-detailing.jsx'
 import ServiceSlider from '@components/service-slider/index.js'
+import Detailing from '@components/sign-ups/detailing/detailing.jsx'
+import Service from '@components/sign-ups/service/service.jsx'
 import TypesOfJobs from '@components/types-of-jobs/types-of-jobs.jsx'
 
 import MainLayout from '../../layout/main/main-layout.jsx'
@@ -235,14 +236,14 @@ const DetailingPage = () => {
 			]
 		},
 		{
-			alias: 'FastSignUp',
+			alias: 'Detailing',
 			value: [
 				{
 					title: 'Быстрая запись на детейлинг',
 					description: 'Оставьте заявку через форму или позвоните по номеру +7 (ХХХ) ХХХ-ХХ-ХХ',
 					btn: 'Записаться',
 					policyText: 'Нажимая на кнопку, вы соглашаетесь с ',
-					policyLink: 'Политикой конфиденциальности',
+					policyLink: 'Запись на детейлинг',
 					image: detailing,
 					titleMobile: 'Запись в сервисный центр'
 				}
@@ -371,8 +372,8 @@ const DetailingPage = () => {
 						return <Brands title={block.title} viewTabs={block.viewTabs} brandsList={block.value} />
 					case 'LoyaltyProgram':
 						return <LoyaltyProgram textList={block.value} />
-					case 'FastSignUp':
-						return <FastSignUp signUpList={block.value} comboboxValues={block.brands} />
+					case 'Detailing':
+						return <Detailing detailingList={block.value} comboboxValues={block.brands} />
 					case 'DealerAndServiceCenters':
 						return (
 							<DealerAndServiceCenters

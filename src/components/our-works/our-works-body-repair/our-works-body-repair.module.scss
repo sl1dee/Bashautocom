@@ -19,12 +19,12 @@
       position: relative;
 
       .swiper {
-        height: 490px;
+        height: 360px;
 
         .banner {
           border-radius: 40px;
-          max-width: 536.67px;
-          height: 436px;
+          max-width: 815px;
+          height: 306px;
           object-fit: cover;
         }
       }
@@ -75,7 +75,7 @@
 @media (min-width: 1401px) and (max-width: 1919px) {
   .serviceSlider {
     background-color: #FFFFFF;
-    padding: 20px 0 50px 0;
+    padding: 70px 0 3px 0;
 
     &Content {
 
@@ -139,7 +139,7 @@
 @media (min-width: 992px) and (max-width: 1400px) {
   .serviceSlider {
     background-color: #FFFFFF;
-    padding: 20px 0 50px 0;
+    padding: 70px 0 3px 0;
 
     &Content {
 
@@ -164,7 +164,7 @@
 @media (min-width: 576px) and (max-width: 992px) {
   .serviceSlider {
     background-color: #FFFFFF;
-    padding: 20px 0 50px 0;
+    padding: 50px 0 0 0;
 
     &Content {
       row-gap: 30px;
@@ -193,7 +193,7 @@
 @media (max-width: 576px) {
   .serviceSlider {
     background-color: #FFFFFF;
-    padding: 20px 0 25px 0;
+    padding: 25px 0 10px 0;
 
     &Content {
       row-gap: 16px;
@@ -211,7 +211,7 @@
 
           .banner {
             border-radius: 20px;
-            max-width: 300px;
+            width: 300px;
             height: 108px;
           }
         }
