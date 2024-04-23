@@ -11,45 +11,6 @@ import Button from '../../ui/button/index.js'
 import cl from './about.module.scss'
 
 const About = ({ aboutText }) => {
-	// const aboutText = [
-	// 	{
-	// 		title: 'Башавтоком - лидер на автомобильном рынке Башкирии',
-	// 		points: [
-	// 			{
-	// 				id: 0,
-	// 				image: shieldAbout,
-	// 				text: 'Официальный дилер брендов Omoda, Changan Auto, Jaecoo, Exeed, Москвич, Lada, Haval.'
-	// 			},
-	// 			{
-	// 				id: 1,
-	// 				image: settingAbout,
-	// 				text: 'Обслуживаем автомобили в нашем сервисном центре, обеспечивая безопасность и комфорт'
-	// 			},
-	// 			{
-	// 				id: 2,
-	// 				image: usersAbout,
-	// 				text: '850 сотрудников Башавтоком — профессионалы своего дела, и каждый день делают всё для вашего удобства'
-	// 			}
-	// 		],
-	// 		btn: 'Подробнее о компании',
-	// 		achievements: [
-	// 			{
-	// 				title: '30 лет',
-	// 				text: 'Продаём автомобили с 1992 года'
-	// 			},
-	// 			{
-	// 				title: '100 000+',
-	// 				text: 'Автомобилей продали за все время работы'
-	// 			},
-	// 			{
-	// 				title: '4 города',
-	// 				text: 'Уфа, Октябрьский, Стерлитамак, Белебей'
-	// 			}
-	// 		],
-	// 		firstImg: mainEntrance,
-	// 		secondImg: car
-	// 	}
-	// ]
 
 	return (
 		<>
@@ -78,7 +39,7 @@ const About = ({ aboutText }) => {
 							</span>
 							<div className={cn([cl.secondBlock, 'd-none', 'd-sm-flex'])}>
 								{achievements.map(({ title, text }) => (
-									<span className={cn([cl.secondBlockCol, 'd-flex', 'flex-column'])}>
+									<span className={cn([cl.secondBlockCol, 'd-flex', 'flex-column'])} key={title}>
 										<h1 className={cn([cl.secondBlockColTitle, 'd-flex', 'mb-0'])}>{title}</h1>
 										<p className={cn([cl.secondBlockColText, 'd-flex', 'mb-0'])}>{text}</p>
 									</span>

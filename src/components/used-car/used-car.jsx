@@ -1,21 +1,11 @@
-import user from '@assets/img/header/user.svg'
-import first from '@assets/img/used-car/1.jpg'
-import second from '@assets/img/used-car/2.jpg'
-import third from '@assets/img/used-car/3.jpg'
-import fourth from '@assets/img/used-car/4.jpg'
-import fifth from '@assets/img/used-car/5.jpg'
-import brush from '@assets/img/used-car/brush.svg'
-import clipboard from '@assets/img/used-car/clipboard.svg'
 import credit from '@assets/img/used-car/credit.svg'
 import exchange from '@assets/img/used-car/exchange.svg'
-import key from '@assets/img/used-car/key.svg'
-import owner from '@assets/img/used-car/owner.svg'
 import refresh from '@assets/img/used-car/refresh.svg'
-import shield from '@assets/img/used-car/shield.svg'
-import tick from '@assets/img/used-car/tick.svg'
+
 import cn from 'classnames'
 import React, { useState } from 'react'
 import swiper, { FreeMode, Navigation, Thumbs } from 'swiper'
+// import { FreeMode, Navigation, Thumbs } from 'swiper';
 import 'swiper/css'
 import 'swiper/css/free-mode'
 import 'swiper/css/navigation'
@@ -27,52 +17,120 @@ import Button from '@ui/button/index.js'
 import Equipment from '@components/equipment/equipment.jsx'
 
 import cl from './used-car.module.scss'
+import {Collapse} from "@consta/uikit/Collapse";
 
 const UsedCar = () => {
-	const [thumbsSwiper, setThumbsSwiper] = useState(null)
 	const [swiper, setSwiper] = useState(null)
-	// const [equipmentOpen, setEquipmentOpen] = useState(false)
+	const [thumbsSwiper, setThumbsSwiper] = useState(null)
+	const [activeIndex, setActiveIndex] = useState(0); // Состояние для отслеживания активного индекса
+	const [isOpen, setOpen] = useState(false);
 
 	const cardInformation = [
 		{
 			id: 0,
 			name: 'Kia Rio X',
 			price: '1 840 000 ₽',
-			characteristics: [
+			characteristicsName: [
 				{
-					owners: '1 владелец',
-					year: '2020',
-					mileage: '56 200 км',
-					engine: '1.6 л/ 123 л.с. / Бензин',
-					gearbox: 'Автомат',
-					drive: 'Передний',
-					body: 'Хетчбэк',
-					color: 'Серый'
+					id: 0,
+					name: 'Владельцы',
+				},
+				{
+					id: 1,
+					name: 'Год выпуска',
+				},
+				{
+					id: 2,
+					name: 'Пробег',
+				},
+				{
+					id: 3,
+					name: 'Двигатель',
+				},
+				{
+					id: 4,
+					name: 'Коробка',
+				},
+				{
+					id: 5,
+					name: 'Привод',
+				},
+				{
+					id: 6,
+					name: 'Кузов',
+				},
+				{
+					id: 7,
+					name: 'Цвет',
+				}
+			],
+			characteristics: [
+				// {
+				// 	owners: '1 владелец',
+				// 	year: '2020',
+				// 	mileage: '56 200 км',
+				// 	engine: '1.6 л/ 123 л.с. / Бензин',
+				// 	gearbox: 'Автомат',
+				// 	drive: 'Передний',
+				// 	body: 'Хетчбэк',
+				// 	color: 'Серый'
+				// }
+				{
+					id: 0,
+					name: '1 владелец',
+				},
+				{
+					id: 1,
+					name: '2020',
+				},
+				{
+					id: 2,
+					name: '56 200 км',
+				},
+				{
+					id: 3,
+					name: '1.6 л/ 123 л.с. / Бензин',
+				},
+				{
+					id: 4,
+					name: 'Автомат',
+				},
+				{
+					id: 5,
+					name: 'Передний',
+				},
+				{
+					id: 6,
+					name: 'Хетчбэк',
+				},
+				{
+					id: 7,
+					name: 'Серый',
 				}
 			],
 			report: [
 				{
-					icon: shield,
+					icon: './assets/img/used-car/shield.svg',
 					text: 'Зеленая Автотека'
 				},
 				{
-					icon: tick,
+					icon: './assets/img/used-car/tick.svg',
 					text: 'Оригинальный ПТС'
 				},
 				{
-					icon: owner,
+					icon: './assets/img/used-car/owner.svg',
 					text: '1 Собственник в ПТС'
 				},
 				{
-					icon: clipboard,
+					icon: './assets/img/used-car/clipboard.svg',
 					text: 'На заводской гарантии'
 				},
 				{
-					icon: brush,
+					icon: './assets/img/used-car/brush.svg',
 					text: 'Полностью заводской окрас'
 				},
 				{
-					icon: key,
+					icon: './assets/img/used-car/key.svg',
 					text: 'Полный комплект ключей'
 				}
 			],
@@ -126,37 +184,37 @@ const UsedCar = () => {
 
 	const mainCards = [
 		{
-			mainImage: first
+			mainImage: './assets/img/used-car/1.jpg'
 		},
 		{
-			mainImage: second
+			mainImage: './assets/img/used-car/2.jpg'
 		},
 		{
-			mainImage: third
+			mainImage: './assets/img/used-car/3.jpg'
 		},
 		{
-			mainImage: fourth
+			mainImage: './assets/img/used-car/4.jpg'
 		},
 		{
-			mainImage: fifth
+			mainImage: './assets/img/used-car/5.jpg'
 		}
 	]
 
 	const smallCards = [
 		{
-			smallImage: first
+			smallImage: './assets/img/used-car/1.jpg'
 		},
 		{
-			smallImage: second
+			smallImage: './assets/img/used-car/2.jpg'
 		},
 		{
-			smallImage: third
+			smallImage: './assets/img/used-car/3.jpg'
 		},
 		{
-			smallImage: fourth
+			smallImage: './assets/img/used-car/4.jpg'
 		},
 		{
-			smallImage: fifth
+			smallImage: './assets/img/used-car/5.jpg'
 		}
 	]
 
@@ -167,22 +225,44 @@ const UsedCar = () => {
 		swiper?.slideNext()
 	}
 
+	const thumbSlideChangeHandler = (swiper) => {
+		if (swiper && swiper.activeIndex !== undefined) {
+			setActiveIndex(swiper.activeIndex); // Обновляем активный индекс при изменении слайда в нижнем слайдере
+			if (swiper && thumbsSwiper) {
+				const mainIndex = smallCards.findIndex(card => card.smallImage === thumbsSwiper.slides[swiper.activeIndex].getAttribute('src'));
+				setActiveIndex(mainIndex); // Устанавливаем активный индекс
+			}
+		}
+	};
+
+
+
+	const [openCollapseIndex, setOpenCollapseIndex] = useState(null);
+
+
+	// Функция для обработки нажатия на Collapse
+	const handleCollapseClick = (index) => {
+		// Если Collapse уже открыт, закрываем его, иначе открываем
+		setOpenCollapseIndex((prevIndex) => (prevIndex === index ? null : index));
+	};
+
+
+
 	return (
 		<div className={cn([cl.usedCar, 'container', 'p-0'])}>
-			{cardInformation.map(({ id, name, price, characteristics, report, comment, address, number, equipment }) => (
+			{cardInformation.map(({ id, name, price, characteristicsName, characteristics, report, comment, address, number, equipment }) => (
 				<div className={cn([cl.usedCarGrid, 'd-grid'])}>
 					<div className={cl.usedCarGridImage}>
 						<Swiper
 							className={cl.swiperTop}
 							modules={[FreeMode, Navigation, Thumbs]}
-							thumbs={{ swiper: thumbsSwiper }}
+							thumbs={{ swiper: thumbsSwiper }} // Устанавливаем нижний слайдер как thumbs для верхнего
 							onSwiper={setSwiper}
-							// navigation={true}
 							spaceBetween={10}
 							loop={true}
 						>
 							{mainCards.map(({ mainImage }) => (
-								<SwiperSlide>
+								<SwiperSlide key={mainImage}>
 									<div className={cl.wrapper}>
 										<img src={mainImage} alt="" />
 									</div>
@@ -194,18 +274,17 @@ const UsedCar = () => {
 						{/* It is also required to set watchSlidesProgress prop */}
 						<Swiper
 							className={cl.swiperBottom}
-							modules={[FreeMode, Navigation, Thumbs]}
-							// modules={[Thumbs]}
 							onSwiper={setThumbsSwiper}
 							spaceBetween={6}
 							slidesPerView={5}
 							freeMode={true}
 							loop={true}
 							watchSlidesProgress={true}
+							onSlideChange={thumbSlideChangeHandler} // Добавляем обработчик изменения слайда
 						>
-							{smallCards.map(({ smallImage }) => (
-								<SwiperSlide>
-									<div className={cl.wrapper}>
+							{smallCards.map(({ smallImage }, index) => (
+								<SwiperSlide key={smallImage}>
+									<div className={`${cl.wrapper} ${index === activeIndex ? cl.activeSlide : ''}`}>
 										<img src={smallImage} alt="" />
 									</div>
 								</SwiperSlide>
@@ -243,34 +322,22 @@ const UsedCar = () => {
 					</div>
 					<div className={cn([cl.cardCharacteristics, 'd-flex', 'flex-column'])}>
 						<h6 className={cl.name}>Основные характеристики</h6>
-						{characteristics.map(({ owners, year, mileage, engine, gearbox, drive, body, color }) => (
-							<div className={cn([cl.columns, 'd-grid'])}>
-								<div className={cn([cl.column1, 'd-flex', 'flex-column'])}>
-									<div className={cl.col1}>Владельцы</div>
-									<div className={cl.col1}>Год выпуска</div>
-									<div className={cl.col1}>Пробег</div>
-									<div className={cl.col1}>Двигатель</div>
-									<div className={cl.col1}>Коробка</div>
-									<div className={cl.col1}>Привод</div>
-									<div className={cl.col1}>Кузов</div>
-									<div className={cl.col1}>Цвет</div>
-								</div>
-								<div className={cn([cl.column2, 'd-flex', 'flex-column'])}>
-									<h6 className={cl.col2}>{owners}</h6>
-									<h6 className={cl.col2}>{year}</h6>
-									<h6 className={cl.col2}>{mileage}</h6>
-									<h6 className={cl.col2}>{engine}</h6>
-									<h6 className={cl.col2}>{gearbox}</h6>
-									<h6 className={cl.col2}>{drive}</h6>
-									<h6 className={cl.col2}>{body}</h6>
-									<h6 className={cl.col2}>{color}</h6>
-								</div>
+						<div className={cn([cl.columns, 'd-grid'])}>
+							<div className={cn([cl.column1, 'd-flex', 'flex-column'])}>
+								{characteristicsName.map(({ id, name}) => (
+									<div className={cl.col1} key={id}>{name}</div>
+								))}
 							</div>
-						))}
+							<div className={cn([cl.column2, 'd-flex', 'flex-column'])}>
+								{characteristics.map(({id, name}) => (
+									<h6 className={cl.col2} key={id}>{name}</h6>
+								))}
+							</div>
+						</div>
 					</div>
 					<div className={cn([cl.cardReport, 'd-flex', 'flex-column'])}>
 						<h6 className={cl.name}>Отчет о проверке</h6>
-						<div className={cn([cl.cards, 'd-flex', 'flex-column'])}>
+						<div className={cn([cl.cards, 'd-flex'])}>
 							{report.map(({ icon, text }) => (
 								<div className={cn([cl.card, 'd-flex', 'align-items-center'])}>
 									<img src={icon} alt="" className={cl.icon} />
@@ -292,13 +359,23 @@ const UsedCar = () => {
 					</div>
 					<div className={cn([cl.cardEquipment, 'd-flex', 'flex-column'])}>
 						<h3 className={cl.name}>Комплектация</h3>
-						<div>
-							{equipment.map(({ title, description }) => (
-								// <div key={id}>
-								// 	<div onClick={() => setEquipmentOpen((prev) => !prev)}>{title}</div>
-								// 	{equipmentOpen && <div>{description}</div>}
-								// </div>
-								<Equipment title={title} description={description} />
+						<div className={cl.collapses}>
+							{equipment.map(({ title, description }, index) => (
+								<Collapse
+									className={cl.collapse}
+									key={index}
+									label={title}
+									isOpen={openCollapseIndex === index} // Устанавливаем isOpen в true, если текущий Collapse должен быть открыт
+									onClick={() => handleCollapseClick(index)} // Передаем индекс Collapse для обработки нажатия
+									iconPosition="right"
+									divider={true}
+									// icon={arrDown}
+									// closeIcon={arrUp}
+									// icon={IconAdd}
+									// closeIcon={IconRemove}
+								>
+									{description}
+								</Collapse>
 							))}
 						</div>
 					</div>

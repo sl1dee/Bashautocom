@@ -49,8 +49,7 @@
       gap: 30px;
 
       .card {
-        width: 306px;
-        height: 120px;
+        min-height: 120px;
         border-radius: 20px;
         background-color: #FAFAFA;
         display: flex;
@@ -72,7 +71,7 @@
   }
 }
 
-@media (min-width: 1401px) and (max-width: 1919px) {
+@media (min-width: 1400px) and (max-width: 1920px) {
   .brands {
     padding: 140px 0 0 0;
 
@@ -117,8 +116,6 @@
         gap: 30px;
 
         .card {
-          width: 307.5px;
-          height: 120px;
           border-radius: 20px;
           background-color: #FAFAFA;
           display: flex;
@@ -133,7 +130,7 @@
   }
 }
 
-@media (min-width: 1000px) and (max-width: 1400px) {
+@media (min-width: 992px) and (max-width: 1400px) {
   .brands {
     padding: 140px 0 70px 0;
 
@@ -179,8 +176,7 @@
         gap: 30px;
 
         .card {
-          width: 300px;
-          height: 120px;
+          min-height: 120px;
           border-radius: 20px;
           background-color: #FAFAFA;
           display: flex;
@@ -241,8 +237,7 @@
         gap: 10px;
 
         .card {
-          width: 173px;
-          height: 80px;
+          min-height: 80px;
           border-radius: 20px;
           background-color: #FAFAFA;
           display: flex;
@@ -306,8 +301,7 @@
         gap: 10px;
 
         .card {
-          width: 92px;
-          height: 43px;
+          min-height: 43px;
           border-radius: 4px;
           background-color: #FAFAFA;
           display: flex;

@@ -8,17 +8,6 @@ import cl from './our-works-detailing.module.scss'
 const OurWorksDetailing = ({ title, ourWorksDetailingList }) => {
 	const [swiper, setSwiper] = useState(null)
 
-	// const ourWorksList = [
-	// 	{
-	// 		id: 0,
-	// 		image: pic1
-	// 	},
-	// 	{
-	// 		id: 1,
-	// 		image: pic2
-	// 	}
-	// ]
-
 	const prevSwipeHandler = () => {
 		swiper?.slidePrev()
 	}

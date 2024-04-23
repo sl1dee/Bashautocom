@@ -1,6 +1,3 @@
-import autoCredit from '@assets/img/used-cars-slider/autoCredit.jpg'
-import autoCreditMobile from '@assets/img/used-cars-slider/autoCreditMobile.jpg'
-import autoCreditTablet from '@assets/img/used-cars-slider/autoCreditTablet.jpg'
 import cn from 'classnames'
 import React, { useState } from 'react'
 import { A11y, Navigation, Pagination, Scrollbar } from 'swiper'
@@ -13,19 +10,19 @@ const UsedCarsSlider = () => {
 
 	const bannerList = [
 		{
-			banner: autoCredit,
-			bannerTablet: autoCreditTablet,
-			bannerMobile: autoCreditMobile
+			banner: './assets/img/used-cars-slider/autoCredit.jpg',
+			bannerTablet: './assets/img/used-cars-slider/autoCreditTablet.jpg',
+			bannerMobile: './assets/img/used-cars-slider/autoCreditMobile.jpg'
 		},
 		{
-			banner: autoCredit,
-			bannerTablet: autoCreditTablet,
-			bannerMobile: autoCreditMobile
+			banner: './assets/img/used-cars-slider/autoCredit.jpg',
+			bannerTablet: './assets/img/used-cars-slider/autoCreditTablet.jpg',
+			bannerMobile: './assets/img/used-cars-slider/autoCreditMobile.jpg'
 		},
 		{
-			banner: autoCredit,
-			bannerTablet: autoCreditTablet,
-			bannerMobile: autoCreditMobile
+			banner: './assets/img/used-cars-slider/autoCredit.jpg',
+			bannerTablet: './assets/img/used-cars-slider/autoCreditTablet.jpg',
+			bannerMobile: './assets/img/used-cars-slider/autoCreditMobile.jpg'
 		}
 	]
 

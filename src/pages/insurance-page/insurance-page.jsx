@@ -1,32 +1,6 @@
-import insuranceDesktop from '@assets/img/banner/insurance/insuranceDesktop.jpg'
-import insuranceMobile from '@assets/img/banner/insurance/insuranceMobile.jpg'
-import insuranceTablet from '@assets/img/banner/insurance/insuranceTablet.jpg'
-import insurance from '@assets/img/fast-sign-up/insurance.jpg'
-import alfa from '@assets/img/insurance/alfa.png'
-import check from '@assets/img/insurance/check.svg'
-import energogarant from '@assets/img/insurance/energogarant.png'
-import ingosstrah from '@assets/img/insurance/ingosstrah.png'
-import kasko from '@assets/img/insurance/kasko.png'
-import max from '@assets/img/insurance/max.png'
-import megaruss from '@assets/img/insurance/megaruss.png'
-import osago from '@assets/img/insurance/osago.png'
-import peco from '@assets/img/insurance/peco.png'
-import prolongation from '@assets/img/insurance/prolongation.png'
-import rosgosstrah from '@assets/img/insurance/rosgosstrah.png'
-import sber from '@assets/img/insurance/sber.png'
-import service from '@assets/img/insurance/service.svg'
-import shield from '@assets/img/insurance/shield.svg'
-import sogaz from '@assets/img/insurance/sogaz.png'
-import soglasie from '@assets/img/insurance/soglasie.png'
-import time from '@assets/img/insurance/time.svg'
-import ugory from '@assets/img/insurance/ugory.png'
-import vsk from '@assets/img/insurance/vsk.png'
-
 import Banks from '@components/banks/banks.jsx'
 import Banner from '@components/banner/banner.jsx'
 import BenefitsOfInsurance from '@components/benefits-of-insurance/benefits-of-insurance.jsx'
-import InOurShowrooms from '@components/in-our-showrooms/in-our-showrooms.jsx'
-import Credit from '@components/sign-ups/credit/credit.jsx'
 import Insurance from '@components/sign-ups/insurance/insurance.jsx'
 import TypesOfInsurance from '@components/types-of-insurance/types-of-insurance.jsx'
 
@@ -38,9 +12,9 @@ const InsurancePage = () => {
 			alias: 'Banner',
 			value: [
 				{
-					bannerDesktop: insuranceDesktop,
-					bannerTablet: insuranceTablet,
-					bannerMobile: insuranceMobile
+					bannerDesktop: './assets/img/banner/insurance/insuranceDesktop.jpg',
+					bannerTablet: './assets/img/banner/insurance/insuranceTablet.jpg',
+					bannerMobile: './assets/img/banner/insurance/insuranceMobile.jpg'
 				}
 			]
 		},
@@ -49,25 +23,25 @@ const InsurancePage = () => {
 			value: [
 				{
 					id: 0,
-					icon: check,
+					icon: './assets/img/insurance/check.svg',
 					title: 'Большой выбор страховых компаний',
 					text: 'Более 10 самых крупных и надежных страховых компаний'
 				},
 				{
 					id: 1,
-					icon: service,
+					icon: './assets/img/insurance/service.svg',
 					title: 'Предложения сразу нескольких страховых ',
 					text: 'С расчетом стоимости страхового полиса'
 				},
 				{
 					id: 2,
-					icon: time,
+					icon: './assets/img/insurance/time.svg',
 					title: 'Оформляем полис прямо в дилерском центре',
 					text: 'В это время ваш автомобиль может пройти очередное ТО'
 				},
 				{
 					id: 3,
-					icon: shield,
+					icon: './assets/img/insurance/shield.svg',
 					title: 'Нет дополнительных комиссий',
 					text: 'Наша услуга бесплатна и мы работаем по тарифам СК'
 				}
@@ -78,7 +52,7 @@ const InsurancePage = () => {
 			value: [
 				{
 					id: 0,
-					image: kasko,
+					image: './assets/img/insurance/kasko.png',
 					title: 'Автострахование КАСКО',
 					description:
 						'Добровольное страхование каско обеспечит финансовую защиту в случае угона, ущерба и полной гибели вашего автомобиля.',
@@ -87,7 +61,7 @@ const InsurancePage = () => {
 				},
 				{
 					id: 1,
-					image: osago,
+					image: './assets/img/insurance/osago.png',
 					title: 'Автострахование ОСАГО',
 					description:
 						'Обязательное страхование автогражданской ответственности. Покрывает ущерб имуществу, здоровью и жизни пострадавшей стороне в ДТП.',
@@ -96,7 +70,7 @@ const InsurancePage = () => {
 				},
 				{
 					id: 2,
-					image: prolongation,
+					image: './assets/img/insurance/prolongation.png',
 					title: 'Пролонгация',
 					description: 'Повторное заключение договора страхования на новый период страхования',
 					button: 'Оставить заявку на пролонгацию',
@@ -110,51 +84,51 @@ const InsurancePage = () => {
 			value: [
 				{
 					id: 0,
-					image: alfa
+					image: './assets/img/insurance/alfa.png'
 				},
 				{
 					id: 1,
-					image: sber
+					image: './assets/img/insurance/sber.png'
 				},
 				{
 					id: 2,
-					image: sogaz
+					image: './assets/img/insurance/sogaz.png'
 				},
 				{
 					id: 3,
-					image: rosgosstrah
+					image: './assets/img/insurance/rosgosstrah.png'
 				},
 				{
 					id: 4,
-					image: ugory
+					image: './assets/img/insurance/ugory.png'
 				},
 				{
 					id: 5,
-					image: energogarant
+					image: './assets/img/insurance/energogarant.png'
 				},
 				{
 					id: 6,
-					image: soglasie
+					image: './assets/img/insurance/soglasie.png'
 				},
 				{
 					id: 7,
-					image: peco
+					image: './assets/img/insurance/peco.png'
 				},
 				{
 					id: 8,
-					image: megaruss
+					image: './assets/img/insurance/megaruss.png'
 				},
 				{
 					id: 9,
-					image: max
+					image: './assets/img/insurance/max.png'
 				},
 				{
 					id: 10,
-					image: ingosstrah
+					image: './assets/img/insurance/ingosstrah.png'
 				},
 				{
 					id: 11,
-					image: vsk
+					image: './assets/img/insurance/vsk.png'
 				}
 			]
 		},
@@ -167,7 +141,7 @@ const InsurancePage = () => {
 					btn: 'Записаться',
 					policyText: 'Нажимая на кнопку, вы соглашаетесь с ',
 					policyLink: 'Политикой конфиденциальности',
-					image: insurance,
+					image: './assets/img/fast-sign-up/insurance.jpg',
 					titleMobile: 'Оставьте заявку на страхование'
 				}
 			],
@@ -197,7 +171,7 @@ const InsurancePage = () => {
 	]
 
 	return (
-		<MainLayout>
+		<>
 			{blocks.map((block) => {
 				switch (block.alias) {
 					case 'Banner':
@@ -212,7 +186,7 @@ const InsurancePage = () => {
 						return <Insurance insuranceList={block.value} comboboxValues={block.brands} />
 				}
 			})}
-		</MainLayout>
+		</>
 	)
 }
 

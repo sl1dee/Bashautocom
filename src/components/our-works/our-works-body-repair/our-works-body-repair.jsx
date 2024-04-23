@@ -10,17 +10,6 @@ import cl from './our-works-body-repair.module.scss'
 const OurWorksBodyRepair = ({ title, ourWorksList }) => {
 	const [swiper, setSwiper] = useState(null)
 
-	// const ourWorksList = [
-	// 	{
-	// 		id: 0,
-	// 		image: pic1
-	// 	},
-	// 	{
-	// 		id: 1,
-	// 		image: pic2
-	// 	}
-	// ]
-
 	const prevSwipeHandler = () => {
 		swiper?.slidePrev()
 	}

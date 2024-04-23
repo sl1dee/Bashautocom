@@ -9,32 +9,6 @@ import Button from '@ui/button/index.js'
 import cl from './benefits-of-insurance.module.scss'
 
 const BenefitsOfInsurance = ({ benefitsList }) => {
-	// const benefitsList = [
-	// 	{
-	// 		id: 0,
-	// 		icon: check,
-	// 		title: 'Большой выбор страховых компаний',
-	// 		text: 'Более 10 самых крупных и надежных страховых компаний'
-	// 	},
-	// 	{
-	// 		id: 1,
-	// 		icon: service,
-	// 		title: 'Предложения сразу нескольких страховых ',
-	// 		text: 'С расчетом стоимости страхового полиса'
-	// 	},
-	// 	{
-	// 		id: 2,
-	// 		icon: time,
-	// 		title: 'Оформляем полис прямо в дилерском центре',
-	// 		text: 'В это время ваш автомобиль может пройти очередное ТО'
-	// 	},
-	// 	{
-	// 		id: 3,
-	// 		icon: shield,
-	// 		title: 'В это время ваш автомобиль может пройти очередное ТО',
-	// 		text: 'Наша услуга бесплатна и мы работаем по тарифам СК'
-	// 	}
-	// ]
 
 	return (
 		<div className={cl.benefits}>

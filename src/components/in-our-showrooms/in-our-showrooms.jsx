@@ -4,23 +4,6 @@ import React from 'react'
 import cl from './in-our-showrooms.module.scss'
 
 const InOurShowrooms = ({ title, cardList, description }) => {
-	// const cardList = [
-	// 	{
-	// 		id: 0,
-	// 		number: '1',
-	// 		text: 'Вас проконсультируют по поводу автокредитования'
-	// 	},
-	// 	{
-	// 		id: 1,
-	// 		number: '2',
-	// 		text: 'Получите условия предоставления кредитов от разных банков'
-	// 	},
-	// 	{
-	// 		id: 2,
-	// 		number: '3',
-	// 		text: 'Получите условия предоставления кредитов от разных банков'
-	// 	}
-	// ]
 
 	return (
 		<div className={cl.showroom}>

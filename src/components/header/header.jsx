@@ -1,28 +1,14 @@
 import close from '@assets/img/header/close.svg'
 import cn from 'classnames'
-import React, { useEffect, useMemo, useState } from 'react'
+import React, {useEffect, useMemo, useRef, useState} from 'react'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-import Sidebar from '@components/header/sidebar/sidebar.jsx'
-
-import calendar from '../../../assets/img/about/calendar.svg'
-import career from '../../../assets/img/about/career.svg'
-import information from '../../../assets/img/about/i.svg'
-import loyaltyProgram from '../../../assets/img/about/loyaltyProgram.svg'
-import news from '../../../assets/img/about/news.svg'
 import burger from '../../../assets/img/header/burger.svg'
 import burgerMobile from '../../../assets/img/header/burger_mobile.svg'
 import logo from '../../../assets/img/header/new_logo.svg'
 import logoMobile from '../../../assets/img/header/new_logo_mobile.svg'
 import user from '../../../assets/img/header/user.svg'
-import bodyRepair from '../../../assets/img/our-services/bodyRepair.svg'
-import carsRent from '../../../assets/img/our-services/carsRent.svg'
-import detailing from '../../../assets/img/our-services/detailing.svg'
-import insurance from '../../../assets/img/our-services/insurance.svg'
-import lending from '../../../assets/img/our-services/lending.svg'
-import serviceCenter from '../../../assets/img/our-services/serviceСenter.svg'
-import tradeIn from '../../../assets/img/our-services/tradeIn.svg'
 import { setBurgerIsOpen } from '../../store/modules/modals.js'
 import Button from '../../ui/button/index.js'
 import cl from './header.module.scss'
@@ -55,49 +41,49 @@ const Header = () => {
 			href: '/',
 			title: 'Выкуп и Trade-In',
 			text: 'Выкупим или обменяем ваш автомобиль на новый',
-			icon: tradeIn
+			icon: './assets/img/our-services/tradeIn.svg'
 		},
 		{
 			id: 2,
 			href: '/service-center',
 			title: 'Сервисный центр',
 			text: 'Технический осмотр, диагностика и др.',
-			icon: serviceCenter
+			icon: './assets/img/our-services/serviceCenter.svg'
 		},
 		{
 			id: 3,
 			href: '/body-repair',
 			title: 'Кузовной ремонт',
 			text: 'Ремонт деталей кузова, покраска, полировка и др.',
-			icon: bodyRepair
+			icon: './assets/img/our-services/bodyRepair.svg'
 		},
 		{
 			id: 4,
 			href: '/detailing',
 			title: 'Детейлинг',
 			text: 'Полировка кузова, пленка, химчистка и др.',
-			icon: detailing
+			icon: './assets/img/our-services/detailing.svg'
 		},
 		{
 			id: 5,
 			href: '/credit',
 			title: 'Кредитование',
 			text: 'Выгодные условия от 0,1%',
-			icon: lending
+			icon: './assets/img/our-services/lending.svg'
 		},
 		{
 			id: 6,
 			href: '/insurance',
 			title: 'Страхование',
 			text: 'ОСАГО, КАСКО и др.',
-			icon: insurance
+			icon: './assets/img/our-services/insurance.svg'
 		},
 		{
 			id: 7,
 			href: '/',
 			title: 'Аренда автомобилей',
 			text: 'Автомобиль для любых целей',
-			icon: carsRent
+			icon: './assets/img/our-services/carsRent.svg'
 		}
 	]
 
@@ -107,35 +93,35 @@ const Header = () => {
 			href: '/',
 			title: 'О компании',
 			text: 'Лидер авторынка в Башкирии',
-			icon: information
+			icon: './assets/img/about/i.svg'
 		},
 		{
 			id: 2,
 			href: '/',
 			title: 'Карьера',
 			text: 'Работа и карьера в компании мечты',
-			icon: career
+			icon: './assets/img/about/career.svg'
 		},
 		{
 			id: 3,
 			href: '/',
 			title: 'Новости',
 			text: 'Будьте в курсе событий Башавтоком',
-			icon: news
+			icon: './assets/img/about/news.svg'
 		},
 		{
 			id: 4,
 			href: '/',
 			title: 'История компании',
 			text: 'Рассказываем про наш путь с 1992 года',
-			icon: calendar
+			icon: './assets/img/about/calendar.svg'
 		},
 		{
 			id: 5,
 			href: '/',
 			title: 'Программа лояльности',
 			text: 'Позволь себе больше',
-			icon: loyaltyProgram
+			icon: './assets/img/about/loyaltyProgram.svg'
 		}
 	]
 
@@ -165,43 +151,43 @@ const Header = () => {
 					{
 						id: 0,
 						href: '/',
-						icon: tradeIn,
+						icon: './assets/img/our-services/tradeIn.svg',
 						text: 'Выкуп и Trade-In'
 					},
 					{
 						id: 1,
 						href: '/service-center',
-						icon: serviceCenter,
+						icon: './assets/img/our-services/serviceCenter.svg',
 						text: 'Сервисный центр'
 					},
 					{
 						id: 2,
 						href: '/body-repair',
-						icon: bodyRepair,
+						icon: './assets/img/our-services/bodyRepair.svg',
 						text: 'Кузовной ремонт'
 					},
 					{
 						id: 3,
 						href: '/detailing',
-						icon: detailing,
+						icon: './assets/img/our-services/detailing.svg',
 						text: 'Детейлинг'
 					},
 					{
 						id: 4,
 						href: '/credit',
-						icon: lending,
+						icon: './assets/img/our-services/lending.svg',
 						text: 'Кредитование'
 					},
 					{
 						id: 5,
 						href: '/insurance',
-						icon: insurance,
+						icon: './assets/img/our-services/insurance.svg',
 						text: 'Страхование'
 					},
 					{
 						id: 6,
 						href: '/',
-						icon: carsRent,
+						icon: './assets/img/our-services/carsRent.svg',
 						text: 'Аренда автомобилей'
 					}
 				]
@@ -215,31 +201,31 @@ const Header = () => {
 					{
 						id: 0,
 						href: '/',
-						icon: information,
+						icon: './assets/img/about/i.svg',
 						text: 'О компании'
 					},
 					{
 						id: 1,
 						href: '/',
-						icon: career,
+						icon: './assets/img/about/career.svg',
 						text: 'Карьера'
 					},
 					{
 						id: 2,
 						href: '/',
-						icon: news,
+						icon: './assets/img/about/news.svg',
 						text: 'Новости'
 					},
 					{
 						id: 3,
 						href: '/',
-						icon: calendar,
+						icon: './assets/img/about/calendar.svg',
 						text: 'История компании'
 					},
 					{
 						id: 4,
 						href: '/',
-						icon: loyaltyProgram,
+						icon: './assets/img/about/loyaltyProgram.svg',
 						text: 'Программа лояльности'
 					}
 				]
@@ -254,6 +240,34 @@ const Header = () => {
 	)
 
 	const [isOpen, setIsOpen] = useState(false)
+
+	const [isHover, setIsHover] = useState(false);
+	const timeoutRef = useRef(null);
+
+	const [isHover2, setIsHover2] = useState(false);
+	const timeoutRef2 = useRef(null);
+
+	const handleMenuOpen = () => {
+		clearTimeout(timeoutRef.current);
+		setIsHover(true);
+	};
+
+	const handleMenuClose = () => {
+		timeoutRef.current = setTimeout(() => {
+			setIsHover(false);
+		}, 300);
+	};
+
+	const handleMenuOpen2 = () => {
+		clearTimeout(timeoutRef2.current);
+		setIsHover2(true);
+	};
+
+	const handleMenuClose2 = () => {
+		timeoutRef2.current = setTimeout(() => {
+			setIsHover2(false);
+		}, 300);
+	};
 
 	return (
 		<>
@@ -322,15 +336,18 @@ const Header = () => {
 										{/*<Link to="/" onClick={() => setIsOpenServices(!isOpenServices)}>*/}
 										{/*	<span>Услуги</span>*/}
 										{/*</Link>*/}
-										<div className={cl.droplink}>
+										<div className={cl.droplink} onMouseEnter={handleMenuOpen}
+											 onMouseLeave={handleMenuClose}>
 											<span>Услуги</span>
 										</div>
 										{/*<div className={isOpenServices ? cn([cl.dropdown, cl.dropdownOpen]) : cl.dropdown}>*/}
-										<div className={cl.dropdown}>
+										<div className={`${cl.dropdown} ${isHover ? cl.open : ''}`} onMouseEnter={handleMenuOpen} onMouseLeave={handleMenuClose}>
+											{/*<div className={cl.dropdown} onMouseEnter={handleMenuOpen} onMouseLeave={handleMenuClose}>*/}
+											<div className={cl.bckg}></div>
 											<div className={cn([cl.cards, 'container'])}>
 												{servicesList.map(({ id, href, title, text, icon }) => (
-													<Link to={href}>
-														<div className={cn([cl.cardWrapper, 'd-flex'])} key={id}>
+													<Link to={href} key={id}>
+														<div className={cn([cl.cardWrapper, 'd-flex'])}>
 															<div className={cn([cl.card, 'd-flex', 'flex-column'])}>
 																<div className={cn([cl.cardDescription, 'd-flex', 'flex-column'])}>
 																	<div className={cl.cardDescriptionTitle}>{title}</div>
@@ -348,16 +365,17 @@ const Header = () => {
 										{/*<Link to="/" onClick={() => setIsOpenAbout(!isOpenAbout)}>*/}
 										{/*	<span>О компании</span>*/}
 										{/*</Link>*/}
-										<div className={cl.droplink}>
+										<div className={cl.droplink} onMouseEnter={handleMenuOpen2} onMouseLeave={handleMenuClose2}>
 											<span>О компании</span>
 										</div>
 										{/*<div className={isOpenAbout ? cn([cl.dropdown, cl.dropdownOpen]) : cl.dropdown}>*/}
 										{/*<div className={cl.bckg}></div>*/}
-										<div className={cl.dropdown}>
+										<div className={`${cl.dropdown} ${isHover2 ? cl.open : ''}`} onMouseEnter={handleMenuOpen2} onMouseLeave={handleMenuClose2}>
+											<div className={cl.bckg}></div>
 											<div className={cn([cl.cards, 'container'])}>
 												{aboutList.map(({ id, href, title, text, icon }) => (
-													<Link to={href}>
-														<div className={cn([cl.cardWrapper, 'd-flex'])} key={id}>
+													<Link to={href} key={id}>
+														<div className={cn([cl.cardWrapper, 'd-flex'])}>
 															<div className={cn([cl.card, 'd-flex', 'flex-column'])}>
 																<div className={cn([cl.cardDescription, 'd-flex', 'flex-column'])}>
 																	<div className={cl.cardDescriptionTitle}>{title}</div>

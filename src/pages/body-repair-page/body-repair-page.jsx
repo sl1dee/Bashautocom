@@ -1,42 +1,10 @@
-import changan from '@assets/img/brands/changan.svg'
-import datsun from '@assets/img/brands/datsun.svg'
-import exeed from '@assets/img/brands/exeed.svg'
-import haval from '@assets/img/brands/haval.svg'
-import honda from '@assets/img/brands/honda.svg'
-import infinity from '@assets/img/brands/infinity.svg'
-import jaecoo from '@assets/img/brands/jaecoo.svg'
-import lada from '@assets/img/brands/lada.svg'
-import moskvich from '@assets/img/brands/moskvich.svg'
-import nissan from '@assets/img/brands/nissan.svg'
-import omoda from '@assets/img/brands/omoda.svg'
-import skoda from '@assets/img/brands/skoda.svg'
-import suzuki from '@assets/img/brands/suzuki.svg'
-import volkswagen from '@assets/img/brands/volkswagen.svg'
-import havalBckg from '@assets/img/dealer-and-service-centers/haval.jpg'
-import moskvichBckg from '@assets/img/dealer-and-service-centers/moskvich.jpg'
-import omodaBckg from '@assets/img/dealer-and-service-centers/omoda.jpg'
-import polisher from '@assets/img/fast-sign-up/polisher.jpg'
-import phones from '@assets/img/loyalty-program/phones.png'
-import pic1 from '@assets/img/our-works/body-repair/pic1.jpg'
-import pic2 from '@assets/img/our-works/body-repair/pic2.jpg'
-import bodyRepairDesktop from '@assets/img/service-slider/bodyRepairDesktop.jpg'
-import bodyRepairMobile from '@assets/img/service-slider/bodyRepairMobile.jpg'
-import bodyRepairTablet from '@assets/img/service-slider/bodyRepairTablet.jpg'
-import bodyDetails from '@assets/img/types-of-jobs/bodyDetails.png'
-import dentRepair from '@assets/img/types-of-jobs/dentRepair.png'
-import geometry from '@assets/img/types-of-jobs/geometry.png'
-import painting from '@assets/img/types-of-jobs/painting.png'
-import plasticDetails from '@assets/img/types-of-jobs/plasticDetails.png'
-import polishing from '@assets/img/types-of-jobs/polishing.png'
 import React from 'react'
 
-import Breadcrumbs from '@helpers/Breadcrumbs.jsx'
-
-import Brands from '@components/brands/index.js'
-import DealerAndServiceCenters from '@components/dealer-and-service-centers/index.js'
+import Brands from '@components/brands/brands.jsx'
+import DealerAndServiceCenters from '@components/dealer-and-service-centers/dealer-and-service-centers.jsx'
 import LoyaltyProgram from '@components/loyalty-program/loyalty-program.jsx'
 import OurWorksBodyRepair from '@components/our-works/our-works-body-repair/our-works-body-repair.jsx'
-import ServiceSlider from '@components/service-slider/index.js'
+import ServiceSlider from '@components/service-slider/service-slider.jsx'
 import BodyRepair from '@components/sign-ups/body-repair/body-repair.jsx'
 import TypesOfJobsBodyRepair from '@components/types-of-jobs-body-repair/types-of-jobs-body-repair.jsx'
 
@@ -48,19 +16,19 @@ const BodyRepairPage = () => {
 			alias: 'BodyRepairSlider',
 			value: [
 				{
-					bannerDesktop: bodyRepairDesktop,
-					bannerTablet: bodyRepairTablet,
-					bannerMobile: bodyRepairMobile
+					bannerDesktop: './assets/img/service-slider/bodyRepairDesktop.jpg',
+					bannerTablet: './assets/img/service-slider/bodyRepairTablet.jpg',
+					bannerMobile: './assets/img/service-slider/bodyRepairMobile.jpg'
 				},
 				{
-					bannerDesktop: bodyRepairDesktop,
-					bannerTablet: bodyRepairTablet,
-					bannerMobile: bodyRepairMobile
+					bannerDesktop: './assets/img/service-slider/bodyRepairDesktop.jpg',
+					bannerTablet: './assets/img/service-slider/bodyRepairTablet.jpg',
+					bannerMobile: './assets/img/service-slider/bodyRepairMobile.jpg'
 				},
 				{
-					bannerDesktop: bodyRepairDesktop,
-					bannerTablet: bodyRepairTablet,
-					bannerMobile: bodyRepairMobile
+					bannerDesktop: './assets/img/service-slider/bodyRepairDesktop.jpg',
+					bannerTablet: './assets/img/service-slider/bodyRepairTablet.jpg',
+					bannerMobile: './assets/img/service-slider/bodyRepairMobile.jpg'
 				}
 			]
 		},
@@ -70,32 +38,32 @@ const BodyRepairPage = () => {
 			value: [
 				{
 					id: 1,
-					image: bodyDetails,
+					image: './assets/img/types-of-jobs/bodyDetails.png',
 					title: 'Ремонт деталей корпуса'
 				},
 				{
 					id: 2,
-					image: geometry,
+					image: './assets/img/types-of-jobs/geometry.png',
 					title: 'Восстановление геометрии кузова'
 				},
 				{
 					id: 3,
-					image: painting,
+					image: './assets/img/types-of-jobs/painting.png',
 					title: 'Покраска автомобиля'
 				},
 				{
 					id: 4,
-					image: dentRepair,
+					image: './assets/img/types-of-jobs/dentRepair.png',
 					title: 'Ремонт вмятин без покраски'
 				},
 				{
 					id: 5,
-					image: polishing,
+					image: './assets/img/types-of-jobs/polishing.png',
 					title: 'Полировка кузова'
 				},
 				{
 					id: 6,
-					image: plasticDetails,
+					image: './assets/img/types-of-jobs/plasticDetails.png',
 					title: 'Ремонт пластиковых деталей'
 				}
 			]
@@ -106,27 +74,27 @@ const BodyRepairPage = () => {
 			value: [
 				{
 					id: 0,
-					image: pic1
+					image: './assets/img/our-works/body-repair/pic1.jpg'
 				},
 				{
 					id: 1,
-					image: pic2
+					image: './assets/img/our-works/body-repair/pic2.jpg'
 				},
 				{
 					id: 0,
-					image: pic1
+					image: './assets/img/our-works/body-repair/pic1.jpg'
 				},
 				{
 					id: 1,
-					image: pic2
+					image: './assets/img/our-works/body-repair/pic2.jpg'
 				},
 				{
 					id: 0,
-					image: pic1
+					image: './assets/img/our-works/body-repair/pic1.jpg'
 				},
 				{
 					id: 1,
-					image: pic2
+					image: './assets/img/our-works/body-repair/pic2.jpg'
 				}
 			]
 		},
@@ -138,72 +106,72 @@ const BodyRepairPage = () => {
 				{
 					id: 1,
 					href: '/service-center',
-					imgPath: haval
+					imgPath: './assets/img/brands/haval.svg'
 				},
 				{
 					id: 2,
 					href: '/service-center',
-					imgPath: changan
+					imgPath: './assets/img/brands/changan.svg'
 				},
 				{
 					id: 3,
 					href: '/service-center',
-					imgPath: omoda
+					imgPath: './assets/img/brands/omoda.svg'
 				},
 				{
 					id: 4,
 					href: '/service-center',
-					imgPath: jaecoo
+					imgPath: './assets/img/brands/jaecoo.svg'
 				},
 				{
 					id: 5,
 					href: '/service-center',
-					imgPath: exeed
+					imgPath: './assets/img/brands/exeed.svg'
 				},
 				{
 					id: 6,
 					href: '/service-center',
-					imgPath: moskvich
+					imgPath: './assets/img/brands/moskvich.svg'
 				},
 				{
 					id: 7,
 					href: '/service-center',
-					imgPath: lada
+					imgPath: './assets/img/brands/lada.svg'
 				},
 				{
 					id: 8,
 					href: '/service-center',
-					imgPath: volkswagen
+					imgPath: './assets/img/brands/volkswagen.svg'
 				},
 				{
 					id: 9,
 					href: '/service-center',
-					imgPath: nissan
+					imgPath: './assets/img/brands/nissan.svg'
 				},
 				{
 					id: 10,
 					href: '/service-center',
-					imgPath: honda
+					imgPath: './assets/img/brands/honda.svg'
 				},
 				{
 					id: 11,
 					href: '/service-center',
-					imgPath: skoda
+					imgPath: './assets/img/brands/skoda.svg'
 				},
 				{
 					id: 12,
 					href: '/service-center',
-					imgPath: infinity
+					imgPath: './assets/img/brands/infinity.svg'
 				},
 				{
 					id: 13,
 					href: '/service-center',
-					imgPath: datsun
+					imgPath: './assets/img/brands/datsun.svg'
 				},
 				{
 					id: 14,
 					href: '/service-center',
-					imgPath: suzuki
+					imgPath: './assets/img/brands/suzuki.svg'
 				}
 			]
 		},
@@ -218,7 +186,7 @@ const BodyRepairPage = () => {
 					li3: 'Записываться в сервисный центр',
 					btnText: 'Стать участником бонусной программы',
 					smallBtnText: 'Стать участником программы',
-					image: phones
+					image: './assets/img/loyalty-program/phones.png'
 				}
 			]
 		},
@@ -231,7 +199,7 @@ const BodyRepairPage = () => {
 					btn: 'Записаться',
 					policyText: 'Нажимая на кнопку, вы соглашаетесь с ',
 					policyLink: 'Политикой конфиденциальности',
-					image: polisher,
+					image: './assets/img/fast-sign-up/polisher.jpg',
 					titleMobile: 'Запись в сервисный центр'
 				}
 			],
@@ -263,7 +231,7 @@ const BodyRepairPage = () => {
 			title: 'Сервисные центры',
 			value: [
 				{
-					bckgImg: havalBckg,
+					bckgImg: './assets/img/dealer-and-service-centers/haval.jpg',
 					street: 'Уфа, ул. Проспект Салавата Юлаева, 89',
 					number: '+7 (347) 246-65-47',
 					saleCount: '3',
@@ -272,7 +240,7 @@ const BodyRepairPage = () => {
 					serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
 				},
 				{
-					bckgImg: moskvichBckg,
+					bckgImg: './assets/img/dealer-and-service-centers/moskvich.jpg',
 					street: 'Уфа, ул. Рубежная, 168',
 					number: '+7 (347) 246-65-47',
 					saleCount: '2',
@@ -281,7 +249,7 @@ const BodyRepairPage = () => {
 					serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
 				},
 				{
-					bckgImg: omodaBckg,
+					bckgImg: './assets/img/dealer-and-service-centers/omoda.jpg',
 					street: 'Уфа, ул. Адмирала Макарова, 32',
 					number: '+7 (347) 246-65-47',
 					saleCount: '2',
@@ -290,7 +258,7 @@ const BodyRepairPage = () => {
 					serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
 				},
 				{
-					bckgImg: havalBckg,
+					bckgImg: './assets/img/dealer-and-service-centers/haval.jpg',
 					street: 'Уфа, ул. Проспект Салавата Юлаева, 89',
 					number: '+7 (347) 246-65-47',
 					saleCount: '3',
@@ -299,7 +267,7 @@ const BodyRepairPage = () => {
 					serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
 				},
 				{
-					bckgImg: moskvichBckg,
+					bckgImg: './assets/img/dealer-and-service-centers/moskvich.jpg',
 					street: 'Уфа, ул. Рубежная, 168',
 					number: '+7 (347) 246-65-47',
 					saleCount: '2',
@@ -308,7 +276,7 @@ const BodyRepairPage = () => {
 					serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
 				},
 				{
-					bckgImg: omodaBckg,
+					bckgImg: './assets/img/dealer-and-service-centers/omoda.jpg',
 					street: 'Уфа, ул. Адмирала Макарова, 32',
 					number: '+7 (347) 246-65-47',
 					saleCount: '2',
@@ -344,7 +312,7 @@ const BodyRepairPage = () => {
 	]
 
 	return (
-		<MainLayout>
+		<>
 			{/* <BreadcrumbsTop /> */}
 			{/* <Breadcrumbs url={window.location.pathname.slice(1)} type="breadcrumbs/page/" /> */}
 			{blocks.map((block) => {
@@ -372,7 +340,7 @@ const BodyRepairPage = () => {
 						)
 				}
 			})}
-		</MainLayout>
+		</>
 	)
 }
 

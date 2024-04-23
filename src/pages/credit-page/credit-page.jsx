@@ -1,21 +1,3 @@
-import alfa from '@assets/img/banks/alfa.png'
-import autofinance from '@assets/img/banks/autofinance.png'
-import driveclick from '@assets/img/banks/driveclick.png'
-import ekspobank from '@assets/img/banks/ekspobank.png'
-import evropabank from '@assets/img/banks/evropabank.png'
-import fastbank from '@assets/img/banks/fastbank.png'
-import lokobank from '@assets/img/banks/lokobank.png'
-import otkrytie from '@assets/img/banks/otkrytie.png'
-import otpbank from '@assets/img/banks/otpbank.png'
-import rosbank from '@assets/img/banks/rosbank.png'
-import sovkombank from '@assets/img/banks/sovkombank.png'
-import tinkoff from '@assets/img/banks/tinkoff.png'
-import uralsib from '@assets/img/banks/uralsib.png'
-import vtb from '@assets/img/banks/vtb.png'
-import creditDesktop from '@assets/img/banner/credit/creditDesktop.jpg'
-import creditMobile from '@assets/img/banner/credit/creditMobile.jpg'
-import creditTablet from '@assets/img/banner/credit/creditTablet.jpg'
-import credit from '@assets/img/fast-sign-up/credit.jpg'
 import React from 'react'
 
 import Banks from '@components/banks/banks.jsx'
@@ -31,9 +13,9 @@ const CreditPage = () => {
 			alias: 'Banner',
 			value: [
 				{
-					bannerDesktop: creditDesktop,
-					bannerTablet: creditTablet,
-					bannerMobile: creditMobile
+					bannerDesktop: './assets/img/banner/credit/creditDesktop.jpg',
+					bannerTablet: './assets/img/banner/credit/creditMobile.jpg',
+					bannerMobile: './assets/img/banner/credit/creditMobile.jpg'
 				}
 			]
 		},
@@ -65,59 +47,59 @@ const CreditPage = () => {
 			value: [
 				{
 					id: 0,
-					image: tinkoff
+					image: './assets/img/banks/tinkoff.png'
 				},
 				{
 					id: 1,
-					image: alfa
+					image: './assets/img/banks/alfa.png'
 				},
 				{
 					id: 2,
-					image: vtb
+					image: './assets/img/banks/vtb.png'
 				},
 				{
 					id: 3,
-					image: rosbank
+					image: './assets/img/banks/rosbank.png'
 				},
 				{
 					id: 4,
-					image: uralsib
+					image: './assets/img/banks/uralsib.png'
 				},
 				{
 					id: 5,
-					image: sovkombank
+					image: './assets/img/banks/sovkombank.png'
 				},
 				{
 					id: 6,
-					image: otkrytie
+					image: './assets/img/banks/otkrytie.png'
 				},
 				{
 					id: 7,
-					image: evropabank
+					image: './assets/img/banks/evropabank.png'
 				},
 				{
 					id: 8,
-					image: otpbank
+					image: './assets/img/banks/otpbank.png'
 				},
 				{
 					id: 9,
-					image: autofinance
+					image: './assets/img/banks/autofinance.png'
 				},
 				{
 					id: 10,
-					image: fastbank
+					image: './assets/img/banks/fastbank.png'
 				},
 				{
 					id: 11,
-					image: driveclick
+					image: './assets/img/banks/driveclick.png'
 				},
 				{
 					id: 12,
-					image: lokobank
+					image: './assets/img/banks/lokobank.png'
 				},
 				{
 					id: 13,
-					image: ekspobank
+					image: './assets/img/banks/ekspobank.png'
 				}
 			]
 		},
@@ -130,7 +112,7 @@ const CreditPage = () => {
 					btn: 'Записаться',
 					policyText: 'Нажимая на кнопку, вы соглашаетесь с ',
 					policyLink: 'Политикой конфиденциальности',
-					image: credit,
+					image: './assets/img/fast-sign-up/credit.jpg',
 					titleMobile: 'Оставить заявку на кредитование'
 				}
 			],
@@ -160,7 +142,7 @@ const CreditPage = () => {
 	]
 
 	return (
-		<MainLayout>
+		<>
 			{blocks.map((block) => {
 				switch (block.alias) {
 					case 'Banner':
@@ -173,7 +155,7 @@ const CreditPage = () => {
 						return <Credit creditList={block.value} comboboxValues={block.brands} />
 				}
 			})}
-		</MainLayout>
+		</>
 	)
 }
 

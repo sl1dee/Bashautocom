@@ -10,24 +10,6 @@ import cl from './service-slider.module.scss'
 const ServiceSlider = ({ bannerList }) => {
 	const [swiper, setSwiper] = useState(null)
 
-	// const bannerList = [
-	// 	{
-	// 		banner: dueDiligence,
-	// 		bannerTablet: dueDiligenceTablet,
-	// 		bannerMobile: dueDiligenceMobile
-	// 	},
-	// 	{
-	// 		banner: dueDiligence,
-	// 		bannerTablet: dueDiligenceTablet,
-	// 		bannerMobile: dueDiligenceMobile
-	// 	},
-	// 	{
-	// 		banner: dueDiligence,
-	// 		bannerTablet: dueDiligenceTablet,
-	// 		bannerMobile: dueDiligenceMobile
-	// 	}
-	// ]
-
 	const prevSwipeHandler = () => {
 		swiper?.slidePrev()
 	}

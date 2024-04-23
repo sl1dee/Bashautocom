@@ -14,7 +14,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/scss/pagination'
 
 import Button from '../../ui/button/button.jsx'
-import SpecialOffersCard from './special-offers-card/index.js'
+import SpecialOffersCard from './special-offers-card/special-offers-card.jsx'
 import cl from './special-offers.module.scss'
 import haval from '/assets/img/special-offer/haval.jpg'
 import haval_logo from '/assets/img/special-offer/haval_logo.svg'
@@ -29,58 +29,6 @@ const SpecialOffers = ({ specialOffersText, specialOffersCards, comboboxValues, 
 	const [brand, setBrand] = useState(null)
 	const [service, setService] = useState(null)
 	// const { isDesktop, isTablet, isTabletSmall } = useMatchMedia()
-
-	// const specialOffersCards = [
-	// 	{
-	// 		image: haval,
-	// 		link: '/service-center'
-	// 	},
-	// 	{
-	// 		image: moskvich,
-	// 		link: '/service-center'
-	// 	},
-	// 	{
-	// 		image: omoda,
-	// 		link: '/service-center'
-	// 	},
-	// 	{
-	// 		image: haval,
-	// 		link: '/service-center'
-	// 	},
-	// 	{
-	// 		image: moskvich,
-	// 		link: '/service-center'
-	// 	},
-	// 	{
-	// 		image: omoda,
-	// 		link: '/service-center'
-	// 	}
-	// ]
-
-	// const comboboxValues = [
-	// 	{
-	// 		label: 'Changan',
-	// 		id: 1
-	// 	},
-	// 	{
-	// 		label: 'Omoda',
-	// 		id: 2
-	// 	},
-	// 	{
-	// 		label: 'Haval',
-	// 		id: 3
-	// 	},
-	// 	{
-	// 		label: 'Москвич',
-	// 		id: 4
-	// 	},
-	// 	{
-	// 		label: 'Exeed',
-	// 		id: 5
-	// 	}
-	// ]
-
-	// const items = ['Все', 'Продажа', 'Сервис', 'Детейлинг']
 
 	const [value, setValue] = useState(items[0])
 

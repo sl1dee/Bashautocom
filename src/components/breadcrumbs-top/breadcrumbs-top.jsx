@@ -15,15 +15,15 @@ const BreadcrumbsTop = () => {
 		},
 		{
 			label: 'Новые автомобили',
-			href: '/new-cars'
+			href: '/new-cars-page'
 		},
 		{
 			label: 'Авто с пробегом',
-			href: '/used-cars'
+			href: '/used-cars-page'
 		},
 		{
 			label: 'Страница автомобиля',
-			href: '/used-car'
+			href: '/used-car-page'
 		}
 	]
 

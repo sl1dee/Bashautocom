@@ -4,45 +4,13 @@ import { Navigation, Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/scss/pagination'
 
-import Button from '../../ui/button/button.jsx'
-import SpecialOffersCard from '../special-offers/special-offers-card/index.js'
-import ReviewsCard from './reviews-card/index.js'
+import ReviewsCard from './reviews-card/reviews-card.jsx'
 import cl from './reviews.module.scss'
-import jaecoo from '/assets/img/reviews/jaecoo.jpg'
-import moskvich from '/assets/img/reviews/moskvich.jpg'
-import omoda from '/assets/img/reviews/omoda.jpg'
 import play from '/assets/img/reviews/play.svg'
 
 const Reviews = ({ reviewsCards }) => {
 	const [swiper, setSwiper] = useState(null)
 	// const { isDesktop, isTablet, isTabletSmall } = useMatchMedia()
-
-	// const reviewsCards = [
-	// 	{
-	// 		video: omoda,
-	// 		text: '2024 Chery Omoda 5 — Великолепный компактный внедорожник!'
-	// 	},
-	// 	{
-	// 		video: moskvich,
-	// 		text: 'МОСКВИЧ 3 — лучше Лады! Двигатель, вариатор, подвеска, бензин и цена / тест и обзор'
-	// 	},
-	// 	{
-	// 		video: jaecoo,
-	// 		text: 'JAECOO J7 ТЕСТ ДРАЙВ У ДИЛЕРА, обзор jaecoo j7, лучший китайский кроссовер за 3 миллиона рублей'
-	// 	},
-	// 	{
-	// 		video: omoda,
-	// 		text: '2024 Chery Omoda 5 — Великолепный компактный внедорожник!'
-	// 	},
-	// 	{
-	// 		video: moskvich,
-	// 		text: 'МОСКВИЧ 3 — лучше Лады! Двигатель, вариатор, подвеска, бензин и цена / тест и обзор'
-	// 	},
-	// 	{
-	// 		video: jaecoo,
-	// 		text: 'JAECOO J7 ТЕСТ ДРАЙВ У ДИЛЕРА, обзор jaecoo j7, лучший китайский кроссовер за 3 миллиона рублей'
-	// 	}
-	// ]
 
 	const prevSwipeHandler = () => {
 		swiper?.slidePrev()

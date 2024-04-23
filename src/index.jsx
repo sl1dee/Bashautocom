@@ -26,13 +26,24 @@
 // )
 import { Theme } from '@consta/uikit/Theme'
 import ReactDOM from 'react-dom/client'
+import {Provider} from 'react-redux'
 
 import '../assets/css/styles.scss'
 import Root from './root'
 import { presetGiGas } from './uikit/presets/presetGiGas.js'
 
+import store from '@store'
+import {BrowserRouter} from "react-router-dom";
+import {createBrowserHistory} from "history";
+
+const history = createBrowserHistory();
+
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<Theme preset={presetGiGas}>
-		<Root />
+		<Provider store={store}>
+			<BrowserRouter history={history}>
+				<Root/>
+			</BrowserRouter >
+		</Provider>
 	</Theme>
 )

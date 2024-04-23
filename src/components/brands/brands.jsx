@@ -23,78 +23,6 @@ import Button from '../../ui/button/button.jsx'
 import cl from './brands.module.scss'
 
 const Brands = ({ title, viewTabs, brandsList }) => {
-	// const brandsList = [
-	// 	{
-	// 		id: 1,
-	// 		href: '',
-	// 		imgPath: haval
-	// 	},
-	// 	{
-	// 		id: 2,
-	// 		href: '',
-	// 		imgPath: changan
-	// 	},
-	// 	{
-	// 		id: 3,
-	// 		href: '',
-	// 		imgPath: omoda
-	// 	},
-	// 	{
-	// 		id: 4,
-	// 		href: '',
-	// 		imgPath: jaecoo
-	// 	},
-	// 	{
-	// 		id: 5,
-	// 		href: '',
-	// 		imgPath: exeed
-	// 	},
-	// 	{
-	// 		id: 6,
-	// 		href: '',
-	// 		imgPath: moskvich
-	// 	},
-	// 	{
-	// 		id: 7,
-	// 		href: '',
-	// 		imgPath: lada
-	// 	},
-	// 	{
-	// 		id: 8,
-	// 		href: '',
-	// 		imgPath: volkswagen
-	// 	},
-	// 	{
-	// 		id: 9,
-	// 		href: '',
-	// 		imgPath: nissan
-	// 	},
-	// 	{
-	// 		id: 10,
-	// 		href: '',
-	// 		imgPath: honda
-	// 	},
-	// 	{
-	// 		id: 11,
-	// 		href: '',
-	// 		imgPath: skoda
-	// 	},
-	// 	{
-	// 		id: 12,
-	// 		href: '',
-	// 		imgPath: infinity
-	// 	},
-	// 	{
-	// 		id: 13,
-	// 		href: '',
-	// 		imgPath: datsun
-	// 	},
-	// 	{
-	// 		id: 14,
-	// 		href: '',
-	// 		imgPath: suzuki
-	// 	}
-	// ]
 
 	const items = ['Все', 'Продаем', 'Ремонтируем']
 
@@ -167,9 +95,9 @@ const Brands = ({ title, viewTabs, brandsList }) => {
 					</div>
 					<div className={cl.cards}>
 						{brandsList.map(({ id, href, imgPath }) => (
-							<div>
+							<div key={id}>
 								<Link to={href}>
-									<div key={id} className={cl.card}>
+									<div className={cl.card}>
 										<div className={cn([cl.cardLogo, 'd-flex', 'align-items-center', 'justify-content-center'])}>
 											<img src={imgPath} alt="car_logo" />
 										</div>

@@ -17,44 +17,6 @@ import cl from './question.module.scss'
 const Question = ({ questionText, comboboxValues, items }) => {
 	const [comboboxValue, setComboboxValue] = useState(null)
 
-	// const comboboxValues = [
-	// 	{
-	// 		label: 'Changan',
-	// 		id: 1
-	// 	},
-	// 	{
-	// 		label: 'Omoda',
-	// 		id: 2
-	// 	},
-	// 	{
-	// 		label: 'Haval',
-	// 		id: 3
-	// 	},
-	// 	{
-	// 		label: 'Москвич',
-	// 		id: 4
-	// 	},
-	// 	{
-	// 		label: 'Exeed',
-	// 		id: 5
-	// 	}
-	// ]
-
-	// const questionText = [
-	// 	{
-	// 		question: 'У вас возник вопрос?',
-	// 		description: 'Задайте свой вопрос в форме, выбрав тему Покупка, Сервис или Услуги. Мы свяжемся с вами в течении дня, ответим на все вопросы, запишем на тест-драйв, сервис или ремонт при необходимости.',
-	// 		descriptionMobile: 'Мы ответим на все вопросы, запишем на тест-драйв, сервис или ремонт при необходимости.',
-	// 		socialNetworkText: 'Или напишите нам в социальных сетях',
-	// 		policyText: 'Нажимая на кнопку, вы соглашаетесь с ',
-	// 		policyLink: 'Политикой конфиденциальности',
-	// 		btn: 'Отправить вопрос',
-	// 		btnMobile: 'Задать вопрос'
-	// 	}
-	// ]
-
-	// const items = ['Покупка', 'Сервис', 'Услуги']
-
 	const [value, setValue] = useState(items[0])
 
 	const [viewPhone, setViewPhone] = useState('')

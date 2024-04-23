@@ -1,65 +1,15 @@
-import car from '@assets/img/about/car.jpg'
-import mainEntrance from '@assets/img/about/mainEntrance.jpg'
-import settingAbout from '@assets/img/about/setting.svg'
-import shieldAbout from '@assets/img/about/shield.svg'
-import usersAbout from '@assets/img/about/users.svg'
-import changan from '@assets/img/brands/changan.svg'
-import datsun from '@assets/img/brands/datsun.svg'
-import exeed from '@assets/img/brands/exeed.svg'
-import haval from '@assets/img/brands/haval.svg'
-import honda from '@assets/img/brands/honda.svg'
-import infinity from '@assets/img/brands/infinity.svg'
-import jaecoo from '@assets/img/brands/jaecoo.svg'
-import lada from '@assets/img/brands/lada.svg'
-import moskvich from '@assets/img/brands/moskvich.svg'
-import nissan from '@assets/img/brands/nissan.svg'
-import omoda from '@assets/img/brands/omoda.svg'
-import skoda from '@assets/img/brands/skoda.svg'
-import suzuki from '@assets/img/brands/suzuki.svg'
-import volkswagen from '@assets/img/brands/volkswagen.svg'
-import havalBckg from '@assets/img/dealer-and-service-centers/haval.jpg'
-import moskvichBckg from '@assets/img/dealer-and-service-centers/moskvich.jpg'
-import omodaBckg from '@assets/img/dealer-and-service-centers/omoda.jpg'
-import changanEvent from '@assets/img/events/changan.jpg'
-import jaecooEvent from '@assets/img/events/jaecoo.jpg'
-import ladaEvent from '@assets/img/events/lada.jpg'
-import omodaEvent from '@assets/img/events/omoda.jpg'
-import bodyRepair from '@assets/img/main-services/bodyRepair.png'
-import carsRent from '@assets/img/main-services/carsRent.png'
-import detailing from '@assets/img/main-services/detailing.png'
-import insurance from '@assets/img/main-services/insurance.png'
-import lending from '@assets/img/main-services/lending.png'
-import newCars from '@assets/img/main-services/newCars.png'
-import serviceCenter from '@assets/img/main-services/serviceСenter.png'
-import toCorporativeClients from '@assets/img/main-services/toCorporativeClients.png'
-import tradeIn from '@assets/img/main-services/tradeIn.png'
-import usedCars from '@assets/img/main-services/usedCars.png'
-import jaecooVideo from '@assets/img/reviews/jaecoo.jpg'
-import moskvichVideo from '@assets/img/reviews/moskvich.jpg'
-import omodaVideo from '@assets/img/reviews/omoda.jpg'
-import havalSpecialOffersBckg from '@assets/img/special-offer/haval.jpg'
-import moskvichSpecialOffersBckg from '@assets/img/special-offer/moskvich.jpg'
-import omodaSpecialOffersBckg from '@assets/img/special-offer/omoda.jpg'
 import React from 'react'
 
-import About from '@components/about/index.js'
-import Brands from '@components/brands/index.js'
-import DealerAndServiceCenters from '@components/dealer-and-service-centers/index.js'
-import Events from '@components/events/index.js'
-import MainServices from '@components/main-services/index.js'
-import OurServices from '@components/our-services/index.js'
-import Question from '@components/question/index.js'
-import Reviews from '@components/reviews/index.js'
-import SpecialOffers from '@components/special-offers/index.js'
+import About from '@components/about/about.jsx'
+import Brands from '@components/brands/brands.jsx'
+import DealerAndServiceCenters from '@components/dealer-and-service-centers/dealer-and-service-centers.jsx'
+import Events from '@components/events/events.jsx'
+import MainServices from '@components/main-services/main-services.jsx'
+import OurServices from '@components/our-services/our-services.jsx'
+import Question from '@components/question/question.jsx'
+import Reviews from '@components/reviews/reviews.jsx'
+import SpecialOffers from '@components/special-offers/special-offers.jsx'
 
-import bodyRepairIcon from '../../../assets/img/our-services/bodyRepair.svg'
-import carsRentIcon from '../../../assets/img/our-services/carsRent.svg'
-import detailingIcon from '../../../assets/img/our-services/detailing.svg'
-import insuranceIcon from '../../../assets/img/our-services/insurance.svg'
-import lendingIcon from '../../../assets/img/our-services/lending.svg'
-import serviceCenterIcon from '../../../assets/img/our-services/serviceСenter.svg'
-import toCorporativeClientsIcon from '../../../assets/img/our-services/toCorporativeClients.svg'
-import tradeInIcon from '../../../assets/img/our-services/tradeIn.svg'
 import MainLayout from '../../layout/main'
 
 const MainPage = () => {
@@ -69,70 +19,70 @@ const MainPage = () => {
 			path: '/new-cars',
 			title: 'Новые автомобили',
 			text: 'Официальный дилер',
-			imgPath: newCars
+			imgPath: './assets/img/main-services/newCars.png'
 		},
 		{
 			id: 2,
 			path: '/used-cars',
 			title: 'Авто с пробегом',
 			text: 'По выгодным ценам',
-			imgPath: usedCars
+			imgPath: './assets/img/main-services/usedCars.png'
 		},
 		{
 			id: 3,
 			path: '/service-center',
 			title: 'Сервисный центр',
 			text: 'Технический осмотр, диагностика и др.',
-			imgPath: serviceCenter
+			imgPath: './assets/img/main-services/serviceСenter.png'
 		},
 		{
 			id: 4,
 			path: '/body-repair',
 			title: 'Кузовной ремонт',
 			text: 'Ремонт деталей кузова, покраска, полировка и др.',
-			imgPath: bodyRepair
+			imgPath: './assets/img/main-services/bodyRepair.png'
 		},
 		{
 			id: 5,
 			path: '/',
 			title: 'Корпоративным клиентам',
 			text: 'Выгодно в лизинг',
-			imgPath: toCorporativeClients
+			imgPath: './assets/img/main-services/toCorporativeClients.png'
 		},
 		{
 			id: 6,
 			path: '/detailing',
 			title: 'Детейлинг',
 			text: 'Полировка кузова, пленка, химчистка и др.',
-			imgPath: detailing
+			imgPath: './assets/img/main-services/detailing.png'
 		},
 		{
 			id: 7,
 			path: '/insurance',
 			title: 'Страхование',
 			text: 'ОСАГО, КАСКО и др.',
-			imgPath: insurance
+			imgPath: './assets/img/main-services/insurance.png'
 		},
 		{
 			id: 8,
 			path: '/credit',
 			title: 'Кредитование',
 			text: 'Выгодные условия от 0,1%',
-			imgPath: lending
+			imgPath: './assets/img/main-services/lending.png'
 		},
 		{
 			id: 9,
 			path: '/',
 			title: 'Аренда автомобилей',
 			text: 'Машина для ваших дел',
-			imgPath: carsRent
+			imgPath: './assets/img/main-services/carsRent.png'
 		},
 		{
 			id: 10,
 			path: '/',
 			title: 'Выкуп и Trade-In',
 			text: 'Быстрая и честная оценка',
-			imgPath: tradeIn
+			imgPath: './assets/img/main-services/tradeIn.png'
 		}
 	]
 
@@ -140,78 +90,78 @@ const MainPage = () => {
 		{
 			id: 1,
 			href: '/service-center',
-			imgPath: haval
+			imgPath: './assets/img/brands/haval.svg'
 		},
 		{
 			id: 2,
 			href: '/service-center',
-			imgPath: changan
+			imgPath: './assets/img/brands/changan.svg'
 		},
 		{
 			id: 3,
 			href: '/service-center',
-			imgPath: omoda
+			imgPath: './assets/img/brands/omoda.svg'
 		},
 		{
 			id: 4,
 			href: '/service-center',
-			imgPath: jaecoo
+			imgPath: './assets/img/brands/jaecoo.svg'
 		},
 		{
 			id: 5,
 			href: '/service-center',
-			imgPath: exeed
+			imgPath: './assets/img/brands/exeed.svg'
 		},
 		{
 			id: 6,
 			href: '/service-center',
-			imgPath: moskvich
+			imgPath: './assets/img/brands/moskvich.svg'
 		},
 		{
 			id: 7,
 			href: '/service-center',
-			imgPath: lada
+			imgPath: './assets/img/brands/lada.svg'
 		},
 		{
 			id: 8,
 			href: '/service-center',
-			imgPath: volkswagen
+			imgPath: './assets/img/brands/volkswagen.svg'
 		},
 		{
 			id: 9,
 			href: '/service-center',
-			imgPath: nissan
+			imgPath: './assets/img/brands/nissan.svg'
 		},
 		{
 			id: 10,
 			href: '/service-center',
-			imgPath: honda
+			imgPath: './assets/img/brands/honda.svg'
 		},
 		{
 			id: 11,
 			href: '/service-center',
-			imgPath: skoda
+			imgPath: './assets/img/brands/skoda.svg'
 		},
 		{
 			id: 12,
 			href: '/service-center',
-			imgPath: infinity
+			imgPath: './assets/img/brands/infinity.svg'
 		},
 		{
 			id: 13,
 			href: '/service-center',
-			imgPath: datsun
+			imgPath: './assets/img/brands/datsun.svg'
 		},
 		{
 			id: 14,
 			href: '/service-center',
-			imgPath: suzuki
+			imgPath: './assets/img/brands/suzuki.svg'
 		}
 	]
 
 	const cardList = [
 		{
-			bckgImg: havalBckg,
+			bckgImg: './assets/img/dealer-and-service-centers/haval.jpg',
 			street: 'Уфа, ул. Проспект Салавата Юлаева, 89',
 			number: '+7 (347) 246-65-47',
 			saleCount: '3',
@@ -220,7 +170,7 @@ const MainPage = () => {
 			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
 		},
 		{
-			bckgImg: moskvichBckg,
+			bckgImg: './assets/img/dealer-and-service-centers/moskvich.jpg',
 			street: 'Уфа, ул. Рубежная, 168',
 			number: '+7 (347) 246-65-47',
 			saleCount: '2',
@@ -229,7 +179,7 @@ const MainPage = () => {
 			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
 		},
 		{
-			bckgImg: omodaBckg,
+			bckgImg: './assets/img/dealer-and-service-centers/omoda.jpg',
 			street: 'Уфа, ул. Адмирала Макарова, 32',
 			number: '+7 (347) 246-65-47',
 			saleCount: '2',
@@ -238,7 +188,7 @@ const MainPage = () => {
 			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
 		},
 		{
-			bckgImg: havalBckg,
+			bckgImg: './assets/img/dealer-and-service-centers/haval.jpg',
 			street: 'Уфа, ул. Проспект Салавата Юлаева, 89',
 			number: '+7 (347) 246-65-47',
 			saleCount: '3',
@@ -247,7 +197,7 @@ const MainPage = () => {
 			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
 		},
 		{
-			bckgImg: moskvichBckg,
+			bckgImg: './assets/img/dealer-and-service-centers/moskvich.jpg',
 			street: 'Уфа, ул. Рубежная, 168',
 			number: '+7 (347) 246-65-47',
 			saleCount: '2',
@@ -256,7 +206,7 @@ const MainPage = () => {
 			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
 		},
 		{
-			bckgImg: omodaBckg,
+			bckgImg: './assets/img/dealer-and-service-centers/omoda.jpg',
 			street: 'Уфа, ул. Адмирала Макарова, 32',
 			number: '+7 (347) 246-65-47',
 			saleCount: '2',
@@ -297,27 +247,27 @@ const MainPage = () => {
 
 	const specialOffersCards = [
 		{
-			image: havalSpecialOffersBckg,
+			image: './assets/img/special-offer/haval.jpg',
 			link: '/'
 		},
 		{
-			image: moskvichSpecialOffersBckg,
+			image: './assets/img/special-offer/moskvich.jpg',
 			link: '/'
 		},
 		{
-			image: omodaSpecialOffersBckg,
+			image: './assets/img/special-offer/omoda.jpg',
 			link: '/'
 		},
 		{
-			image: havalSpecialOffersBckg,
+			image: './assets/img/special-offer/haval.jpg',
 			link: '/'
 		},
 		{
-			image: moskvichSpecialOffersBckg,
+			image: './assets/img/special-offer/moskvich.jpg',
 			link: '/'
 		},
 		{
-			image: omodaSpecialOffersBckg,
+			image: './assets/img/special-offer/omoda.jpg',
 			link: '/'
 		}
 	]
@@ -335,82 +285,82 @@ const MainPage = () => {
 			href: '/',
 			title: 'Выкуп и Trade-In',
 			text: 'Выкупим или обменяем ваш автомобиль на новый',
-			icon: tradeInIcon
+			icon: './assets/img/our-services/tradeIn.svg'
 		},
 		{
 			id: 2,
 			href: '/service-center',
 			title: 'Сервисный центр',
 			text: 'Технический осмотр, диагностика и др.',
-			icon: serviceCenterIcon
+			icon: './assets/img/our-services/serviceCenter.svg'
 		},
 		{
 			id: 3,
 			href: '/credit',
 			title: 'Кредитование',
 			text: 'Выгодные условия от 0,1%',
-			icon: lendingIcon
+			icon: './assets/img/our-services/lending.svg'
 		},
 		{
 			id: 4,
 			href: '/',
 			title: 'Аренда автомобилей',
 			text: 'Автомобиль для любых целей',
-			icon: carsRentIcon
+			icon: './assets/img/our-services/carsRent.svg'
 		},
 		{
 			id: 5,
 			href: '/',
 			title: 'Корпоративным клиентам',
 			text: 'Удобные и выгодные условия лизинга автомобилей',
-			icon: toCorporativeClientsIcon
+			icon: './assets/img/our-services/toCorporativeClients.svg'
 		},
 		{
 			id: 6,
 			href: '/body-repair',
 			title: 'Кузовной ремонт',
 			text: 'Ремонт деталей кузова, покраска, полировка и др.',
-			icon: bodyRepairIcon
+			icon: './assets/img/our-services/bodyRepair.svg'
 		},
 		{
 			id: 7,
 			href: '/insurance',
 			title: 'Страхование',
 			text: 'ОСАГО, КАСКО и др.',
-			icon: insuranceIcon
+			icon: './assets/img/our-services/insurance.svg'
 		},
 		{
 			id: 8,
 			href: '/detailing',
 			title: 'Детейлинг',
 			text: 'Полировка кузова, пленка, химчистка и др.',
-			icon: detailingIcon
+			icon: './assets/img/our-services/detailing.svg'
 		}
 	]
 
 	const reviewsCards = [
 		{
-			video: omodaVideo,
+			video: './assets/img/reviews/omoda.jpg',
 			text: '2024 Chery Omoda 5 — Великолепный компактный внедорожник!'
 		},
 		{
-			video: moskvichVideo,
+			video: './assets/img/reviews/moskvich.jpg',
 			text: 'МОСКВИЧ 3 — лучше Лады! Двигатель, вариатор, подвеска, бензин и цена / тест и обзор'
 		},
 		{
-			video: jaecooVideo,
+			video: './assets/img/reviews/jaecoo.jpg',
 			text: 'JAECOO J7 ТЕСТ ДРАЙВ У ДИЛЕРА, обзор jaecoo j7, лучший китайский кроссовер за 3 миллиона рублей'
 		},
 		{
-			video: omodaVideo,
+			video: './assets/img/reviews/omoda.jpg',
 			text: '2024 Chery Omoda 5 — Великолепный компактный внедорожник!'
 		},
 		{
-			video: moskvichVideo,
+			video: './assets/img/reviews/moskvich.jpg',
 			text: 'МОСКВИЧ 3 — лучше Лады! Двигатель, вариатор, подвеска, бензин и цена / тест и обзор'
 		},
 		{
-			video: jaecooVideo,
+			video: './assets/img/reviews/jaecoo.jpg',
 			text: 'JAECOO J7 ТЕСТ ДРАЙВ У ДИЛЕРА, обзор jaecoo j7, лучший китайский кроссовер за 3 миллиона рублей'
 		}
 	]
@@ -435,17 +385,17 @@ const MainPage = () => {
 			points: [
 				{
 					id: 0,
-					image: shieldAbout,
+					image: './assets/img/about/shield.svg',
 					text: 'Официальный дилер брендов Omoda, Changan Auto, Jaecoo, Exeed, Москвич, Lada, Haval.'
 				},
 				{
 					id: 1,
-					image: settingAbout,
+					image: './assets/img/about/setting.svg',
 					text: 'Обслуживаем автомобили в нашем сервисном центре, обеспечивая безопасность и комфорт'
 				},
 				{
 					id: 2,
-					image: usersAbout,
+					image: './assets/img/about/users.svg',
 					text: '850 сотрудников Башавтоком — профессионалы своего дела, и каждый день делают всё для вашего удобства'
 				}
 			],
@@ -464,8 +414,8 @@ const MainPage = () => {
 					text: 'Уфа, Октябрьский, Стерлитамак, Белебей'
 				}
 			],
-			firstImg: mainEntrance,
-			secondImg: car
+			firstImg: './assets/img/about/mainEntrance.jpg',
+			secondImg: './assets/img/about/car.jpg'
 		}
 	]
 
@@ -474,25 +424,25 @@ const MainPage = () => {
 			title: '',
 			cards: [
 				{
-					image: omodaEvent,
+					image: './assets/img/events/omoda.jpg',
 					href: '/',
 					title: 'ОМОDА СУПЕРКАСКО по супер цене в Башавтоком!',
 					date: '23.01.2024'
 				},
 				{
-					image: jaecooEvent,
+					image: './assets/img/events/jaecoo.jpg',
 					href: '/',
 					title: 'JAECOO наращивает присутствие на глобальном рынке',
 					date: '24.11.2023'
 				},
 				{
-					image: ladaEvent,
+					image: './assets/img/events/lada.jpg',
 					href: '/',
 					title: 'Новое специальное предложение на шиномонтаж в LADA «Башавтоком»',
 					date: '23.01.2024'
 				},
 				{
-					image: changanEvent,
+					image: './assets/img/events/changan.jpg',
 					href: '/',
 					title: 'CHANGAN: 20 лет инноваций, с богатым наследием итальянского дизайна',
 					date: '23.01.2024'
@@ -502,7 +452,7 @@ const MainPage = () => {
 	]
 
 	return (
-		<MainLayout>
+		<>
 			<MainServices mainServicesList={mainServicesList} />
 			<Brands title="Найдите свой бренд" viewTabs brandsList={brandsList} />
 			<SpecialOffers
@@ -522,7 +472,7 @@ const MainPage = () => {
 			/>
 			<About aboutText={aboutText} />
 			<Events events={events} />
-		</MainLayout>
+		</>
 	)
 }
 export default MainPage

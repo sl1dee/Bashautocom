@@ -6,8 +6,8 @@ const Banner = ({ bannerList }) => {
 	return (
 		<div className={cl.bannerWrapper}>
 			<div className="container">
-				{bannerList.map(({ bannerDesktop, bannerTablet, bannerMobile }) => (
-					<picture className="d-flex justify-content-center">
+				{bannerList.map(({ id, bannerDesktop, bannerTablet, bannerMobile }) => (
+					<picture className="d-flex justify-content-center" key={id}>
 						<source srcSet={bannerMobile} media="(max-width: 575px)" className={cl.banner} />
 						<source srcSet={bannerTablet} media="(min-width: 567px) and (max-width: 991px)" className={cl.banner} />
 						<source srcSet={bannerDesktop} media="(min-width: 992)" className={cl.banner} />

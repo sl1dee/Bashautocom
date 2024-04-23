@@ -1,6 +1,3 @@
-import havalBckg from '@assets/img/dealer-and-service-centers/haval.jpg'
-import moskvichBckg from '@assets/img/dealer-and-service-centers/moskvich.jpg'
-import omodaBckg from '@assets/img/dealer-and-service-centers/omoda.jpg'
 import { ChoiceGroup } from '@consta/uikit/ChoiceGroup'
 import { Combobox } from '@consta/uikit/Combobox'
 import cn from 'classnames'
@@ -9,98 +6,13 @@ import { A11y, Navigation, Pagination, Scrollbar } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/scss/pagination'
 
-// import haval from '../../../assets/img/dealer-and-service-centers/haval.jpg'
-// import moskvich from '../../../assets/img/dealer-and-service-centers/moskvich.jpg'
-// import omoda from '../../../assets/img/dealer-and-service-centers/omoda.jpg'
-import Button from '../../ui/button/button.jsx'
-import SpecialOffersCard from '../special-offers/special-offers-card/index.js'
-import DealerAndServiceCentersCard from './dealer-and-service-centers-card/index.js'
+import DealerAndServiceCentersCard from './dealer-and-service-centers-card/dealer-and-service-centers-card.jsx'
 import cl from './dealer-and-service-centers.module.scss'
 
 const DealerAndServiceCenters = ({ title, cardList, comboboxValues, items }) => {
 	const [swiper, setSwiper] = useState(null)
 	const [comboboxValue, setComboboxValue] = useState(null)
 	// const { isDesktop, isTablet, isTabletSmall } = useMatchMedia()
-
-	// const cardList = [
-	// 	{
-	// 		bckgImg: havalBckg,
-	// 		street: 'Уфа, ул. Проспект Салавата Юлаева, 89',
-	// 		number: '+7 (347) 246-65-47',
-	// 		saleCount: '3',
-	// 		serviceCount: '7',
-	// 		saleBrands: ['Haval', 'Changan'],
-	// 		serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
-	// 	},
-	// 	{
-	// 		bckgImg: moskvichBckg,
-	// 		street: 'Уфа, ул. Рубежная, 168',
-	// 		number: '+7 (347) 246-65-47',
-	// 		saleCount: '2',
-	// 		serviceCount: '7',
-	// 		saleBrands: ['Haval', 'Changan'],
-	// 		serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
-	// 	},
-	// 	{
-	// 		bckgImg: omodaBckg,
-	// 		street: 'Уфа, ул. Адмирала Макарова, 32',
-	// 		number: '+7 (347) 246-65-47',
-	// 		saleCount: '2',
-	// 		serviceCount: '7',
-	// 		saleBrands: ['Haval', 'Changan'],
-	// 		serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
-	// 	},
-	// 	{
-	// 		bckgImg: havalBckg,
-	// 		street: 'Уфа, ул. Проспект Салавата Юлаева, 89',
-	// 		number: '+7 (347) 246-65-47',
-	// 		saleCount: '3',
-	// 		serviceCount: '7',
-	// 		saleBrands: ['Haval', 'Changan'],
-	// 		serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
-	// 	},
-	// 	{
-	// 		bckgImg: moskvichBckg,
-	// 		street: 'Уфа, ул. Рубежная, 168',
-	// 		number: '+7 (347) 246-65-47',
-	// 		saleCount: '2',
-	// 		serviceCount: '7',
-	// 		saleBrands: ['Haval', 'Changan'],
-	// 		serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
-	// 	},
-	// 	{
-	// 		bckgImg: omodaBckg,
-	// 		street: 'Уфа, ул. Адмирала Макарова, 32',
-	// 		number: '+7 (347) 246-65-47',
-	// 		saleCount: '2',
-	// 		serviceCount: '7',
-	// 		saleBrands: ['Haval', 'Changan'],
-	// 		serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
-	// 	}
-	// ]
-
-	// const comboboxValues = [
-	// 	{
-	// 		label: 'Changan Auto',
-	// 		id: 1
-	// 	},
-	// 	{
-	// 		label: 'Omoda',
-	// 		id: 2
-	// 	},
-	// 	{
-	// 		label: 'Haval',
-	// 		id: 3
-	// 	},
-	// 	{
-	// 		label: 'Москвич',
-	// 		id: 4
-	// 	},
-	// 	{
-	// 		label: 'Exeed',
-	// 		id: 5
-	// 	}
-	// ]
 
 	const prevSwipeHandler = () => {
 		swiper?.slidePrev()

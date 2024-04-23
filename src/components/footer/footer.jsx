@@ -14,7 +14,7 @@ import cl from './footer.module.scss'
 
 const Footer = () => {
 	return (
-		<div>
+		<footer>
 			<div className={cl.footer}>
 				<div className="container p-0">
 					<div className={cn([cl.footerContent, 'd-grid'])}>
@@ -175,7 +175,7 @@ const Footer = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</footer>
 	)
 }
 

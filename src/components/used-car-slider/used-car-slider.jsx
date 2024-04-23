@@ -1,18 +1,9 @@
-import jaecoo from '@assets/img/reviews/jaecoo.jpg'
-import moskvich from '@assets/img/reviews/moskvich.jpg'
-import omoda from '@assets/img/reviews/omoda.jpg'
-import JetourDashing from '@assets/img/used-cars/JetourDashing.jpg'
-import JetourX90Plus from '@assets/img/used-cars/JetourX90Plus.jpg'
-import KiaPicanto from '@assets/img/used-cars/KiaPicanto.jpg'
-import KiaRio from '@assets/img/used-cars/KiaRio.jpg'
-import KiaRioX from '@assets/img/used-cars/KiaRioX.png'
-import LadaVesta from '@assets/img/used-cars/LadaVesta.jpg'
 import cn from 'classnames'
 import React, { useState } from 'react'
 import { Navigation, Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-import ReviewsCard from '@components/reviews/reviews-card/index.js'
+import ReviewsCard from '@components/reviews/reviews-card/reviews-card.jsx'
 import Card from '@components/used-car-slider/card/card.jsx'
 
 import cl from './used-car-slider.module.scss'
@@ -23,7 +14,7 @@ const UsedCarSlider = () => {
 
 	const carsList = [
 		{
-			image: KiaRioX,
+			image: './assets/img/used-cars/KiaRioX.png',
 			name: 'Kia Rio X',
 			year: '2020',
 			owner: '1 владелец',
@@ -33,7 +24,7 @@ const UsedCarSlider = () => {
 			price: '1 850 000 ₽'
 		},
 		{
-			image: JetourX90Plus,
+			image: './assets/img/used-cars/JetourX90Plus.jpg',
 			name: 'Jetour X90 Plus',
 			year: '2023',
 			owner: '1 владелец',
@@ -43,7 +34,7 @@ const UsedCarSlider = () => {
 			price: '3 490 000 ₽'
 		},
 		{
-			image: KiaRio,
+			image: './assets/img/used-cars/KiaRio.jpg',
 			name: 'Kia Rio',
 			year: '2020',
 			owner: '1 владелец',
@@ -53,7 +44,7 @@ const UsedCarSlider = () => {
 			price: '1 850 000 ₽'
 		},
 		{
-			image: JetourDashing,
+			image: './assets/img/used-cars/JetourDashing.jpg',
 			name: 'Jetour Dashing',
 			year: '2020',
 			owner: '1 владелец',
@@ -63,7 +54,7 @@ const UsedCarSlider = () => {
 			price: '3 200 000 ₽'
 		},
 		{
-			image: LadaVesta,
+			image: './assets/img/used-cars/LadaVesta.jpg',
 			name: 'ВАЗ (LADA) Vesta',
 			year: '2020',
 			owner: '1 владелец',
@@ -73,7 +64,7 @@ const UsedCarSlider = () => {
 			price: '1 150 000 ₽'
 		},
 		{
-			image: KiaPicanto,
+			image: './assets/img/used-cars/KiaPicanto.jpg',
 			name: 'KIA Picanto',
 			year: '2009',
 			owner: '1 владелец',
@@ -83,7 +74,7 @@ const UsedCarSlider = () => {
 			price: '580 000 ₽'
 		},
 		{
-			image: KiaRioX,
+			image: './assets/img/used-cars/KiaRioX.png',
 			name: 'Kia Rio X',
 			year: '2020',
 			owner: '1 владелец',
@@ -93,7 +84,7 @@ const UsedCarSlider = () => {
 			price: '1 850 000 ₽'
 		},
 		{
-			image: JetourX90Plus,
+			image: './assets/img/used-cars/JetourX90Plus.jpg',
 			name: 'Jetour X90 Plus',
 			year: '2023',
 			owner: '1 владелец',
@@ -103,7 +94,7 @@ const UsedCarSlider = () => {
 			price: '3 490 000 ₽'
 		},
 		{
-			image: KiaRio,
+			image: './assets/img/used-cars/KiaRio.jpg',
 			name: 'Kia Rio',
 			year: '2020',
 			owner: '1 владелец',
@@ -113,7 +104,7 @@ const UsedCarSlider = () => {
 			price: '1 850 000 ₽'
 		},
 		{
-			image: JetourDashing,
+			image: './assets/img/used-cars/JetourDashing.jpg',
 			name: 'Jetour Dashing',
 			year: '2020',
 			owner: '1 владелец',
@@ -123,7 +114,7 @@ const UsedCarSlider = () => {
 			price: '3 200 000 ₽'
 		},
 		{
-			image: LadaVesta,
+			image: './assets/img/used-cars/LadaVesta.jpg',
 			name: 'ВАЗ (LADA) Vesta',
 			year: '2020',
 			owner: '1 владелец',
@@ -133,7 +124,7 @@ const UsedCarSlider = () => {
 			price: '1 150 000 ₽'
 		},
 		{
-			image: KiaPicanto,
+			image: './assets/img/used-cars/KiaPicanto.jpg',
 			name: 'KIA Picanto',
 			year: '2009',
 			owner: '1 владелец',

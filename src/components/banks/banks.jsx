@@ -18,64 +18,6 @@ import React from 'react'
 import cl from './banks.module.scss'
 
 const Banks = ({ title, banksList }) => {
-	// const banksList = [
-	// 	{
-	// 		id: 0,
-	// 		image: tinkoff
-	// 	},
-	// 	{
-	// 		id: 1,
-	// 		image: alfa
-	// 	},
-	// 	{
-	// 		id: 2,
-	// 		image: vtb
-	// 	},
-	// 	{
-	// 		id: 3,
-	// 		image: rosbank
-	// 	},
-	// 	{
-	// 		id: 4,
-	// 		image: uralsib
-	// 	},
-	// 	{
-	// 		id: 5,
-	// 		image: sovkombank
-	// 	},
-	// 	{
-	// 		id: 6,
-	// 		image: otkrytie
-	// 	},
-	// 	{
-	// 		id: 7,
-	// 		image: evropabank
-	// 	},
-	// 	{
-	// 		id: 8,
-	// 		image: otpbank
-	// 	},
-	// 	{
-	// 		id: 9,
-	// 		image: autofinance
-	// 	},
-	// 	{
-	// 		id: 10,
-	// 		image: fastbank
-	// 	},
-	// 	{
-	// 		id: 11,
-	// 		image: driveclick
-	// 	},
-	// 	{
-	// 		id: 12,
-	// 		image: lokobank
-	// 	},
-	// 	{
-	// 		id: 13,
-	// 		image: ekspobank
-	// 	}
-	// ]
 
 	return (
 		<div className={cl.banks}>

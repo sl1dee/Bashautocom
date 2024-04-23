@@ -64,9 +64,9 @@
 
     .filter {
       background-color: #F4F5F7;
-      padding: 40px 10px;
+      padding: 40px 10px 60px;
       row-gap: 10px;
-      height: 100%;
+      height: 200%;
 
       &Head {
         position: relative;
@@ -390,7 +390,7 @@
   }
 }
 
-@media (min-width: 1401px) and (max-width: 1919px) {
+@media (min-width: 1400px) and (max-width: 1920px) {
   .newCars {
     row-gap: 60px;
 
