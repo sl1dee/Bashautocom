@@ -1,38 +1,14 @@
 
-//@keyframes open {
-//  0% {
-//    opacity: 0;
-//    transform: translateX(320px);
-//  }
-//  100% {
-//    opacity: 1;
-//    transform: translateX(0);
-//  }
-//}
-//
-//@keyframes close {
-//  0% {
-//    opacity: 1;
-//    transform: translateX(0);
-//  }
-//  100% {
-//    opacity: 0;
-//    transform: translateX(320px);
-//  }
-//}
-
 .sidebar {
+  overflow: hidden;
   position: fixed;
   opacity: 1;
   top: 0;
   right: 0;
   bottom: 0;
   left: -320px;
-  z-index: 1000;
-  //pointer-events: none;
+  z-index: 1001;
   transition: transform 0.3s ease;
-
-  //animation: open .3s ease;
 
   &Bckg {
     position: absolute;
@@ -55,18 +31,12 @@
     overflow-y: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    //animation: open .3s ease;
-
-    //&Closed {
-    //  animation: close .3s ease forwards;
-    //}
-
 
     .filter {
       background-color: #F4F5F7;
-      padding: 40px 10px 60px;
+      padding: 40px 10px 30px;
       row-gap: 10px;
-      height: 200%;
+      //min-height: 100%;
 
       &Head {
         position: relative;
@@ -124,11 +94,6 @@
           border: 2px solid #2F3140;
           &Done {
             display: block;
-            //position: absolute;
-            //top: -9px;
-            //right: -9px;
-            //width: 20px;
-            //height: 20px;
           }
         }
       }
@@ -153,6 +118,13 @@
           padding: 10px;
           border-radius: 4px;
         }
+
+        .checkbox {
+
+          .Checkbox-Label {
+            color: black;
+          }
+        }
       }
 
       .minPrice {
@@ -168,7 +140,7 @@
           color: #111111;
         }
 
-        &Inputs {
+        .inputs {
           gap: 12px;
 
           input {
@@ -182,13 +154,12 @@
       }
 
       .btn {
-        position: fixed;
+        position: sticky;
         bottom: 30px;
         width: 300px;
-        padding: 7px 16px 7px 16px;
         font-size: 16px;
         font-weight: 500;
-        line-height: 22.4px;
+        line-height: 140%;
       }
     }
   }
@@ -197,6 +168,7 @@
 .active {
   transform: translateX(100%);
   transition: transform 0.3s ease;
+  overflow: visible;
 }
 
 
@@ -318,10 +290,10 @@
         }
 
         .btn {
+          width: 100%;
           font-size: 18px;
           font-weight: 500;
-          line-height: 25.2px;
-          padding: 9.5px 20px 9.5px 20px;
+          line-height: 140%;
         }
       }
     }
@@ -331,8 +303,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     //padding: 10px 0 140px;
-    padding-bottom: 140px;
-
+    padding-bottom: 40px;
 
     &Card {
       max-width: 390px;
@@ -382,10 +353,38 @@
         .btn {
           font-size: 18px;
           font-weight: 500;
-          line-height: 25.2px;
-          padding: 9.5px 20px 9.5px 20px;
+          line-height: 140%;
         }
       }
+    }
+  }
+
+  .pagination {
+    row-gap: 30px;
+
+    &Btn {
+      padding: 9.5px 16px 9.5px 16px;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 140%;
+    }
+  }
+  .filterimg {
+    opacity: 1;
+    transition: opacity .3s ease;
+    cursor: pointer;
+    position: sticky;
+    bottom: 82px;
+    left: 100%;
+    width: 104px;
+    height: 104px;
+    background-color: #2F3140;
+    border-radius: 50%;
+    padding: 28px;
+
+    .icon {
+      width: 47.78px;
+      height: 47.78px;
     }
   }
 }
@@ -493,8 +492,6 @@
     &Cards {
       grid-template-columns: repeat(3, 1fr);
       gap: 30px;
-      //padding: 10px 0 140px;
-      padding-bottom: 140px;
 
 
       &Card {
@@ -647,8 +644,6 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 30px;
       //padding: 10px 0 140px;
-      padding-bottom: 100px;
-
 
       &Card {
         max-width: 299.33px;
@@ -799,8 +794,7 @@
           .btn {
             font-size: 16px;
             font-weight: 500;
-            line-height: 22.4px;
-            padding: 7px 16px 7px 16px;
+            line-height: 140%;
           }
         }
       }
@@ -811,8 +805,7 @@
       gap: 10px;
       row-gap: 20px;
       //padding: 10px 0 140px;
-      padding-bottom: 100px;
-
+      padding-bottom: 20px;
 
       &Card {
         max-width: 265px;
@@ -862,17 +855,36 @@
 
           .btn {
             font-size: 16px;
-            font-weight: 500;
-            line-height: 22.4px;
-            padding: 7px 16px 7px 16px;
           }
         }
+      }
+    }
+
+    .pagination {
+      row-gap: 20px;
+
+      &Btn {
+        padding: 7px 16px 7px 16px;
+        font-size: 16px;
+      }
+    }
+
+    .filterimg {
+      bottom: 16px;
+      left: 100%;
+      width: 63.14px;
+      height: 63.14px;
+      padding: 18px;
+
+      .icon {
+        width: 29.41px;
+        height: 29.41px;
       }
     }
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575.96px) {
 
   .newCars {
     row-gap: 16px;
@@ -970,12 +982,6 @@
 
       div {
         align-self: start;
-
-        .btn {
-          color: #111111;
-          padding: 6px 12px;
-          gap: 6px;
-        }
       }
     }
 
@@ -984,7 +990,7 @@
       gap: 10px;
       row-gap: 20px;
       //padding: 10px 0 140px;
-      padding-bottom: 100px;
+      padding-bottom: 16px;
 
 
       &Card {
@@ -1035,11 +1041,31 @@
 
           .btn {
             font-size: 16px;
-            font-weight: 500;
-            line-height: 22.4px;
-            padding: 6.5px 16px;
           }
         }
+      }
+    }
+
+    .pagination {
+      row-gap: 16px;
+
+      &Btn {
+        padding: 4px 16px 4px 16px;
+        font-size: 14px;
+      }
+    }
+
+
+    .filterimg {
+      bottom: 10px;
+      left: 100%;
+      width: 63.14px;
+      height: 63.14px;
+      padding: 18px;
+
+      .icon {
+        width: 29.41px;
+        height: 29.41px;
       }
     }
   }

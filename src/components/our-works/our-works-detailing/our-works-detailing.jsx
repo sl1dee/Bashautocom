@@ -17,7 +17,7 @@ const OurWorksDetailing = ({ title, ourWorksDetailingList }) => {
 
 	return (
 		<div className={cl.serviceSlider}>
-			<div className="container p-0">
+			<div className="container">
 				<div className={cn([cl.serviceSliderContent, 'd-flex', 'flex-column'])}>
 					<h2 className={cn([cl.serviceSliderContentTitle, 'mb-0'])}>{title}</h2>
 					<div className={cl.serviceSliderContentSwiper}>

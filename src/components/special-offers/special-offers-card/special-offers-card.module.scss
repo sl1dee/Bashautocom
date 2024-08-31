@@ -1,12 +1,13 @@
 
 
 .offerCard {
-  width: 530px;
-  height: 500px;
+  //width: 530px;
+  //height: 500px;
 
   img {
-    width: 530px;
-    height: 500px;
+    width: 100%;
+    //width: 530px;
+    //height: 500px;
     border-radius: 20px;
   }
 
@@ -14,12 +15,12 @@
 
 @media (min-width: 1400px) and (max-width: 1920px) {
   .offerCard {
-    width: 420px;
-    height: 398px;
+    //width: 420px;
+    //height: 398px;
 
     img {
-      width: 420px;
-      height: 398px;
+      //width: 420px;
+      //height: 398px;
       border-radius: 20px;
     }
 
@@ -28,12 +29,12 @@
 
 @media (min-width: 992px) and (max-width: 1400px) {
   .offerCard {
-    width: 306.67px;
-    height: 296px;
+    //width: 306.67px;
+    //height: 296px;
 
     img {
-      width: 306.67px;
-      height: 296px;
+      //width: 306.67px;
+      //height: 296px;
       border-radius: 20px;
     }
 
@@ -42,26 +43,26 @@
 
 @media (min-width: 576px) and (max-width: 992px) {
   .offerCard {
-    width: 265px;
-    height: 250px;
+    //width: 265px;
+    //height: 250px;
 
     img {
-      width: 265px;
-      height: 250px;
+      //width: 265px;
+      //height: 250px;
       border-radius: 20px;
     }
 
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575.96px) {
   .offerCard {
-    width: 222px;
-    height: 212px;
+    //width: 222px;
+    //height: 212px;
 
     img {
-      width: 222px;
-      height: 212px;
+      //width: 222px;
+      //height: 212px;
       border-radius: 14px;
     }
 

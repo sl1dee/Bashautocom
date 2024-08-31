@@ -14,6 +14,7 @@ const UsedCarSlider = () => {
 
 	const carsList = [
 		{
+			id: 0,
 			image: './assets/img/used-cars/KiaRioX.png',
 			name: 'Kia Rio X',
 			year: '2020',
@@ -24,6 +25,7 @@ const UsedCarSlider = () => {
 			price: '1 850 000 ₽'
 		},
 		{
+			id: 1,
 			image: './assets/img/used-cars/JetourX90Plus.jpg',
 			name: 'Jetour X90 Plus',
 			year: '2023',
@@ -34,6 +36,7 @@ const UsedCarSlider = () => {
 			price: '3 490 000 ₽'
 		},
 		{
+			id: 2,
 			image: './assets/img/used-cars/KiaRio.jpg',
 			name: 'Kia Rio',
 			year: '2020',
@@ -44,6 +47,7 @@ const UsedCarSlider = () => {
 			price: '1 850 000 ₽'
 		},
 		{
+			id: 3,
 			image: './assets/img/used-cars/JetourDashing.jpg',
 			name: 'Jetour Dashing',
 			year: '2020',
@@ -54,6 +58,7 @@ const UsedCarSlider = () => {
 			price: '3 200 000 ₽'
 		},
 		{
+			id: 4,
 			image: './assets/img/used-cars/LadaVesta.jpg',
 			name: 'ВАЗ (LADA) Vesta',
 			year: '2020',
@@ -64,6 +69,7 @@ const UsedCarSlider = () => {
 			price: '1 150 000 ₽'
 		},
 		{
+			id: 5,
 			image: './assets/img/used-cars/KiaPicanto.jpg',
 			name: 'KIA Picanto',
 			year: '2009',
@@ -74,6 +80,7 @@ const UsedCarSlider = () => {
 			price: '580 000 ₽'
 		},
 		{
+			id: 6,
 			image: './assets/img/used-cars/KiaRioX.png',
 			name: 'Kia Rio X',
 			year: '2020',
@@ -84,6 +91,7 @@ const UsedCarSlider = () => {
 			price: '1 850 000 ₽'
 		},
 		{
+			id: 7,
 			image: './assets/img/used-cars/JetourX90Plus.jpg',
 			name: 'Jetour X90 Plus',
 			year: '2023',
@@ -94,6 +102,7 @@ const UsedCarSlider = () => {
 			price: '3 490 000 ₽'
 		},
 		{
+			id: 8,
 			image: './assets/img/used-cars/KiaRio.jpg',
 			name: 'Kia Rio',
 			year: '2020',
@@ -104,6 +113,7 @@ const UsedCarSlider = () => {
 			price: '1 850 000 ₽'
 		},
 		{
+			id: 9,
 			image: './assets/img/used-cars/JetourDashing.jpg',
 			name: 'Jetour Dashing',
 			year: '2020',
@@ -114,6 +124,7 @@ const UsedCarSlider = () => {
 			price: '3 200 000 ₽'
 		},
 		{
+			id: 10,
 			image: './assets/img/used-cars/LadaVesta.jpg',
 			name: 'ВАЗ (LADA) Vesta',
 			year: '2020',
@@ -124,6 +135,7 @@ const UsedCarSlider = () => {
 			price: '1 150 000 ₽'
 		},
 		{
+			id: 11,
 			image: './assets/img/used-cars/KiaPicanto.jpg',
 			name: 'KIA Picanto',
 			year: '2009',
@@ -144,7 +156,7 @@ const UsedCarSlider = () => {
 
 	return (
 		<div className={cl.reviews}>
-			<div className="container p-0">
+			<div className="container">
 				<div className={cn([cl.reviewsInformation, 'd-flex', 'flex-column'])}>
 					<h2 className={cn([cl.reviewsInformationTitle, 'mb-0'])}>Похожие автомобили с пробегом</h2>
 					<div className="d-flex flex-column gap-4">
@@ -192,8 +204,8 @@ const UsedCarSlider = () => {
 									}
 								}}
 							>
-								{carsList.map(({ image, name, year, owner, mileage, gearbox, drive, price }) => (
-									<SwiperSlide>
+								{carsList.map(({ id, image, name, year, owner, mileage, gearbox, drive, price }) => (
+									<SwiperSlide key={id}>
 										<Card
 											image={image}
 											name={name}

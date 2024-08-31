@@ -38,7 +38,7 @@ const NewCarsSlider = () => {
 
 	return (
 		<div className={cl.newCarsSlider}>
-			<div className="container p-0">
+			<div className="container">
 				<div className={cl.newCarsSliderSwiper}>
 					<button onClick={prevSwipeHandler} className={cn([cl.swiperArrow, cl.swiperArrowLeft])} />
 					<button onClick={nextSwipeHandler} className={cn([cl.swiperArrow, cl.swiperArrowRight])} />

@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom'
 import getRawPhoneFromParsedPhone from '@helpers/getRawPhoneFromParsedPhone.js'
 import parseRawPhone from '@helpers/parseRawPhone.js'
 
-import Button from '../../ui/button/button.jsx'
+import { Button } from '@consta/uikit/Button';
 import cl from './question.module.scss'
 
 const Question = ({ questionText, comboboxValues, items }) => {
@@ -35,8 +35,8 @@ const Question = ({ questionText, comboboxValues, items }) => {
 			{questionText.map(
 				({ question, description, descriptionMobile, socialNetworkText, policyText, policyLink, btn, btnMobile }) => (
 					<div className={cl.question}>
-						<div className="container p-0">
-							<div className={cn([cl.questionInformation, 'd-grid'])}>
+						<div className="container">
+							<div className={cn([cl.questionInformation, 'd-flex', 'flex-column', 'flex-lg-row'])}>
 								<div className={cn([cl.questionInformationText, 'd-flex', 'flex-column'])}>
 									<div className={cn([cl.yourQuestion, 'd-flex', 'flex-column'])}>
 										<h1 className={cn([cl.title, 'mb-0'])}>{question}</h1>
@@ -60,12 +60,13 @@ const Question = ({ questionText, comboboxValues, items }) => {
 											</Link>
 										</div>
 									</div>
+									<img src={car} alt="" className={cn([cl.image, 'd-none', 'd-lg-flex'])} />
 								</div>
-								<img src={car} alt="" className={cl.image} />
 								<div className={cn([cl.btn, 'd-xs-flex', 'd-sm-none'])}>
-									<Button sizeStyle="sizeS" className={cl.button}>
-										{btnMobile}
-									</Button>
+									{/*<Button sizeStyle="sizeS" className={cl.button}>*/}
+									{/*	{btnMobile}*/}
+									{/*</Button>*/}
+									<Button className={cn([cl.button, 'd-xs-flex', 'd-sm-none', 'justify-content-center', 'align-items-center'])} label={btnMobile} size='s'/>
 								</div>
 								<div className={cn([cl.questionInformationModal, 'd-none', 'd-sm-flex', 'flex-column'])}>
 									<div className={cn([cl.questionInformationModalBlock1, 'd-flex', 'flex-column'])}>
@@ -73,7 +74,7 @@ const Question = ({ questionText, comboboxValues, items }) => {
 										<div className={cn([cl.tabs, 'd-none', 'd-lg-flex', 'mb-0'])}>
 											<ChoiceGroup
 												value={value}
-												onChange={({ value }) => setValue(value)}
+												onChange={( value ) => setValue(value)}
 												items={items}
 												getItemLabel={(item) => item}
 												form="default"
@@ -87,7 +88,7 @@ const Question = ({ questionText, comboboxValues, items }) => {
 										<div className={cn([cl.tabs, 'd-none', 'd-sm-flex', 'd-lg-none', 'mb-0'])}>
 											<ChoiceGroup
 												value={value}
-												onChange={({ value }) => setValue(value)}
+												onChange={( value ) => setValue(value)}
 												items={items}
 												getItemLabel={(item) => item}
 												form="default"
@@ -117,7 +118,7 @@ const Question = ({ questionText, comboboxValues, items }) => {
 												size="l"
 												items={comboboxValues}
 												value={comboboxValue}
-												onChange={({ value }) => setComboboxValue(value)}
+												onChange={( value ) => setComboboxValue(value)}
 												multiple
 											/>
 										</div>
@@ -127,16 +128,18 @@ const Question = ({ questionText, comboboxValues, items }) => {
 												size="m"
 												items={comboboxValues}
 												value={comboboxValue}
-												onChange={({ value }) => setComboboxValue(value)}
+												onChange={( value ) => setComboboxValue(value)}
 												multiple
 											/>
 										</div>
 									</div>
 									<div className={cn([cl.questionInformationModalBlock3, 'd-flex', 'flex-column'])}>
 										<div>
-											<Button sizeStyle="sizeContent" className={cl.btn}>
-												{btn}
-											</Button>
+											{/*<Button sizeStyle="sizeContent" className={cl.btn}>*/}
+											{/*	{btn}*/}
+											{/*</Button>*/}
+											<Button className={cn([cl.btn, 'd-none', 'd-lg-flex', 'justify-content-center', 'align-items-center'])} label={btn} size='l'/>
+											<Button className={cn([cl.btn, 'd-none', 'd-sm-flex', 'd-lg-none', 'justify-content-center', 'align-items-center'])} label={btn} size='m'/>
 										</div>
 										<p className={cn([cl.policy, 'd-flex', 'flex-column', 'mb-0'])}>
 											{policyText}
@@ -146,6 +149,7 @@ const Question = ({ questionText, comboboxValues, items }) => {
 										</p>
 									</div>
 								</div>
+								<img src={car} alt="" className={cn([cl.image, 'd-flex', 'd-lg-none'])} />
 							</div>
 						</div>
 					</div>

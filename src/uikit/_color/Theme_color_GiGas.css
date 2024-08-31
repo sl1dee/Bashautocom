@@ -53,7 +53,7 @@
 
 	/* Default */
 	--color-control-bg-default: #ffffff; /* Цвет фона контрола */
-	--color-control-typo-default: #6B6B6B; /* Цвет основного текста контрола */
+	--color-control-typo-default: #111111; /* Цвет основного текста контрола */
 	--color-control-typo-placeholder: #6B6B6B; /* Цвет плейсхолдера контрола */
 	--color-control-bg-border-default: #6B6B6B; /* Цвет фона бордеров котрола */
 
@@ -65,27 +65,27 @@
 
 	/* Primary */
 	--color-control-bg-primary: #2F3140; /* Цвет фона активного контрола */
-	--color-control-bg-primary-hover: #2F3140; /* Цвет фона активного контрола по ховеру */
+	--color-control-bg-primary-hover: rgba(47,49,64, 0.95); /* Цвет фона активного контрола по ховеру */
 
 	--color-control-typo-primary: rgb(255, 255, 255); /* Цвет акцентного текста */
-	--color-control-typo-primary-hover: rgb(255, 255, 255); /* Цвет акцентного текста */
+	--color-control-typo-primary-hover: #FFFFFF; /* Цвет акцентного текста */
 
 	/* Secondary */
-	--color-control-bg-secondary: rgba(255, 255, 255, 0.00); /* Цвет фона бордеров котрола */
-	--color-control-bg-border-secondary: rgb(255, 112, 0); /* Цвет фона бордеров котрола */
+	--color-control-bg-secondary: #F1F1F1; /* Цвет фона бордеров котрола */
+	--color-control-bg-border-secondary: #F1F1F1; /* Цвет фона бордеров котрола */
 
-	--color-control-bg-border-secondary-hover: rgb(245, 132, 20); /* Цвет фона бордеров контрола по ховеру */
+	--color-control-bg-border-secondary-hover: #F1F1F1; /* Цвет фона бордеров контрола по ховеру */
 
-	--color-control-typo-secondary: #2F3140; /* Цвет второстепеного текста контрола */
+	--color-control-typo-secondary: #111111; /* Цвет второстепеного текста контрола */
 
-	--color-control-typo-secondary-hover: #2F3140; /* Цвет акцентного текста */
+	--color-control-typo-secondary-hover: #111111; /* Цвет акцентного текста */
 
 	/* Ghost */
 	--color-control-bg-ghost: rgba(250, 250, 250); /* Цвет фона дополнительного контрола */
 
 	--color-control-bg-ghost-hover: rgb(250, 250, 250); /* Цвет фона дополнительного контрола по ховеру */
 
-	--color-control-typo-ghost: rgb(0, 32, 51); /* Цвет дополнительного текста контрола */
+	--color-control-typo-ghost: #111111; /* Цвет дополнительного текста контрола */
 
 	--color-control-typo-ghost-hover: rgb(0, 32, 51); /* Цвет акцентного текста */
 
@@ -110,6 +110,14 @@
 	--color-shadow-layer-2: rgba(0, 32, 51, 0.12);
 	--color-shadow-modal-1: rgba(0, 32, 51, 0.04);
 	--color-shadow-modal-2: rgba(0, 32, 51, 0.12);
+
+	--button-bg-color: var(--color-control-bg-primary);
+	--button-bg-color-hover: var(--color-control-bg-primary-hover);
+	--button-color: var(--color-control-typo-primary);
+	--button-color-hover: var(--color-control-typo-primary-hover);
+	--button-border: transparent;
+	--button-bg-color-disable: var(--color-control-bg-disable);
+	--button-color-disable: var(--color-control-typo-disable);
 }
 
 /* stylelint-enable */

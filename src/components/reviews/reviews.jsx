@@ -21,7 +21,7 @@ const Reviews = ({ reviewsCards }) => {
 
 	return (
 		<div className={cl.reviews}>
-			<div className="container p-0">
+			<div className="container">
 				<div className={cn([cl.reviewsInformation, 'd-flex', 'flex-column'])}>
 					<h2 className={cn([cl.reviewsInformationTitle, 'mb-0'])}>Узнайте больше в наших обзорах</h2>
 					<div className="d-flex flex-column gap-4">
@@ -40,7 +40,13 @@ const Reviews = ({ reviewsCards }) => {
 								spaceBetween={30}
 								slidesPerView={2}
 								onSwiper={(swiper) => setSwiper(swiper)}
-								pagination={{ clickable: true }}
+								pagination={{
+									el: `.${cl.swiperPagination}`,
+									clickable: true,
+									renderBullet: (index, className) => {
+										return `<div class='${className}'></div>`;
+									},
+								}}
 								scrollbar={{ draggable: true }}
 								loop={true}
 								breakpoints={{
@@ -66,8 +72,8 @@ const Reviews = ({ reviewsCards }) => {
 										<ReviewsCard text={text} video={video} play={play} />
 									</SwiperSlide>
 								))}
-								{/*<div className="swiper-pagination"></div>*/}
 							</Swiper>
+							<div className={cn([cl.swiperPagination, 'd-none', 'd-sm-flex'])}/>
 						</div>
 					</div>
 				</div>

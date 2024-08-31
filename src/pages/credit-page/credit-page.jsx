@@ -1,11 +1,9 @@
 import React from 'react'
 
-import Banks from '@components/banks/banks.jsx'
+import LogoGrid from '@components/LogoGrid/LogoGrid.jsx'
 import Banner from '@components/banner/banner.jsx'
 import InOurShowrooms from '@components/in-our-showrooms/in-our-showrooms.jsx'
-import Credit from '@components/sign-ups/credit/credit.jsx'
-
-import MainLayout from '../../layout/main/main-layout.jsx'
+import CallbackForm from "@components/callback/callbackForm/callbackForm";
 
 const CreditPage = () => {
 	const blocks = [
@@ -13,9 +11,9 @@ const CreditPage = () => {
 			alias: 'Banner',
 			value: [
 				{
-					bannerDesktop: './assets/img/banner/credit/creditDesktop.jpg',
-					bannerTablet: './assets/img/banner/credit/creditMobile.jpg',
-					bannerMobile: './assets/img/banner/credit/creditMobile.jpg'
+					bannerDesktop: '/assets/img/banner/credit/creditDesktop.jpg',
+					bannerTablet: '/assets/img/banner/credit/creditMobile.jpg',
+					bannerMobile: '/assets/img/banner/credit/creditMobile.jpg'
 				}
 			]
 		},
@@ -42,103 +40,110 @@ const CreditPage = () => {
 			]
 		},
 		{
-			alias: 'Banks',
+			alias: 'LogoGrid',
 			title: 'Банки партнеры',
 			value: [
 				{
 					id: 0,
-					image: './assets/img/banks/tinkoff.png'
+					image: '/assets/img/banks/tinkoff.png'
 				},
 				{
 					id: 1,
-					image: './assets/img/banks/alfa.png'
+					image: '/assets/img/banks/alfa.png'
 				},
 				{
 					id: 2,
-					image: './assets/img/banks/vtb.png'
+					image: '/assets/img/banks/vtb.png'
 				},
 				{
 					id: 3,
-					image: './assets/img/banks/rosbank.png'
+					image: '/assets/img/banks/rosbank.png'
 				},
 				{
 					id: 4,
-					image: './assets/img/banks/uralsib.png'
+					image: '/assets/img/banks/uralsib.png'
 				},
 				{
 					id: 5,
-					image: './assets/img/banks/sovkombank.png'
+					image: '/assets/img/banks/sovkombank.png'
 				},
 				{
 					id: 6,
-					image: './assets/img/banks/otkrytie.png'
+					image: '/assets/img/banks/otkrytie.png'
 				},
 				{
 					id: 7,
-					image: './assets/img/banks/evropabank.png'
+					image: '/assets/img/banks/evropabank.png'
 				},
 				{
 					id: 8,
-					image: './assets/img/banks/otpbank.png'
+					image: '/assets/img/banks/otpbank.png'
 				},
 				{
 					id: 9,
-					image: './assets/img/banks/autofinance.png'
+					image: '/assets/img/banks/autofinance.png'
 				},
 				{
 					id: 10,
-					image: './assets/img/banks/fastbank.png'
+					image: '/assets/img/banks/fastbank.png'
 				},
 				{
 					id: 11,
-					image: './assets/img/banks/driveclick.png'
+					image: '/assets/img/banks/driveclick.png'
 				},
 				{
 					id: 12,
-					image: './assets/img/banks/lokobank.png'
+					image: '/assets/img/banks/lokobank.png'
 				},
 				{
 					id: 13,
-					image: './assets/img/banks/ekspobank.png'
+					image: '/assets/img/banks/ekspobank.png'
 				}
 			]
 		},
 		{
-			alias: 'Credit',
-			value: [
+			alias: 'CallbackForm',
+			title: 'Проконсультируем по автокредитованию',
+			description: 'Оставьте заявку через форму или позвоните <br/>по номеру <a href="tel:+79051818768">+7 (905) 181-87-68</a>',
+			buttonText: 'Записаться',
+			image: '/assets/img/fast-sign-up/credit.jpg',
+			background: 'dark',
+			fields: [
 				{
-					title: 'Проконсультируем по автокредитованию',
-					description: 'Оставьте заявку через форму или позвоните по номеру +7 (ХХХ) ХХХ-ХХ-ХХ',
-					btn: 'Записаться',
-					policyText: 'Нажимая на кнопку, вы соглашаетесь с ',
-					policyLink: 'Политикой конфиденциальности',
-					image: './assets/img/fast-sign-up/credit.jpg',
-					titleMobile: 'Оставить заявку на кредитование'
-				}
-			],
-			brands: [
-				{
-					label: 'Changan Auto',
-					id: 1
+					type: 'text',
+					name: 'name',
+					placeholder: 'Имя',
 				},
 				{
-					label: 'Omoda',
-					id: 2
+					type: 'phone',
+					name: 'phone',
+					placeholder: 'Телефон',
+					required: 1
 				},
 				{
-					label: 'Haval',
-					id: 3
+					type: 'select',
+					name: 'brand',
+					placeholder: 'Выберите бренд',
+					values: [
+						{
+							label: 'Changan Auto'
+						},
+						{
+							label: 'Omoda'
+						},
+						{
+							label: 'Haval'
+						},
+						{
+							label: 'Москвич'
+						},
+						{
+							label: 'Exeed',
+						}
+					]
 				},
-				{
-					label: 'Москвич',
-					id: 4
-				},
-				{
-					label: 'Exeed',
-					id: 5
-				}
 			]
-		}
+		},
 	]
 
 	return (
@@ -149,10 +154,15 @@ const CreditPage = () => {
 						return <Banner bannerList={block.value} />
 					case 'InOurShowrooms':
 						return <InOurShowrooms title={block.title} cardList={block.value} description={block.description} />
-					case 'Banks':
-						return <Banks title={block.title} banksList={block.value} />
-					case 'Credit':
-						return <Credit creditList={block.value} comboboxValues={block.brands} />
+					case 'LogoGrid':
+						return <LogoGrid title={block.title} logos={block.value} />
+					case 'CallbackForm':
+						return <CallbackForm title={block.title}
+											 description={block.description}
+											 buttonText={block.buttonText}
+											 image={block.image}
+											 backround={block.background}
+											 fields={block.fields}/>
 				}
 			})}
 		</>

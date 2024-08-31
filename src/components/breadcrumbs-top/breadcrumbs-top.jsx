@@ -29,7 +29,7 @@ const BreadcrumbsTop = () => {
 
 	return (
 		<div className={cl.breadcrumbs}>
-			<div className="container p-0">
+			<div className="container">
 				<Breadcrumbs items={pagesNoIcon} />
 			</div>
 		</div>

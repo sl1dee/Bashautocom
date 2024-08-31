@@ -1,7 +1,7 @@
-import React from 'react'
+import React, {useEffect, useRef} from 'react'
 
 import About from '@components/about/about.jsx'
-import Brands from '@components/brands/brands.jsx'
+import LogoGrid from '@components/LogoGrid/LogoGrid.jsx'
 import DealerAndServiceCenters from '@components/dealer-and-service-centers/dealer-and-service-centers.jsx'
 import Events from '@components/events/events.jsx'
 import MainServices from '@components/main-services/main-services.jsx'
@@ -9,10 +9,11 @@ import OurServices from '@components/our-services/our-services.jsx'
 import Question from '@components/question/question.jsx'
 import Reviews from '@components/reviews/reviews.jsx'
 import SpecialOffers from '@components/special-offers/special-offers.jsx'
+import {useLocation} from "react-router-dom";
 
-import MainLayout from '../../layout/main'
 
 const MainPage = () => {
+
 	const mainServicesList = [
 		{
 			id: 1,
@@ -156,63 +157,44 @@ const MainPage = () => {
 			id: 14,
 			href: '/service-center',
 			imgPath: './assets/img/brands/suzuki.svg'
+		},
+		{
+			id: 15,
+			href: '/service-center',
+			imgPath: './assets/img/brands/livan.svg'
 		}
 	]
 
 	const cardList = [
 		{
 			bckgImg: './assets/img/dealer-and-service-centers/haval.jpg',
-			street: 'Уфа, ул. Проспект Салавата Юлаева, 89',
-			number: '+7 (347) 246-65-47',
-			saleCount: '3',
-			serviceCount: '7',
-			saleBrands: ['Haval', 'Changan'],
-			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
+			name: 'Haval Центр Уфа',
+			services: 'Продажа, сервис, запчасти',
 		},
 		{
 			bckgImg: './assets/img/dealer-and-service-centers/moskvich.jpg',
-			street: 'Уфа, ул. Рубежная, 168',
-			number: '+7 (347) 246-65-47',
-			saleCount: '2',
-			serviceCount: '7',
-			saleBrands: ['Haval', 'Changan'],
-			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
+			name: 'Москвич Центр Уфа',
+			services: 'Продажа, сервис, запчасти',
 		},
 		{
 			bckgImg: './assets/img/dealer-and-service-centers/omoda.jpg',
-			street: 'Уфа, ул. Адмирала Макарова, 32',
-			number: '+7 (347) 246-65-47',
-			saleCount: '2',
-			serviceCount: '7',
-			saleBrands: ['Haval', 'Changan'],
-			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
+			name: 'Omoda Центр Уфа',
+			services: 'Продажа, сервис, запчасти',
 		},
 		{
 			bckgImg: './assets/img/dealer-and-service-centers/haval.jpg',
-			street: 'Уфа, ул. Проспект Салавата Юлаева, 89',
-			number: '+7 (347) 246-65-47',
-			saleCount: '3',
-			serviceCount: '7',
-			saleBrands: ['Haval', 'Changan'],
-			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
+			name: 'Haval Центр Уфа',
+			services: 'Продажа, сервис, запчасти',
 		},
 		{
 			bckgImg: './assets/img/dealer-and-service-centers/moskvich.jpg',
-			street: 'Уфа, ул. Рубежная, 168',
-			number: '+7 (347) 246-65-47',
-			saleCount: '2',
-			serviceCount: '7',
-			saleBrands: ['Haval', 'Changan'],
-			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
+			name: 'Москвич Центр Уфа',
+			services: 'Продажа, сервис, запчасти',
 		},
 		{
 			bckgImg: './assets/img/dealer-and-service-centers/omoda.jpg',
-			street: 'Уфа, ул. Адмирала Макарова, 32',
-			number: '+7 (347) 246-65-47',
-			saleCount: '2',
-			serviceCount: '7',
-			saleBrands: ['Haval', 'Changan'],
-			serviceBrands: ['Nissan', 'Honda', 'Infinity', 'Datsun', 'Suzuki', 'Haval', 'Changan']
+			name: 'Omoda Центр Уфа',
+			services: 'Продажа, сервис, запчасти',
 		}
 	]
 
@@ -386,7 +368,7 @@ const MainPage = () => {
 				{
 					id: 0,
 					image: './assets/img/about/shield.svg',
-					text: 'Официальный дилер брендов Omoda, Changan Auto, Jaecoo, Exeed, Москвич, Lada, Haval.'
+					text: 'Официальный дилер брендов Omoda, Changan, Jaecoo, Exeed, Москвич, Lada, Haval, Livan'
 				},
 				{
 					id: 1,
@@ -451,21 +433,35 @@ const MainPage = () => {
 		}
 	]
 
+	const location = useLocation();
+
+	useEffect(() => {
+		if (location.hash === '#services') {
+			const element = document.getElementById('services');
+			if (element) {
+				const y = element.getBoundingClientRect().top + window.pageYOffset - 100;
+				window.scrollTo({ top: y, behavior: 'smooth' });
+			}
+		}
+	}, [location.hash]);
+
 	return (
 		<>
 			<MainServices mainServicesList={mainServicesList} />
-			<Brands title="Найдите свой бренд" viewTabs brandsList={brandsList} />
+			<LogoGrid title="Найдите свой бренд" viewTabs logos={brandsList} />
 			<SpecialOffers
 				specialOffersText={specialOffersText}
 				specialOffersCards={specialOffersCards}
 				comboboxValues={brands}
 				items={tabServices}
 			/>
-			<OurServices ourServicesCards={ourServicesCards} />
+			<div id="services">
+				<OurServices ourServicesCards={ourServicesCards} />
+			</div>
 			<Reviews reviewsCards={reviewsCards} />
 			<Question questionText={questionText} comboboxValues={brands} items={questionServices} />
 			<DealerAndServiceCenters
-				title="Дилерские и сервисные центры"
+				title="Центры и контакты"
 				cardList={cardList}
 				comboboxValues={brands}
 				items={cities}

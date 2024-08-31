@@ -2,14 +2,14 @@ import cn from 'classnames'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import Button from '../../ui/button/index.js'
+import { Button } from '@consta/uikit/Button';
 import cl from './our-services.module.scss'
 
 const OurServices = ({ ourServicesCards }) => {
 
 	return (
 		<div className={cl.ourServices}>
-			<div className="container p-0">
+			<div className="container">
 				<div className={cn([cl.ourServicesInformation, 'd-flex', 'flex-column'])}>
 					<h1
 						className={cn([
@@ -36,13 +36,7 @@ const OurServices = ({ ourServicesCards }) => {
 										</div>
 										<Link to={href}>
 											<div className={cn([cl.btn, 'd-none', 'd-lg-flex'])}>
-												<Button
-													sizeStyle="sizeL"
-													colorStyle="secondary"
-													className={cn([cl.button], 'd-none', 'd-lg-flex')}
-												>
-													Подробнее
-												</Button>
+												<Button className={cn([cl.button, 'd-none', 'd-lg-flex', 'justify-content-center', 'align-items-center'])} label='Подробнее' size='l' view="secondary"/>
 											</div>
 										</Link>
 									</div>

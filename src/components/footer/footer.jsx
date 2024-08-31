@@ -16,7 +16,7 @@ const Footer = () => {
 	return (
 		<footer>
 			<div className={cl.footer}>
-				<div className="container p-0">
+				<div className="container">
 					<div className={cn([cl.footerContent, 'd-grid'])}>
 						<div className={cn([cl.footerContentContacts, 'd-flex', 'flex-sm-column'])}>
 							<div className={cn([cl.footerContentContactsGroup, 'd-flex', 'flex-column'])}>
@@ -161,7 +161,7 @@ const Footer = () => {
 				</div>
 			</div>
 			<div className={cl.footer2}>
-				<div className="container p-0">
+				<div className="container">
 					<div className={cn([cl.footer2Links, 'd-flex', 'justify-content-between', 'flex-column', 'flex-sm-row'])}>
 						<p>
 							<Link to="/privacy-policy">Политика конфиденциальности</Link>

@@ -8,6 +8,7 @@ import 'swiper/scss/pagination'
 
 import DealerAndServiceCentersCard from './dealer-and-service-centers-card/dealer-and-service-centers-card.jsx'
 import cl from './dealer-and-service-centers.module.scss'
+import {Link} from "react-router-dom";
 
 const DealerAndServiceCenters = ({ title, cardList, comboboxValues, items }) => {
 	const [swiper, setSwiper] = useState(null)
@@ -26,10 +27,14 @@ const DealerAndServiceCenters = ({ title, cardList, comboboxValues, items }) => 
 	const [value, setValue] = useState(items[0])
 
 	return (
-		<div className={cn[(cl.centers, 'd-xs-none', 'd-sm-flex')]}>
-			<div className="container p-0">
-				<div className={cn([cl.centersInformation, 'd-flex', 'flex-column'])}>
-					<h1 className={cn([cl.centersInformationTitle, 'mb-0'])}>{title}</h1>
+		<div className={cn[(cl.centers, 'd-none', 'd-sm-flex')]}>
+			<div className="container">
+				<div className={cn([cl.centersInformation, 'd-none', 'd-sm-flex', 'flex-column'])}>
+					<Link to='/' className={cn([cl.centersInformationTitle, 'd-flex', 'align-items-center'])}>
+						<p className={cn([cl.text, 'mb-0'])}>{title}</p>
+						<img className={cl.image} src='../../../assets/img/dealer-and-service-centers/arrow-right.svg' alt=""/>
+					</Link>
+					{/*<h1 className={cn([cl.centersInformationTitle, 'mb-0'])}>{title}</h1>*/}
 					<div className={cn([cl.centersInformationBlock, 'd-flex', 'flex-column'])}>
 						{/*<div className="d-flex flex-column flex-lg-row justify-content-lg-between align-items-lg-center">*/}
 						<div
@@ -46,7 +51,7 @@ const DealerAndServiceCenters = ({ title, cardList, comboboxValues, items }) => 
 							<div className="d-none d-lg-flex">
 								<ChoiceGroup
 									value={value}
-									onChange={({ value }) => setValue(value)}
+									onChange={( value ) => setValue(value)}
 									items={items}
 									getItemLabel={(item) => item}
 									form="default"
@@ -59,7 +64,7 @@ const DealerAndServiceCenters = ({ title, cardList, comboboxValues, items }) => 
 							<div className="d-none d-sm-flex d-lg-none">
 								<ChoiceGroup
 									value={value}
-									onChange={({ value }) => setValue(value)}
+									onChange={( value ) => setValue(value)}
 									items={items}
 									getItemLabel={(item) => item}
 									form="default"
@@ -75,7 +80,7 @@ const DealerAndServiceCenters = ({ title, cardList, comboboxValues, items }) => 
 									size="l"
 									items={comboboxValues}
 									value={comboboxValue}
-									onChange={({ value }) => setComboboxValue(value)}
+									onChange={( value ) => setComboboxValue(value)}
 									multiple
 								/>
 							</div>
@@ -85,7 +90,7 @@ const DealerAndServiceCenters = ({ title, cardList, comboboxValues, items }) => 
 									size="m"
 									items={comboboxValues}
 									value={comboboxValue}
-									onChange={({ value }) => setComboboxValue(value)}
+									onChange={( value ) => setComboboxValue(value)}
 									multiple
 								/>
 							</div>
@@ -105,41 +110,48 @@ const DealerAndServiceCenters = ({ title, cardList, comboboxValues, items }) => 
 								spaceBetween={30}
 								slidesPerView={2}
 								onSwiper={(swiper) => setSwiper(swiper)}
-								pagination={{ clickable: true }}
+								pagination={{
+									el: `.${cl.swiperPagination}`,
+									clickable: true,
+									renderBullet: (index, className) => {
+										return `<div class='${className}'></div>`;
+									},
+								}}
 								scrollbar={{ draggable: true }}
 								loop={true}
 								breakpoints={{
 									// when window width is >= 640px
-									320: {
-										spaceBetween: 20,
-										slidesPerView: 1
-									},
-									// when window width is >= 576px
 									576: {
-										spaceBetween: 20,
+										spaceBetween: 10,
 										slidesPerView: 2
 									},
-									// when window width is >= 992px
-									1000: {
+									// when window width is >= 576px
+									992: {
 										spaceBetween: 20,
 										slidesPerView: 3
+									},
+									// when window width is >= 992px
+									1400: {
+										spaceBetween: 20,
+										slidesPerView: 4
+									},
+									1920: {
+										spaceBetween: 30,
+										slidesPerView: 4
 									}
 								}}
 							>
-								{cardList.map(({ bckgImg, street, number, saleCount, serviceCount, saleBrands, serviceBrands }) => (
+								{cardList.map(({ bckgImg, name, services }) => (
 									<SwiperSlide>
 										<DealerAndServiceCentersCard
 											bckgImg={bckgImg}
-											street={street}
-											number={number}
-											saleCount={saleCount}
-											serviceCount={serviceCount}
-											saleBrands={saleBrands}
-											serviceBrands={serviceBrands}
+											name={name}
+											services={services}
 										/>
 									</SwiperSlide>
 								))}
 							</Swiper>
+							<div className={cn([cl.swiperPagination, 'd-none', 'd-sm-flex'])}/>
 						</div>
 					</div>
 				</div>

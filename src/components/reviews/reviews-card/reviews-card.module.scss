@@ -1,22 +1,24 @@
 
 .reviewsCard {
-  width: 530px;
-  height: 368px;
   background-color: #FFFFFF;
   gap: 20px;
-  position: relative;
 
   &Video {
+    position: relative;
     border-radius: 20px;
-    //position: relative;
     z-index: 0;
   }
 
   &Text {
     font-size: 20px;
     font-weight: 500;
-    line-height: 24px;
+    line-height: 120%;
     color: #111111;
+    overflow: hidden;
+    display: -webkit-box;
+    height: 48px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
 
   &Play {
@@ -24,120 +26,57 @@
     position: absolute;
     width: 74px;
     height: 74px;
-    top: 31%;
-    left: 43%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
   }
 }
 
 @media (min-width: 1400px) and (max-width: 1920px) {
-  .reviewsCard {
-    width: 426.67px;
-    height: 276px;
-    background-color: #FFFFFF;
-    gap: 20px;
 
-    &Video {
-      border-radius: 20px;
-      //position: relative;
-    }
-
-    &Text {
-      font-size: 18px;
-      font-weight: 500;
-      line-height: 20px;
-      color: #111111;
-    }
-    &Play {
-      position: absolute;
-      width: 74px;
-      height: 74px;
-      top: 31%;
-      left: 41%;
-    }
-  }
 }
 
 @media (min-width: 992px) and (max-width: 1400px) {
   .reviewsCard {
-    width: 306.67px;
-    height: 190px;
-    background-color: #FFFFFF;
-    gap: 20px;
-
-    &Video {
-      border-radius: 20px;
-      //position: relative;
-    }
-
-    &Text {
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 20px;
-      color: #111111;
-    }
 
     &Play {
-      position: absolute;
-      width: 74px;
-      height: 74px;
-      top: 31%;
-      left: 41%;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -35%);
     }
   }
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
   .reviewsCard {
-    width: 260px;
-    height: 164px;
-    background-color: #FFFFFF;
-    gap: 20px;
-
-    &Video {
-      border-radius: 20px;
-    }
 
     &Text {
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 16.8px;
-      color: #111111;
+      font-size: 18px;
+      height: 43.2px;
     }
     &Play {
-      position: absolute;
-      width: 74px;
-      height: 74px;
-      top: 20%;
-      left: 34%;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -30%);
     }
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575.96px) {
   .reviewsCard {
-    width: 222px;
-    height: 136px;
-    background-color: #FFFFFF;
     gap: 8px;
-
-    &Video {
-      border-radius: 20px;
-      //position: relative;
-    }
 
     &Text {
       font-size: 14px;
-      font-weight: 500;
-      line-height: 16.8px;
-      color: #111111;
+      height: 33.6px;
     }
 
     &Play {
-      position: absolute;
       width: 40px;
       height: 40px;
-      top: 32%;
-      left: 42%;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -40%);
     }
   }
 }

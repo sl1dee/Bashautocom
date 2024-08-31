@@ -8,7 +8,7 @@ const MainServices = ({ mainServicesList }) => {
 
 	return (
 		<div className={cl.mainServices}>
-			<div className="container p-0">
+			<div className="container">
 				<div className={cn([cl.mainServicesCards])}>
 					{mainServicesList.map(({ id, path, title, text, imgPath }) => (
 						<div key={id}>

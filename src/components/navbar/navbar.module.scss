@@ -1,8 +1,35 @@
-
+//.navbar {
+//  background-color: #F4F5F7;
+//  border: 1px solid #F1F1F1;
+//  padding: 10px 10px 24px 10px;
+//  position: sticky;
+//  bottom: 0;
+//  left: 0;
+//  right: 0;
+//  z-index: 100;
+//
+//  &Links {
+//
+//    .linkGroup {
+//      row-gap: 5px;
+//
+//      .icon {
+//        max-width: 22px;
+//        max-height: 22px;
+//      }
+//      .name {
+//        font-size: 11px;
+//        font-weight: 500;
+//        line-height: 15.4px;
+//        color: #B6B6B6;
+//      }
+//    }
+//  }
+//}
 
 .navbar {
-  background-color: #F4F5F7;
-  border: 1px solid #F1F1F1;
+  background-color: #f4f5f7;
+  border: 1px solid #f1f1f1;
   padding: 10px 10px 24px 10px;
   position: sticky;
   bottom: 0;
@@ -10,31 +37,31 @@
   right: 0;
   z-index: 100;
 
-  &Links {
-
+  .navbarLinks {
     .linkGroup {
       row-gap: 5px;
 
       .icon {
         max-width: 22px;
         max-height: 22px;
+        filter: invert(90%) sepia(10%) saturate(0%) brightness(90%);
       }
+
       .name {
         font-size: 11px;
         font-weight: 500;
         line-height: 15.4px;
-        color: #B6B6B6;
+        color: #b6b6b6;
+      }
+    }
+    .activeLink {
+
+      .icon {
+        filter: none;
       }
 
-      &:hover {
-
-        .icon {
-          stroke: #2F3140 !important;
-        }
-
-        .name {
-          color: #2F3140;
-        }
+      .name {
+        color: #2F3140;
       }
     }
   }

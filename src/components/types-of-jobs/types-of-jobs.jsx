@@ -11,7 +11,7 @@ const TypesOfJobs = ({ title, typesList }) => {
 
 	return (
 		<div className={cl.typesOfJob}>
-			<div className="container p-0">
+			<div className="container">
 				<div className={cn([cl.typesOfJobInformation, 'd-flex', 'flex-column'])}>
 					<h1 className={cn([cl.typesOfJobInformationTitle, 'mb-0'])}>{title}</h1>
 					<span className={cn([cl.typesOfJobInformationBlock, 'd-flex', 'flex-column'])}>

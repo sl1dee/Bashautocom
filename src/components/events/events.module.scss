@@ -21,7 +21,7 @@
         grid-template-columns: repeat(4, 1fr);
 
         .card {
-          max-width: 390px;
+          //max-width: 390px;
           gap: 20px;
           display: none;
 
@@ -30,48 +30,32 @@
           }
 
           &Image {
-            max-width: 390px;
-            max-height: 258px;
+            width: 100%;
+            //max-width: 390px;
+            //max-height: 258px;
             border-radius: 20px;
           }
 
           &Title {
             font-size: 20px;
             font-weight: 500;
-            line-height: 24px;
+            line-height: 120%;
             color: #111111;
           }
 
           &Date {
             font-size: 16px;
             font-weight: 400;
-            line-height: 19.52px;
+            line-height: 130%;
             color: rgba(17, 17, 17, 0.48);
           }
         }
       }
 
       .btn {
-        gap: 14px;
-        align-items: center;
         font-size: 18px;
         font-weight: 500;
-        line-height: 25.2px;
-        padding: 11.5px 20px;
-
-        .arrow {
-          content: url("/assets/img/events/arrow-right.svg");
-          max-width: 24px;
-          max-height: 24px;
-        }
-
-        &:hover {
-          .arrow {
-            content: url("/assets/img/events/arrow-right-blue.svg");
-            max-width: 24px;
-            max-height: 24px;
-          }
-        }
+        line-height: 140%;
       }
     }
   }
@@ -86,49 +70,26 @@
       padding: 50px 0 150px 0;
       gap: 50px;
 
-      &Title {
-        font-size: 50px;
-        font-weight: 500;
-        color: #111111;
-        line-height: 60px;
-      }
-
       &Block {
 
         .cards {
-          gap: 30px;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 20px;
 
           .card {
-            max-width: 390px;
+            //max-width: 390px;
             gap: 20px;
 
             &Image {
-              max-width: 314.75px;
-              max-height: 188px;
+              //max-width: 314.75px;
+              //max-height: 188px;
               border-radius: 20px;
-            }
-
-            &Title {
-              font-size: 20px;
-              font-weight: 500;
-              line-height: 24px;
-              color: #111111;
             }
 
             &Date {
               margin-top: auto;
-              font-size: 16px;
-              font-weight: 400;
-              line-height: 19.52px;
-              color: rgba(17, 17, 17, 0.48);
             }
           }
-        }
-
-        .btn {
-          gap: 14px;
-          align-items: center;
-
         }
       }
     }
@@ -143,54 +104,30 @@
       padding: 50px 0 150px 0;
       gap: 50px;
 
-      &Title {
-        font-size: 50px;
-        font-weight: 500;
-        color: #111111;
-        line-height: 60px;
-      }
-
       &Block {
 
         .cards {
-          gap: 30px;
           grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
 
           .card {
-            max-width: 306.67px;
+            //max-width: 306.67px;
             gap: 20px;
 
             &Image {
-              max-width: 306.67px;
-              max-height: 188px;
+              //max-width: 306.67px;
+              //max-height: 188px;
               border-radius: 20px;
-            }
-
-            &Title {
-              font-size: 20px;
-              font-weight: 500;
-              line-height: 24px;
-              color: #111111;
             }
 
             &Date {
               margin-top: auto;
-              font-size: 16px;
-              font-weight: 400;
-              line-height: 19.52px;
-              color: rgba(17, 17, 17, 0.48);
             }
           }
 
           .card:nth-of-type(n+4) {
             display: none!important;
           }
-        }
-
-        .btn {
-          gap: 14px;
-          align-items: center;
-
         }
       }
     }
@@ -207,40 +144,26 @@
 
       &Title {
         font-size: 38px;
-        font-weight: 500;
-        color: #111111;
-        line-height: 38.4px;
       }
 
       &Block {
 
         .cards {
-          gap: 30px;
           grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
 
           .card {
-            max-width: 260px;
+            //max-width: 260px;
             gap: 20px;
 
             &Image {
-              max-width: 260px;
-              max-height: 164px;
+              //max-width: 260px;
+              //max-height: 164px;
               border-radius: 20px;
-            }
-
-            &Title {
-              font-size: 20px;
-              font-weight: 500;
-              line-height: 24px;
-              color: #111111;
             }
 
             &Date {
               margin-top: auto;
-              font-size: 16px;
-              font-weight: 400;
-              line-height: 19.52px;
-              color: rgba(17, 17, 17, 0.48);
             }
           }
 
@@ -248,18 +171,12 @@
             display: none!important;
           }
         }
-
-        .btn {
-          gap: 14px;
-          align-items: center;
-
-        }
       }
     }
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575.96px) {
   .events {
     background-color: #FFFFFF;
 
@@ -269,41 +186,31 @@
 
       &Title {
         font-size: 18px;
-        font-weight: 500;
-        color: #111111;
-        line-height: 21.6px;
       }
 
       &Block {
         gap: 16px;
 
         .cards {
-          gap: 30px;
           grid-template-columns: repeat(1, 1fr);
 
           .card {
-            max-width: 300px;
+            //max-width: 300px;
             gap: 10px;
 
             &Image {
-              max-width: 300px;
+              //max-width: 300px;
               //max-height: 164px;
               border-radius: 20px;
             }
 
             &Title {
-              font-size: 20px;
-              font-weight: 500;
-              line-height: 24px;
-              color: #111111;
+              font-size: 14px;
             }
 
             &Date {
               margin-top: auto;
-              font-size: 16px;
-              font-weight: 400;
-              line-height: 19.52px;
-              color: rgba(17, 17, 17, 0.48);
+              font-size: 12px;
             }
           }
 
@@ -313,26 +220,7 @@
         }
 
         .btn {
-          gap: 14px;
-          align-items: center;
           font-size: 14px;
-          font-weight: 500;
-          line-height: 19.6px;
-          padding: 6px 12px;
-
-          .arrow {
-            content: url("/assets/img/events/arrow-right.svg");
-            max-width: 18px;
-            max-height: 18px;
-          }
-
-          &:hover {
-            .arrow {
-              content: url("/assets/img/events/arrow-right-blue.svg");
-              max-width: 18px;
-              max-height: 18px;
-            }
-          }
         }
       }
     }

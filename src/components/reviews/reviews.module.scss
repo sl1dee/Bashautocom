@@ -11,14 +11,16 @@
       font-size: 50px;
       font-weight: 500;
       color: #111111;
-      line-height: 60px;
+      line-height: 120%;
     }
 
     .reviewsSwiper {
       position: relative;
 
-      .swiper {
-        height: 422px;
+      .swiperPagination {
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
       }
 
       .swiperArrow {
@@ -72,19 +74,8 @@
       padding: 140px 0 65px 0;
       gap: 50px;
 
-      &Title {
-        font-size: 50px;
-        font-weight: 500;
-        color: #111111;
-        line-height: 60px;
-      }
-
       .reviewsSwiper {
         position: relative;
-
-        .swiper {
-          height: 362px;
-        }
 
         .swiperArrow {
           position: absolute;
@@ -137,21 +128,6 @@
     &Information {
       padding: 140px 0 65px 0;
       gap: 50px;
-
-      &Title {
-        font-size: 50px;
-        font-weight: 500;
-        color: #111111;
-        line-height: 60px;
-      }
-
-      .reviewsSwiper {
-        position: relative;
-
-        .swiper {
-          height: 290px;
-        }
-      }
     }
   }
 }
@@ -166,43 +142,33 @@
 
       &Title {
         font-size: 32px;
-        font-weight: 500;
-        color: #111111;
-        line-height: 38.4px;
       }
 
       .reviewsSwiper {
         position: relative;
 
-        .swiper {
-          height: 252px;
+        .swiperPagination {
+          padding-top: 20px;
         }
       }
     }
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575.96px) {
   .reviews {
     background-color: #FFFFFF;
 
     &Information {
       padding: 25px 0 25px 0;
-      gap: 30px;
+      gap: 16px;
 
       &Title {
         font-size: 18px;
-        font-weight: 500;
-        color: #111111;
-        line-height: 21.6px;
       }
 
       .reviewsSwiper {
         position: relative;
-
-        .swiper {
-          height: 230px;
-        }
       }
     }
   }

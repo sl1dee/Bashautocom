@@ -1,13 +1,7 @@
-import car from '@assets/img/about/car.jpg'
-import mainEntrance from '@assets/img/about/mainEntrance.jpg'
-import settingAbout from '@assets/img/about/setting.svg'
-import shieldAbout from '@assets/img/about/shield.svg'
-import usersAbout from '@assets/img/about/users.svg'
 import cn from 'classnames'
 import React from 'react'
 import { Link } from 'react-router-dom'
-
-import Button from '../../ui/button/index.js'
+import { Button } from '@consta/uikit/Button';
 import cl from './about.module.scss'
 
 const About = ({ aboutText }) => {
@@ -16,7 +10,7 @@ const About = ({ aboutText }) => {
 		<>
 			{aboutText.map(({ title, points, btn, achievements, firstImg, secondImg }) => (
 				<div className={cl.about}>
-					<div className="container p-0">
+					<div className="container">
 						<div className={cn([cl.aboutInformation, 'd-grid'])}>
 							<img className={cl.firstImg} src={firstImg} alt="mainEntrance" />
 							<span className={cn([cl.firstBlock, 'd-flex', 'flex-column'])}>
@@ -31,9 +25,8 @@ const About = ({ aboutText }) => {
 								</span>
 								<div className="d-flex">
 									<Link to="">
-										<Button sizeStyle="sizeL" className={cl.btn}>
-											{btn}
-										</Button>
+										<Button className={cn([cl.btn, 'd-none', 'd-sm-flex', 'justify-content-center', 'align-items-center'])} label={btn} size='l'/>
+										<Button className={cn([cl.btn, 'd-xs-flex', 'd-sm-none', 'justify-content-center', 'align-items-center'])} label={btn} size='s'/>
 									</Link>
 								</div>
 							</span>

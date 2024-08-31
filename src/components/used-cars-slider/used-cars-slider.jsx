@@ -10,16 +10,19 @@ const UsedCarsSlider = () => {
 
 	const bannerList = [
 		{
+			id: 0,
 			banner: './assets/img/used-cars-slider/autoCredit.jpg',
 			bannerTablet: './assets/img/used-cars-slider/autoCreditTablet.jpg',
 			bannerMobile: './assets/img/used-cars-slider/autoCreditMobile.jpg'
 		},
 		{
+			id: 1,
 			banner: './assets/img/used-cars-slider/autoCredit.jpg',
 			bannerTablet: './assets/img/used-cars-slider/autoCreditTablet.jpg',
 			bannerMobile: './assets/img/used-cars-slider/autoCreditMobile.jpg'
 		},
 		{
+			id: 2,
 			banner: './assets/img/used-cars-slider/autoCredit.jpg',
 			bannerTablet: './assets/img/used-cars-slider/autoCreditTablet.jpg',
 			bannerMobile: './assets/img/used-cars-slider/autoCreditMobile.jpg'
@@ -35,7 +38,7 @@ const UsedCarsSlider = () => {
 
 	return (
 		<div className={cl.usedCarsSlider}>
-			<div className="container p-0">
+			<div className="container">
 				<div className={cl.usedCarsSliderSwiper}>
 					<button onClick={prevSwipeHandler} className={cn([cl.swiperArrow, cl.swiperArrowLeft])} />
 					<button onClick={nextSwipeHandler} className={cn([cl.swiperArrow, cl.swiperArrowRight])} />
@@ -48,11 +51,13 @@ const UsedCarsSlider = () => {
 						pagination={{ clickable: true }}
 						scrollbar={{ draggable: true }}
 					>
-						{bannerList.map(({ banner, bannerTablet, bannerMobile }) => (
+						{bannerList.map(({ id, banner, bannerTablet, bannerMobile }) => (
 							<SwiperSlide>
-								<img src={banner} alt="banner" className={cn([cl.banner, 'd-none', 'd-lg-flex'])} />
-								<img src={bannerTablet} alt="banner" className={cn([cl.banner, 'd-none', 'd-sm-flex', 'd-lg-none'])} />
-								<img src={bannerMobile} alt="banner" className={cn([cl.banner, 'd-xs-flex', 'd-sm-none'])} />
+								<div key={id}>
+									<img src={banner} alt="banner" className={cn([cl.banner, 'd-none', 'd-lg-flex'])} />
+									<img src={bannerTablet} alt="banner" className={cn([cl.banner, 'd-none', 'd-sm-flex', 'd-lg-none'])} />
+									<img src={bannerMobile} alt="banner" className={cn([cl.banner, 'd-xs-flex', 'd-sm-none'])} />
+								</div>
 							</SwiperSlide>
 						))}
 					</Swiper>
