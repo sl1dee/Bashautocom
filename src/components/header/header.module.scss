@@ -1,142 +1,1103 @@
-@use '@assets/styles/vars/colors';
+
+.sidebar {
+  position: fixed;
+  opacity: 1;
+  top: 64px;
+  right: 0;
+  bottom: 0;
+  left: -576px;
+  z-index: 90;
+  transition: transform 0.3s ease;
+
+  &Bckg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: -100%;
+    bottom: 0;
+    z-index: -1;
+    background-color: #00000070;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .closer {
+    position: absolute;
+    top: 30px;
+    right: 37px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  &Content {
+    background-color: #F4F5F7;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 576px;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &Body {
+      padding: 20px 18px 28px;
+      row-gap: 10px;
+
+      &Links {
+        padding: 20px;
+        row-gap: 18px;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+
+        .headerLinks {
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 24px;
+          color: #111111;
+        }
+
+        .group {
+          gap: 12px;
+
+          img {
+            width: 20px;
+            height: 20px;
+          }
+
+          .subLinks {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.8px;
+            color: #111111;
+          }
+        }
+      }
+
+      &Footer {
+        padding: 20px;
+        row-gap: 10px;
+
+        .phone {
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 24px;
+          color: #111111;
+        }
+        .modal {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 19.2px;
+          color: #6B6B6B;
+          text-decoration-line: underline;
+        }
+      }
+    }
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+      display: none;
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-button {
+      width: 0;
+      height: 0;
+      display: none;
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      width: 0;
+      display: none;
+      background: transparent;
+    }
+
+    .menu {
+      row-gap: 20px;
+
+      &Logo {
+        height: 45px;
+      }
+
+      &Links {
+        row-gap: 8px;
+
+        &_header {
+          color: #131313;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 120%;
+          letter-spacing: -0.4px;
+        }
+
+        &_link {
+          color: #111111;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 110%;
+        }
+      }
+    }
+
+    .contacts {
+      row-gap: 16px;
+
+      &Info {
+        row-gap: 8px;
+
+        &_link {
+          column-gap: 12px;
+
+          img {
+            width: 20px;
+            height: 20px;
+          }
+
+          p {
+            color: #111111;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 150%;
+          }
+        }
+
+        &_time {
+          p {
+            color: #111111;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 150%;
+          }
+        }
+      }
+
+      .btn {
+        text-align: center;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.active {
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
 
 .header {
-  background-color: colors.$additionalColor;
+  background-color: #FFFFFF;
   position: sticky;
   top: 0;
   left: 0;
   right: 0;
-  padding: 24px 0;
-  z-index: 100;
+  z-index: 1000;
 
-  &Logo {
-    img {
-      height: 51px;
+
+  &Information {
+
+    &TopLinks {
+      gap: 20px;
+      padding: 16px 0 0 0;
+
+      > div {
+        span {
+          color: #6B6B6B;
+          font-size: 14px;
+          font-weight: 400;
+          //line-height: 110%;
+        }
+      }
     }
-  }
 
-  &Links {
-    column-gap: 25px;
+    &Links {
+      //padding: 16px 0 18px 0;
+      height: 82px;
 
-    .link {
-      column-gap: 5px;
-      position: relative;
-      cursor: default;
-      cursor: pointer;
-
-      span {
-        color: colors.$additionalTextColor;
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 110%;
+      .logo {
+        position: relative;
+        img {
+          max-width: 260px;
+          max-height: 24px;
+        }
       }
 
-      img {
-        width: 24px;
-        height: 24px;
-      }
+      .servicesLinks {
+        gap: 20px;
+        height: 82px;
 
-      &Menu {
-        position: absolute;
-        top: -10px;
-        left: 50%;
-        opacity: 0;
-        min-width: 352px;
-        padding-top: 10px;
-        transform: translate(-50%, 0);
-        transition: top .3s ease, transform .3s ease;
-        pointer-events: none;
-        z-index: 1;
+        &Link {
+          //padding: 30px 0 34px 0;
+          height: 82px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
 
-        .content {
-          row-gap: 20px;
-          border-radius: 30px;
-          background-color: colors.$whiteColor;
-          padding: 50px 40px;
-          box-shadow: 0 4px 32px rgba(0, 0, 0, 0.1);
+          .droplink {
 
-          &BigLink {
-            span {
-              color: colors.$mainTextColor;
-              font-size: 32px;
-              font-weight: 700;
-              line-height: 120%;
-              letter-spacing: -0.64px;
-            }
           }
 
-          &AdditionalLinks {
-            row-gap: 5px;
+          .dropdown {
+            position: absolute;
+            //top: calc(99.5%);
+            top: 95.5%;
+            width: 100%;
+            left: 0;
+            right: 0;
+            padding: 50px 0 70px 0;
+            background-color: #F4F5F7;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity .3s ease, visibility 3s ease;
 
-            > div {
-              span {
-                color: colors.$mainTextColor;
-                font-size: 20px;
-                font-weight: 500;
-                line-height: 110%;
+            .bckg {
+              position: absolute;
+              z-index: -1;
+              height: calc(100vh - 122px);
+              top: 100%;
+              left: 0;
+              right: 0;
+              background-color: #2F314066;
+              opacity: .5;
+              pointer-events: none;
+            }
+
+            .cards {
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+              gap: 20px;
+
+              .cardWrapper {
+                background-color: #FFFFFF;
+                border-radius: 20px;
+                padding: 30px;
+                width: 100%;
+                min-height: 220px;
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+
+                .card {
+
+                  &Description {
+                    gap: 8px;
+
+                    &Title {
+                      font-size: 16px;
+                      font-weight: 500;
+                      line-height: 22.4px;
+                      color: #111111;
+                    }
+
+                    &Text {
+                      font-size: 14px;
+                      font-weight: 400;
+                      line-height: 16.8px;
+                      color: #111111;
+                      opacity: 48%;
+                    }
+                  }
+
+                  &Img {
+                    margin-top: auto;
+                    max-height: 50px;
+                    max-width: 50px;
+                  }
+                }
               }
             }
           }
+
+          span {
+            color: #000000;
+            font-size: 16px;
+            font-weight: 400;
+            //line-height: 110%;
+            cursor: pointer;
+          }
+
+          .dropdown.open {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+          }
+
+          .smalldrop {
+            position: relative;
+
+            .smalldroplink {
+
+            }
+
+            .smalldropdown {
+              z-index: 100;
+              position: absolute;
+              top: calc(230%);
+              width: 233px;
+              height: 94px;
+              left: -15px;
+              right: 0;
+              padding: 8px 0 ;
+              background-color: #F4F5F7;
+              border-radius: 4px;
+              border: 1px solid #D4D4D4;
+              opacity: 0;
+              //transform: translate(-50%, 0);
+              //transition: top .3s ease, transform .3s ease;
+              //pointer-events: auto;
+              //transition: opacity .3s ease;
+              pointer-events: none;
+              transition: opacity .3s ease;
+
+              &Block {
+                width: 250px;
+                height: 41px;
+                padding: 10px 16px 10px 16px;
+
+                &Link {
+                  font-size: 16px;
+                  font-weight: 400;
+                  line-height: 20.8px;
+                  color: #111111;
+                }
+              }
+            }
+
+            span {
+              color: #000000;
+              font-size: 16px;
+              font-weight: 400;
+              //line-height: 110%;
+              cursor: pointer;
+            }
+
+
+          }
+          &:hover {
+            .smalldropdown {
+              //opacity: 1;
+              //pointer-events: none;
+              //top: 250%;
+              //opacity: 1;
+              //transform: translate(-50%, 0);
+              //pointer-events: auto;
+              opacity: 1;
+              pointer-events: auto;
+            }
+          }
         }
+        
       }
 
-      &:hover {
-        .linkMenu {
-          top: 100%;
-          opacity: 1;
-          transform: translate(-50%, 0);
-          pointer-events: auto;
-        }
-      }
-    }
-  }
+      .buttons {
+        display: flex;
+        gap: 20px;
+        align-items: center;
 
-  &Additional {
-    column-gap: 30px;
-
-    .contacts {
-      column-gap: 20px;
-
-      &Phone {
-        span {
-          color: colors.$mainTextColor;
-          font-size: 20px;
+        &SignUp {
+          width: 172px;
+          font-size: 18px;
           font-weight: 500;
-          line-height: 150%;
+          line-height: 140%;
         }
-      }
-    }
 
-    .sidenavTrigger {
-      display: block;
-      position: relative;
-      width: 34px;
-      height: 21px;
-      cursor: pointer;
+        &Account {
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 140%;
+        }
 
-      div, &::before, &::after {
-        width: 34px;
-        height: 3px;
-        background: colors.$mainColor;
-        content: "";
-        border-radius: 10px;
+        &AccIcon {
+          display: none;
+        }
+
+        &Burger {
+          cursor: pointer;
+
+          img {
+            width: 40px;
+            height: 40px;
+          }
+        }
       }
     }
   }
 }
 
 .scrolled {
-  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.1);
+  //box-shadow: 0 4px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.06);
+  z-index: 100;
   transition: ease .3s;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 1400px) and (max-width: 1920px) {
   .header {
-    padding: 20px 0;
 
-    &Logo {
-      img {
-        height: 45px;
+    &Information {
+
+      &TopLinks {
+        gap: 20px;
+        padding: 16px 0 0 0;
+
+        > div {
+          span {
+            color: #6B6B6B;
+            font-size: 14px;
+            font-weight: 400;
+            //line-height: 110%;
+          }
+        }
+      }
+
+      &Links {
+        //padding: 16px 0 18px 0;
+
+
+        .servicesLinks {
+          gap: 20px;
+
+          &Link {
+            padding: 29.5px 0 31.5px 0;
+
+            .droplink {
+
+            }
+
+            .dropdown {
+              //z-index: 100;
+              position: absolute;
+              top: calc(99.5%);
+              width: 100%;
+              left: 0;
+              right: 0;
+              padding: 50px 0 70px 0;
+              background-color: #F4F5F7;
+              //opacity: 0;
+              pointer-events: none;
+              //transition: opacity .3s ease;
+
+              .cards {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                gap: 20px;
+
+                .cardWrapper {
+                  background-color: #FFFFFF;
+                  border-radius: 20px;
+                  padding: 30px;
+                  min-height: 220px;
+                  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+
+                  .card {
+
+                    &Description {
+                      gap: 8px;
+
+                      &Title {
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 22.4px;
+                        color: #111111;
+                      }
+
+                      &Text {
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 16.8px;
+                        color: #111111;
+                        opacity: 48%;
+                      }
+                    }
+
+                    &Img {
+                      margin-top: auto;
+                      max-height: 50px;
+                      max-width: 50px;
+                    }
+                  }
+                }
+              }
+            }
+
+            span {
+              color: #000000;
+              font-size: 16px;
+              font-weight: 400;
+              //line-height: 110%;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .buttons {
+          display: flex;
+          gap: 10px;
+
+          &SignUp {
+            width: 141px;
+          }
+
+          &Account {
+            display: none;
+          }
+
+          &AccIcon {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1400px) {
+  .header {
+
+    &Information {
+
+      &TopLinks {
+        gap: 20px;
+        padding: 16px 0 0 0;
+
+        > div {
+          span {
+            color: #6B6B6B;
+            font-size: 14px;
+            font-weight: 400;
+          }
+        }
+      }
+
+      &Links {
+
+        .logo {
+          img {
+            max-width: 224px;
+            max-height: 20px;
+          }
+        }
+
+        .servicesLinks {
+          gap: 20px;
+
+          &Link {
+            padding: 29.5px 0 31.5px 0;
+
+            .droplink {
+
+            }
+
+            .dropdown {
+              //z-index: 100;
+              position: absolute;
+              top: calc(99.5%);
+              width: 100%;
+              left: 0;
+              right: 0;
+              padding: 50px 0 70px 0;
+              background-color: #F4F5F7;
+              opacity: 0;
+              pointer-events: none;
+              transition: opacity .3s ease;
+
+              .cards {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 20px;
+
+                .cardWrapper {
+                  background-color: #FFFFFF;
+                  border-radius: 20px;
+                  padding: 30px;
+                  min-height: 220px;
+                  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+
+                  .card {
+
+                    &Description {
+                      gap: 8px;
+
+                      &Title {
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 22.4px;
+                        color: #111111;
+                      }
+
+                      &Text {
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 16.8px;
+                        color: #111111;
+                        opacity: 48%;
+                      }
+                    }
+
+                    &Img {
+                      margin-top: auto;
+                      max-height: 50px;
+                      max-width: 50px;
+                    }
+                  }
+                }
+              }
+            }
+
+            span {
+              color: #000000;
+              font-size: 16px;
+              font-weight: 400;
+              //line-height: 110%;
+              cursor: pointer;
+            }
+
+            &:hover {
+              .dropdown {
+                opacity: 1;
+                pointer-events: auto;
+              }
+            }
+          }
+
+        }
+
+        .buttons {
+          display: flex;
+          gap: 10px;
+
+          &SignUp {
+            width: 141px;
+          }
+
+          &Account {
+            display: none;
+          }
+
+          &AccIcon {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+
+  .header {
+
+    &Information {
+
+      &Links {
+        padding: 12px 0 12px 0;
+        max-height: 64px;
+
+        > div {
+
+          .dropdown {
+            //z-index: 1000;
+            position: absolute;
+            top: calc(99.5%);
+            left: 0;
+            right: 0;
+            padding: 50px 0 70px 0;
+            background-color: #F4F5F7;
+            opacity: 0;
+            transform: translateY(-10px);
+            visibility: hidden;
+            transition: .3s;
+
+            &Open {
+              transform: translateY(0);
+              opacity: 1;
+              visibility: visible;
+
+              .cards {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 20px;
+
+                .cardWrapper {
+                  background-color: #FFFFFF;
+                  border-radius: 20px;
+                  padding: 30px;
+                  min-height: 220px;
+
+                  .card {
+
+                    &Description {
+                      gap: 8px;
+
+                      &Title {
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 22.4px;
+                        color: #111111;
+                      }
+
+                      &Text {
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 16.8px;
+                        color: #111111;
+                        opacity: 48%;
+                      }
+                    }
+
+                    &Img {
+                      margin-top: auto;
+                      max-height: 50px;
+                      max-width: 50px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          span {
+            color: #000000;
+            font-size: 16px;
+            font-weight: 400;
+            //line-height: 110%;
+          }
+        }
+
+        .logo {
+          img {
+            max-width: 200px;
+            max-height: 18px;
+          }
+        }
+
+        .servicesLinks {
+          gap: 20px;
+
+        }
+
+        .buttons {
+          display: flex;
+          gap: 10px;
+
+          &SignUp {
+            width: 122px;
+            font-size: 16px;
+          }
+
+          &Account {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575.96px) {
+
+  .sidebar {
+    position: fixed;
+    opacity: 1;
+    top: 82px;
+    right: 0;
+    bottom: 0;
+    left: -320px;
+    z-index: 200;
+    transition: transform 0.3s ease;
+
+    .closer {
+      position: absolute;
+      top: 30px;
+      right: 37px;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    &Content {
+      background-color: #F4F5F7;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      max-width: 320px;
+      overflow-y: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &Body {
+        padding: 10px 10px 18px 10px;
+        row-gap: 6px;
+
+        &Links {
+          padding: 14px;
+          row-gap: 18px;
+          background-color: #FFFFFF;
+          border-radius: 10px;
+
+          .headerLinks {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 21.6px;
+            color: #111111;
+          }
+
+          .group {
+            gap: 8px;
+
+            img {
+              width: 20px;
+              height: 20px;
+            }
+
+            .subLinks {
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 16.8px;
+              color: #111111;
+            }
+          }
+        }
+
+        &Footer {
+          padding: 20px;
+          row-gap: 10px;
+
+          .phone {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 24px;
+            color: #111111;
+          }
+          .modal {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.2px;
+            color: #6B6B6B;
+            text-decoration-line: underline;
+          }
+        }
+      }
+
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        display: none;
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-button {
+        width: 0;
+        height: 0;
+        display: none;
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        width: 0;
+        display: none;
+        background: transparent;
+      }
+
+      .menu {
+        row-gap: 20px;
+
+        &Logo {
+          height: 45px;
+        }
+
+        &Links {
+          row-gap: 8px;
+
+          &_header {
+            color: #131313;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 120%;
+            letter-spacing: -0.4px;
+          }
+
+          &_link {
+            color: #111111;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 110%;
+          }
+        }
+      }
+
+      .contacts {
+        row-gap: 16px;
+
+        &Info {
+          row-gap: 8px;
+
+          &_link {
+            column-gap: 12px;
+
+            img {
+              width: 20px;
+              height: 20px;
+            }
+
+            p {
+              color: #111111;
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 150%;
+            }
+          }
+
+          &_time {
+            p {
+              color: #111111;
+              font-size: 12px;
+              font-weight: 500;
+              line-height: 150%;
+            }
+          }
+        }
+
+        .btn {
+          text-align: center;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .active {
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .header {
+    background-color: #2F3140;
+    box-shadow: none;
+
+    &Information {
+
+      &Links {
+        padding: 30px 0 5px 0;
+        //max-height: 64px;
+
+        > div {
+
+          .dropdown {
+            //z-index: 1000;
+            position: absolute;
+            top: calc(99.5%);
+            left: 0;
+            right: 0;
+            padding: 50px 0 70px 0;
+            background-color: #F4F5F7;
+            opacity: 0;
+            transform: translateY(-10px);
+            visibility: hidden;
+            transition: .3s ease;
+
+            &Open {
+              transform: translateY(0);
+              opacity: 1;
+              visibility: visible;
+
+              .cards {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 20px;
+
+                .cardWrapper {
+                  background-color: #FFFFFF;
+                  border-radius: 20px;
+                  padding: 30px;
+                  min-height: 220px;
+
+                  .card {
+
+                    &Description {
+                      gap: 8px;
+
+                      &Title {
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 22.4px;
+                        color: #111111;
+                      }
+
+                      &Text {
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 16.8px;
+                        color: #111111;
+                        opacity: 48%;
+                      }
+                    }
+
+                    &Img {
+                      margin-top: auto;
+                      max-height: 50px;
+                      max-width: 50px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          span {
+            color: #000000;
+            font-size: 16px;
+            font-weight: 400;
+            //line-height: 110%;
+          }
+        }
+
+        .logo {
+          img {
+            max-width: 200px;
+            max-height: 18px;
+          }
+        }
+
+        .servicesLinks {
+          gap: 20px;
+
+        }
+
+        .buttons {
+          display: flex;
+          gap: 10px;
+
+          &SignUp {
+            display: none;
+            min-width: 141px;
+            max-height: 48px;
+            padding: 11.5px 20px 11.5px 20px;
+          }
+
+          &Account {
+            display: none;
+            gap: 10px;
+            min-width: 48px;
+            max-height: 48px;
+            padding: 12px;
+
+            &Icon {
+              display: flex;
+            }
+
+            &Name {
+              display: none;
+              align-items: start;
+            }
+          }
+        }
       }
     }
   }

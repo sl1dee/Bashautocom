@@ -1,0 +1,261 @@
+
+
+.ourServices {
+  background-color: rgba(238, 240, 243, 0.7);
+
+  &Information {
+    padding: 100px 0 100px 0;
+    gap: 68px;
+
+    &Title {
+      color: #111111;
+      font-size: 50px;
+      font-weight: 500;
+      line-height: 120%;
+
+    }
+
+    &Cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+
+      .cardWrapper {
+        background-color: #FFFFFF;
+        border-radius: 20px;
+        padding: 30px;
+        width: 100%;
+        height: 230px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+
+        .card {
+          width: 100%;
+          height: 100%;
+
+          &Group {
+            display: flex;
+            justify-content: space-between;
+
+            &Info {
+              max-width: 240px;
+              gap: 6px;
+
+              &Title {
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 130%;
+                color: #111111;
+              }
+
+              &Text {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 130%;
+                color: #111111;
+                opacity: 48%;
+              }
+            }
+
+            &Img {
+              max-height: 50px;
+              max-width: 50px;
+            }
+          }
+
+          .btn {
+
+            .button {
+              margin-top: auto;
+              font-size: 18px;
+              font-weight: 500;
+              line-height: 140%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1920px) {
+  .ourServices {
+
+    &Information {
+      padding: 100px 0 100px 0;
+      gap: 50px;
+
+      &Cards {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        row-gap: 30px;
+
+        .cardWrapper {
+          height: 280px;
+
+          .card {
+
+            &Group {
+              display: flex;
+              flex-direction: column-reverse;
+              row-gap: 14px;
+
+              &Info {
+                max-width: 255px;
+
+                &Title {
+                  font-size: 20px;
+                }
+
+                &Text {
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1400px) {
+  .ourServices {
+
+    &Information {
+
+      &Cards {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+
+        .cardWrapper {
+          height: 306px;
+
+          .card {
+
+            &Group {
+              display: flex;
+              flex-direction: column-reverse;
+              row-gap: 14px;
+
+              &Info {
+                max-width: 255px;
+
+                &Title {
+                  font-size: 20px;
+                }
+
+                &Text {
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .ourServices {
+
+    &Information {
+      padding: 70px 0;
+      gap: 30px;
+
+      &Title {
+        font-size: 32px;
+      }
+
+      &Cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+
+        .cardWrapper {
+          padding: 20px;
+          height: 170px;
+
+          .card {
+
+            &Group {
+              display: flex;
+              flex-direction: column-reverse;
+              row-gap: 12px;
+
+              &Info {
+                max-width: 225px;
+                gap: 6px;
+
+                &Title {
+                  font-size: 20px;
+                }
+
+                &Text {
+                  font-size: 14px;
+                }
+              }
+
+              &Img {
+                max-height: 30px;
+                max-width: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575.96px) {
+  .ourServices {
+    margin: 0 4px;
+
+    &Information {
+      padding: 30px 0;
+      gap: 16px;
+
+      &Title {
+        font-size: 18px;
+      }
+
+      &Cards {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+
+        .cardWrapper {
+          border-radius: 14px;
+          padding: 12px 14px;
+          height: 78px;
+
+          .card {
+
+            &Group {
+              display: flex;
+              flex-direction: row;
+              row-gap: 12px;
+
+              &Info {
+                max-width: 225px;
+                gap: 6px;
+
+                &Title {
+                  font-size: 14px;
+                }
+
+                &Text {
+                  font-size: 12px;
+                }
+              }
+
+              &Img {
+                max-height: 20px;
+                max-width: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

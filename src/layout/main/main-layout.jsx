@@ -1,26 +1,29 @@
 import useScrollTop from '@hooks/use-scroll-top.js'
 import { burgerIsOpenSelector, signUpIsOpenSelector } from '@store/selectors/modals.js'
-import React, { memo } from 'react'
+import React, {memo, Suspense} from 'react'
 import { useSelector } from 'react-redux'
 
-import Footer from '@components/footer'
-import Header from '@components/header'
-import Sidebar from '@components/header/sidebar'
-import SignUpModal from '@components/modals/sign-up-modal'
+import Sidebar from '@components/header/sidebar/sidebar.jsx'
+import Navbar from '@components/navbar/navbar.jsx'
+
+import Footer from '../../components/footer/footer.jsx'
+import Header from '../../components/header/header.jsx'
 
 const MainLayout = ({ children }) => {
-	const signUpIsOpen = useSelector(signUpIsOpenSelector)
+	// const signUpIsOpen = useSelector(signUpIsOpenSelector)
 	const burgerIsOpen = useSelector(burgerIsOpenSelector)
 
 	useScrollTop()
 	return (
 		<>
 			<Header />
-			{children}
+			<Suspense>{children}</Suspense>
 			<Footer />
-			{/* <Cookie /> */}
 			{burgerIsOpen && <Sidebar />}
-			{signUpIsOpen && <SignUpModal />}
+			<Navbar />
+			{/*<Cookie /> */}
+			{/* !!!!!!! <Sidebar /> нужно сделать сайдбар всегда вмонитрованным */}
+			{/* {signUpIsOpen && <SignUpModal />} */}
 		</>
 	)
 }

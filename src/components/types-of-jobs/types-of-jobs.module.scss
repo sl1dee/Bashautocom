@@ -1,0 +1,162 @@
+.typesOfJob {
+  background-color: #FFFFFF;
+
+  &Information {
+    padding: 50px 0 0 0;
+    gap: 50px;
+
+    &Title {
+      font-size: 50px;
+      font-weight: 500;
+      color: #111111;
+      line-height: 120%;
+    }
+
+    &Block {
+
+      .cards {
+        gap: 30px;
+        row-gap: 30px;
+        grid-template-columns: repeat(4, 1fr);
+
+        .card {
+          min-height: 274px;
+          padding: 30px;
+          gap: 14px;
+          position: relative;
+          background-color: #F1F1F1;
+          border-radius: 20px;
+          overflow: hidden;
+
+          &Image {
+            position: absolute;
+            min-height: 274px;
+            bottom: 0;
+            right: 0;
+            border-radius: 20px;
+          }
+
+          &Title {
+            max-width: 200px;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 130%;
+            color: #111111;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1920px) {
+  .typesOfJob {
+    background-color: #FFFFFF;
+
+    &Information {
+      padding: 50px 0 0 0;
+      gap: 50px;
+
+      &Block {
+
+        .cards {
+          gap: 20px;
+          row-gap: 30px;
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1400px) {
+  .typesOfJob {
+    background-color: #FFFFFF;
+
+    &Information {
+      padding: 50px 0 0 0;
+      gap: 50px;
+
+      &Block {
+
+        .cards {
+          gap: 20px;
+          row-gap: 30px;
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .typesOfJob {
+    background-color: #FFFFFF;
+
+    &Information {
+      padding: 50px 0 0 0;
+      gap: 30px;
+
+      &Title {
+        font-size: 32px;
+      }
+
+      &Block {
+
+        .cards {
+          gap: 10px;
+          row-gap: 10px;
+          grid-template-columns: repeat(2, 1fr);
+
+          .card {
+            min-height: 260px;
+            padding: 26px;
+
+            &Image {
+              max-width: 192px;
+              min-height: 216px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575.96px) {
+  .typesOfJob {
+    background-color: #FFFFFF;
+
+    &Information {
+      padding: 25px 0 0 0;
+      gap: 30px;
+
+      &Title {
+        font-size: 18px;
+      }
+
+      &Block {
+
+        .cards {
+          gap: 10px;
+          row-gap: 10px;
+          grid-template-columns: repeat(2, 1fr);
+
+          .card {
+            min-height: 140px;
+            padding: 16px;
+
+            &Image {
+              max-width: 103px;
+              min-height: 115px;
+            }
+
+            &Title {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

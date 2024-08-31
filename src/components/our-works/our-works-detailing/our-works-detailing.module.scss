@@ -1,0 +1,225 @@
+
+
+.serviceSlider {
+  background-color: #FFFFFF;
+  padding: 70px 0 3px 0;
+
+  &Content {
+    row-gap: 50px;
+
+    &Title {
+      text-align: center;
+      font-size: 50px;
+      font-weight: 500;
+      line-height: 60px;
+      color: #111111;
+    }
+
+    &Swiper {
+      position: relative;
+
+      .swiper {
+        height: 490px;
+
+        .banner {
+          border-radius: 20px;
+          max-width: 536.67px;
+          height: 436px;
+          object-fit: cover;
+        }
+      }
+
+      .swiperArrow {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        transform: translateY(-50%);
+        top: 37%;
+        border: none;
+        background-color: #2F3140;
+        border-radius: 4px;
+        width: 46px;
+        height: 44px;
+
+
+        &Left {
+          left: -30px;
+          transform: translateX(-100%);
+
+          &::before {
+            content: url('/assets/img/special-offer/arrow-left.svg');
+            display: flex;
+            width: 24px;
+            height: 24px;
+          }
+        }
+
+        &Right {
+          right: -30px;
+          transform: translateX(100%);
+
+          &::before {
+            content: url('/assets/img/special-offer/arrow-right.svg');
+            display: flex;
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1920px) {
+  .serviceSlider {
+    background-color: #FFFFFF;
+    padding: 20px 0 50px 0;
+
+    &Content {
+
+      &Swiper {
+        position: relative;
+
+        .swiper {
+          height: 490px;
+
+          .banner {
+            border-radius: 20px;
+            max-width: 426.67px;
+            width: 100%;
+            height: 436px;
+            object-fit: cover;
+          }
+        }
+
+        .swiperArrow {
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 1;
+          transform: translateY(-50%);
+          top: 37%;
+          border: none;
+          background-color: #2F3140;
+          border-radius: 4px;
+          width: 46px;
+          height: 44px;
+
+
+          &Left {
+            left: -8px;
+            transform: translateX(-100%);
+
+            &::before {
+              content: url('/assets/img/special-offer/arrow-left.svg');
+              display: flex;
+              width: 24px;
+              height: 24px;
+            }
+          }
+
+          &Right {
+            right: -8px;
+            transform: translateX(100%);
+
+            &::before {
+              content: url('/assets/img/special-offer/arrow-right.svg');
+              display: flex;
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1400px) {
+  .serviceSlider {
+    background-color: #FFFFFF;
+    padding: 20px 0 50px 0;
+
+    &Content {
+
+      &Swiper {
+        position: relative;
+
+        .swiper {
+          height: 460px;
+
+          .banner {
+            border-radius: 20px;
+            max-width: 470px;
+            width: 100%;
+            height: 416px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .serviceSlider {
+    background-color: #FFFFFF;
+    padding: 20px 0 50px 0;
+
+    &Content {
+      row-gap: 30px;
+
+      &Title {
+        font-size: 32px;
+        line-height: 38.4px;
+      }
+
+      &Swiper {
+        position: relative;
+
+        .swiper {
+          height: 240px;
+
+          .banner {
+            border-radius: 20px;
+            max-width: 540px;
+            width: 100%;
+            height: 206px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 575.96px) {
+  .serviceSlider {
+    background-color: #FFFFFF;
+    padding: 20px 0 25px 0;
+
+    &Content {
+      row-gap: 16px;
+
+      &Title {
+        font-size: 18px;
+        line-height: 21.6px;
+      }
+
+      &Swiper {
+        position: relative;
+
+        .swiper {
+          height: 260px;
+
+          .banner {
+            border-radius: 14px;
+            max-width: 300px;
+            width: 100%;
+            height: 228px;
+          }
+        }
+      }
+    }
+  }
+}

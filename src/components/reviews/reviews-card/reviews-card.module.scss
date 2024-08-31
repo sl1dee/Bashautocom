@@ -1,0 +1,82 @@
+
+.reviewsCard {
+  background-color: #FFFFFF;
+  gap: 20px;
+
+  &Video {
+    position: relative;
+    border-radius: 20px;
+    z-index: 0;
+  }
+
+  &Text {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 120%;
+    color: #111111;
+    overflow: hidden;
+    display: -webkit-box;
+    height: 48px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  &Play {
+    cursor: pointer;
+    position: absolute;
+    width: 74px;
+    height: 74px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1920px) {
+
+}
+
+@media (min-width: 992px) and (max-width: 1400px) {
+  .reviewsCard {
+
+    &Play {
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -35%);
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .reviewsCard {
+
+    &Text {
+      font-size: 18px;
+      height: 43.2px;
+    }
+    &Play {
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -30%);
+    }
+  }
+}
+
+@media (max-width: 575.96px) {
+  .reviewsCard {
+    gap: 8px;
+
+    &Text {
+      font-size: 14px;
+      height: 33.6px;
+    }
+
+    &Play {
+      width: 40px;
+      height: 40px;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -40%);
+    }
+  }
+}

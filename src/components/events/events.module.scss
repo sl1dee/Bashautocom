@@ -1,0 +1,228 @@
+
+.events {
+  background-color: #FFFFFF;
+
+  &Information {
+    padding: 50px 0 150px 0;
+    gap: 50px;
+
+    &Title {
+      font-size: 50px;
+      font-weight: 500;
+      color: #111111;
+      line-height: 60px;
+    }
+
+    &Block {
+      gap: 25px;
+
+      .cards {
+        gap: 30px;
+        grid-template-columns: repeat(4, 1fr);
+
+        .card {
+          //max-width: 390px;
+          gap: 20px;
+          display: none;
+
+          &:nth-of-type(-n+3) {
+            display: block;
+          }
+
+          &Image {
+            width: 100%;
+            //max-width: 390px;
+            //max-height: 258px;
+            border-radius: 20px;
+          }
+
+          &Title {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 120%;
+            color: #111111;
+          }
+
+          &Date {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 130%;
+            color: rgba(17, 17, 17, 0.48);
+          }
+        }
+      }
+
+      .btn {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 140%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1920px) {
+
+  .events {
+    background-color: #FFFFFF;
+
+    &Information {
+      padding: 50px 0 150px 0;
+      gap: 50px;
+
+      &Block {
+
+        .cards {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 20px;
+
+          .card {
+            //max-width: 390px;
+            gap: 20px;
+
+            &Image {
+              //max-width: 314.75px;
+              //max-height: 188px;
+              border-radius: 20px;
+            }
+
+            &Date {
+              margin-top: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1400px) {
+  .events {
+    background-color: #FFFFFF;
+
+    &Information {
+      padding: 50px 0 150px 0;
+      gap: 50px;
+
+      &Block {
+
+        .cards {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+
+          .card {
+            //max-width: 306.67px;
+            gap: 20px;
+
+            &Image {
+              //max-width: 306.67px;
+              //max-height: 188px;
+              border-radius: 20px;
+            }
+
+            &Date {
+              margin-top: auto;
+            }
+          }
+
+          .card:nth-of-type(n+4) {
+            display: none!important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .events {
+    background-color: #FFFFFF;
+
+    &Information {
+      padding: 50px 0 100px 0;
+      gap: 30px;
+
+      &Title {
+        font-size: 38px;
+      }
+
+      &Block {
+
+        .cards {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+
+          .card {
+            //max-width: 260px;
+            gap: 20px;
+
+            &Image {
+              //max-width: 260px;
+              //max-height: 164px;
+              border-radius: 20px;
+            }
+
+            &Date {
+              margin-top: auto;
+            }
+          }
+
+          .card:nth-of-type(n+3) {
+            display: none!important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575.96px) {
+  .events {
+    background-color: #FFFFFF;
+
+    &Information {
+      padding: 25px 0 50px 0;
+      gap: 16px;
+
+      &Title {
+        font-size: 18px;
+      }
+
+      &Block {
+        gap: 16px;
+
+        .cards {
+          grid-template-columns: repeat(1, 1fr);
+
+          .card {
+            //max-width: 300px;
+            gap: 10px;
+
+            &Image {
+              //max-width: 300px;
+              //max-height: 164px;
+              border-radius: 20px;
+            }
+
+            &Title {
+              font-size: 14px;
+            }
+
+            &Date {
+              margin-top: auto;
+              font-size: 12px;
+            }
+          }
+
+          .card:nth-of-type(n+2) {
+            display: none!important;
+          }
+        }
+
+        .btn {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

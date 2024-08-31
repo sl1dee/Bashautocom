@@ -1,0 +1,210 @@
+.promoSlider {
+  background-color: #FFFFFF;
+  padding: 40px 0 50px 0;
+
+  &Swiper {
+    position: relative;
+    .swiper {
+      .banner {
+        border-radius: 20px;
+        width: 100%;
+      }
+    }
+
+    .swiperPagination {
+      display: flex;
+      justify-content: center;
+      padding-top: 30px;
+    }
+
+    .swiperArrow {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      transform: translateY(-50%);
+      top: 42%;
+      border: none;
+      background-color: #2F3140;
+      border-radius: 4px;
+      width: 46px;
+      height: 44px;
+
+      &Left {
+        left: -30px;
+        transform: translateX(-100%);
+
+        &::before {
+          content: url('/assets/img/special-offer/arrow-left.svg');
+          display: flex;
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      &Right {
+        right: -30px;
+        transform: translateX(100%);
+
+        &::before {
+          content: url('/assets/img/special-offer/arrow-right.svg');
+          display: flex;
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1920px) {
+  .promoSlider {
+    background-color: #FFFFFF;
+    padding: 20px 0 50px 0;
+
+    &Swiper {
+      position: relative;
+
+      .swiper {
+        .banner {
+          border-radius: 20px;
+        }
+      }
+
+      .swiperArrow {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        transform: translateY(-50%);
+        top: 42%;
+        border: none;
+        background-color: #2F3140;
+        border-radius: 4px;
+        width: 46px;
+        height: 44px;
+
+
+        &Left {
+          left: -8px;
+          transform: translateX(-100%);
+
+          &::before {
+            content: url('/assets/img/special-offer/arrow-left.svg');
+            display: flex;
+            width: 24px;
+            height: 24px;
+          }
+        }
+
+        &Right {
+          right: -8px;
+          transform: translateX(100%);
+
+          &::before {
+            content: url('/assets/img/special-offer/arrow-right.svg');
+            display: flex;
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1400px) {
+  .promoSlider {
+    background-color: #FFFFFF;
+    padding: 20px 0 50px 0;
+
+    &Swiper {
+      position: relative;
+
+      .swiper {
+        .banner {
+          border-radius: 20px;
+        }
+      }
+
+      .swiperArrow {
+        position: absolute;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        transform: translateY(-50%);
+        top: 42%;
+        border: none;
+        background-color: #2F3140;
+        border-radius: 4px;
+        width: 46px;
+        height: 44px;
+
+
+        &Left {
+          left: -8px;
+          transform: translateX(-100%);
+
+          &::before {
+            content: url('/assets/img/special-offer/arrow-left.svg');
+            display: flex;
+            width: 24px;
+            height: 24px;
+          }
+        }
+
+        &Right {
+          right: -8px;
+          transform: translateX(100%);
+
+          &::before {
+            content: url('/assets/img/special-offer/arrow-right.svg');
+            display: flex;
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .promoSlider {
+    background-color: #FFFFFF;
+    padding: 20px 0 50px 0;
+
+    &Swiper {
+      position: relative;
+
+      .swiper {
+        .banner {
+          border-radius: 20px;
+        }
+      }
+
+      .swiperPagination {
+        padding-top: 14px;
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .promoSlider {
+    background-color: #FFFFFF;
+    padding: 20px 0 25px 0;
+
+    &Swiper {
+      position: relative;
+
+      .swiper {
+        .banner {
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+}

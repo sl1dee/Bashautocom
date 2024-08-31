@@ -1,13 +1,17 @@
 @use '@assets/styles/vars/colors';
 
 .btn {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 120%;
-  letter-spacing: -0.36px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22.4px;
+  //letter-spacing: -0.36px;
   cursor: pointer;
-  border: 2px solid colors.$mainColor;
-  border-radius: 100px;
+  border: 2px solid #2F3140;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 
 
 
@@ -15,45 +19,68 @@
   //  margin-bottom: 0;
   //  user-select: none;
   //}
+  &SizeContent {
+    padding: 14px 20px;
+  }
   &SizeS{
-    padding: 10px 18px;
-    min-width: 178px;
+    padding: 14px 20px;
+    min-width: 124px;
   }
   &SizeM {
     padding: 8px 13px;
+    min-width: 156px;
+    min-height: 48px;
+  }
+  &SizeL {
+    padding: 14px 20px;
+    min-width: 172px;
   }
   //&-dark-trnsp
   &Primary {
-    background-color: colors.$mainColor;
+    background-color: #2F3140;
     color: colors.$whiteColor;
     transition: background-color .3s ease, color .3s ease;
 
     &:hover {
-      color: colors.$mainColor;
+      color: #2F3140;
       background-color: transparent;
     }
   }
   //&-trnsp-dark
   &Outlined {
     background-color: transparent;
-    color: colors.$mainColor;
+    color: #2F3140;
     transition: color .3s ease, background-color .3s ease;
 
     &:hover {
       color: colors.$whiteColor;
-      background-color: colors.$mainColor;
+      background-color: #2F3140;
     }
   }
   //&-white-trnsp
   &Secondary {
-    background-color: colors.$whiteColor;
-    color: colors.$mainColor;
-    border: 2px solid colors.$whiteColor;
+    background-color: #F1F1F1;
+    color: #111111;
+    border: 2px solid #F1F1F1;
     transition: color .3s ease, background-color .3s ease;
 
     &:hover {
-      color: colors.$whiteColor;
+      color: #111111;
       background-color: transparent;
+      border: 2px solid #F1F1F1;
+    }
+  }
+
+  &Secondary2 {
+    background-color: #F1F1F1;
+    color: #111111;
+    border: 2px solid #F1F1F1;
+    transition: color .3s ease, background-color .3s ease;
+
+    &:hover {
+      color: #F1F1F1;
+      background-color: transparent;
+      border: 2px solid #F1F1F1;
     }
   }
 }

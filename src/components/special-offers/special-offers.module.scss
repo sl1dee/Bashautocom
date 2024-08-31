@@ -1,0 +1,439 @@
+.sidebar {
+  position: fixed;
+  opacity: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: -576px;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+
+  &Bckg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: -100%;
+    bottom: 0;
+    z-index: -1;
+    background-color: #00000070;
+    cursor: pointer;
+  }
+
+  .group {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 576px;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &Filter {
+      width: 576px;
+      min-height: 100%;
+      padding: 50px 18px 30px 18px;
+      background-color: #FFFFFF;
+      border: 1px solid #F1F1F1;
+      gap: 30px;
+
+      &Head {
+        position: relative;
+
+        &Title {
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 31.2px;
+          color: #111111;
+        }
+
+        &Close {
+          position: absolute;
+          top: -39px;
+          right: -13px;
+        }
+      }
+
+      .filter {
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        row-gap: 16px;
+
+        &Title {
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 21.6px;
+          color: #111111;
+        }
+
+        &Input  {
+          width: 100%;
+          height: 40px;
+          border: 1px solid #B6B6B6;
+          padding: 10px;
+          border-radius: 4px;
+        }
+      }
+
+      .btn {
+        position: sticky;
+        width: 540px;
+        padding: 7px 16px 7px 16px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+      }
+    }
+  }
+}
+.active {
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.specialOffers {
+  background-color: #FFFFFF;
+
+  &Information {
+    padding: 70px 0 130px 0;
+    gap: 50px;
+
+    &Title {
+      font-size: 50px;
+      font-weight: 500;
+      color: #111111;
+      line-height: 120%;
+    }
+
+    &Group {
+
+      &Title {
+
+      }
+
+      .btn {
+
+      }
+    }
+
+    .specialOffersSwiper {
+      position: relative;
+      z-index: 0;
+
+      .swiperPagination {
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+      }
+
+      .swiperArrow {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        transform: translateY(-50%);
+        top: 41%;
+        border: none;
+        background-color: #2F3140;
+        border-radius: 4px;
+        width: 46px;
+        height: 44px;
+
+
+        &Left {
+          left: -10px;
+          transform: translateX(-100%);
+
+          &::before {
+            content: url('/assets/img/special-offer/arrow-left.svg');
+            display: flex;
+            width: 24px;
+            height: 24px;
+          }
+        }
+
+        &Right {
+          right: -10px;
+          transform: translateX(100%);
+
+          &::before {
+            content: url('/assets/img/special-offer/arrow-right.svg');
+            display: flex;
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+
+    .specialOffersBtngroup {
+
+      .btn {
+        gap: 8px;
+        padding: 7px 16px 7px 16px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+      }
+    }
+
+    .combobox {
+      width: 390px;
+      height: 48px;
+      z-index: 1;
+    }
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1920px) {
+  .specialOffers {
+
+    &Information {
+      padding: 70px 0 140px 0;
+      gap: 50px;
+
+      .specialOffersSwiper {
+        position: relative;
+        z-index: 0;
+
+        .swiperArrow {
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 1;
+          transform: translateY(-50%);
+          top: 39%;
+          border: none;
+          background-color: #2F3140;
+          border-radius: 4px;
+          width: 46px;
+          height: 44px;
+
+          &Left {
+            left: -6px;
+            transform: translateX(-100%);
+
+            &::before {
+              content: url('/assets/img/special-offer/arrow-left.svg');
+              display: flex;
+              width: 24px;
+              height: 24px;
+            }
+          }
+
+          &Right {
+            right: -6px;
+            transform: translateX(100%);
+
+            &::before {
+              content: url('/assets/img/special-offer/arrow-right.svg');
+              display: flex;
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+
+      .combobox {
+        width: 390px;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1400px) {
+  .specialOffers {
+
+    &Information {
+      padding: 70px 0 130px 0;
+      gap: 50px;
+
+      .specialOffersSwiper {
+        position: relative;
+        z-index: 0;
+      }
+
+      .combobox {
+        width: 390px;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .specialOffers {
+
+    &Information {
+      padding: 50px 0 90px 0;
+      gap: 30px;
+
+      &Title {
+        font-size: 32px;
+      }
+
+      .specialOffersSwiper {
+        position: relative;
+        z-index: 0;
+
+        .swiperPagination {
+          padding-top: 20px;
+        }
+      }
+
+      .combobox {
+        width: 390px;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: 575.96px) {
+
+  .sidebar {
+    position: fixed;
+    opacity: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: -320px;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+
+    &Bckg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: -100%;
+      bottom: 0;
+      z-index: -1;
+      background-color: #00000070;
+      cursor: pointer;
+    }
+
+    .group {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      max-width: 320px;
+      overflow-y: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &Filter {
+        width: 320px;
+        padding: 50px 10px 30px 10px;
+        background-color: #F4F5F7;
+        border: 1px solid #F1F1F1;
+        gap: 10px;
+
+        &Head {
+
+          &Title {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 31.2px;
+            color: #111111;
+          }
+
+          &Close {
+            top: -39px;
+            right: -11px;
+          }
+        }
+
+
+        .filter {
+          background-color: #FFFFFF;
+          padding: 20px 14px 20px 14px;
+          border-radius: 10px;
+          row-gap: 14px;
+
+          &Title {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 21.6px;
+            color: #111111;
+          }
+
+          &Input  {
+            width: 100%;
+            height: 32px;
+            border: 1px solid #B6B6B6;
+            padding: 10px;
+            border-radius: 4px;
+          }
+        }
+
+        .btn {
+          width: 300px;
+          padding: 7px 16px 7px 16px;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22.4px;
+        }
+      }
+    }
+  }
+  .active {
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .specialOffers {
+
+    &Information {
+      padding: 25px 0 25px 0;
+      gap: 30px;
+
+      &Title {
+        font-size: 18px;
+      }
+
+      &Group {
+
+        &Title {
+          font-size: 18px;
+          font-weight: 500;
+          color: #111111;
+          line-height: 120%;
+        }
+
+        .btn {
+          gap: 6px;
+          padding: 4px 12px 4px 12px;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 19.6px;
+        }
+      }
+
+      div {
+
+        .btn {
+          color: #111111;
+          padding: 6px 12px;
+          gap: 6px;
+        }
+      }
+
+      .specialOffersSwiper {
+        position: relative;
+        z-index: 0;
+      }
+
+      .combobox {
+        width: 390px;
+        z-index: 1;
+      }
+    }
+  }
+}

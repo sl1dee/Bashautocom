@@ -1,0 +1,292 @@
+.rentCatalog {
+  padding: 70px 0;
+
+  &Wrapper {
+    row-gap: 50px;
+
+    &Title {
+      font-size: 50px;
+      line-height: 120%;
+      font-weight: 500;
+    }
+
+    &Cards {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      row-gap: 20px;
+      column-gap: 20px;
+
+      &Card {
+        border-radius: 20px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+          height: 250px;
+        }
+
+        .information {
+          padding: 20px 30px 30px;
+          gap: 20px;
+          border: 1px solid #F4F5F7;
+          border-top: 0;
+          .chars{
+            row-gap: 16px;
+          }
+          .firstBlock {
+            gap: 3px;
+
+            .name {
+              font-size: 24px;
+              font-weight: 500;
+              line-height: 130%;
+              color: #111111;
+            }
+            .description {
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 122%;
+              color: #111111;
+              opacity: .48;
+            }
+          }
+          .secondBlock {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            width: fit-content;
+
+            div {
+              gap: 10px;
+
+              div {
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 122%;
+                color: #111111;
+                gap: 6px;
+                padding: 4px 7px 4px 7px;
+                background-color: #F4F5F7;
+                border-radius: 4px;
+                //align-self: start;
+                width: fit-content;
+              }
+
+              .owner, .mileage, .gearbox, .gas{
+                &::before {
+                  width: 24px;
+                  height: 24px;
+                }
+              }
+
+              .owner{
+                &::before {
+                  content: url("/assets/img/used-cars/owner.svg");
+                }
+              }
+              .mileage {
+                &::before {
+                  content: url("/assets/img/used-cars/speedometer.svg");
+                }
+              }
+              .gearbox {
+                &::before {
+                  content: url("/assets/img/used-cars/gearbox.svg");
+                }
+              }
+              .gas {
+                &::before {
+                  content: url("/assets/img/used-cars/gasStation.svg");
+                }
+              }
+            }
+          }
+
+          .price {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 130%;
+            color: #111111;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1400px) and (max-width: 1920px) {
+    &Wrapper {
+      &Cards {
+        &Card {
+          img {
+            height: 190px;
+          }
+
+          .information {
+            padding: 20px 26px 30px;
+            gap: 14px;
+            .chars{
+              row-gap: 10px;
+            }
+            .secondBlock {
+              gap: 10px;
+              div {
+                div {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1400px) {
+    padding: 50px 0;
+    &Wrapper {
+      &Cards {
+        &Card {
+          img {
+            height: 160px;
+          }
+          .information {
+            padding: 20px 20px 30px;
+            gap: 10px;
+            .chars{
+              row-gap: 10px;
+            }
+            .firstBlock {
+              .name {
+                font-size: 18px;
+              }
+              .year {
+                font-size: 14px;
+              }
+            }
+            .secondBlock {
+              gap: 6px;
+
+              div {
+                div {
+                  font-size: 14px;
+                }
+
+                .owner, .mileage, .gearbox, .gas{
+                  &::before {
+                    content: unset !important;
+                  }
+                }
+              }
+            }
+
+            .price {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 576px) and (max-width: 992px) {
+    padding: 50px 0;
+    &Wrapper {
+      row-gap: 30px;
+      &Title {
+        font-size: 32px;
+      }
+      &Cards {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 20px;
+        column-gap: 20px;
+
+        &Card {
+          img {
+            height: 160px;
+          }
+          .information {
+            padding: 20px 20px 30px;
+            gap: 10px;
+            .chars{
+              row-gap: 10px;
+            }
+            .firstBlock {
+              .name {
+                font-size: 18px;
+              }
+              .year {
+                font-size: 14px;
+              }
+            }
+            .secondBlock {
+              gap: 6px;
+
+              div {
+                div {
+                  font-size: 14px;
+                }
+
+                .owner, .mileage, .gearbox, .gas{
+                  &::before {
+                    content: unset !important;
+                  }
+                }
+              }
+            }
+
+            .price {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding: 25px 0;
+    &Wrapper {
+      row-gap: 16px;
+      &Title {
+        font-size: 18px;
+      }
+      &Cards {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 16px;
+        column-gap: 10px;
+
+        &Card {
+          border-radius: 14px;
+          overflow: hidden;
+
+          img {
+            height: 100px;
+          }
+
+          .information {
+            padding: 10px;
+            gap: 6px;
+            .chars{
+              row-gap: 6px;
+            }
+            .firstBlock {
+              row-gap: 0;
+              .name {
+                font-size: 14px;
+              }
+              .year {
+                font-size: 12px;
+              }
+            }
+            .secondBlock {
+              gap: 6px;
+            }
+
+            .price {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

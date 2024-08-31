@@ -1,10 +1,8 @@
-@use '@assets/styles/vars/colors';
 
 @keyframes open {
   0% {
-    //opacity: 0;
     opacity: 0;
-    transform: translateX(500px);
+    transform: translateX(576px);
   }
   100% {
     opacity: 1;
@@ -19,12 +17,13 @@
   }
   100% {
     opacity: 0;
-    transform: translateX(500px);
+    transform: translateX(576px);
   }
 }
 
 .sidebar {
   position: fixed;
+  opacity: 1;
   top: 0;
   right: 0;
   bottom: 0;
@@ -37,7 +36,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    left: -500px;
+    left: -576px;
     bottom: 0;
     z-index: -1;
     background-color: #00000070;
@@ -52,43 +51,93 @@
     height: 20px;
     cursor: pointer;
     z-index: 1;
-
-    &::after, &::before {
-      position: absolute;
-      content: '';
-      background-color: colors.$mainColor;
-      width: 22px;
-      height: 3px;
-      border-radius: 20px;
-    }
-
-    &::after {
-      transform: rotate(45deg);
-    }
-
-    &::before {
-      transform: rotate(-45deg);
-    }
   }
 
   &Content {
-    background-color: colors.$whiteColor;
+    background-color: #FFFFFF;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     width: 100%;
-    max-width: 340px;
-    padding: 20px 40px 20px 20px;
-    row-gap: 20px;
-    border-radius: 30px 0 0 30px;
+    max-width: 576px;
     overflow-y: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
-
     animation: open .3s ease;
+
     &Closed {
       animation: close .3s ease forwards;
+    }
+
+    &Header {
+      padding: 12px 18px 12px 18px;
+      max-height: 64px;
+      box-shadow: 0 4px 32px rgba(0, 0, 0, 0.13);
+
+      .logo {
+
+        img {
+          max-width: 200px;
+          max-height: 18px;
+        }
+      }
+
+      .buttons {
+
+      }
+    }
+
+    &Body {
+      padding: 20px 18px 40px;
+      row-gap: 10px;
+
+      &Links {
+        padding: 20px;
+        row-gap: 18px;
+
+        .headerLinks {
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 24px;
+          color: #111111;
+        }
+
+        .group {
+          gap: 12px;
+
+          img {
+            width: 20px;
+            height: 20px;
+          }
+
+          .subLinks {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.8px;
+            color: #111111;
+          }
+        }
+      }
+
+      &Footer {
+        padding: 20px;
+        row-gap: 10px;
+
+        .phone {
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 24px;
+          color: #111111;
+        }
+        .modal {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 19.2px;
+          color: #6B6B6B;
+          text-decoration-line: underline;
+        }
+      }
     }
 
     &::-webkit-scrollbar {
@@ -130,7 +179,7 @@
         }
 
         &_link {
-          color: colors.$mainTextColor;
+          color: #111111;
           font-size: 16px;
           font-weight: 500;
           line-height: 110%;
@@ -153,7 +202,7 @@
           }
 
           p {
-            color: colors.$mainTextColor;
+            color: #111111;
             font-size: 14px;
             font-weight: 500;
             line-height: 150%;
@@ -162,7 +211,7 @@
 
         &_time {
           p {
-            color: colors.$mainColor;
+            color: #111111;
             font-size: 12px;
             font-weight: 500;
             line-height: 150%;
@@ -178,19 +227,233 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 576px) {
+
+  @keyframes open {
+    0% {
+      opacity: 0;
+      transform: translateX(320px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes close {
+    0% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(320px);
+    }
+  }
+
   .sidebar {
+    position: fixed;
+    opacity: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+
+    animation: open .3s ease;
+
+    &Bckg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: -320px;
+      bottom: 0;
+      z-index: -1;
+      background-color: #00000070;
+      cursor: pointer;
+    }
+
     .closer {
-      right: 27px;
+      position: absolute;
+      top: 30px;
+      right: 37px;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      z-index: 1;
     }
 
     &Content {
+      background-color: #FFFFFF;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
       max-width: 320px;
-      padding: 20px;
-      row-gap: 16px;
+      overflow-y: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      animation: open .3s ease;
+
+      &Closed {
+        animation: close .3s ease forwards;
+      }
+
+      &Header {
+        padding: 30px 10px 5px 10px;
+        max-height: 75px;
+        background-color: #2F3140;
+        box-shadow: 0 4px 32px rgba(0, 0, 0, 0.13);
+
+        .logo {
+
+          img {
+            max-width: 200px;
+            max-height: 18px;
+          }
+        }
+
+        .buttons {
+
+        }
+      }
+
+      &Body {
+        padding: 10px 10px 18px 10px;
+        row-gap: 6px;
+
+        &Links {
+          padding: 14px;
+          row-gap: 18px;
+
+          .headerLinks {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 21.6px;
+            color: #111111;
+          }
+
+          .group {
+            gap: 8px;
+
+            img {
+              width: 20px;
+              height: 20px;
+            }
+
+            .subLinks {
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 16.8px;
+              color: #111111;
+            }
+          }
+        }
+
+        &Footer {
+          padding: 20px;
+          row-gap: 10px;
+
+          .phone {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 24px;
+            color: #111111;
+          }
+          .modal {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.2px;
+            color: #6B6B6B;
+            text-decoration-line: underline;
+          }
+        }
+      }
+
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        display: none;
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-button {
+        width: 0;
+        height: 0;
+        display: none;
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        width: 0;
+        display: none;
+        background: transparent;
+      }
 
       .menu {
+        row-gap: 20px;
+
+        &Logo {
+          height: 45px;
+        }
+
+        &Links {
+          row-gap: 8px;
+
+          &_header {
+            color: #131313;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 120%;
+            letter-spacing: -0.4px;
+          }
+
+          &_link {
+            color: #111111;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 110%;
+          }
+        }
+      }
+
+      .contacts {
         row-gap: 16px;
+
+        &Info {
+          row-gap: 8px;
+
+          &_link {
+            column-gap: 12px;
+
+            img {
+              width: 20px;
+              height: 20px;
+            }
+
+            p {
+              color: #111111;
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 150%;
+            }
+          }
+
+          &_time {
+            p {
+              color: #111111;
+              font-size: 12px;
+              font-weight: 500;
+              line-height: 150%;
+            }
+          }
+        }
+
+        .btn {
+          text-align: center;
+          font-size: 14px;
+        }
       }
     }
   }

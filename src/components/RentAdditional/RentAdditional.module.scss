@@ -1,0 +1,134 @@
+.rentAdditional {
+  padding: 140px 0;
+  background-color: #F4F5F7;
+
+  &Wrap{
+    padding: 70px 0;
+  }
+
+  &Header {
+    font-size: 50px;
+    line-height: 120%;
+    font-weight: 500;
+    color: #111;
+  }
+
+  >div{
+    row-gap: 50px;
+  }
+
+  &Grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 25px;
+    &El{
+      row-gap: 20px;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 20px;
+      .image{
+        width: 100%;
+        max-height: 164px;
+        object-fit: contain;
+      }
+      .text{
+        row-gap: 6px;
+        h3{
+          font-size: 24px;
+          line-height: 130%;
+          color: #111;
+          font-weight: 500;
+        }
+        p{
+          font-size: 16px;
+          line-height: 130%;
+          color: #111;
+          font-weight: 400;
+          opacity: .48;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1400px) {
+    &Wrap{
+      padding: 50px 0;
+    }
+    &Grid{
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      &El{
+        padding: 30px;
+      }
+    }
+  }
+
+  @media (min-width: 576px) and (max-width: 992px) {
+    padding: 100px 0;
+    &Wrap{
+      padding: 50px 0;
+    }
+
+    >div{
+      row-gap: 30px;
+    }
+
+    &Header {
+      font-size: 32px;
+    }
+
+    &Grid{
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      &El{
+        padding: 20px;
+        .image{
+          max-height: 111px;
+        }
+        .text{
+          h3{
+            font-size: 18px;
+          }
+          p{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding: 50px 0;
+    &Wrap{
+      padding: 25px 0;
+    }
+
+    >div{
+      row-gap: 16px;
+    }
+
+    &Header {
+      font-size: 18px;
+    }
+
+    &Grid{
+      grid-template-columns: 1fr;
+      gap: 10px;
+      &El{
+        padding: 14px 12px;
+        gap: 4px;
+        .image{
+          width: unset;
+          height: 77px;
+        }
+        .text{
+          h3{
+            font-size: 14px;
+          }
+          p{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

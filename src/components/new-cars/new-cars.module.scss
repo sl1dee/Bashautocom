@@ -1,0 +1,1072 @@
+
+.sidebar {
+  overflow: hidden;
+  position: fixed;
+  opacity: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: -320px;
+  z-index: 1001;
+  transition: transform 0.3s ease;
+
+  &Bckg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: -100%;
+    bottom: 0;
+    z-index: -1;
+    background-color: #00000070;
+    cursor: pointer;
+  }
+
+  .group {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 320px;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    .filter {
+      background-color: #F4F5F7;
+      padding: 40px 10px 30px;
+      row-gap: 10px;
+      //min-height: 100%;
+
+      &Head {
+        position: relative;
+
+        &Title {
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 21.6px;
+          color: #111111;
+        }
+
+        &Close {
+          position: absolute;
+          top: -19px;
+          right: 0;
+        }
+      }
+
+      &Cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+        row-gap: 6px;
+
+        &Card {
+          background-color: #FFFFFF;
+          padding: 8px;
+          border-radius: 10px;
+          row-gap: 2px;
+          border: 2px solid transparent;
+          position: relative;
+
+          &Image {
+            max-width: 80px;
+            height: 36px;
+
+          }
+          &Name {
+            font-size: 10px;
+            font-weight: 500;
+            line-height: 14px;
+            text-align: center;
+          }
+
+          &Done {
+            display: none;
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            width: 20px;
+            height: 20px;
+          }
+        }
+
+        .active2 {
+          border: 2px solid #2F3140;
+          &Done {
+            display: block;
+          }
+        }
+      }
+
+      .brand {
+        background-color: #FFFFFF;
+        padding: 20px 14px 20px 14px;
+        border-radius: 10px;
+        row-gap: 10px;
+
+        &Title {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 16.8px;
+          color: #111111;
+        }
+
+        &Input  {
+          width: 272px;
+          height: 32px;
+          border: 1px solid #B6B6B6;
+          padding: 10px;
+          border-radius: 4px;
+        }
+
+        .checkbox {
+
+          .Checkbox-Label {
+            color: black;
+          }
+        }
+      }
+
+      .minPrice {
+        background-color: #FFFFFF;
+        padding: 20px 14px 20px 14px;
+        border-radius: 10px;
+        row-gap: 10px;
+
+        &Title {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 16.8px;
+          color: #111111;
+        }
+
+        .inputs {
+          gap: 12px;
+
+          input {
+            width: 130px;
+            height: 32px;
+            border: 1px solid #B6B6B6;
+            padding: 10px;
+            border-radius: 4px;
+          }
+        }
+      }
+
+      .btn {
+        position: sticky;
+        bottom: 30px;
+        width: 300px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 140%;
+      }
+    }
+  }
+}
+
+.active {
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  overflow: visible;
+}
+
+
+
+
+.newCars {
+  row-gap: 60px;
+
+  &Filter {
+    gap: 50px;
+
+    .title {
+      font-size: 50px;
+      font-weight: 500;
+      line-height: 60px;
+      color: #111111;
+    }
+
+    &Content {
+      padding: 40px;
+      border-radius: 20px;
+      gap: 20px;
+      background-color: #F4F5F7;
+
+      .leftBlock {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        row-gap: 16px;
+
+        &Card {
+          position: relative;
+          max-width: 241.75px;
+          height: 164px;
+          padding: 20px 30px 20px 30px;
+          border-radius: 10px;
+          background-color: #FFFFFF;
+          cursor: pointer;
+          border: 2px solid transparent;
+          display: flex;
+          flex-direction: column;
+          row-gap: 4px;
+          user-select: none;
+
+          &Image {
+            max-width: 181.75px;
+            height: 90px;
+          }
+
+          &Name {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 30px;
+            color: #111111;
+            text-align: center;
+            margin-top: auto;
+          }
+
+          &Done {
+            display: none;
+            position: absolute;
+            top: -18px;
+            right: -16px;
+            width: 40px;
+            height: 40px;
+          }
+        }
+
+        .active2 {
+          border: 2px solid #2F3140;
+          &Done {
+            display: block;
+          }
+        }
+      }
+
+      .rightBlock {
+        width: 521px;
+        height: 342px;
+        padding: 30px;
+        border-radius: 10px;
+        gap: 16px;
+        background-color: #FFFFFF;
+
+        &Group {
+          row-gap: 16px;
+
+          &First {
+            gap: 10px;
+
+            .title {
+              font-size: 20px;
+              font-weight: 500;
+              line-height: 30px;
+              color: #111111;
+            }
+          }
+          &Second {
+            gap: 12px;
+
+            .title {
+              font-size: 20px;
+              font-weight: 500;
+              line-height: 30px;
+              color: #111111;
+            }
+
+            .inputs {
+              gap: 12px;
+
+              input {
+                border: 1px solid #B6B6B6;
+                padding: 13px 16px 13px 16px;
+                border-radius: 4px;
+                width: 100%;
+                height: 48px;
+              }
+            }
+          }
+        }
+
+        .btn {
+          width: 100%;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 140%;
+        }
+      }
+    }
+  }
+
+  &Cards {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    //padding: 10px 0 140px;
+    padding-bottom: 40px;
+
+    &Card {
+      max-width: 390px;
+      height: 521px;
+      border-radius: 20px;
+      border: 1px solid #F4F5F7;
+
+      .image {
+        max-width: 390px;
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+        //height: 100%;
+        border-radius: 20px 20px 0 0;
+
+      }
+
+      .information {
+        padding: 20px 30px 30px 30px;
+        height: 271px;
+
+        .group {
+          gap: 10px;
+
+          .name {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 31.2px;
+            color: #111111;
+          }
+          .description {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.52px;
+            color: rgba(17, 17, 17, 0.48);
+
+          }
+        }
+
+        .price {
+          font-size: 32px;
+          font-weight: 500;
+          line-height: 38.4px;
+          color: #111111;
+        }
+
+        .btn {
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 140%;
+        }
+      }
+    }
+  }
+
+  .pagination {
+    row-gap: 30px;
+
+    &Btn {
+      padding: 9.5px 16px 9.5px 16px;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 140%;
+    }
+  }
+  .filterimg {
+    opacity: 1;
+    transition: opacity .3s ease;
+    cursor: pointer;
+    position: sticky;
+    bottom: 82px;
+    left: 100%;
+    width: 104px;
+    height: 104px;
+    background-color: #2F3140;
+    border-radius: 50%;
+    padding: 28px;
+
+    .icon {
+      width: 47.78px;
+      height: 47.78px;
+    }
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1920px) {
+  .newCars {
+    row-gap: 60px;
+
+    &Filter {
+      gap: 50px;
+
+      .title {
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        color: #111111;
+      }
+
+      &Content {
+        padding: 30px;
+        border-radius: 20px;
+        gap: 20px;
+        //background-color: #F4F5F7;
+
+        .leftBlock {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+          row-gap: 16px;
+
+          &Card {
+            max-width: 199.5px;
+            height: 150.5px;
+            padding: 20px;
+            border-radius: 10px;
+
+            &Image {
+              max-width: 159.5px;
+              height: 81.5px;
+            }
+
+            &Name {
+              font-size: 18px;
+              font-weight: 500;
+              line-height: 25.2px;
+              color: #111111;
+              text-align: center;
+              margin-top: auto;
+            }
+
+            &Done {
+              top: -11px;
+              right: -11px;
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+
+        .rightBlock {
+          width: 521px;
+          height: 342px;
+          padding: 20px 30px;
+          border-radius: 10px;
+          gap: 16px;
+
+          &Group {
+
+            &First {
+              gap: 10px;
+
+              .title {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 25.2px;
+                color: #111111;
+              }
+            }
+            &Second {
+              gap: 12px;
+
+              .title {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 25.2px;
+                color: #111111;
+              }
+
+              .inputs {
+                gap: 12px;
+
+                input {
+                  border: 1px solid #B6B6B6;
+                  padding: 13px 16px 13px 16px;
+                  border-radius: 4px;
+                  width: 100%;
+                  height: 48px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &Cards {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+
+
+      &Card {
+        max-width: 420px;
+        height: 521px;
+
+        .image {
+          max-width: 420px;
+          height: 250px;
+          width: 100%;
+          object-fit: cover;
+          //height: 100%;
+          border-radius: 20px 20px 0 0;
+
+        }
+
+        .information {
+          padding: 20px 30px 30px 30px;
+          height: 271px;
+
+          .group {
+
+            .name {
+              font-size: 24px;
+              font-weight: 500;
+              line-height: 31.2px;
+              color: #111111;
+            }
+            .description {
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 19.52px;
+            }
+          }
+
+          .price {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 38.4px;
+            color: #111111;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1400px) {
+  .newCars {
+    row-gap: 60px;
+
+    &Filter {
+      gap: 40px;
+
+      .title {
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        color: #111111;
+      }
+
+      &Content {
+        padding: 30px;
+        border-radius: 20px;
+        gap: 20px;
+        background-color: #F4F5F7;
+
+        .leftBlock {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 10px;
+          row-gap: 16px;
+
+          &Card {
+            max-width: 149.33px;
+            height: 111px;
+            padding: 20px;
+            border-radius: 10px;
+
+            &Image {
+              max-width: 109.33px;
+              height: 47px;
+            }
+
+            &Name {
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 22.4px;
+              color: #111111;
+              text-align: center;
+              margin-top: auto;
+            }
+
+            &Done {
+              top: -11px;
+              right: -11px;
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+
+        .rightBlock {
+          width: 521px;
+          height: 366px;
+          padding: 20px 30px;
+          border-radius: 10px;
+          gap: 30px;
+
+          &Group {
+            row-gap: 30px;
+
+            &First {
+              gap: 10px;
+
+              .title {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 25.2px;
+                color: #111111;
+              }
+            }
+            &Second {
+              gap: 12px;
+
+              .title {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 25.2px;
+                color: #111111;
+              }
+
+              .inputs {
+                gap: 12px;
+
+                input {
+                  border: 1px solid #B6B6B6;
+                  padding: 13px 16px 13px 16px;
+                  border-radius: 4px;
+                  width: 100%;
+                  height: 48px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &Cards {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      //padding: 10px 0 140px;
+
+      &Card {
+        max-width: 299.33px;
+        height: 458px;
+        row-gap: 2px;
+
+        .image {
+          max-width: 299.33px;
+          height: 209px;
+          width: 100%;
+          object-fit: cover;
+          //height: 100%;
+          border-radius: 20px 20px 0 0;
+
+        }
+
+        .information {
+          padding: 20px 26px 30px 26px;
+          height: 271px;
+
+          .group {
+
+            .name {
+              font-size: 24px;
+              font-weight: 500;
+              line-height: 31.2px;
+              color: #111111;
+            }
+            .description {
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 16.8px;
+            }
+          }
+
+          .price {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 31.2px;
+            color: #111111;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .newCars {
+    row-gap: 60px;
+
+    &Filter {
+      gap: 30px;
+
+      .title {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 38.4px;
+        color: #111111;
+      }
+
+      &Content {
+        padding: 20px;
+        border-radius: 20px;
+        gap: 20px;
+        background-color: #F4F5F7;
+
+        .leftBlock {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+          row-gap: 10px;
+
+          &Card {
+            max-width: 117.5px;
+            height: 106px;
+            padding: 20px 10px;
+            border-radius: 14px;
+
+            &Image {
+              max-width: 97.5px;
+              height: 44px;
+            }
+
+            &Name {
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 19.6px;
+              color: #111111;
+              text-align: center;
+              margin-top: auto;
+            }
+
+            &Done {
+              top: -11px;
+              right: -11px;
+              width: 25px;
+              height: 25px;
+            }
+          }
+        }
+
+        .rightBlock {
+          width: 500px;
+          height: 220px;
+          padding: 20px 30px;
+          border-radius: 10px;
+          gap: 30px;
+
+          &Group {
+            gap: 30px;
+
+            &First {
+              width: 205px;
+              gap: 10px;
+
+              .title {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 19.6px;
+                color: #111111;
+              }
+            }
+            &Second {
+              width: 205px;
+              gap: 12px;
+
+              .title {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 19.6px;
+                color: #111111;
+              }
+
+              .inputs {
+                gap: 12px;
+
+                input {
+                  border: 1px solid #B6B6B6;
+                  padding: 10px 10px 10px 10px;
+                  border-radius: 4px;
+                  width: 100%;
+                  height: 32px;
+                }
+              }
+            }
+          }
+
+          .btn {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 140%;
+          }
+        }
+      }
+    }
+
+    &Cards {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      row-gap: 20px;
+      //padding: 10px 0 140px;
+      padding-bottom: 20px;
+
+      &Card {
+        max-width: 265px;
+        height: 366px;
+
+        .image {
+          max-width: 265px;
+          height: 169px;
+          width: 100%;
+          object-fit: cover;
+          //height: 100%;
+          border-radius: 20px 20px 0 0;
+
+        }
+
+        .information {
+          padding: 20px 20px 30px 20px;
+          height: 197px;
+
+          .group {
+
+            .name {
+              font-size: 18px;
+              font-weight: 500;
+              line-height: 21.6px;
+              color: #111111;
+            }
+
+            .description {
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 16.8px;
+              display: inline-block;
+              height: 33px;
+              overflow: hidden;
+              white-space: normal;
+              text-overflow: ellipsis;
+            }
+          }
+
+          .price {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 21.6px;
+            color: #111111;
+          }
+
+          .btn {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .pagination {
+      row-gap: 20px;
+
+      &Btn {
+        padding: 7px 16px 7px 16px;
+        font-size: 16px;
+      }
+    }
+
+    .filterimg {
+      bottom: 16px;
+      left: 100%;
+      width: 63.14px;
+      height: 63.14px;
+      padding: 18px;
+
+      .icon {
+        width: 29.41px;
+        height: 29.41px;
+      }
+    }
+  }
+}
+
+@media (max-width: 575.96px) {
+
+  .newCars {
+    row-gap: 16px;
+
+    &Filter {
+      gap: 16px;
+
+      .title {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21.6px;
+        color: #111111;
+      }
+
+      &Content {
+        padding: 20px;
+        border-radius: 20px;
+        gap: 20px;
+        background-color: #F4F5F7;
+
+        .leftBlock {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+          row-gap: 10px;
+
+          &Card {
+            max-width: 117.5px;
+            height: 106px;
+            padding: 20px 10px;
+            border-radius: 14px;
+
+            &Image {
+              max-width: 97.5px;
+              height: 44px;
+            }
+
+            &Name {
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 19.6px;
+              color: #111111;
+              text-align: center;
+              margin-top: auto;
+            }
+          }
+        }
+
+        .rightBlock {
+          width: 500px;
+          height: 234px;
+          padding: 20px 30px;
+          border-radius: 10px;
+          gap: 30px;
+
+          &Group {
+            gap: 30px;
+
+            &First {
+              width: 205px;
+              gap: 10px;
+
+              .title {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 19.6px;
+                color: #111111;
+              }
+            }
+            &Second {
+              width: 205px;
+              gap: 12px;
+
+              .title {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 19.6px;
+                color: #111111;
+              }
+
+              .inputs {
+                gap: 12px;
+
+                input {
+                  border: 1px solid #B6B6B6;
+                  padding: 13px 16px 13px 16px;
+                  border-radius: 4px;
+                  width: 100%;
+                  height: 48px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      div {
+        align-self: start;
+      }
+    }
+
+    &Cards {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      row-gap: 20px;
+      //padding: 10px 0 140px;
+      padding-bottom: 16px;
+
+
+      &Card {
+        max-width: 145px;
+        height: 184px;
+
+        .image {
+          max-width: 145px;
+          height: 91px;
+          width: 100%;
+          object-fit: cover;
+          //height: 100%;
+          border-radius: 10px 10px 0 0;
+
+        }
+
+        .information {
+          padding: 10px;
+          //height: 93px;
+
+          .group {
+
+            .name {
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 19.6px;
+              color: #111111;
+            }
+
+            .description {
+              font-size: 10px;
+              font-weight: 400;
+              line-height: 13px;
+              display: inline-block;
+              height: 28px;
+              overflow: hidden;
+              white-space: normal;
+              text-overflow: ellipsis;
+            }
+          }
+
+          .price {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 19.6px;
+            color: #111111;
+          }
+
+          .btn {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .pagination {
+      row-gap: 16px;
+
+      &Btn {
+        padding: 4px 16px 4px 16px;
+        font-size: 14px;
+      }
+    }
+
+
+    .filterimg {
+      bottom: 10px;
+      left: 100%;
+      width: 63.14px;
+      height: 63.14px;
+      padding: 18px;
+
+      .icon {
+        width: 29.41px;
+        height: 29.41px;
+      }
+    }
+  }
+}

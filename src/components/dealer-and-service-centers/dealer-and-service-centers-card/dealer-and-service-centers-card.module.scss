@@ -1,0 +1,70 @@
+
+
+.centersCard {
+  background-size: auto auto;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 376px;
+  border-radius: 20px;
+  padding: 30px;
+
+  .text {
+    row-gap: 2px;
+
+    &Name {
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 120%;
+      color: #FFFFFF;
+    }
+    &Services {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 130%;
+      color: #F4F5F7;
+    }
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1920px) {
+  .centersCard {
+    min-height: 302px;
+
+    .text {
+
+      &Name {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1400px) {
+  .centersCard {
+    min-height: 302px;
+
+    .text {
+
+      &Name {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .centersCard {
+    min-height: 245px;
+    padding: 24px 20px;
+
+    .text {
+
+      &Name {
+        font-size: 20px;
+      }
+      &Services {
+        font-size: 14px;
+      }
+    }
+  }
+}

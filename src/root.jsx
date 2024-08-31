@@ -1,14 +1,20 @@
-import '@assets/styles/style.scss'
-import store from '@store'
-import { Provider } from 'react-redux'
+import React from "react";
 
-import Routes from './routes.jsx'
+import '@assets/styles/style.scss'
+
+import Footer from "@components/footer/footer.jsx";
+import Header from "@components/header/header.jsx";
+import AppRoutes from './appRoutes.jsx'
+import Navbar from "@components/navbar/navbar.jsx";
 
 const Root = () => {
 	return (
-		<Provider store={store}>
-			<Routes />
-		</Provider>
+		<>
+			<Header/>
+				<AppRoutes />
+			<Footer/>
+			<Navbar/>
+		</>
 	)
 }
 

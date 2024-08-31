@@ -1,151 +1,747 @@
-@use '@assets/styles/vars/colors';
 
 .footer {
-  padding: 40px 0 30px;
-  background-color: colors.$mainColor;
-
-  > div {
-    row-gap: 70px;
-  }
+  background-color: #F4F5F7;
 
   &Content {
-    column-gap: 40px;
-  }
+    padding: 50px 0 120px 0;
+    justify-content: space-between;
 
-  &Bottom {
-    &Link {
-      color: colors.$additionalColor;
-      opacity: .7;
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 150%;
+    &Contacts {
+      max-width: 367px;
+      gap: 40px;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+
+      &Group {
+        row-gap: 40px;
+
+        .logo {
+          max-width: 307px;
+        }
+
+        .phone {
+          gap: 14px;
+
+          &Number {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 38.4px;
+            color: #2F3140;
+          }
+
+          &Link {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.2px;
+            color: #2F3140;
+            text-decoration-line: underline;
+            align-self: start;
+
+          }
+        }
+      }
+
+      &Icons {
+        gap: 24px;
+        height: 40px;
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
     }
-  }
 
-  &Logo {
-    img {
-      height: 50px;
+    .text {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16.8px;
+      color: rgba(17, 17, 17, 0.31);
+      max-width: 367px;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
     }
-  }
 
-  &Links {
-    row-gap: 10px;
+    &Buy {
+      max-width: 200px;
+      gap: 16px;
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 3;
 
-    p {
-      color: colors.$whiteColor;
-      font-size: 18px;
-      font-weight: 600;
-      line-height: 150%;
-    }
-  }
-
-  &Contacts {
-    row-gap: 20px;
-
-    &El {
-      row-gap: 6px;
-
-      .label {
-        color: colors.$additionalColor;
+      .title {
         font-size: 16px;
         font-weight: 500;
-        line-height: 150%;
+        line-height: 22.4px;
+        color: #2F3140;
       }
 
-      .contact {
-        color: colors.$whiteColor;
-        font-size: 18px;
-        font-weight: 600;
-        line-height: 150%;
+      .link {
+
+        .actlink {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 19.52px;
+          color: #2F3140;
+
+          &:hover {
+            color: #00000E;
+          }
+        }
       }
     }
 
-    .btn {
-      padding: 16px 26px;
+    &Company {
+      max-width: 200px;
+      gap: 16px;
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 3;
+
+      .title {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+        color: #2F3140;
+      }
+
+      .link {
+
+        .actlink {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 19.52px;
+          color: #2F3140;
+
+          &:hover {
+            color: #00000E;
+          }
+        }
+      }
+    }
+
+    &Services {
+      max-width: 200px;
+      gap: 16px;
+      grid-column-start: 4;
+      grid-column-end: 5;
+      grid-row-start: 1;
+      grid-row-end: 3;
+
+      .title {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+        color: #2F3140;
+      }
+
+      .link {
+
+        .actlink {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 19.52px;
+          color: #2F3140;
+
+          &:hover {
+            color: #00000E;
+          }
+        }
+      }
+    }
+
+    &Download {
+      gap: 16px;
+      grid-column-start: 5;
+      grid-column-end: 6;
+      grid-row-start: 1;
+      grid-row-end: 3;
+
+      .title {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+        color: #2F3140;
+      }
+
+      .icons {
+        gap: 20px;
+
+        &Links {
+          gap: 14px;
+        }
+      }
     }
   }
 }
 
-
-@media (min-width: 768px) and (max-width: 992px) {.footer {
-  padding: 40px 0;
-
-  > div {
-    row-gap: 50px;
-  }
-
-  &Content {
-    column-gap: 30px;
-  }
+.footer2 {
+  background-color: #EDEEF0;
 
   &Links {
-    row-gap: 6px;
+    padding: 15px 0 15px 0;
 
     p {
       font-size: 16px;
+      font-weight: 400;
+      line-height: 19.52px;
+      color: #6B6B6B;
+      margin: 0;
+    }
+
+    a {
+      color: #6B6B6B;
+      border-bottom: 1px solid #6B6B6B;
     }
   }
+}
 
-  &Contacts {
-    &El {
-      row-gap: 6px;
+@media (min-width: 992px) and (max-width: 1400px) {
 
-      .label {
-        font-size: 14px;
-      }
-
-      .contact {
-        font-size: 16px;
-      }
-    }
-  }
-}}
-
-@media (max-width: 768px) {
   .footer {
-    padding: 40px 0;
-
-    > div {
-      row-gap: 30px;
-    }
 
     &Content {
-      row-gap: 20px;
-    }
+      padding: 40px 40px 50px 40px;
+      row-gap: 25px;
 
-    &Bottom {
-      row-gap: 10px;
+      &Contacts {
+        max-width: 367px;
+        gap: 25px;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
 
-      &Link {
-        font-size: 14px;
+        &Group {
+          row-gap: 25px;
+
+          .logo {
+            max-width: 307px;
+          }
+
+          .phone {
+            gap: 14px;
+
+            &Number {
+              font-size: 32px;
+              font-weight: 500;
+              line-height: 38.4px;
+              color: #2F3140;
+            }
+
+            &Link {
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 19.2px;
+              color: #2F3140;
+              //border-bottom: 1px solid #2F3140;
+            }
+          }
+
+          .text {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.8px;
+            color: rgba(17, 17, 17, 0.31);
+          }
+        }
+
+        &Icons {
+          gap: 20px;
+          height: 40px;
+          img {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+
+      &Buy {
+        max-width: 200px;
+        gap: 16px;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+        .title {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22.4px;
+          color: #2F3140;
+        }
+
+        .link {
+
+          .actlink {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.52px;
+            color: #2F3140;
+          }
+        }
+      }
+
+      &Company {
+        max-width: 200px;
+        gap: 16px;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 4;
+
+        .title {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22.4px;
+          color: #2F3140;
+        }
+
+        .link {
+
+          .actlink {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.52px;
+            color: #2F3140;
+          }
+        }
+      }
+
+      &Services {
+        max-width: 200px;
+        gap: 16px;
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 4;
+
+        .title {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22.4px;
+          color: #2F3140;
+        }
+
+        .link {
+
+          .actlink {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.52px;
+            color: #2F3140;
+          }
+        }
+      }
+
+      .text {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        padding-bottom: 22px;
+      }
+
+      &Download {
+        gap: 16px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+
+        .title {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22.4px;
+          color: #2F3140;
+        }
+
+        .icons {
+          gap: 20px;
+
+          &Links {
+            gap: 14px;
+          }
+        }
       }
     }
+  }
+
+  .footer2 {
+    background-color: #EDEEF0;
 
     &Links {
-      row-gap: 6px;
+      padding: 15px 0 15px 0;
 
       p {
         font-size: 16px;
+        font-weight: 400;
+        line-height: 19.52px;
+        color: #6B6B6B;
+        margin: 0;
+      }
+
+      a {
+        color: #6B6B6B;
+        border-bottom: 1px solid #6B6B6B;
       }
     }
+  }
+}
 
-    &Contacts {
-      row-gap: 20px;
+@media (min-width: 576px) and (max-width: 992px) {
 
-      &El {
-        row-gap: 6px;
+  .footer {
 
-        .label {
-          font-size: 14px;
+    &Content {
+      padding: 40px 0 20px 0;
+      row-gap: 10px;
+
+      &Contacts {
+        max-width: 248px;
+        gap: 20px;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+        &Group {
+          row-gap: 20px;
+
+          .logo {
+            max-width: 179px;
+          }
+
+          .phone {
+            gap: 14px;
+
+            &Number {
+              font-size: 20px;
+              font-weight: 500;
+              line-height: 24px;
+              color: #2F3140;
+            }
+
+            &Link {
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 16.8px;
+              color: #2F3140;
+              //border-bottom: 1px solid #2F3140;
+            }
+          }
+
+          .text {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 14.4px;
+            color: rgba(17, 17, 17, 0.31);
+            max-width: 248px;
+          }
         }
 
-        .contact {
-          font-size: 14px;
+        &Icons {
+          gap: 20px;
+          height: 40px;
+          img {
+            width: 40px;
+            height: 40px;
+          }
         }
       }
 
-      .btn {
-        padding: 12px 26px;
+      &Buy {
+        max-width: 200px;
+        gap: 10px;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+        .title {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22.4px;
+          color: #2F3140;
+        }
+
+        .link {
+
+          .actlink {
+            font-size: 14px;
+          }
+        }
+      }
+
+      &Company {
+        max-width: 200px;
+        gap: 10px;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+        .title {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22.4px;
+          color: #2F3140;
+        }
+
+        .link {
+
+          .actlink {
+            font-size: 14px;
+          }
+        }
+      }
+
+      &Services {
+        max-width: 200px;
+        gap: 10px;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+
+        .title {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22.4px;
+          color: #2F3140;
+        }
+
+        .link {
+
+          .actlink {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .text {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+      }
+
+      &Download {
+        gap: 10px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 4;
+
+        .title {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22.4px;
+          color: #2F3140;
+          max-width: 248px;
+        }
+
+        .icons {
+          gap: 14px;
+
+          .qr {
+            max-width: 142px;
+            max-height: 142px;
+          }
+
+          &Links {
+            gap: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .footer2 {
+    background-color: #EDEEF0;
+
+    &Links {
+      padding: 15px 0 15px 0;
+
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17.08px;
+        color: #6B6B6B;
+        margin: 0;
+      }
+
+      a {
+        color: #6B6B6B;
+        border-bottom: 1px solid #6B6B6B;
+      }
+    }
+  }
+}
+
+@media (max-width: 575.96px) {
+
+  .footer {
+
+    &Content {
+      padding: 20px 0 10px 0;
+      row-gap: 16px;
+
+      &Contacts {
+        max-width: 248px;
+        gap: 48px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+        &Group {
+          row-gap: 16px;
+
+          .logo {
+            max-width: 143px;
+          }
+
+          .phone {
+            gap: 4px;
+
+            &Number {
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 16.8px;
+              color: #2F3140;
+            }
+
+            &Link {
+              font-size: 12px;
+              font-weight: 400;
+              line-height: 15.6px;
+              color: #2F3140;
+              //border-bottom: 1px solid #2F3140;
+            }
+          }
+
+          .text {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 14.4px;
+            color: rgba(17, 17, 17, 0.31);
+            max-width: 248px;
+          }
+        }
+
+        &Icons {
+          gap: 10px;
+          height: 30px;
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+
+      &Buy {
+        max-width: 200px;
+        gap: 6px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+        .title {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22.4px;
+          color: #2F3140;
+        }
+
+        .link {
+
+          .actlink {
+            font-size: 14px;
+          }
+        }
+      }
+
+      &Company {
+        max-width: 200px;
+        gap: 6px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+
+        .title {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22.4px;
+          color: #2F3140;
+        }
+
+        .link {
+
+          .actlink {
+            font-size: 14px;
+          }
+        }
+      }
+
+      &Services {
+        max-width: 200px;
+        gap: 6px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
+
+        .title {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22.4px;
+          color: #2F3140;
+        }
+
+        .link {
+
+          .actlink {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .text {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 6;
+      }
+    }
+  }
+
+  .footer2 {
+    background-color: #EDEEF0;
+    padding: 10px 0;
+
+    &Links {
+      padding: 0;
+      row-gap: 10px;
+
+      p {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 15.6px;
+        color: #6B6B6B;
+        margin: 0;
+      }
+
+      a {
+        color: #6B6B6B;
+        border-bottom: 1px solid #6B6B6B;
       }
     }
   }

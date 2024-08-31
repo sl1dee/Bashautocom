@@ -1,0 +1,175 @@
+
+
+.reviews {
+  background-color: #FFFFFF;
+
+  &Information {
+    padding: 140px 0 65px 0;
+    gap: 50px;
+
+    &Title {
+      font-size: 50px;
+      font-weight: 500;
+      color: #111111;
+      line-height: 120%;
+    }
+
+    .reviewsSwiper {
+      position: relative;
+
+      .swiperPagination {
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+      }
+
+      .swiperArrow {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        transform: translateY(-50%);
+        top: 38%;
+        border: none;
+        background-color: #2F3140;
+        border-radius: 4px;
+        width: 46px;
+        height: 44px;
+
+
+        &Left {
+          left: -10px;
+          transform: translateX(-100%);
+
+          &::before {
+            content: url('/assets/img/special-offer/arrow-left.svg');
+            display: flex;
+            width: 24px;
+            height: 24px;
+          }
+        }
+
+        &Right {
+          right: -10px;
+          transform: translateX(100%);
+
+          &::before {
+            content: url('/assets/img/special-offer/arrow-right.svg');
+            display: flex;
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1920px) {
+  .reviews {
+    background-color: #FFFFFF;
+
+    &Information {
+      padding: 140px 0 65px 0;
+      gap: 50px;
+
+      .reviewsSwiper {
+        position: relative;
+
+        .swiperArrow {
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 1;
+          transform: translateY(-50%);
+          top: 23%;
+          border: none;
+          background-color: #2F3140;
+          border-radius: 4px;
+          width: 46px;
+          height: 44px;
+
+
+          &Left {
+            left: -6px;
+            transform: translateX(-100%);
+
+            &::before {
+              content: url('/assets/img/special-offer/arrow-left.svg');
+              display: flex;
+              width: 24px;
+              height: 24px;
+            }
+          }
+
+          &Right {
+            right: -6px;
+            transform: translateX(100%);
+
+            &::before {
+              content: url('/assets/img/special-offer/arrow-right.svg');
+              display: flex;
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1400px) {
+  .reviews {
+    background-color: #FFFFFF;
+
+    &Information {
+      padding: 140px 0 65px 0;
+      gap: 50px;
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .reviews {
+    background-color: #FFFFFF;
+
+    &Information {
+      padding: 100px 0 40px 0;
+      gap: 30px;
+
+      &Title {
+        font-size: 32px;
+      }
+
+      .reviewsSwiper {
+        position: relative;
+
+        .swiperPagination {
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575.96px) {
+  .reviews {
+    background-color: #FFFFFF;
+
+    &Information {
+      padding: 25px 0 25px 0;
+      gap: 16px;
+
+      &Title {
+        font-size: 18px;
+      }
+
+      .reviewsSwiper {
+        position: relative;
+      }
+    }
+  }
+}

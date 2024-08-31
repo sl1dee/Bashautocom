@@ -1,0 +1,12 @@
+.DateRangeWrap{
+  column-gap: 16px;
+  >div{
+    width: 50%;
+  }
+  @media (max-width: 576px){
+    row-gap: 12px;
+    >div{
+      width: 100%;
+    }
+  }
+}
